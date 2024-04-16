@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/grid.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <!--=============== ICONSCOUT ===============-->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
+    <title>F4 SHOP - Frontend</title>
+</head>
+<body>
+    <div class="app">
+        <header class="header">
+            <div class="grid wide">
+                <nav class="header__navbar hide-on-mobile-table">
+                    <ul class="header__navbar-list">
+                        <li class="header__navbar-item header__navbar-item--has-qr header__navbar-item--separate">Vào
+                            của
+                            hàng trên ứng dụng F4-Shop
+                            <div class="header__qr">
+                                <img src="./assets/img/think_bout_you.jpg" alt="" class="header__qr-img">
+                                <div class="header__qr-apps">
+                                    <a href="" class="header__qr-link">
+                                        <img src="./assets/img/think_bout_you.jpg" alt="App Store" class="header__qr-download-img">
+                                    </a>
+                                    <a href="" class="header__qr-link">
+                                        <img src="./assets/img/think_bout_you.jpg" alt="Google Play" class="header__qr-download-img">
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="header__navbar-item">
+                            <span class="header__navbar-item--no-pointer">Kết nối</span>
+                            <a href="" class="header__navbar-icon-link"><i
+                                    class=" header__navbar-icon fa-brands fa-facebook"></i></a>
+                            <a href="" class="header__navbar-icon-link"><i
+                                    class=" header__navbar-icon fa-brands fa-instagram"></i></i></a>
+    
+                        </li>
+                    </ul>
+                    <ul class="header__navbar-list">
+                        <li class="header__navbar-item header__navbar-item--has-notify">
+                            <a href="" class="header__navbar-item-link">
+                                <a href="" class="header__navbar-icon-link"><i
+                                        class=" header__navbar-icon fa-regular fa-bell"></i></a>
+                                Thông báo
+                            </a>
+                            <div class="header__notify">
+                                <header class="header__notify-header">
+                                    <h3>Thông báo mới nhận</h3>
+                                </header>
+                                <ul class="header__notify-list">
+                                    <li class="header__notify-item header__notify-item--viewed ">
+                                        <a href="" class="header__notify-link">
+                                            <div class="header__notify-img"><img src="./assets/img/think_bout_you.jpg" alt=""
+                                                    class=""></div>
+                                            <div class="header__notify-info">
+                                                <span class="header__notify-name">Xác thực chính hãnh nguồn gốc của các
+                                                    sản
+                                                    phẩm 0hui</span>
+                                                <span class="header__notify-descriotion">Hidden tag là giải pháp xác
+                                                    thực
+                                                    hàng chính hãng bằng công nghệ tiên tiến nhất hiện nay</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="header__notify-item header__notify-item--viewed ">
+                                        <a href="" class="header__notify-link">
+                                            <div class="header__notify-img"><img src="./assets/img/think_bout_you.jpg" alt=""
+                                                    class=""></div>
+                                            <div class="header__notify-info">
+                                                <span class="header__notify-name">Sale Sốc bộ dưỡng 0hui The First tái
+                                                    tạo
+                                                    trẻ hoá da SALE OFF 70%</span>
+                                                <span class="header__notify-descriotion">Mô tả mỹ phẩm 0hui chính
+                                                    hãng</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="header__notify-item header__notify-item--viewed ">
+                                        <a href="" class="header__notify-link">
+                                            <div class="header__notify-img"><img src="./assets/img/think_bout_you.jpg" alt=""
+                                                    class=""></div>
+                                            <div class="header__notify-info">
+                                                <span class="header__notify-name">Mỹ phẩm chính 0thui hãng</span>
+                                                <span class="header__notify-descriotion">Mô tả mỹ phẩm 0hui chính
+                                                    hãng</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <footer class="header__notify-footer">
+                                    <a href="" class="header__notify-footer-btn">Xem tất cả</a>
+                                </footer>
+                            </div>
+                        </li>
+                        <li class="header__navbar-item">
+                            <a href="" class="header__navbar-item-link"> 
+                                <a href="" class="header__navbar-icon-link">
+                                    <i class="header__navbar-icon fa-regular fa-circle-question"></i>
+                                </a> Trợ giúp
+                            </a>
+                        </li>
+                        <li class="header__navbar-item header__navbar-item--strong header__navbar-item--separate">
+                            <a class="header__navbar-item-link" href="/User/Register">Đăng ký</a>
+                        </li>
+                        <li class="header__navbar-item header__navbar-item--strong">
+                            <a class="header__navbar-item-link" href="login.html">Đăng nhập</a>
+                        </li>
+                        
+                        <!-- <li class="header__navbar-item header__navbar-user">
+                            <img src="~/img/no_user.jpg" alt="" class="header__navbar-user-img">
+                            <span class="header__navbar-user-name">Công Đặng</span>
+                            <ul class="header__navbar-user-menu">
+                                <li class="header__navbar-user-item">
+                                    <a href="">Tài khoản của tôi</a>
+                                </li>
+                                <li class="header__navbar-user-item">
+                                    <a href="">Địa chỉ của tôi</a>
+                                </li>
+                                <li class="header__navbar-user-item">
+                                    <a href="">Đơn mua</a>
+                                </li>
+                                <li class="header__navbar-user-item header__navbar-user-item--separate">
+                                    <a href="/User/Logout">Đăng xuất</a>
+                                </li>
+                            </ul>
+                        </li> -->
+                    </ul>
+                </nav>
+                <!--Header with search-->
+                <div class="header-with-search">
+                    <div class="header__logo hide-on-table">
+                        <a href="index.html" class="header__logo-link">
+                            <span class="header__logo-icon ">F4 SHOP</span>
+                        </a>
+                    </div>
+    
+                    <input class="header__search-box" type="checkbox" hidden id="mobile-search-checkbock">
+    
+                    <div class="header__search">
+                        <div class="header__search-input-wrap">
+                            <input type="text" class="header__search-input" onkeyup="searchProducts(this)"
+                                placeholder="Tìm kiếm">
+    
+                            <!--Search history-->
+                            <div class="header__search-history">
+                                <h3 class="header__search-history-heading">Lịch sử tìm kiếm</h3>
+                                <ul class="header__search-history-list">
+                                    <li class="header__search-history-item">
+                                        <a href="">Kem dưỡng da</a>
+                                    </li>
+                                    <li class="header__search-history-item">
+                                        <a href="">Kem trị mụn</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="header__search-select">
+                            <span class="header__search-select-label">Trong shop</span>
+                            <i class="header__search-select-icon fa-solid fa-chevron-down"></i>
+                            <ul class="header__search-option">
+                                <li class="header__search-option-item header__search-option-item--active">
+                                    <span>Trong shop</span>
+                                    <i class="fa-solid fa-check"></i>
+                                </li>
+                                <li class="header__search-option-item header__search-option-item--active">
+                                    <span>Ngoài shop</span>
+                                    <i class="fa-solid fa-check"></i>
+                                </li>
+                            </ul>
+                        </div>
+                        <button class="header__search-btn">
+                            <i class="header__search-btn-icon fa-solid fa-magnifying-glass"></i>
+                        </button>
+                    </div>
+                    <!--Cart layout-->
+                    <div class="header__cart">
+                        <a href="cart.html" class="header__cart-wrap">
+                            <i class="header__cart-icon fa-solid fa-cart-shopping"></i>
+                            <span class="header__cart-notice">0</span>
+                            <!--No cart: header__cart-list--no-cart-->
+                            <!-- <div class="header__cart-list header__cart-list--no-cart">
+                                <img src="~/img/no-cart.png" alt="" class="header__cart-no-cart-img">
+                                <span class="header__cart-list-no-cart-msg">
+                                    Chưa có sản phẩm
+                                </span>
+                            </div> -->
+                            <div class="header__cart-list">
+                                <h4 class="header__cart-heading">Sản phẩm đã thêm</h4>
+                                <ul class="header__cart-list-item">
+                                    <li class="header__cart-item">
+                                        <div class="header__cart-item-img">
+                                            <img src="./assets/img/think_bout_you.jpg" class="header__cart-item-img" alt="">
+                                        </div>
+                                        <div class="header__cart-item-info">
+                                            <div class="header__cart-item-head">
+                                                <h5 class="header__cart-item-name">Tai nghe eport</h5>
+                                                <div class="header__cart-item-price-wrap">
+                                                    <span class="header__cart-item-price">100.000 đ</span>
+                                                    <span class="header__cart-item-multifly">X</span>
+                                                    <span class="header__cart-item-qnt">2</span>
+                                                </div>
+                                            </div>
+                                            <div class="header__cart-item-body">
+                                                <span class="header__cart-item-description">
+                                                    Phân loại hàng:Bạc
+                                                </span>
+                                                <span class="header__cart-item-remove">Xoá</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    
+                                </ul>
+                                <div class="header__cart-btn">
+                                    <botton class="header__cart-btn-sub">Xem giỏ hàng</botton>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <ul class="header__sort-bar">
+                <li class="header__sort-item">
+                    <a href="" class="header__sort-link">Liên quan</a>
+                </li>
+                <li class="header__sort-item header__sort-item--active">
+                    <a href="" class="header__sort-link">Mới nhất</a>
+                </li>
+                <li class="header__sort-item">
+                    <a href="" class="header__sort-link">Bán chạy</a>
+                </li>
+                <li class="header__sort-item">
+                    <a href="" class="header__sort-link">Giá</a>
+                </li>
+            </ul>
+        </header>
+        <div class="app__container">
+            <div class="grid wide">
+                <div class="banner">
+                    <div class="banner-container">
+                        <div class="banner-left">
+                            <div class="banner-left-content">
+                                <div class="banner-left-content__top">
+                                    <a href="" class="banner-left-content__top-link">
+                                        <div class="banner-home__content-left-container">
+                                            <div class="banner-home__content-left-container-text">
+                                                <h1 class="banner-home__content-left-title">Mua sản phẩm có giảm giá tại F4
+                                                    SHOP
+                                                </h1>
+                                                <p class="banner-home__content-left-desc">
+                                                    Tai nghe bluetooth X15 phiên bản Gaming chất lượng cao,
+                                                    tai nghe không dây pin trâu âm thanh sống động hợp mọi dòng máy
+                                                </p>
+                                                <button class="banner-home__content-left-btn">Xem ngay</button>
+                                                <div class="banner-home__content-left-container-img">
+                                                    <img width="200" src="./assets/img/sac_du_phong.png" alt="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a href="" class="banner-left-content__top-link">
+                                        <div class="banner-home__content-left-container">
+                                            <div class="banner-home__content-left-container-text">
+                                                <h1 class="banner-home__content-left-title">Mua sản phẩm có giảm giá tại F4
+                                                    SHOP
+                                                </h1>
+                                                <p class="banner-home__content-left-desc">
+                                                    Tai nghe bluetooth X15 phiên bản Gaming chất lượng cao,
+                                                    tai nghe không dây pin trâu âm thanh sống động hợp mọi dòng máy
+                                                </p>
+                                                <button class="banner-home__content-left-btn">Xem ngay</button>
+                                                <div class="banner-home__content-left-container-img">
+                                                    <img width="200" src="./assets/img/sac_du_phong.png" alt="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a href="" class="banner-left-content__top-link">
+                                        <div class="banner-home__content-left-container">
+                                            <div class="banner-home__content-left-container-text">
+                                                <h1 class="banner-home__content-left-title">Mua sản phẩm có giảm giá tại F4
+                                                    SHOP
+                                                </h1>
+                                                <p class="banner-home__content-left-desc">
+                                                    Tai nghe bluetooth X15 phiên bản Gaming chất lượng cao,
+                                                    tai nghe không dây pin trâu âm thanh sống động hợp mọi dòng máy
+                                                </p>
+                                                <button class="banner-home__content-left-btn">Xem ngay</button>
+                                                <div class="banner-home__content-left-container-img">
+                                                    <img width="200" src="./assets/img/sac_du_phong.png" alt="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="banner-left-content__top-btn">
+                                    <i class="uil uil-angle-left banner-left-content__top-btn-icon banner-left-content__top-btn-icon-prev"></i>
+                                    <i class="uil uil-angle-right banner-left-content__top-btn-icon banner-left-content__top-btn-icon-next"></i>
+                                </div>
+                                
+                                <div class="banner-left-content__bottom">
+                                    <div class="banner-left-content__bottom-pagination">
+                                        <!-- <div class=""></div>
+                                        <div class=""></div>
+                                        <div class=""></div> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="banner-right">
+                            <div class="banner-right__content">
+                                <div class="banner-right__content-top" style="background-image: url(./assets/img/banner_my_pham.jpg);">
+                                    
+                                </div>
+                                <div class="banner-right__content-bottom" style="background-image: url(./assets/img/ngat_ngay.jpg);">
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="category">
+                    <div class="category-header">
+                        <div class="category-header__title">Danh mục</div>
+                        <div class="category-header__arrow">
+                            <i class="fa-solid fa-arrow-left"></i>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </div>
+                    </div>
+                    <div class="category-container">
+                        <div class="category-content">
+                            <ul class="row sm-gutter category-list">
+                                <li class="category-item-home">
+                                    <a href="product.html" class="category-item-link">
+                                        <div class="category-item__img" style="background-image: url(./assets/img/think_bout_you.jpg);">
+                                        </div>
+                                        <div class="category-item__name">Tai nghe</div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="success">
+                    <div class="success-header">
+                        <div class="success-title">Gợi ý hôm nay</div>
+                    </div>
+                    <div class="success-container">
+                        <div class="home-product">
+                            <div class="row sm-gutter">
+                                <div class="col l-2 c-6 m-4">
+                                    <a class="home-product-item" href="product_detail.html">
+                                        <div class="home-product-item__img"
+                                            style="background-image: url(./assets/img/think_bout_you.jpg)"></div>
+                                        <h4 class="home-product-item__name">Tai nghe Bluetooth</h4>
+                                        <div class="home-product-item__price">
+                                            <span class="home-product-item__price-old">1.200 000đ</span>
+                                            <span class="home-product-item__price-current">1.100.000 đ</span>
+                                        </div>
+                                        <div class="home-product-item__action">
+                                            <span class="home-product-item__like home-product-item__like--liked">
+                                                <i class="home-product-item__like-icon-empty far fa-heart"></i>
+                                                <i class="home-product-item__like-icon-fill fas fa-heart"></i>
+                                            </span>
+                                            <div class="home-product-item__rating">
+                                                <i class="home-product-item__star--gold fas fa-star"></i>
+                                                <i class="home-product-item__star--gold fas fa-star"></i>
+                                                <i class="home-product-item__star--gold fas fa-star"></i>
+                                                <i class="home-product-item__star--gold fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                            <span class="home-product-item__sold"> 88 Đã bán</span>
+                                        </div>
+                                        <div class="home-product-item__origin">
+                                            <span class="home-product-item__brand">Who</span>
+                                            <span class="home-product-item__origin-name">Nhật Bản</span>
+                                        </div>
+                                        <div class="home-product-item__favourite">
+                                            <i class="fas fa-check"></i>
+                                            <span>Yêu thích</span>
+                                        </div>
+                                        <div class="home-product-item__sale-off">
+                                            <span class="home-product-item__sale-off-percent">53%</span>
+                                            <span class="home-product-item__sale-off-label">GIẢM</span>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <ul class="pagination home-product__pagination">
+                            <li class="pagination-item">
+                                <a href="#" class="pagination-item__link">
+                                    <i class="pagination-item__icon fas fa-angle-left"></i>
+                                </a>
+                            </li>
+                            <li
+                                class="pagination-item pagination-item--active">
+                                <a href="/Home/Index?currentPage=@i" class="pagination-item__link">1</a>
+                            </li>
+                            <li class="pagination-item">
+                                <a href="/Home/Index?currentPage=@i" class="pagination-item__link">2</a>
+                            </li>
+                            <li class="pagination-item">
+                                <a href="" class="pagination-item__link">...</a>
+                            </li>
+                            <li class="pagination-item">
+                                <a href="/Home/Index?currentPage=@(Model.CurrentPage + 1)" class="pagination-item__link">
+                                    <i class="pagination-item__icon fas fa-angle-right"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="footer">
+            <div class="grid wide footer__content">
+                <div class="row">
+                    <div class="col l-2-4 c-6 m-4">
+                        <h3 class="footer__heading">Chăm sóc khách hàng</h3>
+                        <ul class="footer-list">
+                            <li class="footer-item">
+                                <a href="" class="footer-item__link">Trung tâm trợ giúp</a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="" class="footer-item__link">F4 Shop Mail</a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="" class="footer-item__link">Hướng dẫn mua hàng</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col l-2-4 c-6 m-4">
+                        <h3 class="footer__heading">Giới thiệu</h3>
+                        <ul class="footer-list">
+                            <li class="footer-item">
+                                <a href="" class="footer-item__link">Giới thiệu</a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="" class="footer-item__link">Tuyển dụng </a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="" class="footer-item__link">Điều khoản</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col l-2-4 c-6 m-4">
+                        <h3 class="footer__heading">Danh mục</h3>
+                        <ul class="footer-list">
+                            <li class="footer-item">
+                                <a href="" class="footer-item__link">
+                                    <i class="footer-item__icon fab fa-facebook"></i>
+                                    Facebook
+                                </a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="" class=" footer-item__link">
+                                    <i class="footer-item__icon fab fa-instagram"></i>
+                                    Instagram
+                                </a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="" class="footer-item__link">
+                                    <i class="footer-item__icon fa-brands fa-linkedin"></i>
+                                    Linking
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col l-2-4 c-6 m-4">
+                        <h3 class="footer__heading">Thep dõi khách hàng</h3>
+                        <ul class="footer-list">
+                            <li class="footer-item">
+                                <a href="" class="footer-item__link">Trung tâm trợ giúp</a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="" class="footer-item__link">VanCong Shop Mail</a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="" class="footer-item__link">Hướng dẫn mua hàng</a>
+                            </li>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col l-2-4 c-12 m-4">
+                        <h3 class="footer__heading">Vào cửa hàng F4 SHOP</h3>
+                        <div class="footer__download">
+                            <img src="~/img/qr_code.png" alt="" class="footer__download-qr">
+                            <div class="footer__download-apps">
+                                <a href="#" class="footer__download-apps-link">
+                                    <img src="~/img/google_play.png" alt="Google Play" class="footer__download-apps-img">
+                                </a>
+                                <a href="#" class="footer__download-apps-link">
+                                    <img src="~/img/app-store.png" alt="App Store" class="footer__download-apps-img">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer__bottom">
+                    <div class="grid wide">
+                        <p class="footer__text">2022 - Bản quyền thuộc về công ty F4 Shop</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+<script src="./assets/js/index.js"></script>
+</html>

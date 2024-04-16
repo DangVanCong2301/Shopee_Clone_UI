@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/grid.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+    <link rel="stylesheet" href="./assets/css/product_detail.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <!--=============== ICONSCOUT ===============-->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/solid.css" />
+    <title>F4 SHOP - Frontend</title>
+</head>
+<body>
+    <div class="app">
+        <header class="header">
+            <div class="grid wide">
+                <nav class="header__navbar hide-on-mobile-table">
+                    <ul class="header__navbar-list">
+                        <li class="header__navbar-item header__navbar-item--has-qr header__navbar-item--separate">Vào
+                            của
+                            hàng trên ứng dụng F4-Shop
+                            <div class="header__qr">
+                                <img src="./assets/img/think_bout_you.jpg" alt="" class="header__qr-img">
+                                <div class="header__qr-apps">
+                                    <a href="" class="header__qr-link">
+                                        <img src="./assets/img/think_bout_you.jpg" alt="App Store" class="header__qr-download-img">
+                                    </a>
+                                    <a href="" class="header__qr-link">
+                                        <img src="./assets/img/think_bout_you.jpg" alt="Google Play" class="header__qr-download-img">
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="header__navbar-item">
+                            <span class="header__navbar-item--no-pointer">Kết nối</span>
+                            <a href="" class="header__navbar-icon-link"><i
+                                    class=" header__navbar-icon fa-brands fa-facebook"></i></a>
+                            <a href="" class="header__navbar-icon-link"><i
+                                    class=" header__navbar-icon fa-brands fa-instagram"></i></i></a>
+    
+                        </li>
+                    </ul>
+                    <ul class="header__navbar-list">
+                        <li class="header__navbar-item header__navbar-item--has-notify">
+                            <a href="" class="header__navbar-item-link">
+                                <a href="" class="header__navbar-icon-link"><i
+                                        class=" header__navbar-icon fa-regular fa-bell"></i></a>
+                                Thông báo
+                            </a>
+                            <div class="header__notify">
+                                <header class="header__notify-header">
+                                    <h3>Thông báo mới nhận</h3>
+                                </header>
+                                <ul class="header__notify-list">
+                                    <li class="header__notify-item header__notify-item--viewed ">
+                                        <a href="" class="header__notify-link">
+                                            <div class="header__notify-img"><img src="./assets/img/think_bout_you.jpg" alt=""
+                                                    class=""></div>
+                                            <div class="header__notify-info">
+                                                <span class="header__notify-name">Xác thực chính hãnh nguồn gốc của các
+                                                    sản
+                                                    phẩm 0hui</span>
+                                                <span class="header__notify-descriotion">Hidden tag là giải pháp xác
+                                                    thực
+                                                    hàng chính hãng bằng công nghệ tiên tiến nhất hiện nay</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="header__notify-item header__notify-item--viewed ">
+                                        <a href="" class="header__notify-link">
+                                            <div class="header__notify-img"><img src="./assets/img/think_bout_you.jpg" alt=""
+                                                    class=""></div>
+                                            <div class="header__notify-info">
+                                                <span class="header__notify-name">Sale Sốc bộ dưỡng 0hui The First tái
+                                                    tạo
+                                                    trẻ hoá da SALE OFF 70%</span>
+                                                <span class="header__notify-descriotion">Mô tả mỹ phẩm 0hui chính
+                                                    hãng</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="header__notify-item header__notify-item--viewed ">
+                                        <a href="" class="header__notify-link">
+                                            <div class="header__notify-img"><img src="./assets/img/think_bout_you.jpg" alt=""
+                                                    class=""></div>
+                                            <div class="header__notify-info">
+                                                <span class="header__notify-name">Mỹ phẩm chính 0thui hãng</span>
+                                                <span class="header__notify-descriotion">Mô tả mỹ phẩm 0hui chính
+                                                    hãng</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <footer class="header__notify-footer">
+                                    <a href="" class="header__notify-footer-btn">Xem tất cả</a>
+                                </footer>
+                            </div>
+                        </li>
+                        <li class="header__navbar-item">
+                            <a href="" class="header__navbar-item-link"> <a href="" class="header__navbar-icon-link">
+                                <i class="header__navbar-icon fa-regular fa-circle-question"></i></a> Trợ giúp
+                            </a>
+                        </li>
+                        <li class="header__navbar-item header__navbar-item--strong header__navbar-item--separate js-enter-form">
+                            <a class="header__navbar-item-link" href="/User/Register">Đăng ký</a></li>
+                        <li class="header__navbar-item header__navbar-item--strong js-login-form">Đăng nhập</li>
+                        
+                        <!-- <li class="header__navbar-item header__navbar-user">
+                            <img src="~/img/no_user.jpg" alt="" class="header__navbar-user-img">
+                            <span class="header__navbar-user-name">Công Đặng</span>
+                            <ul class="header__navbar-user-menu">
+                                <li class="header__navbar-user-item">
+                                    <a href="">Tài khoản của tôi</a>
+                                </li>
+                                <li class="header__navbar-user-item">
+                                    <a href="">Địa chỉ của tôi</a>
+                                </li>
+                                <li class="header__navbar-user-item">
+                                    <a href="">Đơn mua</a>
+                                </li>
+                                <li class="header__navbar-user-item header__navbar-user-item--separate">
+                                    <a href="/User/Logout">Đăng xuất</a>
+                                </li>
+                            </ul>
+                        </li> -->
+                    </ul>
+                </nav>
+                <!--Header with search-->
+                <div class="header-with-search">
+                    <div class="header__logo hide-on-table">
+                        <a href="index.html" class="header__logo-link">
+                            <span class="header__logo-icon ">F4 SHOP</span>
+                        </a>
+                    </div>
+    
+                    <input class="header__search-box" type="checkbox" hidden id="mobile-search-checkbock">
+    
+                    <div class="header__search">
+                        <div class="header__search-input-wrap">
+                            <input type="text" class="header__search-input" onkeyup="searchProducts(this)"
+                                placeholder="Tìm kiếm">
+    
+                            <!--Search history-->
+                            <div class="header__search-history">
+                                <h3 class="header__search-history-heading">Lịch sử tìm kiếm</h3>
+                                <ul class="header__search-history-list">
+                                    <li class="header__search-history-item">
+                                        <a href="">Kem dưỡng da</a>
+                                    </li>
+                                    <li class="header__search-history-item">
+                                        <a href="">Kem trị mụn</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="header__search-select">
+                            <span class="header__search-select-label">Trong shop</span>
+                            <i class="header__search-select-icon fa-solid fa-chevron-down"></i>
+                            <ul class="header__search-option">
+                                <li class="header__search-option-item header__search-option-item--active">
+                                    <span>Trong shop</span>
+                                    <i class="fa-solid fa-check"></i>
+                                </li>
+                                <li class="header__search-option-item header__search-option-item--active">
+                                    <span>Ngoài shop</span>
+                                    <i class="fa-solid fa-check"></i>
+                                </li>
+                            </ul>
+                        </div>
+                        <button class="header__search-btn">
+                            <i class="header__search-btn-icon fa-solid fa-magnifying-glass"></i>
+                        </button>
+                    </div>
+                    <!--Cart layout-->
+                    <div class="header__cart">
+                        <a href="cart.html" class="header__cart-wrap">
+                            <i class="header__cart-icon fa-solid fa-cart-shopping"></i>
+                            <span class="header__cart-notice">0</span>
+                            <!--No cart: header__cart-list--no-cart-->
+                            <!-- <div class="header__cart-list header__cart-list--no-cart">
+                                <img src="~/img/no-cart.png" alt="" class="header__cart-no-cart-img">
+                                <span class="header__cart-list-no-cart-msg">
+                                    Chưa có sản phẩm
+                                </span>
+                            </div> -->
+                            <div class="header__cart-list">
+                                <h4 class="header__cart-heading">Sản phẩm đã thêm</h4>
+                                <ul class="header__cart-list-item">
+                                    <li class="header__cart-item">
+                                        <div class="header__cart-item-img">
+                                            <img src="~/img/@cart.sImageUrl" class="header__cart-item-img" alt="">
+                                        </div>
+                                        <div class="header__cart-item-info">
+                                            <div class="header__cart-item-head">
+                                                <h5 class="header__cart-item-name">Tai nghe eport</h5>
+                                                <div class="header__cart-item-price-wrap">
+                                                    <span class="header__cart-item-price">100.000 đ</span>
+                                                    <span class="header__cart-item-multifly">X</span>
+                                                    <span class="header__cart-item-qnt">2</span>
+                                                </div>
+                                            </div>
+                                            <div class="header__cart-item-body">
+                                                <span class="header__cart-item-description">
+                                                    Phân loại hàng:Bạc
+                                                </span>
+                                                <span class="header__cart-item-remove">Xoá</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    
+                                </ul>
+                                <div class="header__cart-btn">
+                                    <botton class="header__cart-btn-sub">Xem giỏ hàng</botton>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <ul class="header__sort-bar">
+                <li class="header__sort-item">
+                    <a href="" class="header__sort-link">Liên quan</a>
+                </li>
+                <li class="header__sort-item header__sort-item--active">
+                    <a href="" class="header__sort-link">Mới nhất</a>
+                </li>
+                <li class="header__sort-item">
+                    <a href="" class="header__sort-link">Bán chạy</a>
+                </li>
+                <li class="header__sort-item">
+                    <a href="" class="header__sort-link">Giá</a>
+                </li>
+            </ul>
+        </header>
+        <div class="app__container">
+            <div class="detail">
+                <!-- card left -->
+                <div class="detail__left">
+                    <img src="./assets/img/sac_du_phong.png" alt="product image" class="detail__left-img"/>
+                </div>
+                <!-- card right -->
+                <div class="detail__right">
+                    <h2 class="detail__right-title">Tai nghe</h2>
+                    <div class="detail__price">
+                        <p class="detail__price-old"><span>500.000 đ</span></p>
+                        <p class="detail__price-new"><span>500.000 đ</span></p>
+                    </div>
+        
+                    <div class="detail__text">
+                        <h2 class="detail__text-title">về mặt hàng này: </h2>
+                        <p class="detail__text-desc">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim repudiandae necessitatibus ab, at amet sed beatae. Sapiente, aspernatur 
+                            perspiciatis cum ducimus quis exercitationem veniam labore libero quibusdam doloribus perferendis? Facere!
+                        </p>
+                    </div>
+                    <div class="detail__btns">
+                        <div class="detail__btn-count">
+                            <button type="button" class="detail__btn-count-btn"
+                                onclick="">-</button>
+                            <input type="text" name="quantity" id="qnt" value="0" class="detail__btn-count-input" />
+                            <button type="button" class="detail__btn-count-btn"
+                                onclick="">+</button>
+                        </div>
+                        <button type="button" class="detail__btn-add"> Thêm vào giỏ 
+                            <i class="fas fa-shopping-cart detail__cart-icon"></i>
+                        </button>
+                        <button type="button" class="btn btn--primary detail__btn-buy-now">Mua ngay</button>
+                    </div>
+                    <div class="detail__social">
+                        <p class="detail__social-title">Chia sẻ: </p>
+                        <a class="detail__social-link" href="#">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a class="detail__social-link" href="#">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a class="detail__social-link" href="#">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a class="detail__social-link" href="#">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a class="detail__social-link" href="#">
+                            <i class="fab fa-pinterest"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="grid wide">
+                <div class="comment">
+                    <div class="comment__title">ĐÁNH GIÁ VÀ NHẬN XÉT SẢN PHẨM</div>
+                    <div class="rate">
+                        <div class="rate__header">
+                            <div class="rate__title">
+                                <div class="rate__title-point">4.8</div> 
+                                <div class="rate__title-total">/5</div>
+                            </div>
+                            <div class="rate__stars">
+                                <i class="uis uis-star"></i>
+                                <i class="uis uis-star"></i>
+                                <i class="uis uis-star"></i>
+                                <i class="uis uis-star"></i>
+                                <i class="uis uis-star-half-alt"></i>
+                            </div>
+                            <div class="rate__evaluate">300 đánh giá</div>
+                        </div>
+                        <div class="rate__body">
+                            <div class="rate__star">
+                                <div class="rate__star-5-icon">
+                                    <i class="uis uis-star rate__icon"></i>
+                                    <i class="uis uis-star rate__icon"></i>
+                                    <i class="uis uis-star rate__icon"></i>
+                                    <i class="uis uis-star rate__icon"></i>
+                                    <i class="uis uis-star rate__icon"></i>
+                                </div>
+                                <div class="rate__num-5-percent">
+                                    <div class="rate__bar">
+                                        <span class="rate__percent-box"></span>
+                                    </div>
+                                    <div class="rate__percent-count">226</div>
+                                </div>
+                            </div>
+                            <div class="rate__star">
+                                <div class="rate__star-4-icon">
+                                    <i class="uis uis-star rate__icon"></i>
+                                    <i class="uis uis-star rate__icon"></i>
+                                    <i class="uis uis-star rate__icon"></i>
+                                    <i class="uis uis-star rate__icon"></i>
+                                    <i class="uis uis-star rate__icon-blur"></i>
+                                </div>
+                                <div class="rate__num-4-percent">
+                                    <div class="rate__bar">
+                                        <span class="rate__percent-box"></span>
+                                    </div>
+                                    <div class="rate__percent-count">226</div>
+                                </div>
+                            </div>
+                            <div class="rate__star">
+                                <div class="rate__star-3-icon">
+                                    <i class="uis uis-star rate__icon"></i>
+                                    <i class="uis uis-star rate__icon"></i>
+                                    <i class="uis uis-star rate__icon"></i>
+                                    <i class="uis uis-star rate__icon-blur"></i>
+                                    <i class="uis uis-star rate__icon-blur"></i>
+                                </div>
+                                <div class="rate__num-3-percent">
+                                    <div class="rate__bar">
+                                        <span class="rate__percent-box"></span>
+                                    </div>
+                                    <div class="rate__percent-count">226</div>
+                                </div>
+                            </div>
+                            <div class="rate__star">
+                                <div class="rate__star-2-icon">
+                                    <i class="uis uis-star rate__icon"></i>
+                                    <i class="uis uis-star rate__icon"></i>
+                                    <i class="uis uis-star rate__icon-blur"></i>
+                                    <i class="uis uis-star rate__icon-blur"></i>
+                                    <i class="uis uis-star rate__icon-blur"></i>
+                                </div>
+                                <div class="rate__num-2-percent">
+                                    <div class="rate__bar">
+                                        <span class="rate__percent-box"></span>
+                                    </div>
+                                    <div class="rate__percent-count">226</div>
+                                </div>
+                            </div>
+                            <div class="rate__star">
+                                <div class="rate__star-1-icon">
+                                    <i class="uis uis-star rate__icon"></i>
+                                    <i class="uis uis-star rate__icon-blur"></i>
+                                    <i class="uis uis-star rate__icon-blur"></i>
+                                    <i class="uis uis-star rate__icon-blur"></i>
+                                    <i class="uis uis-star rate__icon-blur"></i>
+                                </div>
+                                <div class="rate__num-1-percent">
+                                    <div class="rate__bar">
+                                        <span class="rate__percent-box"></span>
+                                    </div>
+                                    <div class="rate__percent-count">226</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="rate__me">
+                            <div class="rate__me-title">Đánh giá của bạn</div>
+                            <div class="rate__me-stars">
+                                <i class="uis uis-star"></i>
+                                <i class="uis uis-star"></i>
+                                <i class="uis uis-star"></i>
+                                <i class="uis uis-star"></i>
+                                <i class="uis uis-star"></i>
+                            </div>
+                            <button class="btn btn--primary btn-evaluate">Gửi đánh giá</button>
+                        </div>
+                    </div>
+                    <div class="comment__body">
+                        <div class="comment__container">
+                            <div class="comment__user">
+                                <img src="./assets/img/think_bout_you.jpg" alt="" class="comment__user-img">
+                                <p class="comment__username">Công Đặng</p>
+                                <p class="comment__at">2 tuần trước</p>
+                            </div>
+                            <div class="comment__controls">
+                                <div class="comment__reply">
+                                    <i class="uil uil-corner-up-left-alt comment__icon"></i>
+                                    Phản hồi
+                                </div>
+                            </div>
+                            <div class="comment__text">
+                                <span class="comment__reply-to"></span>
+                                <span class="comment__text-body">
+                                    Ấn tượng! Mặc dù có vẻ như tính năng kéo có thể được cải thiện.
+                                    Nhưng nhìn chung nó có vẻ đáng kinh ngạc. Bạn đã hoàn thành tốt
+                                    thiết kế và khả năng phản hồi ở nhiều điểm dừng khác nhau hoạt
+                                    động thực sự tốt.
+                                </span>
+                            </div>
+                        </div>
+                        <div class="comment__replies">
+                            <div class="comment__container">
+                                <div class="comment__user">
+                                    <img src="./assets/img/think_bout_you.jpg" alt="" class="comment__user-img">
+                                    <p class="comment__username">Công Đặng</p>
+                                    <p class="comment__at">2 tuần trước</p>
+                                </div>
+                                <div class="comment__controls">
+                                    <div class="comment__reply">
+                                        <i class="uil uil-corner-up-left-alt comment__icon"></i>
+                                        Phản hồi
+                                    </div>
+                                </div>
+                                <div class="comment__text">
+                                    <span class="comment__reply-to"></span>
+                                    <span class="comment__text-body">
+                                        <span class="comment__reply-to">@CôngĐặng</span> Ấn tượng! Mặc dù có vẻ như tính năng kéo có thể được cải thiện.
+                                        Nhưng nhìn chung nó có vẻ đáng kinh ngạc. Bạn đã hoàn thành tốt
+                                        thiết kế và khả năng phản hồi ở nhiều điểm dừng khác nhau hoạt
+                                        động thực sự tốt.
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="comment__replies">
+                                <div class="comment__container">
+                                    <div class="comment__user">
+                                        <img src="./assets/img/think_bout_you.jpg" alt="" class="comment__user-img">
+                                        <p class="comment__username">Công Đặng</p>
+                                        <p class="comment__at">2 tuần trước</p>
+                                    </div>
+                                    <div class="comment__controls">
+                                        <div class="comment__delete">
+                                            <i class="uil uil-trash comment__icon"></i>
+                                            Xoá
+                                        </div>
+                                        <div class="comment__edit">
+                                            <i class="uil-edit comment__icon"></i>
+                                            Chỉnh sửa
+                                        </div>
+                                    </div>
+                                    <div class="comment__text">
+                                        <span class="comment__reply-to"></span>
+                                        <span class="comment__text-body">
+                                            <span class="comment__reply-to">@CôngĐặng</span> Ấn tượng! Mặc dù có vẻ như tính năng kéo có thể được cải thiện.
+                                            Nhưng nhìn chung nó có vẻ đáng kinh ngạc. Bạn đã hoàn thành tốt
+                                            thiết kế và khả năng phản hồi ở nhiều điểm dừng khác nhau hoạt
+                                            động thực sự tốt.
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="comment__container">
+                                <div class="comment__user">
+                                    <img src="./assets/img/think_bout_you.jpg" alt="" class="comment__user-img">
+                                    <p class="comment__username">Công Đặng</p>
+                                    <p class="comment__at">2 tuần trước</p>
+                                </div>
+                                <div class="comment__controls">
+                                    <div class="comment__delete">
+                                        <i class="uil uil-trash comment__icon"></i>
+                                        Xoá
+                                    </div>
+                                    <div class="comment__edit">
+                                        <i class="uil-edit comment__icon"></i>
+                                        Chỉnh sửa
+                                    </div>
+                                </div>
+                                <div class="comment__text">
+                                    <span class="comment__reply-to"></span>
+                                    <span class="comment__text-body">
+                                        <span class="comment__reply-to">@CôngĐặng</span> Ấn tượng! Mặc dù có vẻ như tính năng kéo có thể được cải thiện.
+                                        Nhưng nhìn chung nó có vẻ đáng kinh ngạc. Bạn đã hoàn thành tốt
+                                        thiết kế và khả năng phản hồi ở nhiều điểm dừng khác nhau hoạt
+                                        động thực sự tốt.
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="comment__add">
+                        <img src="./assets/img/think_bout_you.jpg" alt="" class="comment__user-img">
+                        <textarea class="comment__add-input"></textarea>
+                        <button class="comment__add-btn">Gửi</button>
+                    </div>
+                </div>
+            </div>
+            <div class="comment__section">
+            </div>
+        </div>
+        <footer class="footer">
+            <div class="grid wide footer__content">
+                <div class="row">
+                    <div class="col l-2-4 c-6 m-4">
+                        <h3 class="footer__heading">Chăm sóc khách hàng</h3>
+                        <ul class="footer-list">
+                            <li class="footer-item">
+                                <a href="" class="footer-item__link">Trung tâm trợ giúp</a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="" class="footer-item__link">F4 Shop Mail</a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="" class="footer-item__link">Hướng dẫn mua hàng</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col l-2-4 c-6 m-4">
+                        <h3 class="footer__heading">Giới thiệu</h3>
+                        <ul class="footer-list">
+                            <li class="footer-item">
+                                <a href="" class="footer-item__link">Giới thiệu</a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="" class="footer-item__link">Tuyển dụng </a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="" class="footer-item__link">Điều khoản</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col l-2-4 c-6 m-4">
+                        <h3 class="footer__heading">Danh mục</h3>
+                        <ul class="footer-list">
+                            <li class="footer-item">
+                                <a href="" class="footer-item__link">
+                                    <i class="footer-item__icon fab fa-facebook"></i>
+                                    Facebook
+                                </a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="" class=" footer-item__link">
+                                    <i class="footer-item__icon fab fa-instagram"></i>
+                                    Instagram
+                                </a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="" class="footer-item__link">
+                                    <i class="footer-item__icon fa-brands fa-linkedin"></i>
+                                    Linking
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col l-2-4 c-6 m-4">
+                        <h3 class="footer__heading">Thep dõi khách hàng</h3>
+                        <ul class="footer-list">
+                            <li class="footer-item">
+                                <a href="" class="footer-item__link">Trung tâm trợ giúp</a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="" class="footer-item__link">VanCong Shop Mail</a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="" class="footer-item__link">Hướng dẫn mua hàng</a>
+                            </li>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col l-2-4 c-12 m-4">
+                        <h3 class="footer__heading">Vào cửa hàng F4 SHOP</h3>
+                        <div class="footer__download">
+                            <img src="~/img/qr_code.png" alt="" class="footer__download-qr">
+                            <div class="footer__download-apps">
+                                <a href="#" class="footer__download-apps-link">
+                                    <img src="~/img/google_play.png" alt="Google Play" class="footer__download-apps-img">
+                                </a>
+                                <a href="#" class="footer__download-apps-link">
+                                    <img src="~/img/app-store.png" alt="App Store" class="footer__download-apps-img">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer__bottom">
+                    <div class="grid wide">
+                        <p class="footer__text">2022 - Bản quyền thuộc về công ty F4 Shop</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
