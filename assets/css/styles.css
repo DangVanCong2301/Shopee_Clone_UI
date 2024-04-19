@@ -33,6 +33,7 @@
     display: flex;
     justify-items: center;
     position: relative;
+    margin-top: 0;
 }
 
 .header__navbar-user-img {
