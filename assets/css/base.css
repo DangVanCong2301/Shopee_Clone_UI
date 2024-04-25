@@ -9,7 +9,7 @@
     --header-height: 120px;
     --header-with-search-height: calc(var(--header-height) - var(--navbar-height));
     --header-sort-bar-height: 46px;
-    --normal-font-size: 15px;
+    --normal-font-size: 14px;
     --h1-font-size: 1.5rem; 
     --font-semi-bold: 600;
 }
