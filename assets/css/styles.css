@@ -22,6 +22,8 @@
 .header__navbar-list {
     list-style: none;
     padding-left: 0;
+    display: flex;
+    align-items: center;
 }
 
 .header__navbar-item {
@@ -32,6 +34,7 @@
 .header__navbar-user {
     display: flex;
     justify-items: center;
+    align-items: center;
     position: relative;
     margin-top: 0;
 }
