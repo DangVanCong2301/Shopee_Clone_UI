@@ -157,7 +157,7 @@
 .purchase__body-item-title {
     line-height: 22px;
     overflow: hidden;
-    font-size: 16px;
+    font-size: 15px;
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
@@ -250,6 +250,7 @@
 .purchase__bottom-link {
     border: 1px solid var(--border-color);
 }
+
 /* Profile Left */
 .profile__left {
     margin: 20px 0;
