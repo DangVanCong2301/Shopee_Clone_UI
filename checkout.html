@@ -7,11 +7,11 @@
     <link rel="stylesheet" href="./assets/css/base.css">
     <link rel="stylesheet" href="./assets/css/grid.css">
     <link rel="stylesheet" href="./assets/css/responsive.css">
-    <link rel="stylesheet" href="./assets/css/purchase.css">
+    <link rel="stylesheet" href="./assets/css/checkout.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <!--=============== ICONSCOUT ===============-->
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
-    <title>F4 SHOP - Mua hàng</title>
+    <title>F4 SHOP - Thanh toán</title>
 </head>
 <body>
     <div class="app">
@@ -57,7 +57,8 @@
                                 <ul class="header__notify-list">
                                     <li class="header__notify-item header__notify-item--viewed ">
                                         <a href="" class="header__notify-link">
-                                            <div class="header__notify-img"><img src="./assets/img/sac_du_phong.png" alt="" class=""></div>
+                                            <div class="header__notify-img"><img src="./assets/img/think_bout_you.jpg" alt=""
+                                                    class=""></div>
                                             <div class="header__notify-info">
                                                 <span class="header__notify-name">Xác thực chính hãnh nguồn gốc của các
                                                     sản
@@ -70,7 +71,7 @@
                                     </li>
                                     <li class="header__notify-item header__notify-item--viewed ">
                                         <a href="" class="header__notify-link">
-                                            <div class="header__notify-img"><img src="./assets/img/sac_du_phong.png" alt=""
+                                            <div class="header__notify-img"><img src="./assets/img/think_bout_you.jpg" alt=""
                                                     class=""></div>
                                             <div class="header__notify-info">
                                                 <span class="header__notify-name">Sale Sốc bộ dưỡng 0hui The First tái
@@ -83,7 +84,7 @@
                                     </li>
                                     <li class="header__notify-item header__notify-item--viewed ">
                                         <a href="" class="header__notify-link">
-                                            <div class="header__notify-img"><img src="./assets/img/sac_du_phong.png" alt=""
+                                            <div class="header__notify-img"><img src="./assets/img/think_bout_you.jpg" alt=""
                                                     class=""></div>
                                             <div class="header__notify-info">
                                                 <span class="header__notify-name">Mỹ phẩm chính 0thui hãng</span>
@@ -106,7 +107,7 @@
                             </a>
                         </li>
                         <li class="header__navbar-item header__navbar-item--strong header__navbar-item--separate">
-                            <a class="header__navbar-item-link" href="register.html">Đăng ký</a>
+                            <a class="header__navbar-item-link" href="/User/Register">Đăng ký</a>
                         </li>
                         <li class="header__navbar-item header__navbar-item--strong">
                             <a class="header__navbar-item-link" href="login.html">Đăng nhập</a>
@@ -152,10 +153,10 @@
                                 <h3 class="header__search-history-heading">Lịch sử tìm kiếm</h3>
                                 <ul class="header__search-history-list">
                                     <li class="header__search-history-item">
-                                        <a href="">Tai nghe Bluetooth</a>
+                                        <a href="">Kem dưỡng da</a>
                                     </li>
                                     <li class="header__search-history-item">
-                                        <a href="">Sạc dự phòng</a>
+                                        <a href="">Kem trị mụn</a>
                                     </li>
                                 </ul>
                             </div>
@@ -195,7 +196,7 @@
                                 <ul class="header__cart-list-item">
                                     <li class="header__cart-item">
                                         <div class="header__cart-item-img">
-                                            <img src="./assets/img/sac_du_phong.png" class="header__cart-item-img" alt="">
+                                            <img src="./assets/img/think_bout_you.jpg" class="header__cart-item-img" alt="">
                                         </div>
                                         <div class="header__cart-item-info">
                                             <div class="header__cart-item-head">
@@ -241,166 +242,8 @@
         </header>
         <div class="app__container">
             <div class="grid wide">
-                <div class="row">
-                    <div class="col l-2 m-0 c-0">
-                        <div class="profile__left">
-                            <div class="profile__left-header">
-                                <img src="./assets/img/profile_avatar.jpg" alt="" class="profile__left-avatar">
-                                <div class="profile__left-account">
-                                    <div class="profile__left-account-name">vancong23012002</div>
-                                    <div class="profile__left-account-edit"><i class="uil uil-pen"></i>Chỉnh sửa</div>
-                                </div>
-                            </div>
-                            <div class="profile__left-body">
-                                <ul class="profile__left-list">
-                                    <li class="profile__left-item">
-                                        <a href="" class="profile__left-link">
-                                            <i class="uil uil-user"></i> Tài khoản của tôi
-                                        </a>
-                                    </li>
-                                    <li class="profile__left-item">
-                                        <a href="" class="profile__left-link">
-                                            <i class="uil uil-clipboard-notes"></i> Đơn mua
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col l-10 m-12 c-12">
-                        <div class="purchase">
-                            <div class="purchase__header">
-                                <ul class="purchase__header-list">
-                                    <li class="purchase__header-item purchase__header-item--active">
-                                        <a href="" class="purchase__header-link">Tất cả</a>
-                                    </li>
-                                    <li class="purchase__header-item">
-                                        <a href="" class="purchase__header-link">Chờ thanh toán</a>
-                                    </li>
-                                    <li class="purchase__header-item">
-                                        <a href="" class="purchase__header-link">Vận chuyển</a>
-                                    </li>
-                                    <li class="purchase__header-item">
-                                        <a href="" class="purchase__header-link">Chờ giao hàng</a>
-                                    </li>
-                                    <li class="purchase__header-item">
-                                        <a href="" class="purchase__header-link">Hoàn thành</a>
-                                    </li>
-                                    <li class="purchase__header-item">
-                                        <a href="" class="purchase__header-link">Đã huỷ</a>
-                                    </li>
-                                    <li class="purchase__header-item">
-                                        <a href="" class="purchase__header-link">Trả hàng/hoàn tiền</a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="purchase__search">
-                                <i class="uil uil-search purchase__search-icon"></i>
-                                <input type="text" class="purchase__search-input" placeholder="Bạn có thể tìm kiếm theo ID đơn hàng hoặc tên sản phẩm">
-                            </div>
-                            <div class="purchase__body">
-                                <div class="purchase__body-header">
-                                    <div class="purchase__body-header-btns">
-                                        <button class="purchase__body-header-btn"><i class="uil uil-chat"></i><span>Chat</span></button>
-                                        <a class="purchase__body-header-btn-link"><i class="uil uil-shop"></i><span>Xem Shop</span></a>
-                                    </div>
-                                    <div class="purchase__body-title">
-                                        <div class="purchase__body-header-subtitle"><i class="uil uil-truck"></i> <span>Đơn hàng đã được giao thành công</span></div>
-                                        <div class="purchase__body-header-success">Hoàn thành</div>
-                                    </div>
-                                </div>
-                                <div class="purchase__body-container">
-                                    <ul class="purchase__body-list">
-                                        <li class="purchase__body-item">
-                                            <a class="purchase__body-item-link">
-                                                <div class="purchase__body-item-img">
-                                                    <img src="./assets/img/sac_du_phong.png" alt="">
-                                                </div>
-                                                <div class="purchase__body-item-info">
-                                                    <div class="purchase__body-item-info-left">
-                                                        <div class="purchase__body-item-title">
-                                                            Bút Laze Trình Chiếu PowerPoint Kèm Remote Điều Khiển Không Dây Cho Laptop RF 2.4GHz
-                                                        </div>
-                                                        <div class="purchase__body-item-sub">
-                                                            <div class="purchase__body-item-desc">Phân loại hàng: Bạc</div>
-                                                            <span class="purchase__body-item-qnt">x 3</span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="purchase__body-item-info-right">
-                                                        <div class="purchase__body-item-old-price">189.000 đ</div>
-                                                        <div class="purchase__body-item-price">121.000 đ</div>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li class="purchase__body-item">
-                                            <a class="purchase__body-item-link">
-                                                <div class="purchase__body-item-img">
-                                                    <img src="./assets/img/sac_du_phong.png" alt="">
-                                                </div>
-                                                <div class="purchase__body-item-info">
-                                                    <div class="purchase__body-item-info-left">
-                                                        <div class="purchase__body-item-title">
-                                                            Bút Laze Trình Chiếu PowerPoint Kèm Remote Điều Khiển Không Dây Cho Laptop RF 2.4GHz
-                                                        </div>
-                                                        <div class="purchase__body-item-sub">
-                                                            <div class="purchase__body-item-desc">Phân loại hàng: Bạc</div>
-                                                            <span class="purchase__body-item-qnt">x 3</span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="purchase__body-item-info-right">
-                                                        <div class="purchase__body-item-old-price">189.000 đ</div>
-                                                        <div class="purchase__body-item-price">121.000 đ</div>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li class="purchase__body-item">
-                                            <a class="purchase__body-item-link">
-                                                <div class="purchase__body-item-img">
-                                                    <img src="./assets/img/sac_du_phong.png" alt="">
-                                                </div>
-                                                <div class="purchase__body-item-info">
-                                                    <div class="purchase__body-item-info-left">
-                                                        <div class="purchase__body-item-title">
-                                                            Bút Laze Trình Chiếu PowerPoint Kèm Remote Điều Khiển Không Dây Cho Laptop RF 2.4GHz
-                                                            Bút Laze Trình Chiếu PowerPoint Kèm Remote Điều Khiển Không Dây Cho Laptop RF 2.4GHz
-                                                            Bút Laze Trình Chiếu PowerPoint Kèm Remote Điều Khiển Không Dây Cho Laptop RF 2.4GHz
-                                                        </div>
-                                                        <div class="purchase__body-item-sub">
-                                                            <div class="purchase__body-item-desc">Phân loại hàng: Bạc</div>
-                                                            <span class="purchase__body-item-qnt">x 3</span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="purchase__body-item-info-right">
-                                                        <div class="purchase__body-item-old-price">189.000 đ</div>
-                                                        <div class="purchase__body-item-price">121.000 đ</div>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="purchase__prevent">
-                                <div class="purchase__prevent-box purchase__prevent-box-left"></div>
-                                <div class="purchase__prevent-box purchase__prevent-box-right"></div>
-                            </div>
-                            <div class="purchase__bottom">
-                                <div class="purchase__bottom-head">
-                                    <div class="purchase__bottom-head-sub-price">
-                                        <i class="uil uil-shield-check"></i>
-                                        <span>Thành tiền:</span>
-                                    </div>
-                                    <div class="purchase__bottom-head-price">121.000 đ</div>
-                                </div>
-                                <div class="purchase__bottom-btns">
-                                    <button class="btn btn--primary purchase__bottom-btn">Mua lại</button>
-                                    <a href="" class="btn purchase__bottom-link">Liên hệ người bán</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="checkout">
+
                 </div>
             </div>
         </div>
@@ -476,13 +319,13 @@
                     <div class="col l-2-4 c-12 m-4">
                         <h3 class="footer__heading">Vào cửa hàng F4 SHOP</h3>
                         <div class="footer__download">
-                            <img src="/assets/img/qr_code.png" alt="" class="footer__download-qr">
+                            <img src="./assets/img/qr_code.png" alt="" class="footer__download-qr">
                             <div class="footer__download-apps">
                                 <a href="#" class="footer__download-apps-link">
-                                    <img src="./assets/img/app-store.png" alt="Google Play" class="footer__download-apps-img">
+                                    <img src="./assets/img/google_play.png" alt="Google Play" class="footer__download-apps-img">
                                 </a>
                                 <a href="#" class="footer__download-apps-link">
-                                    <img src="./assets/img/google_play.png" alt="App Store" class="footer__download-apps-img">
+                                    <img src="./assets/img/app-store.png" alt="App Store" class="footer__download-apps-img">
                                 </a>
                             </div>
                         </div>
