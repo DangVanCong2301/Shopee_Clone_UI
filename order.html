@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <!--=============== ICONSCOUT ===============-->
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
-    <title>F4 SHOP - Frontend</title>
+    <title>F4 SHOP - Đặt hàng</title>
 </head>
 <body>
     <div class="app">
@@ -23,13 +23,13 @@
                             của
                             hàng trên ứng dụng F4-Shop
                             <div class="header__qr">
-                                <img src="./assets/img/think_bout_you.jpg" alt="" class="header__qr-img">
+                                <img src="./assets/img/qr_code.png" alt="" class="header__qr-img">
                                 <div class="header__qr-apps">
                                     <a href="" class="header__qr-link">
-                                        <img src="./assets/img/think_bout_you.jpg" alt="App Store" class="header__qr-download-img">
+                                        <img src="./assets/img/app-store.png" alt="App Store" class="header__qr-download-img">
                                     </a>
                                     <a href="" class="header__qr-link">
-                                        <img src="./assets/img/think_bout_you.jpg" alt="Google Play" class="header__qr-download-img">
+                                        <img src="./assets/img/google_play.png" alt="Google Play" class="header__qr-download-img">
                                     </a>
                                 </div>
                             </div>
@@ -707,7 +707,7 @@
                                     </div>
                                     <div class="order__product-container">
                                         <ul class="order__product-list">
-                                            <li class="purchase__body-item">
+                                            <li class="order__product-item">
                                                 <a class="order__product-item-link">
                                                     <div class="order__product-item-img" style="background-image: url(./assets/img/sac_du_phong.png);">
                                                         
@@ -729,7 +729,7 @@
                                                     </div>
                                                 </a>
                                             </li>
-                                            <li class="purchase__body-item">
+                                            <li class="order__product-item">
                                                 <a class="order__product-item-link">
                                                     <div class="order__product-item-img" style="background-image: url(./assets/img/sac_du_phong.png);">
                                                         
@@ -753,8 +753,41 @@
                                             </li>
                                         </ul>
                                     </div>
-                                    <div class="order__money">
-                                        
+                                </div>
+                                <div class="order__money">
+                                    <div class="order__money-row">
+                                        <div class="order__money-row-left"> <span>Tổng tiền hàng</span></div>
+                                        <div class="order__money-row-right">121.000 đ</div>
+                                    </div>
+                                    <div class="order__money-row">
+                                        <div class="order__money-row-left"> <span>Phí vận chuyển</span></div>
+                                        <div class="order__money-row-right">15.000 đ</div>
+                                    </div>
+                                    <div class="order__money-row">
+                                        <div class="order__money-row-left"><span>Giảm giá phí vận chuyển</span> <i class="uil uil-exclamation-octagon order__money-row-left-icon"></i></div>
+                                        <div class="order__money-row-right">-15.000 đ</div>
+                                    </div>
+                                    <div class="order__money-row-bottom">
+                                        <div class="order__money-row-bottom-left"><span>Thành tiền</span></div>
+                                        <div class="order__money-row-bottom-right">121.000 đ</div>
+                                    </div>
+                                </div>
+                                <div class="order__please">
+                                    <div class="order__please-content">
+                                        <i class="uil uil-bell order__please-icon"></i>
+                                        <div class="order__please-text">
+                                            Vui lòng thanh toán <span>121.000 đ</span> khi nhận hàng!
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="order__prevent">
+                                    <div class="order__prevent-box order__prevent-box-left"></div>
+                                    <div class="order__prevent-box order__prevent-box-right"></div>
+                                </div>
+                                <div class="order__bottom">
+                                    <div class="order__money-row">
+                                        <div class="order__money-row-left"><i class="uil uil-html5 order__bottom-icon"></i> <span>Phương thức Thanh toán</span></div>
+                                        <div class="order__money-row-right">Thanh toán khi nhận hàng</div>
                                     </div>
                                 </div>
                             </div>
@@ -835,13 +868,13 @@
                     <div class="col l-2-4 c-12 m-4">
                         <h3 class="footer__heading">Vào cửa hàng F4 SHOP</h3>
                         <div class="footer__download">
-                            <img src="~/img/qr_code.png" alt="" class="footer__download-qr">
+                            <img src="./assets/img/qr_code.png" alt="" class="footer__download-qr">
                             <div class="footer__download-apps">
                                 <a href="#" class="footer__download-apps-link">
-                                    <img src="~/img/google_play.png" alt="Google Play" class="footer__download-apps-img">
+                                    <img src="./assets/img/google_play.png" alt="Google Play" class="footer__download-apps-img">
                                 </a>
                                 <a href="#" class="footer__download-apps-link">
-                                    <img src="~/img/app-store.png" alt="App Store" class="footer__download-apps-img">
+                                    <img src="./assets/img/app-store.png" alt="App Store" class="footer__download-apps-img">
                                 </a>
                             </div>
                         </div>

@@ -26,6 +26,17 @@
     margin: 1rem 0;
 }
 
+.detail__number {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.detail__favorite-icon {
+    font-size: 32px;
+    color: var(--heart-color);
+}
+
 .detail__price {
     display: flex;
     gap: 1rem;
