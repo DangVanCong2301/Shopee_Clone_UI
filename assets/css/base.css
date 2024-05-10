@@ -49,6 +49,7 @@ html {
 .modal.open {
     display: flex;
 }
+
 .modal__body {
     --growth-from:0.7;
     --growth-to:1;
@@ -56,6 +57,14 @@ html {
     margin: auto;
     z-index: 1;
     animation: growth linear 0.1s;
+}
+
+@keyframes growth {
+    from {
+        transform: scale(var(--growth-from));
+    } to {
+        transform: scale(var(--growth-to));
+    }
 }
 
 /* Button Styles*/

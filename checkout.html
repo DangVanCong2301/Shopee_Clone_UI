@@ -57,7 +57,7 @@
                                 <ul class="header__notify-list">
                                     <li class="header__notify-item header__notify-item--viewed ">
                                         <a href="" class="header__notify-link">
-                                            <div class="header__notify-img"><img src="./assets/img/think_bout_you.jpg" alt=""
+                                            <div class="header__notify-img"><img src="./assets/img/sac_du_phong.png" alt=""
                                                     class=""></div>
                                             <div class="header__notify-info">
                                                 <span class="header__notify-name">Xác thực chính hãnh nguồn gốc của các
@@ -71,7 +71,7 @@
                                     </li>
                                     <li class="header__notify-item header__notify-item--viewed ">
                                         <a href="" class="header__notify-link">
-                                            <div class="header__notify-img"><img src="./assets/img/think_bout_you.jpg" alt=""
+                                            <div class="header__notify-img"><img src="./assets/img/sac_du_phong.png" alt=""
                                                     class=""></div>
                                             <div class="header__notify-info">
                                                 <span class="header__notify-name">Sale Sốc bộ dưỡng 0hui The First tái
@@ -84,7 +84,7 @@
                                     </li>
                                     <li class="header__notify-item header__notify-item--viewed ">
                                         <a href="" class="header__notify-link">
-                                            <div class="header__notify-img"><img src="./assets/img/think_bout_you.jpg" alt=""
+                                            <div class="header__notify-img"><img src="./assets/img/sac_du_phong.png" alt=""
                                                     class=""></div>
                                             <div class="header__notify-info">
                                                 <span class="header__notify-name">Mỹ phẩm chính 0thui hãng</span>
@@ -196,7 +196,7 @@
                                 <ul class="header__cart-list-item">
                                     <li class="header__cart-item">
                                         <div class="header__cart-item-img">
-                                            <img src="./assets/img/think_bout_you.jpg" class="header__cart-item-img" alt="">
+                                            <img src="./assets/img/sac_du_phong.png" class="header__cart-item-img" alt="">
                                         </div>
                                         <div class="header__cart-item-info">
                                             <div class="header__cart-item-head">
@@ -243,7 +243,22 @@
         <div class="app__container">
             <div class="grid wide">
                 <div class="checkout">
-
+                    <div class="checkout__label">
+                        <div class="checkout__label-box"></div>
+                    </div>
+                    <div class="checkout__address">
+                        <div class="checkout__address-title">
+                            <i class="uil uil-map-marker checkout__address-title-icon"></i>
+                            <span>Địa chỉ nhận hàng</span>
+                        </div>
+                        <div class="checkout__address-desc">
+                            <div class="checkout__address-desc-name">Đặng Văn Công</div>
+                            <div class="checkout__address-desc-phone">(+84) 347797502</div>
+                            <div class="checkout__address-desc-direction">Số 20, Ngõ 259 Định Công, Phường Định Công, Quận Hoàng Mai, Hà Nội</div>
+                            <div class="checkout__address-desc-sub">Mặc định</div>
+                            <a href="javascript:openAddressModal()" class="checkout__address-desc-change">Thay đổi</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -339,5 +354,68 @@
             </div>
         </footer>
     </div>
+    <div class="modal">
+        <div class="modal__overlay">
+
+        </div>
+        <div class="modal__body">
+            <div class="address-form">
+                <div class="address-from__container">
+                    <div class="address-form__title">Địa chỉ của tôi</div>
+                    <div class="address-form__body">
+                        <ul class="address-form__list">
+                            <li class="address-form__item">
+                                <div class="address-form__item-box">
+                                    <input type="radio" name="address" class="address-form__item-input">
+                                </div>
+                                <div class="address-form__item-content">
+                                    <div class="address-form__item-header">
+                                        <div class="address-form__item-header-info">
+                                            <div class="address-form__item-name">Đặng Văn Công</div>
+                                            <div class="address-form__item-phone">(+84) 347797502</div>
+                                        </div>
+                                        <a href="" class="address-form__item-update">Cập nhật</a>
+                                    </div>
+                                    <div class="address-form__item-body">
+                                        <div class="address-form__item-body-row">Số 20, Ngõ 259 Định Công, Phường Định Công</div>
+                                        <div class="address-form__item-body-row">Quận Hoàng Mai, Hà Nội</div>
+                                    </div>
+                                    <button class="address-form__item-sub">Mặc định</button>
+                                </div>
+                            </li>
+                            <li class="address-form__item">
+                                <div class="address-form__item-box">
+                                    <input type="radio" name="address" class="address-form__item-input">
+                                </div>
+                                <div class="address-form__item-content">
+                                    <div class="address-form__item-header">
+                                        <div class="address-form__item-header-info">
+                                            <div class="address-form__item-name">Đặng Văn Công</div>
+                                            <div class="address-form__item-phone">(+84) 347797502</div>
+                                        </div>
+                                        <a href="" class="address-form__item-update">Cập nhật</a>
+                                    </div>
+                                    <div class="address-form__item-body">
+                                        <div class="address-form__item-body-row">Số 20, Ngõ 259 Định Công, Phường Định Công</div>
+                                        <div class="address-form__item-body-row">Quận Hoàng Mai, Hà Nội</div>
+                                    </div>
+                                    <button class="address-form__item-sub">Mặc định</button>
+                                </div>
+                            </li>
+                        </ul>
+                        <button class="address-form__add">
+                            <i class="uil uil-plus address-form__add-icon"></i>
+                            <span>Thêm địa chỉ mới</span>
+                        </button>
+                    </div>
+                    <div class="address-form__footer">
+                        <button class="btn address-form__btn-destroy" onclick="closeAddressModal()">Huỷ</button>
+                        <button class="btn btn--primary">Xác nhận</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
+<script src="./assets/js/checkout.js"></script>
 </html>
