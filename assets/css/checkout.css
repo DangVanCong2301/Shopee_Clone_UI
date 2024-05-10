@@ -1,0 +1,219 @@
+.checkout {
+    margin: 12px 0;
+}
+
+.checkout__address {
+    background-color: var(--white-color);
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .1);
+    padding: 28px 30px 24px 30px;
+}
+
+.checkout__label {
+    background-color: var(--white-color);
+}
+
+.checkout__label-box {
+    background-image: repeating-linear-gradient(45deg, #6fa6d6, #6fa6d6 33px, transparent 0, transparent 41px, #f18d9b 0, #f18d9b 74px, transparent 0, transparent 82px);
+    background-position-x: -30px;
+    background-size: 116px 3px;
+    height: 3px;
+    width: 100%;
+}
+
+.checkout__address-title {
+    font-size: 20px;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.checkout__address-title-icon {
+    margin-right: 9px;
+}
+
+.checkout__address-title span {
+    text-transform: capitalize;
+}
+
+.checkout__address-desc {
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+}
+
+.checkout__address-desc-name,
+.checkout__address-desc-phone {
+    font-weight: 700;
+}
+.checkout__address-desc-phone {
+    margin-left: 8px;
+}
+
+.checkout__address-desc-direction {
+    margin-left: 20px;
+}
+
+.checkout__address-desc-sub {
+    margin-left: 20px;
+    font-size: 10px;
+    border: 0.5px solid var(--primary-color);
+    color: var(--primary-color);
+    padding: 2px 5px;
+}
+
+.checkout__address-desc-change {
+    margin-left: 2.5rem;
+    color: rgb(64, 128, 238);
+    text-decoration: none;
+    text-transform: capitalize;
+}
+
+/* Address Modal */
+.address-form {
+    background-color: var(--white-color);
+    border-radius: 2px;
+    box-shadow: rgba(0, 0, 0, .54) 0px 2px 4px;
+}
+
+.address-from__container {
+    height: 600px;
+    width: 500px;
+    position: relative;
+    font-size: var(--normal-font-size);
+}
+
+.address-form__title {
+    padding: 16px 24px;
+    height: 56px;
+    font-size: 17px;
+    text-transform: capitalize;
+    line-height: 1.5;
+    border-bottom: 1px solid rgba(0, 0, 0, .09);
+}
+
+.address-form__body {
+    padding: 0 24px 88px 24px;
+}
+
+.address-form__list {
+    list-style: none;
+}
+
+.address-form__item {
+    padding: 16px 0;
+    display: flex;
+    border-bottom: 1px solid rgba(0, 0, 0, .09);
+}
+
+.address-form__item:last-child {
+    border-bottom: 1px solid transparent;
+}
+
+.address-form__item-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 4px;
+}
+
+.address-form__item-header-info {
+    display: flex;
+    align-items: center;
+}
+
+.address-form__item-box {
+    padding-right: 4px;
+}
+
+.address-form__item-input {
+    margin: 0 8px auto 0;
+    accent-color: var(--primary-color);
+    width: 18px;
+    height: 18px;
+}
+
+.address-form__item-content {
+    line-height: 1.5;
+    width: 100%;
+}
+
+.address-form__item-name {
+    position: relative;
+    font-size: 16px;
+    color: rgba(0, 0, 0, .87);
+    line-height: 1.5;
+}
+
+.address-form__item-name::before {
+    content: '';
+    position: absolute;
+    border-left: 0.5px solid rgba(0, 0, 0, .26);
+    height: 20px;
+    right: -17px;
+    top: 30%;
+    transform: translateY(-30%);
+    display: block;
+    margin-right: 8px;
+}
+
+.address-form__item-phone {
+    margin-left: 16px;
+    color: rgba(0, 0, 0, .54);
+}
+
+.address-form__item-update {
+    text-decoration: none;
+    text-transform: capitalize;
+    color: rgb(64, 128, 238);
+}
+
+.address-form__item-body {
+    font-size: 14px;
+    color: rgba(0, 0, 0, .54);
+}
+
+.address-form__item-sub {
+    margin: 4px 0;
+    border: .5px solid var(--primary-color);
+    color: var(--primary-color);
+    background: none;
+    padding: 2px 4px;
+    border-radius: 1px;
+}
+
+.address-form__add {
+    min-width: 140px;
+    padding: 10px;
+    border: 1px solid var(--primary-color);
+    background-color: transparent;
+    font-size: 14px;
+    color: var(--primary-color);
+    font-size: 14px;
+    text-transform: capitalize;
+}
+
+.address-form__add-icon {
+    font-size: 16px;
+    color: rgba(0, 0, 0, .54);
+    margin-right: 8px;
+}
+
+.address-form__footer {
+    position: absolute;
+    bottom: 0;
+    padding: 0 24px;
+    height: 64px;
+    width: 100%;
+    border-top: 1px solid rgba(0, 0, 0, .09);
+    right: 0;
+    left: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    column-gap: 1rem;
+}
+
+.address-form__btn-destroy {
+    border: 1px solid var(--primary-color);
+    background-color: var(--white-color);
+    color: var(--primary-color);
+}
