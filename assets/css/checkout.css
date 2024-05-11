@@ -71,14 +71,15 @@
 .address-form {
     background-color: var(--white-color);
     border-radius: 2px;
+    height: 600px;
+    width: 500px;
     box-shadow: rgba(0, 0, 0, .54) 0px 2px 4px;
 }
 
-.address-from__container {
-    height: 600px;
-    width: 500px;
+.address-form__container {
     position: relative;
     font-size: var(--normal-font-size);
+    display: none;
 }
 
 .address-form__title {
@@ -180,7 +181,7 @@
     border-radius: 1px;
 }
 
-.address-form__add {
+.address-form__add-btn {
     min-width: 140px;
     padding: 10px;
     border: 1px solid var(--primary-color);
@@ -191,7 +192,7 @@
     text-transform: capitalize;
 }
 
-.address-form__add-icon {
+.address-form__add-btn-icon {
     font-size: 16px;
     color: rgba(0, 0, 0, .54);
     margin-right: 8px;
@@ -216,4 +217,206 @@
     border: 1px solid var(--primary-color);
     background-color: var(--white-color);
     color: var(--primary-color);
+}
+
+/* Address Form Add */
+.address-form__add {
+    position: relative;
+    padding: 24px;
+    font-size: var(--normal-font-size);
+}
+
+.address-form__add-title {
+    font-size: 17px;
+}
+
+.address-form__add-body {
+    padding-top: 15px;
+}
+
+.address-form__add-div {
+    margin: 6px 0 16px 0;
+    position: relative;
+}
+
+.address-form__add-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Chia đều 2 been */
+    column-gap: 1rem;
+}
+
+.address-form__add-box-left,
+.address-form__add-box-right {
+    position: relative;
+}
+
+.address-form__add-input,
+.address-form__add-textarea {
+    background: transparent;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    padding: 10px;
+    border-radius: 2px;
+    outline: none;
+    font-size: 14px;
+    border: 1px solid var(--border-color);
+}
+
+.address-form__add-input-phone-suggest {
+    position: absolute;
+    margin-top: 5px;
+    width: 100%;
+    background-color: var(--white-color);
+    padding: 8px;
+    box-shadow: rgba(0, 0, 0, .54) 0px 2px 4px;
+    cursor: pointer;
+    z-index: 2;
+    display: none;
+}
+
+.address-form__add-input-phone-suggest button {
+    border: 1px solid var(--primary-color);
+    padding: 4px 10px;
+    background-color: initial;
+    border-radius: 2px;
+    font-size: 12px;
+    margin-left: 20px;
+    color: var(--primary-color);
+    text-transform: capitalize;
+}
+
+.address-form__add-input:focus + .address-form__add-input-phone-suggest {
+    display: block;
+}
+
+.address-form__add-label {
+    position: absolute;
+    left: 1rem;
+    top: 1rem;
+    color: var(--border-color);
+    background-color: var(--white-color);
+    transition: .3s;
+    z-index: 0;
+}
+
+.address-form__add-input:focus + .address-form__add-label,
+.address-form__add-textarea:focus + .address-form__add-label {
+    top: -.6rem;
+    left: .8rem;
+    font-size: 12px;
+    padding: 0 3px;
+    font-weight: 500;
+    color: rgba(0, 0, 0, .4);
+    z-index: 10; 
+}
+
+.address-form__add-input:focus {
+    border: 1px solid #999;
+}
+
+.address-form__add-textarea {
+    resize: none; 
+}
+
+.address-form__add-div-icon {
+    font-size: 20px;
+    position: absolute;
+    right: 1rem;
+    color: rgba(0, 0, 0, .4);
+    top: 1rem;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.address-form__add-detail {
+    position: absolute;
+    width: 100%;
+    height: 250px;
+    background-color: var(--white-color);
+    box-shadow: rgba(0, 0, 0, .54) 0px 2px 4px;
+    overflow: hidden;
+    z-index: 2;
+}
+
+.address-form__add-detail-header {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; 
+    align-items: center;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.address-form__add-detail-title {
+    padding: 16px 24px;
+    cursor: pointer;
+
+}
+
+.address-form__add-detail-title--active {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+}
+
+.address-form__add-detail-body {
+    padding: 12px;
+    width: 100%;
+    display: grid;
+    position: absolute;
+}
+
+.address-form__add-detail-city-list,
+.address-form__add-detail-district-list,
+.address-form__add-detail-street-list {
+    position: relative;
+    list-style: none;
+    max-height: 170px;
+    overflow-y: auto;
+}
+
+.address-form__add-detail-city {
+    padding: 12px;
+    position: absolute;
+    width: 100%;
+}
+
+.address-form__add-detail-district {
+    position: absolute;
+    top: 12px;
+    right: -100%;
+    width: 100%;
+}
+
+.address-form__add-detail-city-list::-webkit-scrollbar,
+.address-form__add-detail-district-list::-webkit-scrollbar,
+.address-form__add-detail-street-list::-webkit-scrollbar {
+    width: 7px;
+}
+
+.address-form__add-detail-city-list::-webkit-scrollbar-track,
+.address-form__add-detail-district-list::-webkit-scrollbar-track,
+.address-form__add-detail-street-list::-webkit-scrollbar-track {
+    border-radius: 2px;
+    background: var(--border-color);
+}
+
+.address-form__add-detail-city-list::-webkit-scrollbar-thumb,
+.address-form__add-detail-district-list::-webkit-scrollbar-thumb,
+.address-form__add-detail-street-list::-webkit-scrollbar-thumb {
+    border-radius: 2px;
+    background: #999;
+}
+
+
+
+.address-form__add-detail-street {
+    position: absolute;
+    top: 12px;
+    right: -200%;
+    width: 100%;
+}
+
+.address-form__add-detail-city-item,
+.address-form__add-detail-district-item,
+.address-form__add-detail-street-item {
+    margin-bottom: 2rem;
 }
