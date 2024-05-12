@@ -324,7 +324,7 @@
                                     </tr>
                                     <tr>
                                         <td></td>
-                                        <td><button class="btn btn--primary">Cập nhật</button></td>
+                                        <td><button type="button" onclick="updateProfile()" class="btn btn--primary">Cập nhật</button></td>
                                     </tr>
                                 </table>
                             </form>
@@ -426,5 +426,14 @@
             </div>
         </footer>
     </div>
+    <div class="modal">
+        <div class="modal__overlay">
+
+        </div>
+        <div class="modal__body">
+            <div class="spinner"></div>
+        </div>
+    </div>
 </body>
+<script src="./assets/js/profile.js"></script>
 </html>
