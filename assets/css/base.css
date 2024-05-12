@@ -33,9 +33,9 @@ html {
     right: 0;
     bottom: 0;
     left: 0;
-    display: flex; 
+    /* display: flex;  */
     animation: fadeIn linear 0.1s;
-    /* display: none; */
+    display: none;
 }
 
 .modal__overlay {
@@ -245,6 +245,24 @@ html {
 
 .toast--err .toast__icon {
     color: var(--primary-color);
+}
+
+/* Loading Spinner */
+.spinner {
+    width: 66px;
+    height: 66px;
+    border: 6px solid #fff;
+    border-top-color: transparent;
+    border-radius: 50%;
+    animation: spinner .7s linear infinite;
+}
+
+@keyframes spinner {
+    from {
+
+    } to {
+        transform: rotate(360deg);
+    }
 }
 
 /* Rate */
