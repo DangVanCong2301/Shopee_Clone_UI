@@ -74,12 +74,28 @@
     height: 600px;
     width: 500px;
     box-shadow: rgba(0, 0, 0, .54) 0px 2px 4px;
+    position: relative;
+    overflow: hidden;
 }
 
 .address-form__container {
     position: relative;
     font-size: var(--normal-font-size);
-    display: none;
+    height: 100%;
+    /* display: none; */
+}
+
+.address-form__update {
+    position: absolute;
+    right: -110%;
+    top: 0;
+}
+
+.address-form__new {
+    position: absolute;
+    right: 100%;
+    width: 100%;
+    top: 0;
 }
 
 .address-form__title {
@@ -192,6 +208,10 @@
     text-transform: capitalize;
 }
 
+.address-form__add-btn:hover {
+    background-color: #f7f7f7;
+}
+
 .address-form__add-btn-icon {
     font-size: 16px;
     color: rgba(0, 0, 0, .54);
@@ -232,6 +252,13 @@
 
 .address-form__add-body {
     padding-top: 15px;
+    height: 500px;
+    overflow-y: auto;
+    padding-bottom: 50px;
+}
+
+.address-form__add-body::-webkit-scrollbar {
+    display: none;
 }
 
 .address-form__add-div {
@@ -333,10 +360,16 @@
     position: absolute;
     width: 100%;
     height: 250px;
+    margin-top: 5px;
     background-color: var(--white-color);
     box-shadow: rgba(0, 0, 0, .54) 0px 2px 4px;
     overflow: hidden;
     z-index: 2;
+    display: none;
+}
+
+.address-form__add-detail--active {
+    display: block;
 }
 
 .address-form__add-detail-header {
@@ -348,8 +381,8 @@
 
 .address-form__add-detail-title {
     padding: 16px 24px;
+    text-align: center;
     cursor: pointer;
-
 }
 
 .address-form__add-detail-title--active {
@@ -358,8 +391,8 @@
 }
 
 .address-form__add-detail-body {
-    padding: 12px;
     width: 100%;
+    height: 100%;
     display: grid;
     position: absolute;
 }
@@ -374,16 +407,29 @@
 }
 
 .address-form__add-detail-city {
-    padding: 12px;
+    padding: 4px 12px 12px 0px;
     position: absolute;
     width: 100%;
 }
 
 .address-form__add-detail-district {
     position: absolute;
-    top: 12px;
+    padding: 4px 12px 12px 0px;
     right: -100%;
     width: 100%;
+}
+
+.address-form__add-detail-street {
+    position: absolute;
+    padding: 4px 12px 12px 0px;
+    right: -200%;
+    width: 100%;
+}
+
+.address-form__add-detail-city-item:hover,
+.address-form__add-detail-district-item:hover,
+.address-form__add-detail-street-item:hover {
+    background-color: #f7f7f7;
 }
 
 .address-form__add-detail-city-list::-webkit-scrollbar,
@@ -406,17 +452,82 @@
     background: #999;
 }
 
-
-
-.address-form__add-detail-street {
-    position: absolute;
-    top: 12px;
-    right: -200%;
-    width: 100%;
-}
-
 .address-form__add-detail-city-item,
 .address-form__add-detail-district-item,
 .address-form__add-detail-street-item {
-    margin-bottom: 2rem;
+    padding: 10px 12px;
+}
+
+.address-form__add-please {
+    display: flex;
+    column-gap: 8px;
+    padding: 12px;
+    background-color: #fff8e4;
+}
+
+.address-form__add-please-icon {
+    font-size: 16px;
+    color: #f69113;
+}
+
+.address-form__add-please-desc {
+    line-height: 1.5;
+}
+
+.address-form__add-please-desc-title {
+    font-size: 14px;
+    color: #f69113;
+}
+
+.address-form__add-please-desc-subtitle {
+    font-size: 12px;
+    color: rgba(0, 0, 0, .64);
+}
+
+.address-form__add-type {
+    margin: 10px 0 20px 0;
+}
+
+.address-form__add-type-title {
+    margin-bottom: 8px;
+}
+
+.address-form__add-type-btns {
+    display: flex;
+    column-gap: 10px;
+}
+
+.address-form__add-type-btn {
+    border: 1px solid rgba(0, 0, 0, .09);
+    padding: 0 12px;
+    height: 40px;
+    background-color: transparent;
+    border-radius: 2px;
+}
+
+.address-form__add-set-default {
+    display: flex;
+    column-gap: 8px;
+    align-items: center;
+    margin-bottom: 12px;
+    color: rgba(0, 0, 0, .54);
+}
+
+.address-form__add-set-default-input {
+    height: 16px;
+    width: 16px;
+    color: var(--primary-color);
+    background: var(--primary-color);
+}
+
+.address-form__add-footer {
+    bottom: 0;
+    right: 24px;
+    left: 24px;
+    position: absolute;
+    background: linear-gradient(hsla(0, 0%, 100%, .7), #fff);
+    height: 66px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
 }
