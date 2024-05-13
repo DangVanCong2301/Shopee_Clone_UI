@@ -374,7 +374,7 @@
                                             <div class="address-form__item-name">Đặng Văn Công</div>
                                             <div class="address-form__item-phone">(+84) 347797502</div>
                                         </div>
-                                        <a href="" class="address-form__item-update">Cập nhật</a>
+                                        <a href="javascript:openUpdate()" class="address-form__item-update">Cập nhật</a>
                                     </div>
                                     <div class="address-form__item-body">
                                         <div class="address-form__item-body-row">Số 20, Ngõ 259 Định Công, Phường Định Công</div>
@@ -403,7 +403,7 @@
                                 </div>
                             </li>
                         </ul>
-                        <button class="address-form__add-btn">
+                        <button class="address-form__add-btn" onclick="openNewAddressForm()">
                             <i class="uil uil-plus address-form__add-btn-icon"></i>
                             <span>Thêm địa chỉ mới</span>
                         </button>
@@ -413,130 +413,273 @@
                         <button class="btn btn--primary">Xác nhận</button>
                     </div>
                 </div>
-                <div class="address-form__add">
-                    <div class="address-form__add-title">Địa chỉ mới</div>
-                    <div class="address-form__add-body">
-                        <div class="address-form__add-div">
-                            <div class="address-form__add-box">
-                                <div class="address-form__add-box-left">
-                                    <input type="text" class="address-form__add-input">
-                                    <label for="" class="address-form__add-label">Họ và tên</label>
-                                </div>
-                                <div class="address-form__add-box-left">
-                                    <input type="text" class="address-form__add-input">
-                                    <div class="address-form__add-input-phone-suggest">
-                                        (+84) 347797502 <button>Sử dụng</button>
+                <div class="address-form__update">
+                    <div class="address-form__add">
+                        <div class="address-form__add-title">Câp nhật địa chỉ</div>
+                        <div class="address-form__add-body">
+                            <div class="address-form__add-div">
+                                <div class="address-form__add-box">
+                                    <div class="address-form__add-box-left">
+                                        <input type="text" class="address-form__add-input">
+                                        <label for="" class="address-form__add-label">Họ và tên</label>
                                     </div>
-                                    <label for="" class="address-form__add-label">Số điện thoại</label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="address-form__add-div">
-                            <input type="text" class="address-form__add-input">
-                            <i class="uil uil-angle-down address-form__add-div-icon"></i>
-                            <label for="" class="address-form__add-label">Tỉnh/Thành phố, Quận/Huyện, Phường/Xã</label>
-                            <div class="address-form__add-detail">
-                                <div class="address-form__add-detail-header">
-                                    <div class="address-form__add-detail-title">Tỉnh/Thành phố</div>
-                                    <div class="address-form__add-detail-title">Quận/Huyện</div>
-                                    <div class="address-form__add-detail-title">Phường/Xã</div>
-                                </div>
-                                <div class="address-form__add-detail-body">
-                                    <div class="address-form__add-detail-city">
-                                        <ul class="address-form__add-detail-city-list">
-                                            <li class="address-form__add-detail-city-item">
-                                                Hà Nội
-                                            </li>
-                                            <li class="address-form__add-detail-city-item">
-                                                Nam Định
-                                            </li>
-                                            <li class="address-form__add-detail-city-item">
-                                                Hà Nội
-                                            </li>
-                                            <li class="address-form__add-detail-city-item">
-                                                Nam Định
-                                            </li>
-                                            <li class="address-form__add-detail-city-item">
-                                                Hà Nội
-                                            </li>
-                                            <li class="address-form__add-detail-city-item">
-                                                Nam Định
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="address-form__add-detail-district">
-                                        <ul class="address-form__add-detail-district-list">
-                                            <li class="address-form__add-detail-district-item">
-                                                Hoàng Mai
-                                            </li>
-                                            <li class="address-form__add-detail-district-item">
-                                                Hai Bà Trưng
-                                            </li>
-                                            <li class="address-form__add-detail-district-item">
-                                                Hoàng Mai
-                                            </li>
-                                            <li class="address-form__add-detail-district-item">
-                                                Hai Bà Trưng
-                                            </li>
-                                            <li class="address-form__add-detail-district-item">
-                                                Hoàng Mai
-                                            </li>
-                                            <li class="address-form__add-detail-district-item">
-                                                Hai Bà Trưng
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="address-form__add-detail-street">
-                                        <ul class="address-form__add-detail-street-list">
-                                            <li class="address-form__add-detail-street-item">
-                                                Định Công
-                                            </li>
-                                            <li class="address-form__add-detail-street-item">
-                                                Trần Đại Nghĩa
-                                            </li>
-                                            <li class="address-form__add-detail-street-item">
-                                                Định Công
-                                            </li>
-                                            <li class="address-form__add-detail-street-item">
-                                                Trần Đại Nghĩa
-                                            </li>
-                                            <li class="address-form__add-detail-street-item">
-                                                Định Công
-                                            </li>
-                                            <li class="address-form__add-detail-street-item">
-                                                Trần Đại Nghĩa
-                                            </li>
-                                        </ul>
+                                    <div class="address-form__add-box-left">
+                                        <input type="text" class="address-form__add-input">
+                                        <div class="address-form__add-input-phone-suggest">
+                                            (+84) 347797502 <button>Sử dụng</button>
+                                        </div>
+                                        <label for="" class="address-form__add-label">Số điện thoại</label>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="address-form__add-div">
-                            <textarea name="" id="" class="address-form__add-textarea"></textarea>
-                            <label for=""class="address-form__add-label">Địa chỉ cụ thể</label>
-                        </div>
-                        <div class="address-form__add-please">
-                            <i class="uil uil-bell address-form__add-please-icon"></i>
-                            <div class="address-form__add-please-desc">
-                                <div class="address-form__add-please-desc-title">Vui lòng ghim địa chỉ chính xác</div>
-                                <div class="address-form__add-please-desc-subtitle">Hãy chắc chắn vị trí trên bản đồ được ghim đúng để F4 Shop gửi hàng cho bạn nhé!</div>
+                            <div class="address-form__add-div">
+                                <input type="text" class="address-form__add-input address-form__add-input-detail" onclick="toggleDetail()">
+                                <div class="address-form__add-detail">
+                                    <div class="address-form__add-detail-header">
+                                        <div class="address-form__add-detail-title">Tỉnh/Thành phố</div>
+                                        <div class="address-form__add-detail-title">Quận/Huyện</div>
+                                        <div class="address-form__add-detail-title">Phường/Xã</div>
+                                    </div>
+                                    <div class="address-form__add-detail-body">
+                                        <div class="address-form__add-detail-city">
+                                            <ul class="address-form__add-detail-city-list">
+                                                <li class="address-form__add-detail-city-item">
+                                                    Hà Nội
+                                                </li>
+                                                <li class="address-form__add-detail-city-item">
+                                                    Nam Định
+                                                </li>
+                                                <li class="address-form__add-detail-city-item">
+                                                    Hà Nội
+                                                </li>
+                                                <li class="address-form__add-detail-city-item">
+                                                    Nam Định
+                                                </li>
+                                                <li class="address-form__add-detail-city-item">
+                                                    Hà Nội
+                                                </li>
+                                                <li class="address-form__add-detail-city-item">
+                                                    Nam Định
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="address-form__add-detail-district">
+                                            <ul class="address-form__add-detail-district-list">
+                                                <li class="address-form__add-detail-district-item">
+                                                    Hoàng Mai
+                                                </li>
+                                                <li class="address-form__add-detail-district-item">
+                                                    Hai Bà Trưng
+                                                </li>
+                                                <li class="address-form__add-detail-district-item">
+                                                    Hoàng Mai
+                                                </li>
+                                                <li class="address-form__add-detail-district-item">
+                                                    Hai Bà Trưng
+                                                </li>
+                                                <li class="address-form__add-detail-district-item">
+                                                    Hoàng Mai
+                                                </li>
+                                                <li class="address-form__add-detail-district-item">
+                                                    Hai Bà Trưng
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="address-form__add-detail-street">
+                                            <ul class="address-form__add-detail-street-list">
+                                                <li class="address-form__add-detail-street-item">
+                                                    Định Công
+                                                </li>
+                                                <li class="address-form__add-detail-street-item">
+                                                    Trần Đại Nghĩa
+                                                </li>
+                                                <li class="address-form__add-detail-street-item">
+                                                    Định Công
+                                                </li>
+                                                <li class="address-form__add-detail-street-item">
+                                                    Trần Đại Nghĩa
+                                                </li>
+                                                <li class="address-form__add-detail-street-item">
+                                                    Định Công
+                                                </li>
+                                                <li class="address-form__add-detail-street-item">
+                                                    Trần Đại Nghĩa
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <i class="uil uil-angle-down address-form__add-div-icon"></i>
+                                <label for="" class="address-form__add-label">Tỉnh/Thành phố, Quận/Huyện, Phường/Xã</label>
+                            </div>
+                            <div class="address-form__add-div">
+                                <textarea name="" id="" class="address-form__add-textarea"></textarea>
+                                <label for="" class="address-form__add-label">Địa chỉ cụ thể</label>
+                            </div>
+                            <div class="address-form__add-please">
+                                <i class="uil uil-bell address-form__add-please-icon"></i>
+                                <div class="address-form__add-please-desc">
+                                    <div class="address-form__add-please-desc-title">Vui lòng ghim địa chỉ chính xác</div>
+                                    <div class="address-form__add-please-desc-subtitle">Hãy chắc chắn vị trí trên bản đồ được ghim đúng để
+                                        F4 Shop gửi hàng cho bạn nhé!</div>
+                                </div>
+                            </div>
+                            <div class="address-form__add-map">
+                                <iframe
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3932.0349263999647!2d105.52882531470965!3d9.76310899301383!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x746941d0e6aacf0!2zOcKwNDUnNDcuMiJOIDEwNcKwMzEnNTEuNyJF!5e0!3m2!1svi!2s!4v1659586535479!5m2!1svi!2s"
+                                    width="100%" height="120px"></iframe>
+                            </div>
+                            <div class="address-form__add-type">
+                                <div class="address-form__add-type-title">Loại địa chỉ:</div>
+                                <div class="address-form__add-type-btns">
+                                    <button class="address-form__add-type-btn">Nhà riêng</button>
+                                    <button class="address-form__add-type-btn">Văn phòng</button>
+                                </div>
+                            </div>
+                            <div class="address-form__add-set-default">
+                                <input type="checkbox" class="address-form__add-set-default-input">
+                                <label for="">Đặt làm mặc định</label>
                             </div>
                         </div>
-                        <div class="address-form__add-map">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3932.0349263999647!2d105.52882531470965!3d9.76310899301383!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x746941d0e6aacf0!2zOcKwNDUnNDcuMiJOIDEwNcKwMzEnNTEuNyJF!5e0!3m2!1svi!2s!4v1659586535479!5m2!1svi!2s" width="100%" height="120px" ></iframe>
-                        </div>
-                        <div class="address-form__add-type">
-                            <button>Nhà riêng</button>
-                            <button>Văn phòng</button>
-                        </div>
-                        <div class="address-form__add-set-default">
-                            <input type="checkbox">
-                            <label for="">Đặt làm mặc định</label>
+                        <div class="address-form__add-footer">
+                            <div class="address-form__add-footer-btns">
+                                <button type="button" onclick="backMainForm()" class="btn">Trở lại</button>
+                                <button class="btn btn--primary">Hoàn thành</button>
+                            </div>
                         </div>
                     </div>
-                    <div class="address-form__add-footer">
-                        <button>Trở lại</button>
-                        <button>Hoàn thành</button>
+                </div>
+                <div class="address-form__new">
+                    <div class="address-form__add">
+                        <div class="address-form__add-title">Địa chỉ mới</div>
+                        <div class="address-form__add-body">
+                            <div class="address-form__add-div">
+                                <div class="address-form__add-box">
+                                    <div class="address-form__add-box-left">
+                                        <input type="text" class="address-form__add-input">
+                                        <label for="" class="address-form__add-label">Họ và tên</label>
+                                    </div>
+                                    <div class="address-form__add-box-left">
+                                        <input type="text" class="address-form__add-input">
+                                        <div class="address-form__add-input-phone-suggest">
+                                            (+84) 347797502 <button>Sử dụng</button>
+                                        </div>
+                                        <label for="" class="address-form__add-label">Số điện thoại</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="address-form__add-div">
+                                <input type="text" class="address-form__add-input address-form__add-input-detail" onclick="toggleDetail()">
+                                <div class="address-form__add-detail">
+                                    <div class="address-form__add-detail-header">
+                                        <div class="address-form__add-detail-title">Tỉnh/Thành phố</div>
+                                        <div class="address-form__add-detail-title">Quận/Huyện</div>
+                                        <div class="address-form__add-detail-title">Phường/Xã</div>
+                                    </div>
+                                    <div class="address-form__add-detail-body">
+                                        <div class="address-form__add-detail-city">
+                                            <ul class="address-form__add-detail-city-list">
+                                                <li class="address-form__add-detail-city-item">
+                                                    Hà Nội
+                                                </li>
+                                                <li class="address-form__add-detail-city-item">
+                                                    Nam Định
+                                                </li>
+                                                <li class="address-form__add-detail-city-item">
+                                                    Hà Nội
+                                                </li>
+                                                <li class="address-form__add-detail-city-item">
+                                                    Nam Định
+                                                </li>
+                                                <li class="address-form__add-detail-city-item">
+                                                    Hà Nội
+                                                </li>
+                                                <li class="address-form__add-detail-city-item">
+                                                    Nam Định
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="address-form__add-detail-district">
+                                            <ul class="address-form__add-detail-district-list">
+                                                <li class="address-form__add-detail-district-item">
+                                                    Hoàng Mai
+                                                </li>
+                                                <li class="address-form__add-detail-district-item">
+                                                    Hai Bà Trưng
+                                                </li>
+                                                <li class="address-form__add-detail-district-item">
+                                                    Hoàng Mai
+                                                </li>
+                                                <li class="address-form__add-detail-district-item">
+                                                    Hai Bà Trưng
+                                                </li>
+                                                <li class="address-form__add-detail-district-item">
+                                                    Hoàng Mai
+                                                </li>
+                                                <li class="address-form__add-detail-district-item">
+                                                    Hai Bà Trưng
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="address-form__add-detail-street">
+                                            <ul class="address-form__add-detail-street-list">
+                                                <li class="address-form__add-detail-street-item">
+                                                    Định Công
+                                                </li>
+                                                <li class="address-form__add-detail-street-item">
+                                                    Trần Đại Nghĩa
+                                                </li>
+                                                <li class="address-form__add-detail-street-item">
+                                                    Định Công
+                                                </li>
+                                                <li class="address-form__add-detail-street-item">
+                                                    Trần Đại Nghĩa
+                                                </li>
+                                                <li class="address-form__add-detail-street-item">
+                                                    Định Công
+                                                </li>
+                                                <li class="address-form__add-detail-street-item">
+                                                    Trần Đại Nghĩa
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <i class="uil uil-angle-down address-form__add-div-icon"></i>
+                                <label for="" class="address-form__add-label">Tỉnh/Thành phố, Quận/Huyện, Phường/Xã</label>
+                            </div>
+                            <div class="address-form__add-div">
+                                <textarea name="" id="" class="address-form__add-textarea"></textarea>
+                                <label for=""class="address-form__add-label">Địa chỉ cụ thể</label>
+                            </div>
+                            <div class="address-form__add-please">
+                                <i class="uil uil-bell address-form__add-please-icon"></i>
+                                <div class="address-form__add-please-desc">
+                                    <div class="address-form__add-please-desc-title">Vui lòng ghim địa chỉ chính xác</div>
+                                    <div class="address-form__add-please-desc-subtitle">Hãy chắc chắn vị trí trên bản đồ được ghim đúng để F4 Shop gửi hàng cho bạn nhé!</div>
+                                </div>
+                            </div>
+                            <div class="address-form__add-map">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3932.0349263999647!2d105.52882531470965!3d9.76310899301383!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x746941d0e6aacf0!2zOcKwNDUnNDcuMiJOIDEwNcKwMzEnNTEuNyJF!5e0!3m2!1svi!2s!4v1659586535479!5m2!1svi!2s" width="100%" height="120px" ></iframe>
+                            </div>
+                            <div class="address-form__add-type">
+                                <div class="address-form__add-type-title">Loại địa chỉ:</div>
+                                <div class="address-form__add-type-btns">
+                                    <button class="address-form__add-type-btn">Nhà riêng</button>
+                                    <button class="address-form__add-type-btn">Văn phòng</button>
+                                </div>
+                            </div>
+                            <div class="address-form__add-set-default">
+                                <input type="checkbox" class="address-form__add-set-default-input">
+                                <label for="">Đặt làm mặc định</label>
+                            </div>
+                        </div>
+                        <div class="address-form__add-footer">
+                            <div class="address-form__add-footer-btns">
+                                <button class="btn" onclick="backMainForm()">Trở lại</button>
+                                <button class="btn btn--primary">Hoàn thành</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
