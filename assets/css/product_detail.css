@@ -5,12 +5,36 @@
 
 .detail__left {
     padding: 0 4px;
+    position: relative;
     transition: all 0.5s ease;
 }
 
 .detail__left-img {
     border-radius: 15px;
     max-width: 100%;
+}
+
+.detai__left-progress {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: #fafafa;
+    transition: all .3s ease;
+}
+
+.detai__left-progress-spinner {
+    border: 6px solid #ededed;
+    border-top-color: transparent;
+}
+
+.detai__left-progress-icon {
+    font-size: 70px;
+    color: #ededed;
 }
 
 .detail__right {

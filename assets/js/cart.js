@@ -65,3 +65,10 @@ function reduce(event) {
         document.querySelector(".modal").classList.add("open");
     }
 }
+
+function loadImage() {
+    setTimeout(() => {
+        document.querySelector(".cart__like-product-item-progress").style.display = 'none';
+    }, 1000);
+}
+loadImage();
