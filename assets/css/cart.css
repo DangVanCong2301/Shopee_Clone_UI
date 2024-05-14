@@ -318,6 +318,27 @@
     color: rgba(0, 0, 0, .54);
 }
 
+.cart__like-product-item-img {
+    position: relative;
+}
+
+.cart__like-product-item-progress {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #fafafa;
+}
+
+.cart__like-product-item-spinner {
+    border: 6px solid #ededed;
+    border-top-color: transparent;
+}
+
 /* CSS Cart Old */
 
 .cart .table {
