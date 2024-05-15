@@ -169,6 +169,24 @@
     width: 80px;
     background-position: center;
     background-size: contain;
+    position: relative;
+}
+
+.cart__body-product-img-progress {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fafafa;
+}
+
+.cart__body-product-img-progress-icon {
+    font-size: 30px;
+    color: #ededed;
 }
 
 .cart__body-product-voucher {
@@ -339,7 +357,7 @@
     border-top-color: transparent;
 }
 
-/* CSS Cart Old */
+/* Old Code */
 
 .cart .table {
     height: 500px;
@@ -520,6 +538,8 @@
 }
 
 @media screen and (max-width: 768px) {
+
+    /* Old Code */
     .cart .table thead {
         display: none;
     }

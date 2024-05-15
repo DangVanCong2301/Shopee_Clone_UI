@@ -71,6 +71,8 @@
     margin-top: 12px;
     padding-top: 24px;
     background-color: var(--white-color);
+    border-radius: 3px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, .09);
 }
 
 .checkout__product-header {
@@ -274,6 +276,198 @@
     text-decoration: none;
     color: #05a;
 }
+
+.checkout__product-body-contact {
+    background-color: #fafdff;
+    display: flex;
+    border-bottom: 1px dashed rgba(0, 0, 0, .09);
+    font-size: var(--normal-font-size);
+}
+
+.checkout__product-body-message {
+    flex: 4;
+}
+
+.checkout__product-body-transport {
+    flex: 6;
+    border-left: 1px dashed rgba(0, 0, 0, .09);
+}
+
+.checkout__product-body-message-content {
+    padding: 16px 30px;
+    display: flex;
+    align-items: center;
+    column-gap: 15px;
+}
+
+.checkout__product-body-message-input {
+    height: 40px;
+    padding: 4px 12px;
+    width: 100%;
+    flex: 1;
+    outline: none;
+    border: 1px solid var(--border-color);
+    border-radius: 2px;
+}
+
+.checkout__product-body-message-input:focus {
+    border: 1px solid #888;
+}
+
+.checkout__product-body-transport-top {
+    padding: 16px 30px 16px 20px;
+    display: flex;
+    column-gap: 2rem;
+}
+
+.checkout__product-body-transport-type {
+    flex: 1;
+    line-height: 1.5;
+}
+
+.checkout__product-body-transport-type-top {
+    display: flex;
+    justify-content: space-between;
+    line-height: 1.5;
+}
+
+.checkout__product-body-transport-change {
+    text-decoration: none;
+    color: #05a;
+}
+
+.checkout__product-body-transport-type-bottom {
+    margin-top: 5px;
+    font-size: 12px;
+    color: #888;
+}
+
+.checkout__product-body-transport-type-bottom-icon {
+    font-size: 16px;
+}
+
+.checkout__product-body-transport-between {
+    padding: 16px 0 16px 20px;
+    border-top: 1px dashed rgba(0, 0, 0, .09);
+    display: flex;
+}
+
+.checkout__product-body-transport-between-sub {
+    color: rgba(0, 0, 0, .54);
+}
+
+.checkout__product-body-transport-between-link {
+    text-decoration: none;
+    color: #26aa99;
+    display: flex;
+    column-gap: 6px;
+    margin-left: 6px;
+}
+
+.checkout__product-body-transport-between-link i {
+    font-size: 16px;
+}
+
+.checkout__product-body-transport-between-link-row {
+    color: #888;
+}
+
+.checkout__product-body-transport-bottom {
+    display: flex;
+    align-items: center;
+    padding: 16px 0 16px 20px;
+    border-top: 1px dashed rgba(0, 0, 0, .09);
+}
+
+.checkout__product-body-transport-bottom-sub {
+    display: flex;
+    align-items: center;
+}
+
+.checkout__product-body-transport-bottom-icon {
+    font-size: 16px;
+    color: rgba(0, 0, 0, .54);
+    margin-left: 6px;
+}
+
+.checkout__product-bottom {
+    padding: 20px 25px 20px 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    column-gap: 3rem;
+    font-size: var(--normal-font-size);
+    background-color: #fafdff;
+}
+
+.checkout__product-bottom-sub {
+    color: rgba(0, 0, 0, .54);
+}
+
+.checkout__product-bottom span {
+    font-size: 20px;
+    color: var(--primary-color);
+}
+
+.checkout__voucher {
+    display: flex;
+    justify-content: space-between;
+    padding: 28px 30px;
+    margin-top: 20px;
+    background-color: var(--white-color);
+}
+
+.checkout__voucher-sub {
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+}
+
+.checkout__voucher-sub-icon {
+    font-size: 24px;
+    color: var(--primary-color);
+}
+
+.checkout__voucher-sub span {
+    font-size: 18px;
+}
+
+.checkout__voucher-choice {
+    text-decoration: none;
+    color: #05a;
+    font-size: var(--normal-font-size);
+}
+
+.checkout__payment {
+    margin-top: 20px;
+    background-color: var(--white-color);
+}
+
+.checkout__payment-header {
+    min-height: 90px;
+    display: flex;
+    align-items: center;
+    padding: 0 30px;
+}
+
+.checkout__payment-header-sub {
+    font-size: 18px;
+    flex: 1;
+}
+
+.checkout__payment-header-name {
+    font-size: 14px;
+}
+
+.checkout__payment-header-change {
+    font-size: 14px;
+    color: #05a;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin-left: 60px;
+}
+
+
 /* Address Modal */
 .address-form {
     background-color: var(--white-color);
