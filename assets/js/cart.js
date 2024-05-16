@@ -1,6 +1,7 @@
 const progressImage = document.querySelectorAll(".cart__like-product-item-progress");
 const checkProduct = document.querySelectorAll(".cart__checkout-input");
 const progressImageCart = document.querySelectorAll(".cart__body-product-img-progress");
+const progressCartName = document.querySelectorAll(".cart__body-product-name-progress");
 
 function incre(event) {
     const parentElement = event.target.parentNode;
@@ -45,7 +46,34 @@ function reduce(event) {
     if (parseInt(reduce) > 1) {
         input.value = parseInt(reduce) - 1;
     } else {
-        let html = "";
+        deleteProduct();
+    }
+}
+
+function loadImage() {
+    setTimeout(() => {
+        for (let i = 0; i < progressImage.length; i++) {
+            const progressImageItem = progressImage[i];
+            progressImageItem.style.display = 'none';
+        }
+        for (let i = 0; i < progressImageCart.length; i++) {
+            progressImageCart[i].style.display = 'none';
+        }
+        for (let i = 0; i < progressCartName.length; i++) {
+            progressCartName[i].style.display = 'none';
+        }
+    }, 1000);
+}
+loadImage();
+
+function checkAllProduct() {
+    for (let i = 0; i < checkProduct.length; i++) {
+        checkProduct[i].checked = true; // Nguồn: https://stackoverflow.com/questions/8206565/check-uncheck-checkbox-with-javascript
+    }
+}
+
+function deleteProduct() {
+    let html = "";
         html += `
         <div class="modal">
             <div class="modal__overlay">
@@ -67,24 +95,29 @@ function reduce(event) {
         `;
         document.querySelector(".cart__message").innerHTML = html;
         document.querySelector(".modal").classList.add("open");
-    }
 }
 
-function loadImage() {
-    setTimeout(() => {
-        for (let i = 0; i < progressImage.length; i++) {
-            const progressImageItem = progressImage[i];
-            progressImageItem.style.display = 'none';
-        }
-        for (let i = 0; i < progressImageCart.length; i++) {
-            progressImageCart[i].style.display = 'none';
-        }
-    }, 1000);
-}
-loadImage();
-
-function checkAllProduct() {
-    for (let i = 0; i < checkProduct.length; i++) {
-        checkProduct[i].checked = true; // Nguồn: https://stackoverflow.com/questions/8206565/check-uncheck-checkbox-with-javascript
-    }
+function deleteAllProduct() {
+    let html = "";
+        html += `
+        <div class="modal">
+            <div class="modal__overlay">
+    
+            </div>
+            <div class="modal__body">
+                <!--Form message -->
+                <div class="auth-form">
+                    <div class="auth-form__container">
+                        <p class="auth-form__msg">Bạn muốn bỏ 3 sản phẩm?</p>
+                        <div class="auth-form__controls">
+                            <button onclick="exitModal()" class="btn btn--primary">HUỶ</button>
+                            <button class="btn">ĐỒNG Ý</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        `;
+        document.querySelector(".cart__message").innerHTML = html;
+        document.querySelector(".modal").classList.add("open");
 }

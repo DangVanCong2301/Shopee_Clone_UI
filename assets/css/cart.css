@@ -153,6 +153,23 @@
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
     margin-bottom: 5px;
+    position: relative;
+}
+
+.cart__body-product-name-progress {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--white-color);
+    display: grid;
+}
+
+.cart__body-product-name-progress-line {
+    height: 14px;
+    width: 100%;
+    background-color: #fafafa;
 }
 
 .cart__body-product-type,
@@ -301,6 +318,11 @@
 .cart__purchase-payment-desc {
     display: flex;
     flex: 1;
+}
+
+.cart__purchase-footer-delele {
+    text-decoration: none;
+    color: #05a;
 }
 
 .cart__purchase-payment-left {
