@@ -180,6 +180,7 @@
     border: 1px solid var(--primary-color);
     color: var(--primary-color);
     font-size: 10px;
+    border-radius: 2px;
 }
 
 .checkout__product-body-item-img {
@@ -448,11 +449,18 @@
     display: flex;
     align-items: center;
     padding: 0 30px;
+    border-bottom: 1px solid var(--border-color);
 }
 
 .checkout__payment-header-sub {
     font-size: 18px;
     flex: 1;
+}
+
+.checkout__payment-header-btns {
+    flex: 1;
+    display: flex;
+    column-gap: 8px;
 }
 
 .checkout__payment-header-name {
@@ -465,6 +473,193 @@
     text-decoration: none;
     text-transform: uppercase;
     margin-left: 60px;
+}
+
+.checkout__payment-header-vnpay-btn,
+.checkout__payment-header-paypal-btn,
+.checkout__payment-header-momo-btn,
+.checkout__payment-header-cod-btn {
+    padding: 4px 12px;
+    font-size: 14px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    border-radius: 2px;
+    border: 1px solid var(--border-color);
+}
+
+.checkout__payment-header-vnpay-btn {
+    font-weight: bold;
+}
+
+.checkout__payment-header-paypal-btn {
+    font-weight: bold;
+    font-style: italic;
+    background-color: #f6be38;
+}
+
+.checkout__payment-header-momo-btn {
+    background-color: #ad006c;
+    font-weight: bold;
+    color: var(--white-color);
+}
+
+.checkout__payment-header-vnpay-btn span:first-child {
+    color: #ed1c24;
+}
+
+.checkout__payment-header-vnpay-btn span:last-child {
+    color: #005baa;
+}
+
+.checkout__payment-header-paypal-btn span:first-child {
+    color: #27364a;
+}
+
+.checkout__payment-header-paypal-btn span:last-child {
+    color: #2790c3;
+}
+
+.checkout__payment-sub-logo {
+    padding: 30px 0 30px 0;
+    margin: 0 30px;
+    border-bottom: 1px dashed rgba(0, 0, 0, .09);
+}
+
+.checkout__payment-sub-img {
+    height: 82px;
+    width: 82px;
+    background-position: center;
+    background-size: contain;
+}
+
+.checkout__payment-sub-money {
+    display: flex;
+    align-items: center;
+    padding: 30px;
+}
+
+.checkout__payment-sub-money-input {
+    height: 18px;
+    width: 18px;
+}
+
+.checkout__payment-sub-money-currenry {
+    height: 45px;
+    width: 45px;
+    border: 1px solid var(--border-color);
+    border-radius: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 30px;
+}
+
+.checkout__payment-sub-money-currenry span {
+    display: block;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: #f89f37;
+    font-size: 30px;
+    display: flex;
+    color: var(--white-color);
+    justify-content: center;
+    align-items: center;
+}
+
+.checkout__payment-sub-money-desc {
+    margin-left: 20px;
+    color: #9b9b9b;
+    font-size: var(--normal-font-size);
+}
+
+.checkout__payment-sub-money-desc-value {
+    margin-top: 8px;
+}
+
+.checkout__payment-money {
+    background-color: #fffefb;
+    border-top: 1px dotted var(--border-color);
+    font-size: var(--normal-font-size);
+}
+
+.checkout__payment-money-row {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    text-align: right;
+    border-bottom: 1px dotted var(--border-color);
+}
+
+.checkout__payment-money-row-left {
+    font-size: 12px;
+    color: rgba(0, 0, 0, .54);
+    display: flex;
+    align-items: center;
+}
+
+.checkout__payment-money-row-left span {
+    padding: 13px 10px;
+}
+
+.checkout__payment-money-row-left-icon {
+    font-size: 16px;
+    margin: 0 10px 0 0;
+}
+
+.checkout__payment-money-row-right {
+    width: 240px;
+    border-left: 1px dotted var(--border-color);
+    padding: 13px 24px 13px 10px;
+    font-size: 13px;
+    color: rgba(0, 0, 0, .8);
+}
+
+.checkout__payment-money-row-bottom {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    text-align: right;
+}
+
+.checkout__payment-money-row-bottom-left span {
+    padding: 23px 13px;
+    display: block;
+    font-size: 12px;
+    color: rgba(0, 0, 0, .54);
+}
+
+.checkout__payment-money-row-bottom-right {
+    font-size: 24px;
+    color: var(--primary-color);
+    width: 240px;
+    padding: 23px 24px;
+    border-left: 1px dotted var(--border-color);
+}
+
+.checkout__payment-order {
+    min-height: 95px;
+    display: flex;
+    align-items: center;
+    border-top: 1px dotted var(--border-color);
+    padding: 0 30px;
+}
+
+.checkout__payment-order-sub {
+    font-size: 14px;
+    color: rgba(0, 0, 0, .54);
+    padding: 0 15px;
+}
+
+.checkout__payment-order-sub-link {
+    text-decoration: none;
+    color: #05a;
+}
+
+.checkout__payment-order-btn {
+    flex: 1;
+    text-align: right;
 }
 
 

@@ -56,3 +56,19 @@ btnPrevBanner.addEventListener('click', () => {
         document.getElementById(index).classList.add("banner-circle-fill");
     }
 });
+
+// Load Progress
+const progressCategoryImage = document.querySelectorAll(".category-item__img-progress");
+const progressProductImage = document.querySelectorAll(".home-product-item__img-progress");
+
+function loadProgressImage() {
+    setTimeout(() => {
+        for (let i = 0; i < progressCategoryImage.length; i++) {
+            progressCategoryImage[i].style.display = 'none';
+        }
+        for (let i = 0; i < progressProductImage.length; i++) {
+            progressProductImage[i].style.display = 'none';
+        }
+    }, 1000);
+}
+loadProgressImage();
