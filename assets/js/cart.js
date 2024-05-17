@@ -1,7 +1,74 @@
-const progressImage = document.querySelectorAll(".cart__like-product-item-progress");
-const checkProduct = document.querySelectorAll(".cart__checkout-input");
-const progressImageCart = document.querySelectorAll(".cart__body-product-img-progress");
-const progressCartName = document.querySelectorAll(".cart__body-product-name-progress");
+function loadCartItems() {
+    let html = "";
+    for (let i = 1; i <= 3; i++) {
+        html += `
+        <div class="cart__body">
+            <div class="cart__body-header">
+                <div class="cart__input">
+                    <input type="checkbox" class="cart__checkout-input" name="" id="">
+                </div>
+                <span>F4 Shop Mall</span>
+                <div class="cart__body-header-text">LenovoThinkplus.vn</div>
+                <a href="#" class="cart__body-header-chat">
+                    <i class="uil uil-chat cart__body-header-chat-icon"></i>
+                </a>
+            </div>
+            <div class="cart__body-product">
+                <div class="cart__input">
+                    <input type="checkbox" class="cart__checkout-input" name="" id="">
+                </div>
+                <div class="cart__body-product-info">
+                    <div class="cart__body-product-img" style="background-image: url(./assets/img/sac_du_phong.png);">
+                        <div class="cart__body-product-img-progress">
+                            <i class="uil uil-shopping-bag cart__body-product-img-progress-icon"></i>
+                        </div>
+                    </div>
+                    <div class="cart__body-prduct-desc">
+                        <div class="cart__body-product-name">
+                            Bút Laze Trình Chiếu PowerPoint Kèm Remote Điều Khiển Không Dây Cho Laptop RF 2.4GHz
+                            <div class="cart__body-product-name-progress">
+                                <div class="cart__body-product-name-progress-line"></div>
+                                <div class="cart__body-product-name-progress-line"></div>
+                            </div>
+                        </div>
+                        <img src="./assets/img/voucher.png" class="cart__body-product-voucher" alt="">
+                    </div>
+                </div>
+                <div class="cart__body-product-type">Phân loại hàng: Bạc</div>
+                <div class="cart__body-product-cost">
+                    <div class="cart__body-product-cost-old">189.000 đ</div>
+                    <div class="cart__body-product-cost-new">121.000 đ</div>
+                </div>
+                <div class="cart__body-product-quantity">
+                    <div class="cart__count-btns">
+                        <button type="button" class="cart__btn-add" onclick="reduce(event)">-</button>
+                        <input name="qnt" type="text" id="qnt" value="1" class="cart__count-input" />
+                        <button type="button" class="cart__btn-sub" onclick="incre(event)">+</button>
+                    </div>
+                </div>
+                <div class="cart__body-product-money">121.000 đ</div>
+                <div class="cart__body-product-operation">
+                    <div class='btn-tools'>
+                        <a class='btn-tool btn-tool__del' href='javascript:deleteProduct(@cart.PK_iProductID)' title='Xoá sản phẩm'><i class='uil uil-trash'></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="cart__body-discount">
+                <i class="uil uil-store cart__body-discount-icon"></i>
+                <div class="cart__body-discount-sub">Mua thêm 91.000đ để được mức giảm 3kđ</div>
+                <a href="#" class="cart__body-discount-link">Thêm mã giảm giá của Shop</a>
+            </div>
+            <div class="cart__body-transport">
+                <img src="./assets/img/free_ship.png" alt="" class="cart__body-transport-img">
+                <div class="cart__body-transport-sub">Giảm 300.000đ phí vận chuyển đơn tối thiểu 0đ</div>
+                <a href="#" class="cart__body-transport-more">Tìm hiểu thêm</a>
+            </div>
+        </div>
+        `;
+    }
+    document.querySelector(".cart__product-list").innerHTML = html;
+}
+loadCartItems();
 
 function incre(event) {
     const parentElement = event.target.parentNode;
@@ -50,21 +117,78 @@ function reduce(event) {
     }
 }
 
-function loadImage() {
-    setTimeout(() => {
-        for (let i = 0; i < progressImage.length; i++) {
-            const progressImageItem = progressImage[i];
-            progressImageItem.style.display = 'none';
-        }
-        for (let i = 0; i < progressImageCart.length; i++) {
-            progressImageCart[i].style.display = 'none';
-        }
-        for (let i = 0; i < progressCartName.length; i++) {
-            progressCartName[i].style.display = 'none';
-        }
-    }, 1000);
+function loadProducts() {
+    let html = "";
+    for (let i = 1; i <= 12; i++) {
+        html += `
+        <div class="col l-2 c-6 m-4">
+            <a class="home-product-item" href="product_detail.html">
+                <div class="home-product-item__img" style="background-image: url(./assets/img/sac_du_phong.png)">
+                    <div class="home-product-item__img-loading">
+                        <i class="uil uil-shopping-bag home-product-item__img-loading-icon"></i>
+                    </div>
+                </div>
+                <h4 class="home-product-item__name">
+                    Tai nghe Bluetooth Tai nghe Bluetooth Tai nghe Bluetooth
+                    <div class="home-product-item__name-loading">
+                        <div class="home-product-item__name-loading-line"></div>
+                        <div class="home-product-item__name-loading-line"></div>
+                    </div>
+                </h4>
+                <div class="home-product-item__price">
+                    <span class="home-product-item__price-old">
+                        1.200 000đ
+                        <div class="home-product-item__price-old-loading"></div>
+                    </span>
+                    <span class="home-product-item__price-current">
+                        1.100.000 đ
+                        <div class="home-product-item__price-current-loading"></div>
+                    </span>
+                </div>
+                <div class="home-product-item__action">
+                    <span class="home-product-item__like home-product-item__like--liked">
+                        <i class="home-product-item__like-icon-empty far fa-heart"></i>
+                        <i class="home-product-item__like-icon-fill fas fa-heart"></i>
+                        <div class="home-product-item__like-loading"></div>
+                    </span>
+                    <div class="home-product-item__rating">
+                        <i class="home-product-item__star--gold fas fa-star"></i>
+                        <i class="home-product-item__star--gold fas fa-star"></i>
+                        <i class="home-product-item__star--gold fas fa-star"></i>
+                        <i class="home-product-item__star--gold fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <div class="home-product-item__rating-loading"></div>
+                    </div>
+                    <span class="home-product-item__sold"> 
+                        88 Đã bán
+                        <div class="home-product-item__sold-loading"></div>
+                    </span>
+                </div>
+                <div class="home-product-item__origin">
+                    <span class="home-product-item__brand">
+                        Viet Mark
+                        <div class="home-product-item__brand-loading"></div>
+                    </span>
+                    <span class="home-product-item__origin-name">
+                        Hà Nội
+                        <div class="home-product-item__origin-name-loading"></div>
+                    </span>
+                </div>
+                <div class="home-product-item__favourite">
+                    <i class="fas fa-check"></i>
+                    <span>Yêu thích</span>
+                </div>
+                <div class="home-product-item__sale-off">
+                    <span class="home-product-item__sale-off-percent">53%</span>
+                    <span class="home-product-item__sale-off-label">GIẢM</span>
+                </div>
+            </a>
+        </div>
+        `;
+    }
+    document.querySelector(".cart__like-product-list").innerHTML = html;
 }
-loadImage();
+loadProducts();
 
 function checkAllProduct() {
     for (let i = 0; i < checkProduct.length; i++) {
