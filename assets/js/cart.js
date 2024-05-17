@@ -19,9 +19,7 @@ function loadCartItems() {
                 </div>
                 <div class="cart__body-product-info">
                     <div class="cart__body-product-img" style="background-image: url(./assets/img/sac_du_phong.png);">
-                        <div class="cart__body-product-img-progress">
-                            <i class="uil uil-shopping-bag cart__body-product-img-progress-icon"></i>
-                        </div>
+                        
                     </div>
                     <div class="cart__body-prduct-desc">
                         <div class="cart__body-product-name">
@@ -63,6 +61,30 @@ function loadCartItems() {
                 <div class="cart__body-transport-sub">Giảm 300.000đ phí vận chuyển đơn tối thiểu 0đ</div>
                 <a href="#" class="cart__body-transport-more">Tìm hiểu thêm</a>
             </div>
+            <div class="cart__body-loading">
+                <div class="cart__body-header-loading">
+                    <div class="cart__body-header-input-loading"></div>
+                    <div class="cart__body-header-sub-loading"></div>
+                </div>
+                <div class="cart__body-product-loading">
+                    <div class="cart__body-header-input-loading"></div>
+                    <div class="cart__body-product-info-loading">
+                        <div class="cart__body-product-img-loading">
+                            <i class="uil uil-shopping-bag cart__body-product-img-icon-loading"></i>
+                        </div>
+                        <div class="cart__body-product-desc-loading">
+                            <div class="cart__body-product-desc-line-loading"></div>
+                            <div class="cart__body-product-desc-line-loading"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cart__body-discount-loading">
+                    <div class="cart__body-discount-line-loading"></div>
+                </div>
+                <div class="cart__body-transport-loading">
+                    <div class="cart__body-transport-line-loading"></div>
+                </div>
+            </div>              
         </div>
         `;
     }

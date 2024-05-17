@@ -1,9 +1,5 @@
 // Load Progress
-console.log('a');
-const progressImage = document.querySelectorAll(".cart__like-product-item-progress");
-const checkProduct = document.querySelectorAll(".cart__checkout-input");
-const progressImageCart = document.querySelectorAll(".cart__body-product-img-progress");
-const progressCartName = document.querySelectorAll(".cart__body-product-name-progress");
+const loadingCartItem = document.querySelectorAll(".cart__body-loading")
 
 const loadingProductImage = document.querySelectorAll(".home-product-item__img-loading");
 const loadingProductName = document.querySelectorAll(".home-product-item__name-loading");
@@ -18,15 +14,8 @@ const loadingProductOrigin = document.querySelectorAll(".home-product-item__orig
 
 function loadingProgress() {
     setTimeout(() => {
-        for (let i = 0; i < progressImage.length; i++) {
-            const progressImageItem = progressImage[i];
-            progressImageItem.style.display = 'none';
-        }
-        for (let i = 0; i < progressImageCart.length; i++) {
-            progressImageCart[i].style.display = 'none';
-        }
-        for (let i = 0; i < progressCartName.length; i++) {
-            progressCartName[i].style.display = 'none';
+        for (let i = 0; i < loadingCartItem.length; i++) {
+            loadingCartItem[i].style.display = 'none';
         }
         for (let i = 0; i < loadingProductImage.length; i++) {
             loadingProductImage[i].style.display = 'none';
