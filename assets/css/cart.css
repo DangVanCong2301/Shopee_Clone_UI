@@ -86,12 +86,111 @@
 }
 
 .cart__body {
+    position: relative;
     background-color: var(--white-color);
     border-radius: 2px;
     background-color: var(--white-color);
     box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .05);
     margin-bottom: 15px;
 }
+
+/* Cart Item Loading */
+
+.cart__body-loading {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--white-color);
+}
+
+.cart__body-header-loading {
+    height: 60px;
+    padding: 0 20px;
+    border-bottom: 1px solid #ededed;
+    display: flex;
+    align-items: center;
+}
+
+.cart__body-header-input-loading {
+    height: 16px;
+    width: 16px;
+    border-radius: 2px;
+    background-color: #ededed;
+    margin: 0 20px;
+}
+
+.cart__body-header-sub-loading {
+    height: 16px;
+    width: 40%;
+    border-radius: 2px;
+    background-color: #fafafa;
+}
+
+.cart__body-product-loading {
+    display: flex;
+    align-items: center;
+    padding: 15px 20px 20px 20px;
+    border-bottom: 1px solid #ededed;
+}
+
+.cart__body-product-img-loading {
+    height: 80px;
+    width: 80px;
+    border-radius: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fafafa;
+}
+
+.cart__body-product-img-icon-loading {
+    font-size: 30px;
+    color: #ededed;
+}
+
+.cart__body-product-info-loading {
+    display: flex;
+    width: 100%;
+}
+
+.cart__body-product-desc-loading {
+    padding: 5px 0 0 10px;
+    height: 50px;
+    display: grid;
+    width: 100%;
+}
+
+.cart__body-product-desc-line-loading {
+    height: 16px;
+    width: 40%;
+    background-color: #fafafa;
+    border-radius: 2px;
+}
+
+.cart__body-discount-loading {
+    padding: 16px 0px 16px 40px;
+    border-bottom: 1px solid #ededed;
+}
+
+.cart__body-discount-line-loading {
+    height: 16px;
+    width: 40%;
+    background-color: #fafafa;
+}
+
+.cart__body-transport-loading {
+    padding: 20px 0px 20px 40px;
+}
+
+.cart__body-transport-line-loading {
+    height: 16px;
+    width: 40%;
+    background-color: #fafafa;
+}
+
+/* End CSS Cart Item Loading */
 
 .cart__body-header {
     height: 60px;
@@ -153,23 +252,6 @@
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
     margin-bottom: 5px;
-    position: relative;
-}
-
-.cart__body-product-name-progress {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: var(--white-color);
-    display: grid;
-}
-
-.cart__body-product-name-progress-line {
-    height: 14px;
-    width: 100%;
-    background-color: #fafafa;
 }
 
 .cart__body-product-type,
@@ -186,24 +268,6 @@
     width: 80px;
     background-position: center;
     background-size: contain;
-    position: relative;
-}
-
-.cart__body-product-img-progress {
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #fafafa;
-}
-
-.cart__body-product-img-progress-icon {
-    font-size: 30px;
-    color: #ededed;
 }
 
 .cart__body-product-voucher {
