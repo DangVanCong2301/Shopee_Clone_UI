@@ -1,3 +1,4 @@
+
 function loadCartItems() {
     let html = "";
     for (let i = 1; i <= 3; i++) {
@@ -212,9 +213,17 @@ function loadProducts() {
 }
 loadProducts();
 
-function checkAllProduct() {
-    for (let i = 0; i < checkProduct.length; i++) {
-        checkProduct[i].checked = true; // Nguồn: https://stackoverflow.com/questions/8206565/check-uncheck-checkbox-with-javascript
+function checkAllProduct(input) {
+    const checkProduct = document.querySelectorAll(".cart__checkout-input"); // Các thẻ input render ra sau
+
+    if (input.checked) {
+        for (let i = 0; i < checkProduct.length; i++) {
+            checkProduct[i].checked = true; // Nguồn: https://stackoverflow.com/questions/8206565/check-uncheck-checkbox-with-javascript
+        }
+    } else {
+        for (let i = 0; i < checkProduct.length; i++) {
+            checkProduct[i].checked = false; // Nguồn: https://stackoverflow.com/questions/8206565/check-uncheck-checkbox-with-javascript
+        }
     }
 }
 

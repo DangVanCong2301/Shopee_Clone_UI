@@ -38,7 +38,8 @@
     padding: 0 20px 0 20px;
 }
 
-.cart__checkout-input {
+.cart__checkout-input,
+.cart__checkout-input-all {
     appearance: none;
     width: 16px;
     height: 16px;
@@ -47,11 +48,13 @@
     border-radius: 0.25rem;
 }
 
-.cart__checkout-input:checked {
+.cart__checkout-input:checked,
+.cart__checkout-input-all:checked {
     background: var(--white-color);
 }
 
-.cart__checkout-input:checked::before {
+.cart__checkout-input:checked::before,
+.cart__checkout-input-all:checked::before {
     content: '✔️';
     display: block;
     color: var(--white-color);
