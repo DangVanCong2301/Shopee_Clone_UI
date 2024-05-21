@@ -97,6 +97,29 @@
     margin-bottom: 15px;
 }
 
+/* No Cart */
+.cart__no {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 60vh;
+    row-gap: 20px
+}
+
+.cart__no-img {
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    /* background-repeat: no-repeat; */
+    background-position: center;
+    background-size: contain;
+}
+
+.cart__no-sub {
+    font-size: var(--normal-font-size);
+}
+
 /* Cart Item Loading */
 
 .cart__body-loading {
