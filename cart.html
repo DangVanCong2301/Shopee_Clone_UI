@@ -239,55 +239,62 @@
         <div class="app__container">
             <div class="grid wide">
                 <div class="cart">
-                    <div class="cart__instruct">
-                        <img src="./assets/img/free_ship.png" alt="" class="cart__instruct-img">
-                        <div class="cart__instruct-text">Nhấn vào mục Mã giảm giá ở cuối trang để hưởng miễn phí vận chuyển bạn nhé!</div>
+                    <div class="cart__no" style="display: none;">
+                        <div style="background-image: url(./assets/img/no-cart.png);" class="cart__no-img"></div>
+                        <div class="cart__no-sub">Giỏ hàng của bạn còn trống</div>
+                        <a href="index.html" class="btn btn--primary">Mua ngay</a>
                     </div>
-                    <div class="cart__header">
-                        <div class="cart__input">
-                            <input type="checkbox" class="cart__checkout-input" name="" id="">
+                    <div class="cart__have">
+                        <div class="cart__instruct">
+                            <img src="./assets/img/free_ship.png" alt="" class="cart__instruct-img">
+                            <div class="cart__instruct-text">Nhấn vào mục Mã giảm giá ở cuối trang để hưởng miễn phí vận chuyển bạn nhé!</div>
                         </div>
-                        <div class="cart__header-sub">Sản phẩm</div>
-                        <div class="cart__header-type"></div>
-                        <div class="cart__header-cost">Đơn giá</div>
-                        <div class="cart__header-quantity">Số lượng</div>
-                        <div class="cart__header-money">Số tiền</div>
-                        <div class="cart__header-operation">Thao tác</div>
-                    </div>
-                    <div class="cart__product-list">
-                        
-                    </div>
-                    <div class="cart__purchase">
-                        <div class="cart__purchase-voucher">
-                            <div class="cart__purchase-voucher-title">
-                                <i class="uil uil-store cart__body-discount-icon"></i>
-                                <div class="cart__purchase-voucher-sub">F4 Shop Voucher</div>
-                            </div>
-                            <a href="#" class="cart__purchase-voucher-link">Chọn hoặc nhập mã</a>
-                        </div>
-                        <div class="cart__purchase-payment">
+                        <div class="cart__header">
                             <div class="cart__input">
-                                <input type="checkbox" class="cart__checkout-input-all" onclick="checkAllProduct(this)" name="" id="">
+                                <input type="checkbox" class="cart__checkout-input" name="" id="">
                             </div>
-                            <div class="cart__purchase-payment-desc">
-                                <div class="cart__purchase-payment-left">
-                                    <div class="cart__purchase-footer-select">Chọn tất cả (2)</div>
-                                    <a href="javascript:deleteAllProduct()" class="cart__purchase-footer-delele">Xoá</a>
+                            <div class="cart__header-sub">Sản phẩm</div>
+                            <div class="cart__header-type"></div>
+                            <div class="cart__header-cost">Đơn giá</div>
+                            <div class="cart__header-quantity">Số lượng</div>
+                            <div class="cart__header-money">Số tiền</div>
+                            <div class="cart__header-operation">Thao tác</div>
+                        </div>
+                        <div class="cart__product-list">
+                            
+                        </div>
+                        <div class="cart__purchase">
+                            <div class="cart__purchase-voucher">
+                                <div class="cart__purchase-voucher-title">
+                                    <i class="uil uil-store cart__body-discount-icon"></i>
+                                    <div class="cart__purchase-voucher-sub">F4 Shop Voucher</div>
                                 </div>
-                                <div class="cart__purchase-payment-right">
-                                    <div class="cart__purchase-payment-total-sub">Tổng thanh toán (2 sản phẩm): 
-                                        <span>121.000 đ</span>
+                                <a href="#" class="cart__purchase-voucher-link">Chọn hoặc nhập mã</a>
+                            </div>
+                            <div class="cart__purchase-payment">
+                                <div class="cart__input">
+                                    <input type="checkbox" class="cart__checkout-input-all" onclick="checkAllProduct(this)" name="" id="">
+                                </div>
+                                <div class="cart__purchase-payment-desc">
+                                    <div class="cart__purchase-payment-left">
+                                        <div class="cart__purchase-footer-select">Chọn tất cả (2)</div>
+                                        <a href="javascript:deleteAllProduct()" class="cart__purchase-footer-delele">Xoá</a>
                                     </div>
-                                    <button type="button" class="btn btn--primary">Mua hàng</button>
+                                    <div class="cart__purchase-payment-right">
+                                        <div class="cart__purchase-payment-total-sub">Tổng thanh toán (2 sản phẩm): 
+                                            <span>121.000 đ</span>
+                                        </div>
+                                        <button type="button" class="btn btn--primary">Mua hàng</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="cart__like">
-                        <div class="cart__like-title">Có thể bạn cũng thích</div>
-                        <div class="home-product">
-                            <div class="row sm-gutter cart__like-product-list">
-                                
+                        <div class="cart__like">
+                            <div class="cart__like-title">Có thể bạn cũng thích</div>
+                            <div class="home-product">
+                                <div class="row sm-gutter cart__like-product-list">
+                                    
+                                </div>
                             </div>
                         </div>
                     </div>
