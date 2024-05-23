@@ -1,13 +1,4 @@
 // Load Progress
-const loadingBannerLeft = document.querySelector(".banner-left-content__loading");
-const loadingBannerRightTop = document.querySelector(".banner-right__content-top-loading");
-const loadingBannerRightBottom = document.querySelector(".banner-right__content-bottom-loading");
-
-const loadingStoreName = document.querySelectorAll(".store__item-info-loading");
-
-const loadingCategoryImage = document.querySelectorAll(".category-item__img-loading");
-const loadingCategoryName = document.querySelectorAll(".category-item__name-loading");
-
 const loadingProductImage = document.querySelectorAll(".home-product-item__img-loading");
 const loadingProductName = document.querySelectorAll(".home-product-item__name-loading");
 const loadingProductPriceOld = document.querySelectorAll(".home-product-item__price-old-loading");
@@ -20,18 +11,6 @@ const loadingProductOrigin = document.querySelectorAll(".home-product-item__orig
 
 function loadingProgress() {
     setTimeout(() => {
-        loadingBannerLeft.style.display = 'none';
-        loadingBannerRightTop.style.display = 'none';
-        loadingBannerRightBottom.style.display = 'none';
-        for (let i = 0; i < loadingStoreName.length; i++) {
-            loadingStoreName[i].style.display = 'none';
-        }
-        for (let i = 0; i < loadingCategoryImage.length; i++) {
-            loadingCategoryImage[i].style.display = 'none';
-        }
-        for (let i = 0; i < loadingCategoryName.length; i++) {
-            loadingCategoryName[i].style.display = 'none';
-        }
         for (let i = 0; i < loadingProductImage.length; i++) {
             loadingProductImage[i].style.display = 'none';
         }
