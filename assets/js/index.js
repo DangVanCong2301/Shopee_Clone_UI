@@ -156,3 +156,20 @@ function loadProducts() {
     document.querySelector(".home-product__list").innerHTML = html;
 }
 loadProducts();
+
+function hideChatWindow() {
+    document.querySelector(".chat").classList.toggle("hide-chat-window");
+    document.querySelector(".chat__header-btn-arrow").classList.toggle("transform");
+}
+
+function hideSearchSub() {
+    document.querySelector(".chat__body-search-sub").style.display = 'none';
+}
+
+function displaySearchSub() {
+    document.querySelector(".chat__body-search-sub").style.display = 'flex';
+}
+
+function displaySubList() {
+    document.querySelector(".chat__body-search-sub-list").classList.toggle('active'); 
+}

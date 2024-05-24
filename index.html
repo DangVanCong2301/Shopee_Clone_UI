@@ -544,6 +544,47 @@
             </div>
         </footer>
     </div>
+    <div class="chat">
+        <div class="chat__header">
+            <div class="chat__header-title">Chat</div>
+            <div class="chat__header-btns">
+                <div class="chat__header-btn" onclick="hideChatWindow()">
+                    <i class="uil uil-arrow-right chat__header-btn-arrow"></i>
+                </div>
+                <div class="chat__header-btn">
+                    <i class="uil uil-angle-down chat__header-btn-down"></i>
+                </div>
+            </div>
+        </div>
+        <div class="chat__body">
+            <div class="chat__body-left">
+                <div class="chat__body-search">
+                    <div class="chat__body-search-box">
+                        <i class="uil uil-search chat__body-search-icon"></i>
+                        <input type="text" class="chat__body-search-input" onblur="displaySearchSub()" onclick="hideSearchSub()" placeholder="Tìm kiếm">
+                    </div>
+                    <div class="chat__body-search-sub" onclick="displaySubList()">
+                        <span>Tất cả</span>
+                        <i class="uil uil-angle-down chat__body-search-sub-icon"></i>
+                        <ul class="chat__body-search-sub-list">
+                            <li class="chat__body-search-sub-item">
+                                Tất cả
+                            </li>
+                            <li class="chat__body-search-sub-item">
+                                Chưa đọc
+                            </li>
+                            <li class="chat__body-search-sub-item">
+                                Đã ghim
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="chat__body-right">
+
+            </div>
+        </div>
+    </div>
 </body>
 <script src="./assets/js/index.js"></script>
 <script src="./assets/js/index_loading.js"></script>
