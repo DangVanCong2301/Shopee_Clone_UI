@@ -159,6 +159,7 @@ loadProducts();
 
 function hideChatWindow() {
     document.querySelector(".chat").classList.toggle("hide-chat-window");
+    document.querySelector(".chat__body-right").classList.toggle("hide-chat-window");
     document.querySelector(".chat__header-btn-arrow").classList.toggle("transform");
 }
 
@@ -172,4 +173,16 @@ function displaySearchSub() {
 
 function displaySubList() {
     document.querySelector(".chat__body-search-sub-list").classList.toggle('active'); 
+}
+
+document.querySelectorAll(".chat__body-shop-name-sub-control").forEach(e => {
+    e.addEventListener('click', () => {
+        e.classList.toggle('active');
+        e.querySelector(".chat__body-shop-name-sub-control-circle").classList.toggle('active');
+    });
+});
+
+function openShopNameSub() {
+    document.querySelector(".chat__body-shop-name-sub").classList.toggle('open');
+    document.querySelector(".chat__body-shop-name-icon").style.transform = 'rotate(180deg)';
 }
