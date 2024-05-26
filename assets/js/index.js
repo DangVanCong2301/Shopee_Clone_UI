@@ -182,7 +182,12 @@ document.querySelectorAll(".chat__body-shop-name-sub-control").forEach(e => {
     });
 });
 
-function openShopNameSub() {
-    document.querySelector(".chat__body-shop-name-sub").classList.toggle('open');
-    document.querySelector(".chat__body-shop-name-icon").style.transform = 'rotate(180deg)';
+function hideChat() {
+    document.querySelector(".chat").style.display = 'none';
+    document.querySelector(".chat__btn").style.display = "flex";
+}
+
+function displayChat() {
+    document.querySelector(".chat").style.display = 'block';
+    document.querySelector(".chat__btn").style.display = "none";
 }
