@@ -552,7 +552,7 @@
                     <i class="uil uil-arrow-right chat__header-btn-arrow"></i>
                 </div>
                 <div class="chat__header-btn">
-                    <i class="uil uil-angle-down chat__header-btn-down"></i>
+                    <i class="uil uil-angle-down chat__header-btn-down" onclick="hideChat()"></i>
                 </div>
             </div>
         </div>
@@ -609,7 +609,7 @@
                 </div>
             </div>
             <div class="chat__body-right">
-                <div class="chat__body-shop-name" onclick="openShopNameSub()">
+                <div class="chat__body-shop-name">
                     <span>vietmark_store</span>
                     <i class="uil uil-angle-down chat__body-shop-name-icon"></i>
                     <div class="chat__body-shop-name-sub">
@@ -645,8 +645,48 @@
                         </div>
                     </div>
                 </div>
+                <div class="chat__body-message">
+                    <div class="chat__body-message-container">
+
+                    </div>
+                    <div class="chat__body-message-bottom">
+                        <div class="chat__body-message-bottom-box">
+                            <textarea type="text" class="chat__body-message-bottom-input" placeholder="Nhập nội dung tin nhắn"></textarea>
+                        </div>
+                        <div class="chat__body-message-bottom-btns">
+                            <div class="chat__body-message-bottom-btns-left">
+                                <ul class="chat__body-message-bottom-list">
+                                    <li class="chat__body-message-bottom-item">
+                                        <i class="uil uil-grin chat__body-message-bottom-item-icon"></i>
+                                    </li>
+                                    <li class="chat__body-message-bottom-item">
+                                        <i class="uil uil-image-plus chat__body-message-bottom-item-icon"></i>
+                                    </li>
+                                    <li class="chat__body-message-bottom-item">
+                                        <i class="uil uil-youtube chat__body-message-bottom-item-icon"></i>
+                                    </li>
+                                    <li class="chat__body-message-bottom-item">
+                                        <i class="uil uil-shopping-bag chat__body-message-bottom-item-icon"></i>
+                                    </li>
+                                    <li class="chat__body-message-bottom-item">
+                                        <i class="uil uil-clipboard chat__body-message-bottom-item-icon"></i>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="chat__body-message-bottom-btns-right">
+                                <div class="chat__body-message-bottom-item">
+                                    <i class="uil uil-message chat__body-message-bottom-item-icon"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
+    </div>
+    <div class="chat__btn" onclick="displayChat()">
+        <i class="uil uil-comments-alt"></i>
+        <span>Chat</span>
     </div>
 </body>
 <script src="./assets/js/index.js"></script>
