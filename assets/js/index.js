@@ -191,3 +191,13 @@ function displayChat() {
     document.querySelector(".chat").style.display = 'block';
     document.querySelector(".chat__btn").style.display = "none";
 }
+
+window.addEventListener('scroll', () => {
+    const y = this.pageYOffset;
+    //console.log(this.document.querySelector(".header").style);
+    if (y > 80) {
+        this.document.querySelector(".header").classList.add("scroll");
+    } else {
+        this.document.querySelector(".header").classList.remove("scroll");
+    }
+});
