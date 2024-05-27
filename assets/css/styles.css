@@ -127,6 +127,10 @@
     display: none;
 }
 
+.header__mobile-user {
+    display: none;
+}
+
 .header__sort-link {
     font-size: 1.4rem;
     color: var(--text-color);
@@ -2024,7 +2028,3 @@ i.home-product-item__like-icon-fill {
     color: #737373;
     text-align: center;
 }
-
-
-
-

@@ -1,0 +1,63 @@
+.header__mobile-more {
+    display: none;
+}
+
+.header__mobile-back {
+    display: none;
+}
+
+.success-header {
+    display: none;
+}
+
+@media screen and (max-width: 739px) {
+    .header__product {
+        padding: 8px 0 8px 12px;
+        background-color: var(--white-color);
+    }
+
+    .header__mobile-back {
+        margin-right: 12px;
+        display: block;
+    }
+
+    .header__mobile-back-icon {
+        font-size: 2.4rem;
+        color: var(--primary-color);
+    }
+
+    .header-with-search {
+        margin-left: 0;
+    }
+
+    .header__search-input {
+        background-color: #f3f3f3;
+    }
+
+    .header__search-input::placeholder {
+        color: var(--primary-color);
+    }
+
+    .header__cart-icon {
+        color: var(--primary-color);
+    }
+
+    .header__mobile-more {
+        margin-left: 12px;
+        display: block;
+    }
+
+    .header__mobile-more-icon {
+        font-size: 2.4rem;
+        color: var(--primary-color);
+    }
+
+    .app__container {
+        margin-top: 46px;
+    }
+
+    .success-header {
+        margin-top: 10px;
+        display: flex;
+    }
+}
