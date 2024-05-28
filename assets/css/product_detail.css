@@ -359,8 +359,19 @@
         opacity: .9;
     }
 
-    .detail__mobile-bottom-sheet {
+    .detail__mobile-bottom-sheet-modal {
         position: fixed;
+        background-color: rgba(0, 0, 0, 0.4);
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        z-index: 10;
+        display: none;
+    }
+    
+    .detail__mobile-bottom-sheet {
+        position: absolute;
         bottom: -100%;
         right: 0;
         left: 0;
@@ -368,10 +379,9 @@
         border-radius: 4px 4px 0 0;
         box-shadow: 0 4px 20px 0 rgba(28, 28, 51, .16);
         animation: showBottomSheet .4s ease forwards;
-        display: none;
     }
 
-    .detail__mobile-bottom-sheet.open {
+    .detail__mobile-bottom-sheet-modal.open {
         display: block;
     }
 

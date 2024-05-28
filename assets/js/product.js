@@ -70,3 +70,18 @@ function loadProducts() {
     document.querySelector(".home-product__list").innerHTML = html;
 }
 loadProducts();
+
+function showNavMenu(event) {
+    event.preventDefault();
+    document.querySelector(".header__mobile-menu-modal").classList.add("open");
+}
+
+function closeNavMenu() {
+    document.querySelector(".header__mobile-menu-modal").classList.remove("open");
+}
+
+window.addEventListener('click', (e) => {
+    if (e.target == document.querySelector(".header__mobile-menu-modal")) {
+        document.querySelector(".header__mobile-menu-modal").classList.remove("open");
+    }
+});

@@ -29,9 +29,15 @@ window.addEventListener('scroll', () => {
 });
 
 function showBottomSheet() {
-    document.querySelector(".detail__mobile-bottom-sheet").classList.add("open");
+    document.querySelector(".detail__mobile-bottom-sheet-modal").classList.add("open");
 }
 
 function closeBottomSheet() {
-    document.querySelector(".detail__mobile-bottom-sheet").classList.remove("open");
+    document.querySelector(".detail__mobile-bottom-sheet-modal").classList.remove("open");
 }
+
+window.addEventListener('click', (e) => {
+    if (e.target == document.querySelector(".detail__mobile-bottom-sheet-modal")) {
+        document.querySelector(".detail__mobile-bottom-sheet-modal").classList.remove("open");
+    }
+});
