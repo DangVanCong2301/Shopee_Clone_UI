@@ -5,9 +5,15 @@
 #### 1. UI Trang chủ
 ![image](https://github.com/DangVanCong2301/Shopee_Clone_UI/assets/111124018/df82dc3b-3da5-46fc-befa-3ec8782c00c3)
 ![image](https://github.com/DangVanCong2301/Shopee_Clone_UI/assets/111124018/aac04b12-453e-455f-8a8a-ed8ece55ec10)
-#### 2. UI Mua hàng
+#### 2. UI Trang sản phẩm
+![image](https://github.com/DangVanCong2301/Shopee_Clone_UI/assets/111124018/87a60e2b-bf1f-4825-9566-6e5f39231338)
+![image](https://github.com/DangVanCong2301/Shopee_Clone_UI/assets/111124018/6f7b1564-230f-4452-bebe-46ef0dc26b86)
+#### 3. UI Trang chi tiết
+![image](https://github.com/DangVanCong2301/Shopee_Clone_UI/assets/111124018/e5a08071-569e-4c16-abdc-946e975a9a26)
+![image](https://github.com/DangVanCong2301/Shopee_Clone_UI/assets/111124018/7a8656bb-bee0-41a2-bb3e-cfecd6236580)
+#### 4. UI Mua hàng
 ![image](https://github.com/DangVanCong2301/Shopee_Clone_UI/assets/111124018/ff6e367e-59b9-4167-aa0e-955f493df175)
-#### 3. UI Đặt hàng
+#### 5. UI Đặt hàng
 ![image](https://github.com/DangVanCong2301/Shopee_Clone_UI/assets/111124018/e8fd3963-cef0-428b-87b1-d032df7bd383)
 ### Large Devices
 #### 1. UI Trang chủ
