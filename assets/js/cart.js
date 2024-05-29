@@ -276,3 +276,14 @@ function deleteAllProduct() {
         document.querySelector(".cart__message").innerHTML = html;
         document.querySelector(".modal").classList.add("open");
 }
+
+// JS Mobile
+function moveCartItem() {
+    if (document.querySelector(".cart__mobile-item-header-fix").innerText == "Sửa") {
+        document.querySelector(".cart__mobile-item-body-product").classList.toggle("move");
+        document.querySelector(".cart__mobile-item-header-fix").innerText = "Hoàn thành";
+    } else {
+        document.querySelector(".cart__mobile-item-body-product").classList.toggle("move");
+        document.querySelector(".cart__mobile-item-header-fix").innerText = "Sửa";
+    }
+}
