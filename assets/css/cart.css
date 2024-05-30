@@ -540,7 +540,7 @@
 
 .cart button {
     outline: none;
-    border-radius: 6px;
+    border-radius: 2px;
     cursor: pointer;
     padding: 8px;
 }
@@ -721,7 +721,7 @@
 
     .cart__mobile-item-body {
         position: relative;
-        height: 280px;
+        height: 224px;
         padding: 24px 12px 12px 12px ;
         border-top: 1px solid var(--border-color);
         column-gap: 12px;
@@ -751,6 +751,7 @@
         justify-content: center;
         color: var(--white-color);
         width: 100px;
+        height: 200px;
         cursor: pointer;
     }
 
@@ -887,6 +888,223 @@
         outline: none;
         text-align: center;
         border: 1px solid var(--border-color);
+    }
+
+    .cart__mobile-voucher {
+        padding: 16px 12px;
+        font-size: var(--normal-font-size);
+        border-top: 1px solid var(--border-color);
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    .cart__mobile-voucher-icon-more {
+        font-size: 18px;
+        margin-right: 12px;
+        color: rgba(0, 0, 0, .54);
+    }
+
+    .cart__mobile-voucher span {
+        flex: 1;
+    }
+
+    .cart__mobile-voucher-icon-arrow {
+        font-size: 18px;
+        color: rgba(0, 0, 0, .54);
+    }
+
+    .cart__mobile-free-ship {
+        padding: 16px 12px;
+        display: flex;
+        align-items: center;
+        column-gap: 12px;
+        font-size: var(--normal-font-size);
+        border-top: 1px solid var(--border-color);
+    }
+
+    .cart__mobile-free-ship-icon {
+        width: 20px;
+        height: 20px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+    }
+
+    .cart__mobile-voucher-bottom-sheet {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, .4);
+        display: none;
+        z-index: 10;
+    }
+
+    .cart__mobile-voucher-bottom-sheet.show {
+        display: block;
+    }
+
+    .cart__mobile-voucher-bottom-sheet-container {
+        position: absolute;
+        bottom: -100%;
+        left: 0;
+        right: 0;
+        font-size: var(--normal-font-size);
+        background-color: var(--white-color);
+        border-radius: 4px 4px 0 0; 
+        box-shadow: 0 4px 20px 0 rgba(28, 28, 51, .16);
+        animation: showBottomSheetVoucher .4s ease forwards;
+    }
+
+    @keyframes showBottomSheetVoucher {
+        to {
+            bottom: 0;
+        }
+    }
+
+    .cart__mobile-voucher-bottom-sheet-header {
+        padding: 16px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .cart__mobile-voucher-bottom-sheet-header-icon {
+        font-size: 18px;
+        color: #8e8e8e;
+    }
+
+    .cart__mobile-voucher-bottom-sheet-box {
+        padding: 0 16px 16px 16px;
+        display: flex;
+        justify-content: space-between;
+        height: 60px;
+    }
+
+    .cart__mobile-voucher-bottom-sheet-input {
+        border: none;
+        outline: none;
+        flex: 1;
+        font-size: var(--normal-font-size);
+        padding-left: 16px;
+        border: 1px solid var(--border-color);
+        border-radius: 2px;
+    }
+
+    .cart__mobile-voucher-bottom-sheet-input:focus {
+        border: 1px solid #888;
+    }
+
+    .cart__mobile-voucher-bottom-sheet-btn {
+        border: none;
+        margin-left: 12px;
+        font-size: 14px;
+        background-color: #bdbdbd;
+        border-radius: 2px;
+        color: var(--white-color);
+    }
+
+    .cart__mobile-voucher-bottom-sheet-card {
+        padding: 60px 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .cart__mobile-voucher-bottom-sheet-card-box {
+        position: relative;
+        height: 60px;
+        width: 120px;
+        border-radius: 4px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 20px;
+        border: 2px solid #bdbdbd;
+    }
+
+    .cart__mobile-voucher-bottom-sheet-card-line span {
+        height: 40px;
+        display: inline-block;
+        width: 6px;
+        border-radius: 4px;
+        background-color: #eaeaea;
+    }
+
+    .cart__mobile-voucher-bottom-sheet-card-text {
+        font-size: 46px;
+        margin-left: 20px;
+        color: #bfbfbf;
+    }
+
+    .cart__mobile-voucher-bottom-sheet-card-left-circle {
+        position: absolute;
+        height: 20px;
+        width: 20px;
+        left: -10px;
+        border-left-color: transparent;
+        border-radius: 50%;
+        background-color: #fff;
+        border-right: 3px solid #bdbdbd;
+    }
+
+    .cart__mobile-voucher-bottom-sheet-card-right-circle {
+        position: absolute;
+        height: 20px;
+        width: 20px;
+        right: -10px;
+        border-left-color: transparent;
+        border-radius: 50%;
+        background-color: #fff;
+        border-left: 3px solid #bdbdbd;
+    }
+
+    .cart__mobile-voucher-bottom-sheet-card-plus-1 {
+        position: absolute;
+        font-weight: bold;
+        color: #ececec;
+        top: -30px;
+        left: 10px;
+    }
+
+    .cart__mobile-voucher-bottom-sheet-card-plus-2 {
+        position: absolute;
+        font-weight: bold;
+        color: #ececec;
+        bottom: -30px;
+        right: -10px;
+    }
+
+    .cart__mobile-voucher-bottom-sheet-card-round-1 {
+        position: absolute;
+        top: -40px;
+        width: 10px;
+        height: 10px;
+        border: 2px solid #ececec;
+        border-radius: 50%;
+    }
+
+    .cart__mobile-voucher-bottom-sheet-card-round-2 {
+        position: absolute;
+        bottom: -30px;
+        width: 10px;
+        height: 10px;
+        border: 2px solid #ececec;
+        border-radius: 50%;
+    }
+
+    .cart__mobile-voucher-bottom-sheet-sub {
+        text-align: center;
+        padding-bottom: 100px;
+    }
+
+    .cart__mobile-voucher-bottom-sheet-sub-title {
+        margin-bottom: 16px;
+    }
+
+    .cart__mobile-voucher-bottom-sheet-sub-desc {
+        color: #727272;
     }
 }
 
