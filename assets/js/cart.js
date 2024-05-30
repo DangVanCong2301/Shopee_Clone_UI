@@ -278,15 +278,19 @@ function deleteAllProduct() {
 }
 
 // JS Mobile
-function moveCartItem() {
-    if (document.querySelector(".cart__mobile-item-header-fix").innerText == "Sửa") {
-        document.querySelector(".cart__mobile-item-body-product").classList.toggle("move");
-        document.querySelector(".cart__mobile-item-header-fix").innerText = "Hoàn thành";
-    } else {
-        document.querySelector(".cart__mobile-item-body-product").classList.toggle("move");
-        document.querySelector(".cart__mobile-item-header-fix").innerText = "Sửa";
-    }
-}
+const headerFix = document.querySelectorAll(".cart__mobile-item-header-fix");
+headerFix.forEach(e => {
+    e.addEventListener('click', () => {
+        const cartItem = e.parentNode.parentNode;
+        if (e.innerText == "Sửa") {
+            cartItem.querySelector(".cart__mobile-item-body-product").classList.toggle("move");
+            e.innerText = "Hoàn thành";
+        } else {
+            cartItem.querySelector(".cart__mobile-item-body-product").classList.toggle("move");
+            e.innerText = "Sửa";
+        }
+    });
+});
 
 function showBottomSheetVoucher() {
     document.querySelector(".cart__mobile-voucher-bottom-sheet").classList.add("show");
@@ -299,5 +303,15 @@ function hideBottomSheetVoucher() {
 window.addEventListener('click', (e) => {
     if (e.target == document.querySelector(".cart__mobile-voucher-bottom-sheet")) {
         document.querySelector(".cart__mobile-voucher-bottom-sheet").classList.remove("show");
+    }
+});
+
+function showBottomSheetTransport() {
+    document.querySelector(".cart__mobile-transport-bottom-sheet").classList.add("show");
+}
+
+window.addEventListener('click', (e) => {
+    if (e.target == document.querySelector(".cart__mobile-transport-bottom-sheet")) {
+        document.querySelector(".cart__mobile-transport-bottom-sheet").classList.remove("show");
     }
 });
