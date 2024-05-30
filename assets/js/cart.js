@@ -287,3 +287,17 @@ function moveCartItem() {
         document.querySelector(".cart__mobile-item-header-fix").innerText = "Sửa";
     }
 }
+
+function showBottomSheetVoucher() {
+    document.querySelector(".cart__mobile-voucher-bottom-sheet").classList.add("show");
+}
+
+function hideBottomSheetVoucher() {
+    document.querySelector(".cart__mobile-voucher-bottom-sheet").classList.remove("show");
+}
+
+window.addEventListener('click', (e) => {
+    if (e.target == document.querySelector(".cart__mobile-voucher-bottom-sheet")) {
+        document.querySelector(".cart__mobile-voucher-bottom-sheet").classList.remove("show");
+    }
+});
