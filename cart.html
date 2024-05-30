@@ -22,7 +22,7 @@
                     <ul class="header__navbar-list">
                         <li class="header__navbar-item header__navbar-item--has-qr header__navbar-item--separate">Vào
                             của
-                            hàng trên ứng dụng F4-Shop
+                            hàng trên ứng dụng Shopee
                             <div class="header__qr">
                                 <img src="./assets/img/qr_code.png" alt="" class="header__qr-img">
                                 <div class="header__qr-apps">
@@ -319,7 +319,140 @@
                                         <div class="cart__mobile-item-header-shop-name">Viet Mark</div>
                                         <i class="uil uil-angle-right-b cart__mobile-item-header-shop-icon-arrow"></i>
                                     </div>
-                                    <div class="cart__mobile-item-header-fix" onclick="moveCartItem()">Sửa</div>
+                                    <div class="cart__mobile-item-header-fix">Sửa</div>
+                                </div>
+                                <div class="cart__mobile-item-body">
+                                    <div class="cart__mobile-item-body-product">
+                                        <div class="cart__mobile-item-body-left">
+                                            <div class="cart__mobile-item-box">
+                                                <input type="checkbox" class="cart__mobile-item-input" name="" id="">
+                                            </div>
+                                            <div class="cart__mobile-item-product-img" style="background-image: url(./assets/img/am_sieu_toc_1.jpg);"></div>
+                                        </div>
+                                        <div class="cart__mobile-item-body-right">
+                                            <div class="cart__mobile-item-product-name">
+                                                Bút Laze Trình Chiếu PowerPoint Kèm Remote Điều Khiển Không Dây Cho Laptop RF 2.4GHz
+                                            </div>
+                                            <div class="cart__mobile-item-product-type">
+                                                <span>Phân loại hàng: Bạc</span>
+                                                <i class="uil uil-angle-down cart__mobile-item-product-type-icon"></i>
+                                            </div>
+                                            <div class="cart__mobile-item-product-change-sub">
+                                                <span>Đổi ý miễn phí</span>
+                                            </div>
+                                            <div class="cart__mobile-item-product-voucher">
+                                                <img src="./assets/img/voucher.png" class="cart__mobile-item-product-voucher-img"></img>
+                                            </div>
+                                            <div class="cart__mobile-item-product-price">
+                                                <div class="cart__mobile-item-product-price-old">189.000đ</div>
+                                                <div class="cart__mobile-item-product-price-new">121.000đ</div>
+                                            </div>
+                                            <div class="cart__mobile-item-product-quantity">
+                                                <div class="cart__mobile-item-product-quantity-btn-plus">+</div>
+                                                <input type="text" class="cart__mobile-item-product-quantity-input" value="1">
+                                                <div class="cart__mobile-item-product-quantity-btn-less">-</div>
+                                            </div>
+                                        </div>
+                                        <div class="cart__mobile-item-body-tools">
+                                            <div class="cart__mobile-item-body-product-similar">Sản phẩm tương tự</div>
+                                            <div class="cart__mobile-item-body-product-delete">Xoá</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cart__mobile-voucher" onclick="showBottomSheetVoucher()">
+                                    <i class="uil uil-ellipsis-v cart__mobile-voucher-icon-more"></i>
+                                    <span>Thêm Shop Voucher</span>
+                                    <i class="uil uil-angle-right-b cart__mobile-voucher-icon-arrow"></i>
+                                </div>
+                                <div class="cart__mobile-voucher-bottom-sheet">
+                                    <div class="cart__mobile-voucher-bottom-sheet-container">
+                                        <div class="cart__mobile-voucher-bottom-sheet-header">
+                                            <span>Hàng Tốt Giá Rẻ Shop Voucher</span>
+                                            <i class="uil uil-multiply cart__mobile-voucher-bottom-sheet-header-icon" onclick="hideBottomSheetVoucher()"></i>
+                                        </div>
+                                        <div class="cart__mobile-voucher-bottom-sheet-box">
+                                            <input type="text" class="cart__mobile-voucher-bottom-sheet-input">
+                                            <button type="button" class="cart__mobile-voucher-bottom-sheet-btn">Áp dụng</button>
+                                        </div>
+                                        <div class="cart__mobile-voucher-bottom-sheet-card">
+                                            <div class="cart__mobile-voucher-bottom-sheet-card-box">
+                                                <div class="cart__mobile-voucher-bottom-sheet-card-line">
+                                                    <span></span>
+                                                </div>
+                                                <div class="cart__mobile-voucher-bottom-sheet-card-text">%</div>
+                                                <div class="cart__mobile-voucher-bottom-sheet-card-left-circle"></div>
+                                                <div class="cart__mobile-voucher-bottom-sheet-card-right-circle"></div>
+                                                <div class="cart__mobile-voucher-bottom-sheet-card-plus-1">+</div>
+                                                <div class="cart__mobile-voucher-bottom-sheet-card-plus-2">+</div>
+                                                <div class="cart__mobile-voucher-bottom-sheet-card-round-1"></div>
+                                                <div class="cart__mobile-voucher-bottom-sheet-card-round-2"></div>
+                                            </div>
+                                        </div>
+                                        <div class="cart__mobile-voucher-bottom-sheet-sub">
+                                            <div class="cart__mobile-voucher-bottom-sheet-sub-title">Chưa có mã giảm giá nào của Shop</div>
+                                            <div class="cart__mobile-voucher-bottom-sheet-sub-desc">Nhập mã giảm giá có thể sử dụng vào thanh toán bên trên</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cart__mobile-free-ship" onclick="showBottomSheetTransport()">
+                                    <div class="cart__mobile-free-ship-icon" style="background-image: url(./assets/img/free_ship.png);"></div>
+                                    <div class="cart__mobile-free-ship-sub">Giảm 300.000đ phí vận chuyển đơn tối thiểu 0đ</div>
+                                </div>
+                                <div class="cart__mobile-transport-bottom-sheet">
+                                    <div class="cart__mobile-transport-bottom-sheet-container">
+                                        <div class="cart__mobile-transport-bottom-sheet-header">Khuyến mãi vận chuyển - Hàng tốt giá rẻ Shop</div>
+                                        <div class="cart__mobile-transport-bottom-sheet-list">
+                                            <div class="cart__mobile-transport-bottom-sheet-item">
+                                                <div class="cart__mobile-transport-bottom-sheet-item-col-1">Đơn tối thiểu</div>
+                                                <div class="cart__mobile-transport-bottom-sheet-item-col-2">Ưu đãi</div>
+                                                <div class="cart__mobile-transport-bottom-sheet-item-col-3">Đơn vị vận chuyển</div>
+                                            </div>
+                                            <div class="cart__mobile-transport-bottom-sheet-item">
+                                                <div class="cart__mobile-transport-bottom-sheet-item-col-1">0đ</div>
+                                                <div class="cart__mobile-transport-bottom-sheet-item-col-2">300.000đ</div>
+                                                <div class="cart__mobile-transport-bottom-sheet-item-col-3">
+                                                    <div class="cart__mobile-transport-bottom-sheet-item-col-3-line-1">Nhanh</div>
+                                                    <div class="cart__mobile-transport-bottom-sheet-item-col-3-line-2">Hàng cồng kềnh</div>
+                                                </div>
+                                            </div>
+                                            <div class="cart__mobile-transport-bottom-sheet-item">
+                                                <div class="cart__mobile-transport-bottom-sheet-item-col-1">0đ</div>
+                                                <div class="cart__mobile-transport-bottom-sheet-item-col-2">40.000đ</div>
+                                                <div class="cart__mobile-transport-bottom-sheet-item-col-3">
+                                                    <div class="cart__mobile-transport-bottom-sheet-item-col-3-line-1">Hoả tốc</div>
+                                                </div>
+                                            </div>
+                                            <div class="cart__mobile-transport-bottom-sheet-item">
+                                                <div class="cart__mobile-transport-bottom-sheet-item-col-1">0đ</div>
+                                                <div class="cart__mobile-transport-bottom-sheet-item-col-2">20.000đ</div>
+                                                <div class="cart__mobile-transport-bottom-sheet-item-col-3">
+                                                    <div class="cart__mobile-transport-bottom-sheet-item-col-3-line-1">Tiết kiệm</div>
+                                                </div>
+                                            </div>
+                                            <div class="cart__mobile-transport-bottom-sheet-item">
+                                                <div class="cart__mobile-transport-bottom-sheet-item-col-1">25.000đ</div>
+                                                <div class="cart__mobile-transport-bottom-sheet-item-col-2">300.000đ</div>
+                                                <div class="cart__mobile-transport-bottom-sheet-item-col-3">
+                                                    <div class="cart__mobile-transport-bottom-sheet-item-col-3-line-1">Hoả tốc</div>
+                                                    <div class="cart__mobile-transport-bottom-sheet-item-col-3-line-2">Tiết kiệm</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="cart__mobile-transport-bottom-sheet-btn">OK</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cart__mobile-item">
+                                <div class="cart__mobile-item-header">
+                                    <div class="cart__mobile-item-box">
+                                        <input type="checkbox" class="cart__mobile-item-input" name="" id="">
+                                    </div>
+                                    <div class="cart__mobile-item-header-shop">
+                                        <div class="cart__mobile-item-header-shop-favorite">Yêu thích</div>
+                                        <div class="cart__mobile-item-header-shop-name">F4 Shop</div>
+                                        <i class="uil uil-angle-right-b cart__mobile-item-header-shop-icon-arrow"></i>
+                                    </div>
+                                    <div class="cart__mobile-item-header-fix">Sửa</div>
                                 </div>
                                 <div class="cart__mobile-item-body">
                                     <div class="cart__mobile-item-body-product">
@@ -394,9 +527,78 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="cart__mobile-free-ship">
+                                <div class="cart__mobile-free-ship" onclick="showBottomSheetTransport()">
                                     <div class="cart__mobile-free-ship-icon" style="background-image: url(./assets/img/free_ship.png);"></div>
                                     <div class="cart__mobile-free-ship-sub">Giảm 300.000đ phí vận chuyển đơn tối thiểu 0đ</div>
+                                </div>
+                                <div class="cart__mobile-transport-bottom-sheet">
+                                    <div class="cart__mobile-transport-bottom-sheet-container">
+                                        <div class="cart__mobile-transport-bottom-sheet-header">Khuyến mãi vận chuyển - Hàng tốt giá rẻ Shop</div>
+                                        <div class="cart__mobile-transport-bottom-sheet-list">
+                                            <div class="cart__mobile-transport-bottom-sheet-item">
+                                                <div class="cart__mobile-transport-bottom-sheet-item-col-1">Đơn tối thiểu</div>
+                                                <div class="cart__mobile-transport-bottom-sheet-item-col-2">Ưu đãi</div>
+                                                <div class="cart__mobile-transport-bottom-sheet-item-col-3">Đơn vị vận chuyển</div>
+                                            </div>
+                                            <div class="cart__mobile-transport-bottom-sheet-item">
+                                                <div class="cart__mobile-transport-bottom-sheet-item-col-1">0đ</div>
+                                                <div class="cart__mobile-transport-bottom-sheet-item-col-2">300.000đ</div>
+                                                <div class="cart__mobile-transport-bottom-sheet-item-col-3">
+                                                    <div class="cart__mobile-transport-bottom-sheet-item-col-3-line-1">Nhanh</div>
+                                                    <div class="cart__mobile-transport-bottom-sheet-item-col-3-line-2">Hàng cồng kềnh</div>
+                                                </div>
+                                            </div>
+                                            <div class="cart__mobile-transport-bottom-sheet-item">
+                                                <div class="cart__mobile-transport-bottom-sheet-item-col-1">0đ</div>
+                                                <div class="cart__mobile-transport-bottom-sheet-item-col-2">40.000đ</div>
+                                                <div class="cart__mobile-transport-bottom-sheet-item-col-3">
+                                                    <div class="cart__mobile-transport-bottom-sheet-item-col-3-line-1">Hoả tốc</div>
+                                                </div>
+                                            </div>
+                                            <div class="cart__mobile-transport-bottom-sheet-item">
+                                                <div class="cart__mobile-transport-bottom-sheet-item-col-1">0đ</div>
+                                                <div class="cart__mobile-transport-bottom-sheet-item-col-2">20.000đ</div>
+                                                <div class="cart__mobile-transport-bottom-sheet-item-col-3">
+                                                    <div class="cart__mobile-transport-bottom-sheet-item-col-3-line-1">Tiết kiệm</div>
+                                                </div>
+                                            </div>
+                                            <div class="cart__mobile-transport-bottom-sheet-item">
+                                                <div class="cart__mobile-transport-bottom-sheet-item-col-1">25.000đ</div>
+                                                <div class="cart__mobile-transport-bottom-sheet-item-col-2">300.000đ</div>
+                                                <div class="cart__mobile-transport-bottom-sheet-item-col-3">
+                                                    <div class="cart__mobile-transport-bottom-sheet-item-col-3-line-1">Hoả tốc</div>
+                                                    <div class="cart__mobile-transport-bottom-sheet-item-col-3-line-2">Tiết kiệm</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="cart__mobile-transport-bottom-sheet-btn">OK</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cart__mobile-checkout">
+                            <div class="cart__mobile-checkout-voucher">
+                                <div class="cart__mobile-checkout-voucher-title">
+                                    <i class="uil uil-ellipsis-v cart__mobile-checkout-voucher-icon-more"></i>
+                                    <span>Thêm Shop Voucher</span>
+                                </div>
+                                <div class="cart__mobile-checkout-voucher-code">
+                                    <span>Chọn hoặc nhập mã</span>
+                                    <i class="uil uil-angle-right-b cart__mobile-checkout-voucher-icon-arrow"></i>
+                                </div>
+                            </div>
+                            <div class="cart__mobile-checkout-money">
+                                <div class="cart__mobile-checkout-money-left">
+                                    <div class="cart__mobile-item-box">
+                                        <input type="checkbox" class="cart__mobile-item-input" name="" id="">
+                                    </div>
+                                    <span>Chọn tất cả</span>
+                                </div>
+                                <div class="cart__mobile-checkout-money-right">
+                                    <div class="cart__mobile-checkout-money-text">
+                                        Tổng số tiền: <span>0đ</span>
+                                    </div>
+                                    <div class="cart__mobile-checkout-money-btn">Thanh toán</div>
                                 </div>
                             </div>
                         </div>
