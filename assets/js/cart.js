@@ -315,3 +315,59 @@ window.addEventListener('click', (e) => {
         document.querySelector(".cart__mobile-transport-bottom-sheet").classList.remove("show");
     }
 });
+
+function changeBottomCheckout(input) {
+    if (input.innerText == "Sửa") {
+        document.querySelector(".cart__mobile-checkout-voucher").classList.add("hide");
+        document.querySelector(".cart__mobile-checkout-money-text").classList.add("hide");
+        document.querySelector(".cart__mobile-checkout-money-btn").classList.add("hide");
+        document.querySelector(".cart__mobile-checkout-money-btn-delete").classList.add("show");
+        input.innerText = "Hoàn thành";
+    } else {
+        document.querySelector(".cart__mobile-checkout-voucher").classList.remove("hide");
+        document.querySelector(".cart__mobile-checkout-money-text").classList.remove("hide");
+        document.querySelector(".cart__mobile-checkout-money-btn").classList.remove("hide");
+        document.querySelector(".cart__mobile-checkout-money-btn-delete").classList.remove("show");
+        input.innerText = "Sửa";
+    }
+}
+
+function openDeleteModal() {
+    document.querySelector(".modal").classList.add("open");
+    let html = "";
+    html += `
+    <div class="cart__delete">
+        <div class="cart__delete-msg">Bạn có chắc muốn xoá sản phẩm?</div>
+        <div class="cart__delete-btns">
+            <div class="cart__delete-btn-no" onclick="closeDeleteModal()">Không</div>
+            <div class="cart__delete-btn-agree">Đồng ý</div>
+        </div>
+    </div>
+    `;
+    document.querySelector(".modal__body").innerHTML = html;
+}
+
+function closeDeleteModal() {
+    document.querySelector(".modal").classList.remove("open");
+}
+
+window.addEventListener('click', (e) => {
+    if (e.target == document.querySelector(".modal__overlay")) {
+        document.querySelector(".modal").classList.remove("open");
+    }
+});
+
+function openDeleteAllModal() {
+    document.querySelector(".modal").classList.add("open");
+    let html = "";
+    html += `
+    <div class="cart__delete">
+        <div class="cart__delete-msg">Bạn có chắc muốn 2 xoá sản phẩm?</div>
+        <div class="cart__delete-btns">
+            <div class="cart__delete-btn-no" onclick="closeDeleteModal()">Không</div>
+            <div class="cart__delete-btn-agree">Đồng ý</div>
+        </div>
+    </div>
+    `;
+    document.querySelector(".modal__body").innerHTML = html;
+}

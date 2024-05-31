@@ -36,6 +36,7 @@ html {
     /* display: flex;  */
     animation: fadeIn linear 0.1s;
     display: none;
+    z-index: 10;
 }
 
 .modal__overlay {
