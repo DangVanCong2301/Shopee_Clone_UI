@@ -22,13 +22,17 @@
         background-color: var(--white-color);
     }
 
+    .header__search {
+        padding: 0;
+    }
+
     .header__mobile-back {
         margin-right: 12px;
         display: block;
     }
 
     .header__mobile-back-icon {
-        font-size: 2.4rem;
+        font-size: 3.4rem;
         color: var(--primary-color);
     }
 
@@ -59,7 +63,7 @@
     }
 
     .app__container {
-        margin-top: 46px;
+        margin-top: calc(20px + var(--header-height));
     }
 
     .success-header {
