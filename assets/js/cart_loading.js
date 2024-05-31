@@ -11,6 +11,9 @@ const loadingProductSold = document.querySelectorAll(".home-product-item__sold-l
 const loadingProductBrand = document.querySelectorAll(".home-product-item__brand-loading");
 const loadingProductOrigin = document.querySelectorAll(".home-product-item__origin-name-loading");
 
+// Loading Mobile
+const loadingCartItemMobile = document.querySelectorAll(".cart__mobile-item-loading");
+
 
 function loadingProgress() {
     setTimeout(() => {
@@ -43,6 +46,10 @@ function loadingProgress() {
         }
         for (let i = 0; i < loadingProductOrigin.length; i++) {
             loadingProductOrigin[i].style.display = 'none';
+        }
+
+        for (let i = 0; i < loadingCartItemMobile.length; i++) {
+            loadingCartItemMobile[i].style.display = 'none';
         }
     }, 1000);
 }

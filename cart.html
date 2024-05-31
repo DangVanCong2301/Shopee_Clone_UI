@@ -145,7 +145,7 @@
 
                     <div class="header__mobile-title hide-on-destop">Giỏ hàng</div>
 
-                    <div class="header__mobile-fix hide-on-destop">Sửa</div>
+                    <div class="header__mobile-fix hide-on-destop" onclick="changeBottomCheckout(this)">Sửa</div>
 
                     <div class="header__search hide-on-mobile">
                         <div class="header__search-input-wrap">
@@ -297,14 +297,6 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="cart__like">
-                            <div class="cart__like-title">Có thể bạn cũng thích</div>
-                            <div class="home-product">
-                                <div class="row sm-gutter cart__like-product-list">
-                                    
-                                </div>
-                            </div>
-                        </div>
                     </div>
 
                     <div class="cart__mobile hide-on-destop">
@@ -355,7 +347,7 @@
                                         </div>
                                         <div class="cart__mobile-item-body-tools">
                                             <div class="cart__mobile-item-body-product-similar">Sản phẩm tương tự</div>
-                                            <div class="cart__mobile-item-body-product-delete">Xoá</div>
+                                            <div class="cart__mobile-item-body-product-delete" onclick="openDeleteModal()">Xoá</div>
                                         </div>
                                     </div>
                                 </div>
@@ -439,6 +431,42 @@
                                             </div>
                                         </div>
                                         <div class="cart__mobile-transport-bottom-sheet-btn">OK</div>
+                                    </div>
+                                </div>
+                                <div class="cart__mobile-item-loading">
+                                    <div class="cart__mobile-item-loading-header">
+                                        <div class="cart__mobile-item-loading-check"></div>
+                                        <div class="cart__mobile-item-loading-header-shop"></div>
+                                        <div class="cart__mobile-item-loading-header-fix"></div>
+                                    </div>
+                                    <div class="cart__mobile-item-loading-body">
+                                        <div class="cart__mobile-item-loading-body-item">
+                                            <div class="cart__mobile-item-loading-check"></div>
+                                            <div class="cart__mobile-item-loading-body-item-img"></div>
+                                            <div class="cart__mobile-item-loading-body-item-info">
+                                                <div class="cart__mobile-item-loading-body-item-info-1"></div>
+                                                <div class="cart__mobile-item-loading-body-item-info-2"></div>
+                                                <div class="cart__mobile-item-loading-body-item-info-3"></div>
+                                            </div>
+                                        </div>
+                                        <div class="cart__mobile-item-loading-body-item">
+                                            <div class="cart__mobile-item-loading-check"></div>
+                                            <div class="cart__mobile-item-loading-body-item-img"></div>
+                                            <div class="cart__mobile-item-loading-body-item-info">
+                                                <div class="cart__mobile-item-loading-body-item-info-1"></div>
+                                                <div class="cart__mobile-item-loading-body-item-info-2"></div>
+                                                <div class="cart__mobile-item-loading-body-item-info-3"></div>
+                                            </div>
+                                        </div>
+                                        <div class="cart__mobile-item-loading-body-item">
+                                            <div class="cart__mobile-item-loading-check"></div>
+                                            <div class="cart__mobile-item-loading-body-item-img"></div>
+                                            <div class="cart__mobile-item-loading-body-item-info">
+                                                <div class="cart__mobile-item-loading-body-item-info-1"></div>
+                                                <div class="cart__mobile-item-loading-body-item-info-2"></div>
+                                                <div class="cart__mobile-item-loading-body-item-info-3"></div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -574,6 +602,42 @@
                                         <div class="cart__mobile-transport-bottom-sheet-btn">OK</div>
                                     </div>
                                 </div>
+                                <div class="cart__mobile-item-loading">
+                                    <div class="cart__mobile-item-loading-header">
+                                        <div class="cart__mobile-item-loading-check"></div>
+                                        <div class="cart__mobile-item-loading-header-shop"></div>
+                                        <div class="cart__mobile-item-loading-header-fix"></div>
+                                    </div>
+                                    <div class="cart__mobile-item-loading-body">
+                                        <div class="cart__mobile-item-loading-body-item">
+                                            <div class="cart__mobile-item-loading-check"></div>
+                                            <div class="cart__mobile-item-loading-body-item-img"></div>
+                                            <div class="cart__mobile-item-loading-body-item-info">
+                                                <div class="cart__mobile-item-loading-body-item-info-1"></div>
+                                                <div class="cart__mobile-item-loading-body-item-info-2"></div>
+                                                <div class="cart__mobile-item-loading-body-item-info-3"></div>
+                                            </div>
+                                        </div>
+                                        <div class="cart__mobile-item-loading-body-item">
+                                            <div class="cart__mobile-item-loading-check"></div>
+                                            <div class="cart__mobile-item-loading-body-item-img"></div>
+                                            <div class="cart__mobile-item-loading-body-item-info">
+                                                <div class="cart__mobile-item-loading-body-item-info-1"></div>
+                                                <div class="cart__mobile-item-loading-body-item-info-2"></div>
+                                                <div class="cart__mobile-item-loading-body-item-info-3"></div>
+                                            </div>
+                                        </div>
+                                        <div class="cart__mobile-item-loading-body-item">
+                                            <div class="cart__mobile-item-loading-check"></div>
+                                            <div class="cart__mobile-item-loading-body-item-img"></div>
+                                            <div class="cart__mobile-item-loading-body-item-info">
+                                                <div class="cart__mobile-item-loading-body-item-info-1"></div>
+                                                <div class="cart__mobile-item-loading-body-item-info-2"></div>
+                                                <div class="cart__mobile-item-loading-body-item-info-3"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div class="cart__mobile-checkout">
@@ -599,7 +663,17 @@
                                         Tổng số tiền: <span>0đ</span>
                                     </div>
                                     <div class="cart__mobile-checkout-money-btn">Thanh toán</div>
+                                    <div class="cart__mobile-checkout-money-btn-delete" onclick="openDeleteAllModal()">Xoá</div>
                                 </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cart__like">
+                        <div class="cart__like-title">Có thể bạn cũng thích</div>
+                        <div class="home-product">
+                            <div class="row sm-gutter cart__like-product-list">
+                                
                             </div>
                         </div>
                     </div>
@@ -702,13 +776,20 @@
     <div class="cart__message">
 
     </div>
-    <!-- <div class="modal">
+    <div class="modal">
         <div class="modal__overlay">
     
         </div>
         <div class="modal__body">
-    
-            Form message
+            <!-- <div class="cart__delete">
+                <div class="cart__delete-msg">Bạn có chắc muốn xoá sản phẩm?</div>
+                <div class="cart__delete-btns">
+                    <div class="cart__delete-btn-no">Không</div>
+                    <div class="cart__delete-btn-agree">Đồng ý</div>
+                </div>
+            </div> -->
+
+            <!-- Form message
             <div class="auth-form">
                 <div class="auth-form__container">
                     <p class="auth-form__msg">Bạn muốn xoá mặt hàng này khỏi giỏ?</p>
@@ -717,10 +798,10 @@
                         <button onclick="exitModal()" class="btn">ĐỒNG Ý</button>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
     
-    </div> -->
+    </div>
 </body>
 <script src="./assets/js/cart.js"></script>
 <script src="./assets/js/cart_loading.js"></script>
