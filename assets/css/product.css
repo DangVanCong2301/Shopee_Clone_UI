@@ -52,12 +52,14 @@
         color: var(--primary-color);
     }
 
-    .header__mobile-menu {
+    .header__mobile-menu,
+    .header__mobile-more {
         margin-left: 12px;
         display: block;
     }
 
-    .header__mobile-menu-icon {
+    .header__mobile-menu-icon,
+    .header__mobile-more-icon {
         font-size: 2.4rem;
         color: var(--primary-color);
     }

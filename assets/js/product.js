@@ -1,3 +1,5 @@
+const productList = document.querySelectorAll(".home-product__list");
+
 function loadProducts() {
     let html = "";
     for (let i = 1; i <= 10; i++) {
@@ -67,7 +69,9 @@ function loadProducts() {
         </div>
         `;
     }
-    document.querySelector(".home-product__list").innerHTML = html;
+    productList.forEach(e => {
+        e.innerHTML = html;
+    });
 }
 loadProducts();
 
