@@ -113,12 +113,36 @@
         padding: 4px 8px;
     }
 
+    .shop__mobile-header {
+        transition: all .3s;
+    }
+
     .shop__mobile-title-list {
         display: flex;
         justify-content: space-between;
         background-color: var(--white-color);
         font-size: var(--normal-font-size);
         border-bottom: 1px solid var(--border-color);
+    }
+
+    .shop__mobile-header.scroll {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        margin-top: calc(16px + var(--header-height));
+        background-color: var(--white-color);
+        z-index: 8;
+    }
+
+    .header__sort-bar.scroll {
+        position: fixed;
+        top: calc(48px + var(--header-height));
+        right: 0;
+        left: 0;
+        /* margin-top: calc(48px + var(--header-height)); */
+        background-color: var(--white-color);
+        z-index: 8;
     }
     
     .shop__mobile-title-item {
@@ -397,5 +421,60 @@
     .shop__mobile-shop-category-product-item-favourite-icon {
         color: var(--white-color);
         margin: 0 2px 0 5px;
+    }
+
+    .shop__mobile-category {
+        background-color: var(--white-color);
+        font-size: var(--normal-font-size);
+    }
+    
+    .shop__mobile-category-item {
+        border-bottom: 1px solid var(--border-color);
+        padding: 16px;
+    }
+
+    .shop__mobile-category-item-link {
+        display: flex;
+        text-decoration: none;
+        color: var(--text-color);
+        align-items: center;
+        column-gap: 12px;
+    }
+
+    .shop__mobile-category-item-img {
+        width: 40px;
+        height: 40px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+    .shop__mobile-category-item-info {
+        display: flex;
+        column-gap: 10px;
+    }
+
+    .shop__mobile-category-item-quantity,
+    .shop__mobile-category-total-quantity {
+        color: rgba(0, 0, 0, .54);
+    }
+
+    .shop__mobile-category-item-arrow {
+        font-size: 20px;
+        margin-left: auto;
+    }
+
+    .shop__mobile-category-total {
+        display: flex;
+        align-items: center;
+        padding: 16px;
+        column-gap: 10px;
+        text-decoration: none;
+        color: var(--text-color);
+    }
+
+    .shop__mobile-category-total-name {
+        height: 40px;
+        line-height: 40px;
     }
 }
