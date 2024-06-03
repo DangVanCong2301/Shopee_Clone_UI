@@ -248,20 +248,6 @@
                     </div>
                 </div>
             </div>
-            <ul class="header__sort-bar hide-on-mobile">
-                <li class="header__sort-item">
-                    <a href="" class="header__sort-link">Liên quan</a>
-                </li>
-                <li class="header__sort-item header__sort-item--active">
-                    <a href="" class="header__sort-link">Mới nhất</a>
-                </li>
-                <li class="header__sort-item">
-                    <a href="" class="header__sort-link">Bán chạy</a>
-                </li>
-                <li class="header__sort-item">
-                    <a href="" class="header__sort-link">Giá</a>
-                </li>
-            </ul>
         </header>
         <div class="app__container">
             <div class="grid wide">
@@ -299,18 +285,38 @@
                             </div>
                         </div>
                     </div>
-                    <div class="shop__mobile-title-list">
-                        <div class="shop__mobile-title-item">
-                            Shop
+                    <div class="shop__mobile-header">
+                        <div class="shop__mobile-title-list">
+                            <div class="shop__mobile-title-item">
+                                Shop
+                            </div>
+                            <div class="shop__mobile-title-item active">
+                                Sản phẩm
+                            </div>
+                            <div class="shop__mobile-title-item">
+                                Danh mục
+                            </div>
                         </div>
-                        <div class="shop__mobile-title-item active">
-                            Sản phẩm
-                        </div>
-                        <div class="shop__mobile-title-item">
-                            Danh mục
-                        </div>
+                        <ul class="header__sort-bar">
+                            <li class="header__sort-item">
+                                <a href="" class="header__sort-link">Liên quan</a>
+                            </li>
+                            <li class="header__sort-item header__sort-item--active">
+                                <a href="" class="header__sort-link">Mới nhất</a>
+                            </li>
+                            <li class="header__sort-item">
+                                <a href="" class="header__sort-link">Bán chạy</a>
+                            </li>
+                            <li class="header__sort-item">
+                                <a href="javascript:tonglePrice()" class="header__sort-link active">
+                                    <span>Giá</span>
+                                    <i class="uil uil-direction header__sort-link-icon"></i>
+                                    <!-- <i class="uil uil-arrow-up header__sort-link-icon"></i> -->
+                                </a>
+                            </li>
+                        </ul>
                     </div>
-                    <div class="shop__mobile-shop">
+                    <div class="shop__mobile-shop hide-on-mobile">
                         <div class="shop__mobile-description">
                             <div class="shop__mobile-description-paragraph">
                                 <p>Viet Mark Shop</p>
@@ -550,31 +556,52 @@
                             </div>
                         </div>
                     </div>
-                    <div class="shop__mobile-product hide-on-mobile">
-                        <ul class="header__sort-bar">
-                            <li class="header__sort-item">
-                                <a href="" class="header__sort-link">Liên quan</a>
-                            </li>
-                            <li class="header__sort-item header__sort-item--active">
-                                <a href="" class="header__sort-link">Mới nhất</a>
-                            </li>
-                            <li class="header__sort-item">
-                                <a href="" class="header__sort-link">Bán chạy</a>
-                            </li>
-                            <li class="header__sort-item">
-                                <a href="javascript:tonglePrice()" class="header__sort-link active">
-                                    <span>Giá</span>
-                                    <i class="uil uil-direction header__sort-link-icon"></i>
-                                    <!-- <i class="uil uil-arrow-up header__sort-link-icon"></i> -->
-                                </a>
-                            </li>
-                        </ul>
+                    <div class="shop__mobile-product">
                         <div class="home-product">
                             <div class="row sm-gutter home-product__list">
                                 <!--Product item-->
                                 
                             </div>
                         </div>
+                    </div>
+                    <div class="shop__mobile-category hide-on-mobile">
+                        <div class="shop__mobile-category-list">
+                            <div class="shop__mobile-category-item">
+                                <a href="#" class="shop__mobile-category-item-link">
+                                    <div class="shop__mobile-category-item-img" style="background-image: url(./assets/img/am_sieu_toc_1.jpg);"></div>
+                                    <div class="shop__mobile-category-item-info">
+                                        <div class="shop__mobile-category-item-name">Ấm siêu tốc</div>
+                                        <div class="shop__mobile-category-item-quantity">(12)</div>
+                                    </div>
+                                    <i class="uil uil-angle-right-b shop__mobile-category-item-arrow"></i>
+                                </a>
+                            </div>
+                            <div class="shop__mobile-category-item">
+                                <a href="#" class="shop__mobile-category-item-link">
+                                    <div class="shop__mobile-category-item-img" style="background-image: url(./assets/img/am_sieu_toc_1.jpg);"></div>
+                                    <div class="shop__mobile-category-item-info">
+                                        <div class="shop__mobile-category-item-name">Nồi cơm điện</div>
+                                        <div class="shop__mobile-category-item-quantity">(12)</div>
+                                    </div>
+                                    <i class="uil uil-angle-right-b shop__mobile-category-item-arrow"></i>
+                                </a>
+                            </div>
+                            <div class="shop__mobile-category-item">
+                                <a href="#" class="shop__mobile-category-item-link">
+                                    <div class="shop__mobile-category-item-img" style="background-image: url(./assets/img/am_sieu_toc_1.jpg);"></div>
+                                    <div class="shop__mobile-category-item-info">
+                                        <div class="shop__mobile-category-item-name">Bếp từ</div>
+                                        <div class="shop__mobile-category-item-quantity">(12)</div>
+                                    </div>
+                                    <i class="uil uil-angle-right-b shop__mobile-category-item-arrow"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <a href="#" class="shop__mobile-category-total">
+                            <div class="shop__mobile-category-total-name">Sản phẩm</div>
+                            <div class="shop__mobile-category-total-quantity">(200)</div>
+                            <i class="uil uil-angle-right-b shop__mobile-category-item-arrow"></i>
+                        </a>
                     </div>
                 </div>
                 <div class="row sm-gutter app__content">
@@ -705,7 +732,7 @@
                                 
                             </div>
                         </div>
-                        <ul class="pagination home-product__pagination">
+                        <ul class="pagination home-product__pagination hide-on-mobile">
                             <li class="pagination-item">
                                 <a href="" class="pagination-item__link">
                                     <i class="pagination-item__icon fas fa-angle-left"></i>
