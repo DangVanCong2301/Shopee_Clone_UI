@@ -22,10 +22,6 @@
         background-color: var(--white-color);
     }
 
-    .header__search {
-        padding: 0;
-    }
-
     .header__mobile-back {
         margin-right: 12px;
         display: block;
@@ -40,15 +36,7 @@
         margin-left: 0;
     }
 
-    .header__search-input {
-        background-color: #f3f3f3;
-    }
-
     .header__search-input::placeholder {
-        color: var(--primary-color);
-    }
-
-    .header__cart-icon {
         color: var(--primary-color);
     }
 

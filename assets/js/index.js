@@ -194,10 +194,10 @@ function displayChat() {
 
 window.addEventListener('scroll', () => {
     const y = this.pageYOffset;
-    //console.log(this.document.querySelector(".header").style);
-    if (y > 80) {
-        this.document.querySelector(".header").classList.add("scroll");
+    if (y > 1100) {
+        //console.log(y);
+        document.querySelector(".success-header").classList.add("scroll");
     } else {
-        this.document.querySelector(".header").classList.remove("scroll");
+        document.querySelector(".success-header").classList.remove("scroll");
     }
 });
