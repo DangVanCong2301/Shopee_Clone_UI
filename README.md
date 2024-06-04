@@ -4,10 +4,10 @@
 ### Medium Devices
 #### 1. UI Trang chủ
 ![image](https://github.com/DangVanCong2301/Shopee_Clone_UI/assets/111124018/913412c6-931d-4200-b0e5-911c8d23cabd)
-![image](https://github.com/DangVanCong2301/Shopee_Clone_UI/assets/111124018/fef1d395-b6cb-49cc-bbac-e83577ec15ba)
+![image](https://github.com/DangVanCong2301/Shopee_Clone_UI/assets/111124018/427a088e-ac6e-4d5b-a222-ff379ed1bea6)
 #### 2. UI Trang cửa hàng
 ![image](https://github.com/DangVanCong2301/Shopee_Clone_UI/assets/111124018/72e15f47-54f0-4748-9e73-1eccc71540b6)
-![image](https://github.com/DangVanCong2301/Shopee_Clone_UI/assets/111124018/cb6b95a8-091c-4b9a-b326-bb8aa6ff0b9f)
+![Screenshot 2024-06-01 165824](https://github.com/DangVanCong2301/Shopee_Clone_UI/assets/111124018/075677d4-d655-409a-91dd-0d7191ff3610)
 #### 2. UI Trang sản phẩm
 ![image](https://github.com/DangVanCong2301/Shopee_Clone_UI/assets/111124018/87a60e2b-bf1f-4825-9566-6e5f39231338)
 ![image](https://github.com/DangVanCong2301/Shopee_Clone_UI/assets/111124018/6f7b1564-230f-4452-bebe-46ef0dc26b86)
