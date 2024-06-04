@@ -327,22 +327,27 @@
     }
 
     /* Chat Mobile */
+    .chat {
+        overflow: hidden;
+    }
+
     .chat__mobile-window {
         position: absolute;
         top: 0;
-        left: -100%;
+        left: 0;
         width: 224px;
         border-top-left-radius: 4px;
         bottom: 0;
         background-color: var(--white-color);
         z-index: 2;
+        transform: translateX(-100%);
         box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.1), 0 8px 16px 0 rgba(0, 0,0, 0.06);
         animation: showShopMenu .4s ease forwards;
-        display: none;
+        transition: all .3s ease;
     }
 
     .chat__mobile-window.show {
-        display: block;
+        transform: translateX(0);
     }
 
     @keyframes showShopMenu {
