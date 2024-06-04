@@ -201,3 +201,8 @@ window.addEventListener('scroll', () => {
         document.querySelector(".success-header").classList.remove("scroll");
     }
 });
+
+function showChatWindowMobile() {
+    document.querySelector(".chat__header-menu-bar").classList.toggle("active");
+    document.querySelector(".chat__mobile-window").classList.toggle("show");
+}
