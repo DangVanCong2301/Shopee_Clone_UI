@@ -1279,6 +1279,138 @@
     border-radius: 2px;
 }
 
+.banner__voucher {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.banner__voucher-expiry {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    top: 4px;
+    left: 0;
+    font-size: 12px;
+}
+
+.banner__voucher-time {
+    font-size: 20px;
+    font-weight: bold;
+    background-color: var(--white-color);
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    color: var(--primary-color);
+    padding: 4px 10px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+}
+
+.banner__voucher-day {
+    text-transform: uppercase;
+    color: var(--white-color);
+    background-color: #0050d3;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    padding: 2px 4px;
+    font-size: 10px;
+    transition: all .3s;
+}
+
+.banner__voucher-day.active {
+    background-color: var(--primary-color);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+}
+
+.banner__voucher {
+    display: flex;
+}
+
+.banner__voucher-left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.banner__voucher-title {
+    font-size: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #3772ac;
+}
+
+.banner__voucher-discount-now {
+    font-size: 10px;
+    text-transform: uppercase;
+    color: var(--white-color);
+    background-color: var(--primary-color);
+    margin-bottom: -12px;
+    padding: 2px 4px;
+    border-radius: 3px;
+    z-index: 2;
+}
+
+.banner__voucher-weekly {
+    font-size: 10px;
+    text-transform: uppercase;
+    color: var(--white-color);
+    background-color: var(--primary-color);
+    margin-top: -2px;
+    padding: 2px 4px;
+    border-radius: 3px;
+    z-index: 0;
+}
+
+.banner__voucher-money {
+    background-color: #fc9b3c;
+    color: var(--white-color);
+    border: 4px solid #2973d6;
+    font-size: 24px;
+    line-height: 20px;
+    border-radius: 4px;
+    padding: 10px 8px 8px 8px;
+    font-weight: bold;
+    z-index: 1;
+}
+
+.banner__voucher-right {
+    position: relative;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner__voucher-pay {
+    position: absolute;
+    top: 4px;
+    right: 10px;
+    color: var(--primary-color);
+    font-size: 12px;
+}
+
+.banner__voucher-pay span {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    padding: 0px 8px;
+    border-radius: 2px;
+}
+
+.banner__voucher-img-ticket {
+    width: 100px;
+}
+
+.banner__voucher-img-vali {
+    width: 60px;
+    position: absolute;
+    bottom: 36px;
+    left: 20px;
+
+}
+
 /* Store */
 .store__item {
     display: block;
