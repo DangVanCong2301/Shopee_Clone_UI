@@ -573,6 +573,7 @@ html {
     animation: chatGrowth ease-in .3s;
     will-change: opacity, transform;
     display: none;
+    z-index: 2;
 }
 
 @keyframes chatGrowth {
