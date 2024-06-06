@@ -933,6 +933,13 @@ html {
 .chat__body-message-container {
     height: calc(100% - 130px);
     background-color: #f3f3f3;
+    padding: 16px;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+}
+
+.chat__body-message-container::-webkit-scrollbar {
+    display: none;
 }
 
 .chat__body-message {
@@ -988,4 +995,212 @@ html {
 .chat__body-message-bottom-item-icon {
     font-size: 18px;
     color: #8ea4d1;
+}
+
+.chat__message-time {
+    text-align: center;
+    margin: 16px 0;
+}
+
+.chat__message-time span {
+    padding: 4px 8px;
+    background-color: var(--white-color);
+    border-radius: 6px;
+    font-size: var(--normal-font-size);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, .1);
+}
+
+.chat__message-node {
+    display: flex;
+    font-size: 12px;
+    text-align: justify;
+    padding: 8px 10px;
+    background-color: #fff7e0;
+    border-radius: 6px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, .1);
+}
+
+.chat__message-node-icon {
+    font-size: 16px;
+    color: #eda500;
+    margin-right: 6px;
+}
+
+.chat__message-node-link {
+    text-decoration: none;
+    color: #2673dd;
+}
+
+.chat__message-shop {
+    width: 80%;
+    position: relative;
+}
+
+.chat__message-shop-msg {
+    position: relative;
+    margin-top: 12px;
+    border-radius: 6px;
+    line-height: 20px;
+    color: var(--text-color);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, .1);
+    padding: 8px 10px 12px 10px;
+    font-size: var(--normal-font-size);
+    background-color: var(--white-color);
+}
+
+.chat__message-shop-msg::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: -9px;
+    border-style: solid;
+    border-width: 14px 16px 6px;
+    border-color: var(--white-color) transparent transparent transparent;
+}
+
+.chat__message-shop-msg-text {
+    text-align: justify;
+}
+
+.chat__message-shop-msg-short {
+    margin-bottom: 12px;
+}
+
+.chat__message-shop-msg-short span {
+    position: relative;
+    padding: 8px 10px 10px;
+    font-size: var(--normal-font-size);
+    background-color: var(--white-color);
+    color: var(--text-color);
+    border-radius: 4px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, .1);
+    line-height: 20px;
+}
+
+.chat__message-shop-msg-short span::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: -9px;
+    border-style: solid;
+    border-width: 14px 16px 6px;
+    border-color: var(--white-color) transparent transparent transparent;
+}
+
+.chat__message-shop-after-hour {
+    font-size: 10px;
+    color: #b7b7b7;
+}
+
+.chat__message-remind-product-link {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--text-color);
+    margin-top: 10px;
+}
+
+.chat__message-remind-product {
+    display: flex;
+    column-gap: 8px;
+    background-color: #f6f6f6;
+    padding: 10px 8px;
+    border-radius: 4px;
+}
+
+.chat__message-remind-product-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.chat__message-remind-product-img {
+    width: 60px;
+    height: 60px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    border-radius: 4px;
+}
+
+.chat__message-remind-product-name,
+.chat__message-remind-product-numb {
+    height: 20px;
+    line-height: 20px;
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+}
+
+.chat__message-remind-product-status {
+    color: var(--primary-color);
+}
+
+.chat__message-remind-rate-now {
+    text-decoration: none;
+    width: 100%;
+    text-align: center;
+    color: var(--primary-color);
+    margin: 10px auto 0;
+    display: inline-block;
+}
+
+.chat__message-shop-time {
+    position: absolute;
+    font-size: 12px;
+    color: #666;
+    bottom: 10px;
+    right: 10px;
+}
+
+.chat__message-shop-felling {
+    font-size: 50px;
+    line-height: 50px;
+}
+
+.chat__message-customer {
+    width: 80%;
+    margin-left: auto;
+    font-size: var(--normal-font-size);
+    text-align: right;
+    margin-top: 12px;
+    position: relative;
+}
+
+.chat__message-customer-msg span {
+    position: relative;
+    padding: 8px 10px 10px;
+    background-color: #d7f7ef;
+    color: var(--text-color);
+    display: inline-block;
+    border-radius: 4px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, .1);
+    text-align: justify;
+    line-height: 20px;
+}
+
+.chat__message-customer-msg span::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    right: -9px;
+    border-style: solid;
+    border-width: 14px 16px 6px;
+    border-color: #d7f7ef transparent transparent transparent;
+}
+
+.chat__message-customer-time {
+    position: absolute;
+    font-size: 12px;
+    color: #666;
+    bottom: 10px;
+    right: 10px;
+}
+
+.chat__message-customer-time-short,
+.chat__message-shop-time-short {
+    font-size: 12px;
+    color: #666;
+    margin-top: 4px;
 }
