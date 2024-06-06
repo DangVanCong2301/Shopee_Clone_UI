@@ -22,8 +22,8 @@
 ![image](https://github.com/DangVanCong2301/Shopee_Clone_UI/assets/111124018/e8fd3963-cef0-428b-87b1-d032df7bd383)
 ### Large Devices
 #### 1. UI Trang chủ
-![image](https://github.com/DangVanCong2301/Shopee_Clone_UI/assets/111124018/0a503ed6-e3d8-4ee8-8ee1-c61e569cd4fd)
-![image](https://github.com/DangVanCong2301/Shopee_Clone_UI/assets/111124018/40f986bd-7baf-437c-aa54-18ba8e0d0ce6)
+![image](https://github.com/DangVanCong2301/Shopee_Clone_UI/assets/111124018/4b60eb49-1eec-40ff-902a-e2e1354380ee)
+![image](https://github.com/DangVanCong2301/Shopee_Clone_UI/assets/111124018/535539ca-436d-4846-a374-97a0cdac15af)
 #### 2. Sản phẩm
 ![image](https://github.com/DangVanCong2301/Shopee_Clone_UI/assets/111124018/ebf3a5df-8597-4e70-a82c-287cad846582)
 ![image](https://github.com/DangVanCong2301/Shopee_Clone_UI/assets/111124018/684879d3-c8c2-4682-9454-94b3335bd176)
