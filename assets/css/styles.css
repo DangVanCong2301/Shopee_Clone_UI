@@ -1256,27 +1256,25 @@
 }
 
 .banner-right__content {
-    display: grid;
-    grid-template-areas: "img-top" "img-bottom";
-    gap: .6rem;
+    height: 100%;
+    display: flex;
+    row-gap: 6px;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-.banner-right__content-top {
-    position: relative;
-    grid-area: img-top;
-    height: 116px;
-    background-size: contain;
-    background-position: center;
-    border-radius: 2px;
-}
-
+.banner-right__content-top,
 .banner-right__content-bottom {
     position: relative;
-    height: 116px;
-    grid-area: img-bottom;
+    flex: 1;
     background-size: contain;
     background-position: center;
     border-radius: 2px;
+}
+
+.banner-right__content-top-link,
+.banner-right__content-bottom-link {
+    text-decoration: none;
 }
 
 .banner__voucher {
@@ -2183,6 +2181,7 @@ i.home-product-item__like-icon-fill {
     height: 20px;
     width: 82px;
     padding: 4px;
+    border-radius: 2px;
     margin-bottom: 8px;
     display: flex;
     align-items: center;
