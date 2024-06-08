@@ -86,6 +86,10 @@
         width: 642px;
     }
 
+    .chat__body-right {
+        width: 416px;
+    }
+
     .hide-on-destop {
         display: none;
     }

@@ -502,8 +502,13 @@
 }
 
 .shop__header-store {
+    position: relative;
     margin-right: 30px;
-    background-image: linear-gradient(0, #da027f ,#e352a7);
+    /* background-image: linear-gradient(0, #da027f ,#e352a7); */
+    background-image: url(../img/CanhDep1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     padding: 10px 16px;
     border-radius: 4px;
     color: var(--white-color);
