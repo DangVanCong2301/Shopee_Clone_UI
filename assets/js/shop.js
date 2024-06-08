@@ -1,5 +1,62 @@
 const shopMobileTitle = document.querySelectorAll(".shop__mobile-title-item");
 
+// Auto Run Slider
+let index = 0;
+const sliderShopNumber = document.querySelectorAll(".shop__info-slider-item");
+const dots = document.querySelector(".shop__info-slider-dot");
+
+for (let i = 0; i < sliderShopNumber.length; i++) {
+    const span = document.createElement("span");
+    span.id = i;
+    dots.appendChild(span);
+}
+document.getElementById("0").classList.add("slider-shop-cirle-fill");
+const dot = document.querySelectorAll(".shop__info-slider-dot span");
+// Dot click
+for (let i = 0; i < dot.length; i++) {
+    dot[i].addEventListener('click', () => {
+        index = dot[i].id;
+        document.querySelector(".shop__info-slider-list").style.right = index * 100 + "%"; 
+        document.querySelector(".slider-shop-cirle-fill").classList.remove("slider-shop-cirle-fill");
+        document.getElementById(index).classList.add("slider-shop-cirle-fill");
+    });
+}
+
+function sliderShopAuto() {
+    index = index + 1;
+    if (index > sliderShopNumber.length - 1) {
+        index = 0;
+    }
+    document.querySelector(".shop__info-slider-list").style.right = index * 100 + "%"; 
+    document.querySelector(".slider-shop-cirle-fill").classList.remove("slider-shop-cirle-fill");
+    document.getElementById(index).classList.add("slider-shop-cirle-fill");
+}
+setInterval(sliderShopAuto, 3000);
+
+// Next/Prev Slider Shop
+const btnNextSliderShop = document.querySelector(".shop__info-slider-arrow-next");
+const btnPrevSliderShop = document.querySelector(".shop__info-slider-arrow-prev");
+
+btnNextSliderShop.addEventListener('click', () => {
+    index = index + 1;
+    if (index > sliderShopNumber.length - 1) {
+        index = 0;
+    }
+    document.querySelector(".shop__info-slider-list").style.right = index * 100 + "%"; 
+    document.querySelector(".slider-shop-cirle-fill").classList.remove("slider-shop-cirle-fill");
+    document.getElementById(index).classList.add("slider-shop-cirle-fill");
+});
+
+btnPrevSliderShop.addEventListener('click', () => {
+    index = index - 1;
+    if (index <= 0) {
+        index = sliderShopNumber.length - 1;
+    }
+    document.querySelector(".shop__info-slider-list").style.right = index * 100 + "%"; 
+    document.querySelector(".slider-shop-cirle-fill").classList.remove("slider-shop-cirle-fill");
+    document.getElementById(index).classList.add("slider-shop-cirle-fill");
+});
+
 for (let i = 0; i < shopMobileTitle.length; i++) {
     shopMobileTitle[i].addEventListener('click', () => {
         if (i == 0) {

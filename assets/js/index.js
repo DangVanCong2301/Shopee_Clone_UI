@@ -51,10 +51,10 @@ btnPrevBanner.addEventListener('click', () => {
     index = index - 1;
     if (index <= 0) {
         index = sliderNumber.length - 1;
-        document.querySelector(".banner-left-content__top").style.right = index * 100 + "%";
-        document.querySelector(".banner-circle-fill").classList.remove("banner-circle-fill");
-        document.getElementById(index).classList.add("banner-circle-fill");
     }
+    document.querySelector(".banner-left-content__top").style.right = index * 100 + "%";
+    document.querySelector(".banner-circle-fill").classList.remove("banner-circle-fill");
+    document.getElementById(index).classList.add("banner-circle-fill");
 });
 
 // Toggle active voucher 
