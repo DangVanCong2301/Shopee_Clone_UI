@@ -383,7 +383,6 @@ html {
 /* Comment */
 .comment {
     padding: 20px 30px;
-    margin: 10px 4px;
     background-color: var(--white-color);
     margin-bottom: 40px;
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
@@ -661,7 +660,6 @@ html {
 
 .chat__body-right {
     border-left: 1px solid var(--border-color);
-    width: 416px;
 }
 
 .chat__body-right.hide-chat-window {

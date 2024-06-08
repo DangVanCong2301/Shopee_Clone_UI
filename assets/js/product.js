@@ -78,14 +78,17 @@ loadProducts();
 function showNavMenu(event) {
     event.preventDefault();
     document.querySelector(".header__mobile-menu-modal").classList.add("open");
+    document.querySelector(".header__mobile-menu-container").classList.add("open");
 }
 
 function closeNavMenu() {
+    document.querySelector(".header__mobile-menu-container").classList.remove("open");
     document.querySelector(".header__mobile-menu-modal").classList.remove("open");
 }
 
 window.addEventListener('click', (e) => {
     if (e.target == document.querySelector(".header__mobile-menu-modal")) {
         document.querySelector(".header__mobile-menu-modal").classList.remove("open");
+        document.querySelector(".header__mobile-menu-container").classList.remove("open");
     }
 });
