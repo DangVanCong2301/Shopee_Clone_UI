@@ -228,6 +228,207 @@ a.header_logo-link {
     }
 }
 
+@media screen and (max-width: 739px) {
+    .header {
+        height: var(--header-height);
+    }
+
+    .header__mobile {
+        display: flex;
+        align-items: center;
+        font-size: var(--normal-font-size);
+    }
+
+    .header__mobile-arrow-icon {
+        font-size: 2.4rem;
+        color: var(--primary-color);
+        margin-right: 12px;
+    }
+
+    .header__mobile-question {
+        font-size: 2rem;
+        color: var(--primary-color);
+        margin-left: auto;
+    }
+
+    .app__container {
+        padding-top: calc(20px + var(--header-height));
+    }
+
+    .auth__mobile {
+        padding-top: calc(20px + var(--header-height));
+        background-color: var(--white-color);
+        font-size: var(--normal-font-size);
+        color: var(--text-color);
+        padding-bottom: 40px;
+    }
+
+    .auth__mobile-logo {
+        display: flex;
+        justify-content: center;
+        padding: 40px 0 30px;
+    }
+
+    .auth__mobile-logo-img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .auth__mobile-form {
+        width: 100%;
+        padding: 0 20px 40px 20px;
+    }
+
+    .auth__mobile-form-div {
+        width: 100%;
+        height: var(--header-height);
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid var(--border-color);
+    }
+
+    .auth__mobile-form-icon {
+        font-size: 2rem;
+        margin-right: 20px;
+        color: rgba(0, 0, 0, .54);
+    }
+
+    .auth__mobile-form-input {
+        padding: 10px 0;
+        width: 100%;
+        border: none;
+        outline: none;
+    }
+
+    .auth__mobile-form-input::placeholder {
+        font-family: 'Roboto', sans-serif;
+    }
+
+    .auth__mobile-form-password {
+        display: flex;
+        align-items: center;
+    }
+
+    .auth__mobile-form-password-show {
+        position: relative;
+        margin-right: 20px;
+    }
+
+    .auth__mobile-form-password-show::before {
+        position: absolute;
+        content: '';
+        width: 1px;
+        height: 20px;
+        background-color: var(--border-color);
+        right: -10px;
+    }
+
+    .auth__mobile-form-password-show-icon {
+        font-size: 2rem;
+        color: rgba(0, 0, 0, .54);
+    }
+
+    .auth__mobile-form-password-forgot {
+        text-decoration: none;
+        color: #5c84cc;
+    }
+
+    .auth__mobile-form-btn {
+        margin-top: 16px;
+        width: 100%;
+        text-align: center;
+        background-color: #e8e8e8;
+        padding: 14px 0;
+        color: #ababab;
+    }
+
+    .auth__mobile-form-btn:hover {
+        background-color: #ddd8d8;
+    }
+
+    .auth__mobile-form-link {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 16px;
+    }
+
+    .auth__mobile-form-link-register,
+    .auth__mobile-form-link-sms {
+        text-decoration: none;
+        color: #5c84cc;
+    }
+
+    .auth__mobile-or {
+        display: flex;
+        justify-content: center;
+    }
+
+    .auth__mobile-or-title {
+        display: flex;
+        align-items: center;
+        column-gap: 16px;
+        color: #707070;
+    }
+
+    .auth__mobile-or-title span {
+        display: inline-block;
+        height: 1px;
+        width: 100px;
+        background-color: #dfdfdf;
+    }
+
+    .auth__mobile-bottom-btns {
+        margin-top: 30px;
+        padding: 0 20px;
+        display: flex;
+        flex-direction: column;
+        row-gap: 12px;
+    }
+
+    .auth__mobile-bottom-btn {
+        position: relative;
+        text-decoration: none;
+        color: var(--text-color);
+        text-align: center;
+        width: 100%;
+        padding: 14px 0;
+        border: 1px solid #b9b9b9;
+        border-radius: 2px;
+    }
+
+    .auth__mobile-bottom-btn-icon {
+        font-size: 2.4rem;
+        position: absolute;
+        left: 12px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: rgba(0, 0, 0, .54);
+    }
+
+    .auth__mobile-bottom-btn-facebook-icon {
+        color: #2473ea;
+    }
+
+    .auth__mobile-form-password-regis {
+        display: flex;
+        align-items: center;
+        width: 100%;
+    }
+
+    .auth__mobile-agree {
+        font-size: 12px;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .auth__mobile-agree-link {
+        text-decoration: none;
+        color: #2473ea;
+        text-transform: uppercase;
+        line-height: 20px;
+    }
+}
+
 /*Footer*/
 .footer {
     border-top: 4px solid var(--primary-color);

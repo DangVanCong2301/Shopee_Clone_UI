@@ -4,21 +4,34 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Đăng ký - F4 SHOP</title>
+    <title>Shopee - Đăng ký</title>
+    <link rel="sortcut icon" href="./assets/img/shopee_logo.png">
     <link rel="stylesheet" href="./assets/css/base.css">
     <link rel="stylesheet" href="./assets/css/grid.css">
     <link rel="stylesheet" href="./assets/css/user.css">
     <link rel="stylesheet" href="./assets/css/responsive.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <!--=============== ICONSCOUT ===============-->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/solid.css" />
 </head>
 
 <body>
     <div class="app">
         <header class="header">
             <div class="grid wide">
-                <div class="header__text">
+                <div class="header__mobile hide-on-destop">
+                    <div class="header__mobile-arrow">
+                        <i class="uil uil-arrow-left header__mobile-arrow-icon"></i>
+                    </div>
+                    <div class="header__mobile-title">Đăng ký</div>
+                    <div class="header__mobile-question">
+                        <i class="uil uil-question-circle header__mobile-question"></i>
+                    </div>
+                </div>
+                <div class="header__text hide-on-mobile">
                     <div class=" header__text-logo ">
-                        <a href="index.html" class=" header_logo-link ">F4 SHOP</a>
+                        <a href="index.html" class=" header_logo-link ">Shopee</a>
                     </div>
                     <h2 class="header__text-name">ĐĂNG KÝ</h2>
                 </div>
@@ -26,7 +39,64 @@
         </header>
         <div class="container">
             <div class="app__container">
-                <div class="auth">
+                <div class="auth__mobile hide-on-destop">
+                    <div class="auth__mobile-logo">
+                        <img src="./assets/img/shopee_logo.png" class="auth__mobile-logo-img" alt="">
+                    </div>
+                    <div class="auth__mobile-form">
+                        <div class="auth__mobile-form-div">
+                            <i class="uil uil-user auth__mobile-form-icon"></i>
+                            <input type="text" class="auth__mobile-form-input" placeholder="Email/Số điện thoại/Tên đăng nhập">
+                        </div>
+                        <div class="auth__mobile-form-div">
+                            <i class="uil uil-lock-alt auth__mobile-form-icon"></i>
+                            <div class="auth__mobile-form-password-regis">
+                                <input type="text" class="auth__mobile-form-input" placeholder="Mật khẩu">
+                                <i class="uil uil-eye-slash auth__mobile-form-password-show-icon"></i>
+                            </div>
+                        </div>
+                        <div class="auth__mobile-form-div">
+                            <i class="uil uil-lock-alt auth__mobile-form-icon"></i>
+                            <div class="auth__mobile-form-password-regis">
+                                <input type="text" class="auth__mobile-form-input" placeholder="Nhập lại mật khẩu">
+                                <i class="uil uil-eye-slash auth__mobile-form-password-show-icon"></i>
+                            </div>
+                        </div>
+                        <div class="auth__mobile-form-btn">Đăng nhập</div>
+                        <div class="auth__mobile-form-link">
+                            <a href="#" class="auth__mobile-form-link-register">Đăng ký</a>
+                            <a href="#" class="auth__mobile-form-link-sms">Đăng nhập bằng SMS</a>
+                        </div>
+                    </div>
+                    <div class="auth__mobile-or">
+                        <div class="auth__mobile-or-title">
+                            <span></span>
+                            <div class="auth__mobile-or-title-text">HOẶC</div>
+                            <span></span>
+                        </div>
+                    </div>
+                    <div class="auth__mobile-bottom-btns">
+                        <a href="#" class="auth__mobile-bottom-btn">
+                            <i class="uil uil-facebook auth__mobile-bottom-btn-icon auth__mobile-bottom-btn-facebook-icon"></i>
+                            <div class="auth__mobile-bottom-btn-facebook">
+                            </div>
+                            Đăng nhập với Facebook
+                        </a>
+                        <a href="#" class="auth__mobile-bottom-btn">
+                            <i class="uil uil-google auth__mobile-bottom-btn-icon auth__mobile-bottom-btn-google-icon"></i>
+                            Đăng nhập với Google
+                        </a>
+                        <a href="#" class="auth__mobile-bottom-btn">
+                            <i class="uil uil-apple auth__mobile-bottom-btn-icon auth__mobile-bottom-btn-apple-icon"></i>
+                            Đăng nhập với Apple
+                        </a>
+                    </div>
+                    <div class="auth__mobile-agree">
+                        <div class="auth__mobile-agree-text">Bằng việc đăng ký, bạn đã đồng ý với Shopee về</div>
+                        <a href="#" class="auth__mobile-agree-link">Quy chế hoạt động</a> & <a href="#" class="auth__mobile-agree-link">Chính sách bảo mật</a>
+                    </div>
+                </div>
+                <div class="auth hide-on-mobile">
                     <div class="auth__content">
                         <div class="auth__logo">
             
@@ -156,14 +226,14 @@
                     <div class="col l-2-4 c-12 m-4">
                         <h3 class="footer__heading">Vào cửa hàng F4 Shop</h3>
                         <div class="footer__download">
-                            <img src="~/img/qr_code.png" alt="" class="footer__download-qr">
+                            <img src="./assets/img/qr_code.png" alt="" class="footer__download-qr">
                             <div class="footer__download-apps">
                                 <a href="#" class="footer__download-apps-link">
-                                    <img src="~/img/google_play.png" alt="Google Play"
+                                    <img src="./assets/img/google_play.png" alt="Google Play"
                                         class="footer__download-apps-img">
                                 </a>
                                 <a href="#" class="footer__download-apps-link">
-                                    <img src="~/img/app-store.png" alt="App Store" class="footer__download-apps-img">
+                                    <img src="./assets/img/app-store.png" alt="App Store" class="footer__download-apps-img">
                                 </a>
                             </div>
                         </div>
