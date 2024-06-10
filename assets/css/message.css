@@ -21,7 +21,12 @@
     width: 100%;
     height: 100%;
     column-gap: 16px;
-    padding: 16px 32px 16px 16px;
+    padding: 16px 32px 16px 86px;
+    transition: all .3s ease;
+}
+
+.message__container.expander {
+    padding-left: 272px;
 }
 
 .message__menu {
@@ -31,6 +36,11 @@
     bottom: 0;
     width: 54px;
     /* width: 240px; */
+    transition: all .3s ease;
+}
+
+.message__menu.show {
+    width: calc(54px + 186px);
 }
     
 .message__menu-nav { 
@@ -39,6 +49,7 @@
     flex-direction: column;
     padding-bottom: 16px;
     overflow: hidden;
+    /* background-color: var(--white-color); */
 }
 
 .message__menu-top {
@@ -66,7 +77,7 @@
 .message__menu-item {
     display: flex;
     align-items: center;
-    padding: 8px 10px 8px 0;
+    padding: 12px 0;
     border-radius: 4px;
 }
 
@@ -86,6 +97,7 @@
 }
 
 .message__menu-item-box {
+    position: relative;
     width: 30px;
     height: 30px;
     display: flex;
@@ -94,11 +106,29 @@
     margin: 0 12px;
 }
 
+.message__menu-item-box-active {
+    position: absolute;
+    content: '';
+    display: inline-block;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    border: 1px solid var(--white-color);
+    background-color: #0099ff;
+    top: 2px;
+    right: 4px;
+}
+
+.message__menu-item-box-active.hide {
+    display: none;
+}
+
 .message__menu-item-icon {
     font-size: 20px;
 }
 
 .message__menu-item-text {
+    flex: 1;
     height: 20px;
     line-height: 20px;
     display: -webkit-box;
@@ -107,27 +137,51 @@
     overflow: hidden;
 }
 
-.message__menu-item span {
+.message__menu-item-msg-count {
     margin-left: auto;
     width: 20px;
     height: 20px;
+    margin-right: 10px;
     color: var(--white-color);
     border-radius: 50%;
     background-color: #0099ff;
     display: flex;
     justify-content: center;
     align-items: center;
+    display: none;
+}
+
+.message__menu-item-msg-count.show {
+    display: flex;
 }
 
 .message__menu-community-title {
     padding: 12px 10px 12px 10px;
 }
 
+.message__menu-community-title-text {
+    display: none;
+}
+
+.message__menu-community-title-text.show {
+    display: block;
+}
+
+.message__menu-community-title-line {
+    width: 100%;
+    height: 1px;
+    background-color: var(--border-color);
+}
+
+.message__menu-community-title-line.hide {
+    display: none;
+}
+
 .message__menu-community-item {
     display: flex;
     align-items: center;
     border-radius: 4px;
-    padding: 8px 10px 8px 0;
+    padding: 12px 0;
 }
 
 .message__menu-community-item-thumb {
@@ -159,13 +213,28 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-top: 16px;
 }
 
 .message__menu-bottom-account {
     display: flex;
+    flex-direction: column;
+    row-gap: 12px;
+}
+
+.message__menu-bottom-account-collapse-nav {
+    padding-left: 9px;
+}
+
+.message__menu-bottom-account-collapse-nav.hide {
+    display: none;
+}
+
+.message__menu-bottom-account-info {
+    display: flex;
     align-items: center;
-    column-gap: 10px;
-    padding-top: 16px;
+    column-gap: 9px;
+    padding: 0 0 0 9px;
 }
 
 .message__menu-bottom-account-img {
@@ -192,15 +261,67 @@
 }
 
 .message__account {
-    /* flex: 2.5; */
+    width: 374px;
     background-color: var(--white-color);
-    border-radius: 2px;
+    border-radius: 4px;
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .1);
 }
 
+.message__account-header {
+    padding: 12px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.message__account-header-text {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--text-color);
+    font-family: 'Poppins', sans-serif;
+}
+
+.message__account-header-note {
+    display: flex;
+    justify-content: center;
+    height: 36px;
+    width: 36px;
+    border-radius: 50%;
+    align-items: center;
+    background-color: #ebebeb;
+}
+
+.message__account-header-note-icon {
+    font-size: 20px;
+}
+
+.message__account-search {
+    margin: 0 16px;
+    height: 40px;
+    background-color: #ebebeb;
+    display: flex;
+    align-items: center;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.message__account-search-icon {
+    font-size: 16px;
+    padding: 0 10px 0 16px;
+    color: rgba(0, 0, 0, .54);
+}
+
+.message__account-search-input {
+    height: 100%;
+    width: 100%;
+    border: none;
+    outline: none;
+    background-color: #ebebeb;
+}
+
 .message__msg {
-    /* flex: 5.5; */
+    flex: 1;
     background-color: var(--white-color);
-    border-radius: 2px;
+    border-radius: 4px;
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .1);
 }
