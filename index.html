@@ -111,9 +111,9 @@
                         <li class="header__navbar-item header__navbar-item--strong header__navbar-item--separate">
                             <a class="header__navbar-item-link" href="register.html">Đăng ký</a>
                         </li>
-                        <!-- <li class="header__navbar-item header__navbar-item--strong">
+                        <li class="header__navbar-item header__navbar-item--strong hide-on-destop">
                             <a class="header__navbar-item-link" href="login.html">Đăng nhập</a>
-                        </li> -->
+                        </li>
                         
                         <li class="header__navbar-item">
                             <div class="header__navbar-user">
@@ -121,20 +121,22 @@
                                 <span class="header__navbar-user-name">
                                     Công Đặng
                                 </span>
-                                <ul class="header__navbar-user-menu">
-                                    <li class="header__navbar-user-item">
-                                        <a href="">Tài khoản của tôi</a>
-                                    </li>
-                                    <li class="header__navbar-user-item">
-                                        <a href="">Địa chỉ của tôi</a>
-                                    </li>
-                                    <li class="header__navbar-user-item">
-                                        <a href="">Đơn mua</a>
-                                    </li>
-                                    <li class="header__navbar-user-item header__navbar-user-item--separate">
-                                        <a href="/User/Logout">Đăng xuất</a>
-                                    </li>
-                                </ul>
+                                <div class="header__navbar-user-manager">
+                                    <ul class="header__navbar-user-menu">
+                                        <li class="header__navbar-user-item">
+                                            <a href="">Tài khoản của tôi</a>
+                                        </li>
+                                        <li class="header__navbar-user-item">
+                                            <a href="">Địa chỉ của tôi</a>
+                                        </li>
+                                        <li class="header__navbar-user-item">
+                                            <a href="">Đơn mua</a>
+                                        </li>
+                                        <li class="header__navbar-user-item header__navbar-user-item--separate">
+                                            <a href="/User/Logout">Đăng xuất</a>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
                         </li>
                     </ul>
@@ -232,12 +234,30 @@
 
                     <!-- User  -->
                     <div class="header__mobile-user">
-                        <a href="login.html" class="header__mobile-user-link">
-                            <!-- <div class="header__mobile-user-avatar">
-                                <div class="header__mobile-user-avatar-img" style="background-image: url(./assets/img/profile_avatar.jpg);"></div>
-                            </div> -->
-                            <i class="uil uil-user header__mobile-user-icon"></i>
-                        </a>
+                        <div class="header__mobile-user-symbol hide-on-mobile">
+                            <a href="login.html" class="header__mobile-user-link">  
+                                <i class="uil uil-user header__mobile-user-icon"></i>
+                            </a>
+                        </div>
+                        <div class="header__mobile-user-avatar">
+                            <div class="header__mobile-user-avatar-img" style="background-image: url(./assets/img/profile_avatar.jpg);"></div>
+                            <div class="header__mobile-user-avatar-menu">
+                                <ul class="header__navbar-user-menu">
+                                    <li class="header__navbar-user-item">
+                                        <a href="">Tài khoản của tôi</a>
+                                    </li>
+                                    <li class="header__navbar-user-item">
+                                        <a href="">Địa chỉ của tôi</a>
+                                    </li>
+                                    <li class="header__navbar-user-item">
+                                        <a href="">Đơn mua</a>
+                                    </li>
+                                    <li class="header__navbar-user-item header__navbar-user-item--separate">
+                                        <a href="/User/Logout">Đăng xuất</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>  
                     </div>
                 </div>
             </div>

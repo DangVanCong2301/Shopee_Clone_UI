@@ -31,7 +31,7 @@
                 </div>
                 <div class="header__text hide-on-mobile">
                     <div class=" header__text-logo">
-                        <a href="index.html" class=" header_logo-link ">F4 SHOP</a>
+                        <a href="index.html" class=" header_logo-link ">Shopee</a>
                     </div>
                     <h2 class="header__text-name">ĐĂNG NHẬP</h2>
                 </div>
@@ -48,17 +48,26 @@
                             <i class="uil uil-user auth__mobile-form-icon"></i>
                             <input type="text" class="auth__mobile-form-input" placeholder="Email/Số điện thoại/Tên đăng nhập">
                         </div>
+                        <span class="auth__mobile-form-msg error hide-on-mobile">
+                            Email không được trống!
+                        </span>
                         <div class="auth__mobile-form-div">
                             <i class="uil uil-lock-alt auth__mobile-form-icon"></i>
                             <div class="auth__mobile-form-password">
-                                <input type="text" class="auth__mobile-form-input" placeholder="Mật khẩu">
-                                <div class="auth__mobile-form-password-show">
+                                <input type="password" class="auth__mobile-form-input auth__mobile-form-input-password" placeholder="Mật khẩu">
+                                <div class="auth__mobile-form-password-show" onclick="showHiddenPass()">
                                     <i class="uil uil-eye-slash auth__mobile-form-password-show-icon"></i>
                                 </div>
                                 <a href="#" class="auth__mobile-form-password-forgot">Quên tài khoản và mật khẩu</a>
                             </div>
                         </div>
-                        <div class="auth__mobile-form-btn">Đăng nhập</div>
+                        <div class="auth__mobile-form-msg error hide-on-mobile">
+                            Mật khẩu không được trống!
+                        </div>
+                        <div class="auth__mobile-form-msg error hide-on-mobile">
+                            Tên tài khoản hoặc mật khẩu không chính xác!
+                        </div>
+                        <button type="button" class="auth__mobile-form-btn">Đăng nhập</button>
                         <div class="auth__mobile-form-link">
                             <a href="register.html" class="auth__mobile-form-link-register">Đăng ký</a>
                             <a href="#" class="auth__mobile-form-link-sms">Đăng nhập bằng SMS</a>
@@ -234,5 +243,6 @@
             </div>
         </footer>
     </div>
-    </div>
+</div>
+<script src="./assets/js/user.js"></script>
 </body>

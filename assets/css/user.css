@@ -298,6 +298,8 @@ a.header_logo-link {
         width: 100%;
         border: none;
         outline: none;
+        font-family: 'Roboto', sans-serif;
+        color: var(--text-color);
     }
 
     .auth__mobile-form-input::placeholder {
@@ -312,6 +314,7 @@ a.header_logo-link {
     .auth__mobile-form-password-show {
         position: relative;
         margin-right: 20px;
+        cursor: pointer;
     }
 
     .auth__mobile-form-password-show::before {
@@ -333,7 +336,17 @@ a.header_logo-link {
         color: #5c84cc;
     }
 
+    .auth__mobile-form-msg {
+        margin-top: 16px;
+        display: inline-block;
+    }
+
+    .auth__mobile-form-msg.error {
+        color: var(--primary-color);
+    }
+
     .auth__mobile-form-btn {
+        border: none;
         margin-top: 16px;
         width: 100%;
         text-align: center;
