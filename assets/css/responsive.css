@@ -471,7 +471,7 @@
     }
 
     .header__mobile-user-link {
-        display: inline-block;
+        display: block;
         padding-left: 12px;
     }
 
@@ -493,9 +493,11 @@
     }
 
     .header__mobile-user-avatar {
+        position: relative;
         height: 40px;
         width: 40px;
         border-radius: 50%;
+        margin-left: 12px;
     }
 
     .header__mobile-user-avatar-img {
@@ -505,6 +507,17 @@
         background-repeat: no-repeat;
         background-position: center;
         background-size: contain;
+    }
+
+    .header__mobile-user-avatar-menu {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        display: none;
+    }
+
+    .header__mobile-user-avatar:hover .header__mobile-user-avatar-menu {
+        display: block;
     }
 
     .header__mobile-more-modal {
