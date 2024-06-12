@@ -317,6 +317,138 @@
     border: none;
     outline: none;
     background-color: #ebebeb;
+    font-family: 'Roboto', sans-serif;
+}
+
+.message__account-search-input::placeholder {
+    font-family: 'Roboto', sans-serif;
+}
+
+.message__account-list {
+    padding: 12px 20px 20px 6px;
+}
+
+.message__account-item {
+    position: relative;
+    padding: 10px 40px 10px 10px;
+    border-radius: 4px;
+    display: flex;
+    column-gap: 12px;
+    align-items: center;
+}
+
+.message__account-item:hover {
+    background-color: #ebebeb;
+}
+
+.message__account-item.active {
+    background-color: #e7e7e7;
+}
+
+.message__account-item-img {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.message__account-item-desc {
+    flex: 1;
+}
+
+.message__account-item-desc-name {
+    font-weight: bold;
+}
+
+.message__account-item-desc-msg {
+    display: flex;
+    column-gap: 10px;
+    margin-top: 6px;
+}
+
+.message__account-item-desc-msg-content {
+    flex: 1;
+    height: 20px;
+    line-height: 20px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+}
+
+.message__account-item-desc-msg-day {
+    line-height: 20px;
+}
+
+.message__account-item-more {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 30px;
+    height: 36px;
+    width: 36px;
+    border-radius: 50%;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .1);
+    background-color: var(--white-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.message__account-item-more-icon {
+    font-size: 20px;
+    color: rgba(0, 0, 0, .54);
+}
+
+.message__account-item-more-container {
+    position: absolute;
+    top: 20px;
+    width: 346px;
+    background-color: var(--white-color);
+    border-radius: 4px;
+    padding: 4px;
+    box-shadow: 0 0 16px 0 rgba(0, 0, 0, .1), 0 8px 16px 0 rgba(0, 0, 0, .06);
+}
+
+.message__account-item-more-prevent {
+    margin: 8px;
+    height: 1px;
+    width: 95%;
+    background-color: var(--border-color);
+}
+
+.message__account-item-more-item {
+    display: flex;
+    align-items: center;
+    column-gap: 12px;
+    padding: 8px;
+    border-radius: 4px;
+}
+
+.message__account-item-more-item.active {
+    background-color: #f5f5f5;
+}
+
+.message__account-item-more-item:hover {
+    background-color: #f5f5f5;
+}
+
+.message__account-item-more-item-symbol {
+    height: 30px;
+    width: 30px;
+    background-color: #ebebeb;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.message__account-item-more-item-icon {
+    font-size: 20px;
+    color: rgba(0, 0, 0, .54);
 }
 
 .message__msg {
