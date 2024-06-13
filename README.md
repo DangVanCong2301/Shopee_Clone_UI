@@ -10,7 +10,7 @@
 ![Screenshot 2024-06-01 165824](https://github.com/DangVanCong2301/Shopee_Clone_UI/assets/111124018/075677d4-d655-409a-91dd-0d7191ff3610)
 #### 2. UI Trang sản phẩm
 ![image](https://github.com/DangVanCong2301/Shopee_Clone_UI/assets/111124018/87a60e2b-bf1f-4825-9566-6e5f39231338)
-![image](https://github.com/DangVanCong2301/Shopee_Clone_UI/assets/111124018/6f7b1564-230f-4452-bebe-46ef0dc26b86)
+![image](https://github.com/DangVanCong2301/Shopee_Clone_UI/assets/111124018/a966a8ae-fd02-488f-a24d-4179031ddb61)
 #### 3. UI Trang chi tiết
 ![image](https://github.com/DangVanCong2301/Shopee_Clone_UI/assets/111124018/e5a08071-569e-4c16-abdc-946e975a9a26)
 ![image](https://github.com/DangVanCong2301/Shopee_Clone_UI/assets/111124018/7a8656bb-bee0-41a2-bb3e-cfecd6236580)
