@@ -70,6 +70,17 @@
         width: 80px;
         text-align: right;
     }
+
+    .home__table {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 20px;
+        line-height: 24px;
+        padding: 0 24px;
+    }
 }
 
 /* Destop */

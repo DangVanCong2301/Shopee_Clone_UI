@@ -17,7 +17,7 @@
 </head>
 <body>
     <div class="app">
-        <header class="header header__product-detail">
+        <header class="header header__product-detail hide-on-table">
             <div class="grid wide">
                 <nav class="header__navbar hide-on-mobile-table">
                     <ul class="header__navbar-list">
@@ -249,7 +249,11 @@
                 </li>
             </ul>
         </header>
-        <div class="app__container">
+        <div class="home__table hide-on-mobile hide-on-destop">
+            Sản phẩm chưa được tối ưu trên máy tính bảng, vui lòng sử dụng điện thoại và laptop 
+            để có trả nghiệm tốt hơn!
+        </div>
+        <div class="app__container hide-on-table">
             <div class="detail">
                 <!-- card left -->
                 <div class="detail__left">
@@ -298,6 +302,7 @@
                         <div class="detail__mobile-btn-buy-now">Mua ngay</div>
                     </div>
                     <div class="detail__mobile-bottom-sheet-modal">
+                        <div class="detail__mobile-bottom-sheet-overlay"></div>
                         <div class="detail__mobile-bottom-sheet">
                             <div class="detail__mobile-bottom-sheet-info">
                                 <div class="detail__mobile-bottom-sheet-info-img" style="background-image: url(./assets/img/am_sieu_toc_1.jpg);"></div>
@@ -572,7 +577,7 @@
             <div class="comment__section">
             </div>
         </div>
-        <footer class="footer">
+        <footer class="footer hide-on-table">
             <div class="grid wide footer__content">
                 <div class="row">
                     <div class="col l-2-4 c-6 m-4">

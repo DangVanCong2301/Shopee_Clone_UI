@@ -16,7 +16,7 @@
 </head>
 <body>
     <div class="app">
-        <header class="header">
+        <header class="header hide-on-table">
             <div class="grid wide">
                 <nav class="header__navbar hide-on-mobile-table">
                     <ul class="header__navbar-list">
@@ -142,7 +142,7 @@
                     </ul>
                 </nav>
                 <!--Header with search-->
-                <div class="header-with-search">
+                <div class="header-with-search hide-on-table">
                     <div class="header__logo hide-on-mobile">
                         <a href="index.html" class="header__logo-link">
                             <!-- <span class="header__logo-icon ">F4 SHOP</span> -->
@@ -262,7 +262,11 @@
                 </div>
             </div>
         </header>
-        <div class="app__container">
+        <div class="home__table hide-on-mobile hide-on-destop">
+            Sản phẩm chưa được tối ưu trên máy tính bảng, vui lòng sử dụng điện thoại và laptop 
+            để có trả nghiệm tốt hơn!
+        </div>
+        <div class="app__container hide-on-table">
             <div class="grid wide">
                 <div class="banner">
                     <div class="banner-container">
@@ -780,7 +784,7 @@
                 </div>
             </div>
         </div>
-        <footer class="footer">
+        <footer class="footer hide-on-table">
             <div class="grid wide footer__content">
                 <div class="row">
                     <div class="col l-2-4 c-6 m-4">
@@ -1148,7 +1152,7 @@
             </div>
         </div>
     </div>
-    <div class="chat__btn" onclick="displayChat()">
+    <div class="chat__btn hide-on-table" onclick="displayChat()">
         <i class="uil uil-comments-alt"></i>
         <span>Chat</span>
     </div>
