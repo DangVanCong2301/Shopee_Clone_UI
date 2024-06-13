@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="sortcut icon" href="./assets/img/shopee_logo.png">
     <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
     <link rel="stylesheet" href="./assets/css/message.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <!--=============== ICONSCOUT ===============-->
@@ -13,7 +14,7 @@
 </head>
 <body>
     <div class="app">
-        <div class="message">
+        <div class="message hide-on-mobile hide-on-table">
             <div class="message__menu">
                 <div class="message__menu-nav">
                     <div class="message__menu-top">
@@ -57,6 +58,24 @@
                                 <div class="message__menu-community-title-line"></div>
                             </div>
                             <div class="message__menu-community-list">
+                                <div class="message__menu-community-item">
+                                    <div class="message__menu-community-item-thumb">
+                                        <div class="message__menu-community-item-img" style="background-image: url(./assets/img/profile_avatar.jpg);"></div>
+                                    </div>
+                                    <div class="message__menu-community-item-name">Đấu phá thương khung Đấu phá thương khung </div>
+                                </div>
+                                <div class="message__menu-community-item">
+                                    <div class="message__menu-community-item-thumb">
+                                        <div class="message__menu-community-item-img" style="background-image: url(./assets/img/profile_avatar.jpg);"></div>
+                                    </div>
+                                    <div class="message__menu-community-item-name">Đấu phá thương khung Đấu phá thương khung </div>
+                                </div>
+                                <div class="message__menu-community-item">
+                                    <div class="message__menu-community-item-thumb">
+                                        <div class="message__menu-community-item-img" style="background-image: url(./assets/img/profile_avatar.jpg);"></div>
+                                    </div>
+                                    <div class="message__menu-community-item-name">Đấu phá thương khung Đấu phá thương khung </div>
+                                </div>
                                 <div class="message__menu-community-item">
                                     <div class="message__menu-community-item-thumb">
                                         <div class="message__menu-community-item-img" style="background-image: url(./assets/img/profile_avatar.jpg);"></div>
@@ -195,6 +214,635 @@
                                     <div class="message__account-item-desc-msg-day">5 ngày</div>
                                 </div>
                             </div>
+                            <div class="message__account-item-more">
+                                <i class="uil uil-ellipsis-h message__account-item-more-icon"></i>
+                                <div class="message__account-item-more-container">
+                                    <div class="message__account-item-more-list">
+                                        <div class="message__account-item-more-item active">
+                                            <div class="message__account-item-more-item-symbol">
+                                                <i class="uil uil-check message__account-item-more-item-icon"></i>
+                                            </div>
+                                            <div class="message__account-item-more-item-text">Đánh dấu là chưa đọc</div>
+                                        </div>
+                                        <div class="message__account-item-more-item">
+                                            <div class="message__account-item-more-item-symbol">
+                                                <i class="uil uil-user message__account-item-more-item-icon"></i>
+                                            </div>
+                                            <div class="message__account-item-more-item-text">Xem trang cá nhân</div>
+                                        </div>
+                                    </div>
+                                    <div class="message__account-item-more-prevent"></div>
+                                    <div class="message__account-item-more-list">
+                                        <div class="message__account-item-more-item">
+                                            <div class="message__account-item-more-item-symbol">
+                                                <i class="uil uil-phone-alt message__account-item-more-item-icon"></i>
+                                            </div>
+                                            <div class="message__account-item-more-item-text">Gọi thoại</div>
+                                        </div>
+                                        <div class="message__account-item-more-item">
+                                            <div class="message__account-item-more-item-symbol">
+                                                <i class="uil uil-video message__account-item-more-item-icon"></i>
+                                            </div>
+                                            <div class="message__account-item-more-item-text">Chat video</div>
+                                        </div>
+                                    </div>
+                                    <div class="message__account-item-more-prevent"></div>
+                                    <div class="message__account-item-more-list">
+                                        <div class="message__account-item-more-item">
+                                            <div class="message__account-item-more-item-symbol">
+                                                <i class="uil uil-ban message__account-item-more-item-icon"></i>
+                                            </div>
+                                            <div class="message__account-item-more-item-text">Chặn</div>
+                                        </div>
+                                        <div class="message__account-item-more-item">
+                                            <div class="message__account-item-more-item-symbol">
+                                                <i class="uil uil-bookmark message__account-item-more-item-icon"></i>
+                                            </div>
+                                            <div class="message__account-item-more-item-text">Lưu trữ</div>
+                                        </div>
+                                        <div class="message__account-item-more-item">
+                                            <div class="message__account-item-more-item-symbol">
+                                                <i class="uil uil-trash message__account-item-more-item-icon"></i>
+                                            </div>
+                                            <div class="message__account-item-more-item-text">Xoá đoạn chat</div>
+                                        </div>
+                                        <div class="message__account-item-more-item">
+                                            <div class="message__account-item-more-item-symbol">
+                                                <i class="uil uil-exclamation-triangle message__account-item-more-item-icon"></i>
+                                            </div>
+                                            <div class="message__account-item-more-item-text">Báo cáo</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="message__account-item">
+                            <div class="message__account-item-img" style="background-image: url(./assets/img/profile_avatar.jpg);"></div>
+                            <div class="message__account-item-desc">
+                                <div class="message__account-item-desc-name">Đặng Nhật</div>
+                                <div class="message__account-item-desc-msg">
+                                    <div class="message__account-item-desc-msg-content">Ừ tất nhiên rồi</div>
+                                    <div class="message__account-item-desc-msg-day">5 ngày</div>
+                                </div>
+                            </div>
+                            <div class="message__account-item-more">
+                                <i class="uil uil-ellipsis-h message__account-item-more-icon"></i>
+                                <div class="message__account-item-more-container">
+                                    <div class="message__account-item-more-list">
+                                        <div class="message__account-item-more-item active">
+                                            <div class="message__account-item-more-item-symbol">
+                                                <i class="uil uil-check message__account-item-more-item-icon"></i>
+                                            </div>
+                                            <div class="message__account-item-more-item-text">Đánh dấu là chưa đọc</div>
+                                        </div>
+                                        <div class="message__account-item-more-item">
+                                            <div class="message__account-item-more-item-symbol">
+                                                <i class="uil uil-user message__account-item-more-item-icon"></i>
+                                            </div>
+                                            <div class="message__account-item-more-item-text">Xem trang cá nhân</div>
+                                        </div>
+                                    </div>
+                                    <div class="message__account-item-more-prevent"></div>
+                                    <div class="message__account-item-more-list">
+                                        <div class="message__account-item-more-item">
+                                            <div class="message__account-item-more-item-symbol">
+                                                <i class="uil uil-phone-alt message__account-item-more-item-icon"></i>
+                                            </div>
+                                            <div class="message__account-item-more-item-text">Gọi thoại</div>
+                                        </div>
+                                        <div class="message__account-item-more-item">
+                                            <div class="message__account-item-more-item-symbol">
+                                                <i class="uil uil-video message__account-item-more-item-icon"></i>
+                                            </div>
+                                            <div class="message__account-item-more-item-text">Chat video</div>
+                                        </div>
+                                    </div>
+                                    <div class="message__account-item-more-prevent"></div>
+                                    <div class="message__account-item-more-list">
+                                        <div class="message__account-item-more-item">
+                                            <div class="message__account-item-more-item-symbol">
+                                                <i class="uil uil-ban message__account-item-more-item-icon"></i>
+                                            </div>
+                                            <div class="message__account-item-more-item-text">Chặn</div>
+                                        </div>
+                                        <div class="message__account-item-more-item">
+                                            <div class="message__account-item-more-item-symbol">
+                                                <i class="uil uil-bookmark message__account-item-more-item-icon"></i>
+                                            </div>
+                                            <div class="message__account-item-more-item-text">Lưu trữ</div>
+                                        </div>
+                                        <div class="message__account-item-more-item">
+                                            <div class="message__account-item-more-item-symbol">
+                                                <i class="uil uil-trash message__account-item-more-item-icon"></i>
+                                            </div>
+                                            <div class="message__account-item-more-item-text">Xoá đoạn chat</div>
+                                        </div>
+                                        <div class="message__account-item-more-item">
+                                            <div class="message__account-item-more-item-symbol">
+                                                <i class="uil uil-exclamation-triangle message__account-item-more-item-icon"></i>
+                                            </div>
+                                            <div class="message__account-item-more-item-text">Báo cáo</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="message__account-item">
+                            <div class="message__account-item-img" style="background-image: url(./assets/img/profile_avatar.jpg);"></div>
+                            <div class="message__account-item-desc">
+                                <div class="message__account-item-desc-name">Đặng Nhật</div>
+                                <div class="message__account-item-desc-msg">
+                                    <div class="message__account-item-desc-msg-content">Ừ tất nhiên rồi</div>
+                                    <div class="message__account-item-desc-msg-day">5 ngày</div>
+                                </div>
+                            </div>
+                            <div class="message__account-item-more">
+                                <i class="uil uil-ellipsis-h message__account-item-more-icon"></i>
+                                <div class="message__account-item-more-container">
+                                    <div class="message__account-item-more-list">
+                                        <div class="message__account-item-more-item active">
+                                            <div class="message__account-item-more-item-symbol">
+                                                <i class="uil uil-check message__account-item-more-item-icon"></i>
+                                            </div>
+                                            <div class="message__account-item-more-item-text">Đánh dấu là chưa đọc</div>
+                                        </div>
+                                        <div class="message__account-item-more-item">
+                                            <div class="message__account-item-more-item-symbol">
+                                                <i class="uil uil-user message__account-item-more-item-icon"></i>
+                                            </div>
+                                            <div class="message__account-item-more-item-text">Xem trang cá nhân</div>
+                                        </div>
+                                    </div>
+                                    <div class="message__account-item-more-prevent"></div>
+                                    <div class="message__account-item-more-list">
+                                        <div class="message__account-item-more-item">
+                                            <div class="message__account-item-more-item-symbol">
+                                                <i class="uil uil-phone-alt message__account-item-more-item-icon"></i>
+                                            </div>
+                                            <div class="message__account-item-more-item-text">Gọi thoại</div>
+                                        </div>
+                                        <div class="message__account-item-more-item">
+                                            <div class="message__account-item-more-item-symbol">
+                                                <i class="uil uil-video message__account-item-more-item-icon"></i>
+                                            </div>
+                                            <div class="message__account-item-more-item-text">Chat video</div>
+                                        </div>
+                                    </div>
+                                    <div class="message__account-item-more-prevent"></div>
+                                    <div class="message__account-item-more-list">
+                                        <div class="message__account-item-more-item">
+                                            <div class="message__account-item-more-item-symbol">
+                                                <i class="uil uil-ban message__account-item-more-item-icon"></i>
+                                            </div>
+                                            <div class="message__account-item-more-item-text">Chặn</div>
+                                        </div>
+                                        <div class="message__account-item-more-item">
+                                            <div class="message__account-item-more-item-symbol">
+                                                <i class="uil uil-bookmark message__account-item-more-item-icon"></i>
+                                            </div>
+                                            <div class="message__account-item-more-item-text">Lưu trữ</div>
+                                        </div>
+                                        <div class="message__account-item-more-item">
+                                            <div class="message__account-item-more-item-symbol">
+                                                <i class="uil uil-trash message__account-item-more-item-icon"></i>
+                                            </div>
+                                            <div class="message__account-item-more-item-text">Xoá đoạn chat</div>
+                                        </div>
+                                        <div class="message__account-item-more-item">
+                                            <div class="message__account-item-more-item-symbol">
+                                                <i class="uil uil-exclamation-triangle message__account-item-more-item-icon"></i>
+                                            </div>
+                                            <div class="message__account-item-more-item-text">Báo cáo</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="message__account-item">
+                            <div class="message__account-item-img" style="background-image: url(./assets/img/profile_avatar.jpg);"></div>
+                            <div class="message__account-item-desc">
+                                <div class="message__account-item-desc-name">Đặng Nhật</div>
+                                <div class="message__account-item-desc-msg">
+                                    <div class="message__account-item-desc-msg-content">Ừ tất nhiên rồi</div>
+                                    <div class="message__account-item-desc-msg-day">5 ngày</div>
+                                </div>
+                            </div>
+                            <div class="message__account-item-more">
+                                <i class="uil uil-ellipsis-h message__account-item-more-icon"></i>
+                                <div class="message__account-item-more-container">
+                                    <div class="message__account-item-more-list">
+                                        <div class="message__account-item-more-item active">
+                                            <div class="message__account-item-more-item-symbol">
+                                                <i class="uil uil-check message__account-item-more-item-icon"></i>
+                                            </div>
+                                            <div class="message__account-item-more-item-text">Đánh dấu là chưa đọc</div>
+                                        </div>
+                                        <div class="message__account-item-more-item">
+                                            <div class="message__account-item-more-item-symbol">
+                                                <i class="uil uil-user message__account-item-more-item-icon"></i>
+                                            </div>
+                                            <div class="message__account-item-more-item-text">Xem trang cá nhân</div>
+                                        </div>
+                                    </div>
+                                    <div class="message__account-item-more-prevent"></div>
+                                    <div class="message__account-item-more-list">
+                                        <div class="message__account-item-more-item">
+                                            <div class="message__account-item-more-item-symbol">
+                                                <i class="uil uil-phone-alt message__account-item-more-item-icon"></i>
+                                            </div>
+                                            <div class="message__account-item-more-item-text">Gọi thoại</div>
+                                        </div>
+                                        <div class="message__account-item-more-item">
+                                            <div class="message__account-item-more-item-symbol">
+                                                <i class="uil uil-video message__account-item-more-item-icon"></i>
+                                            </div>
+                                            <div class="message__account-item-more-item-text">Chat video</div>
+                                        </div>
+                                    </div>
+                                    <div class="message__account-item-more-prevent"></div>
+                                    <div class="message__account-item-more-list">
+                                        <div class="message__account-item-more-item">
+                                            <div class="message__account-item-more-item-symbol">
+                                                <i class="uil uil-ban message__account-item-more-item-icon"></i>
+                                            </div>
+                                            <div class="message__account-item-more-item-text">Chặn</div>
+                                        </div>
+                                        <div class="message__account-item-more-item">
+                                            <div class="message__account-item-more-item-symbol">
+                                                <i class="uil uil-bookmark message__account-item-more-item-icon"></i>
+                                            </div>
+                                            <div class="message__account-item-more-item-text">Lưu trữ</div>
+                                        </div>
+                                        <div class="message__account-item-more-item">
+                                            <div class="message__account-item-more-item-symbol">
+                                                <i class="uil uil-trash message__account-item-more-item-icon"></i>
+                                            </div>
+                                            <div class="message__account-item-more-item-text">Xoá đoạn chat</div>
+                                        </div>
+                                        <div class="message__account-item-more-item">
+                                            <div class="message__account-item-more-item-symbol">
+                                                <i class="uil uil-exclamation-triangle message__account-item-more-item-icon"></i>
+                                            </div>
+                                            <div class="message__account-item-more-item-text">Báo cáo</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="message__account-item">
+                            <div class="message__account-item-img" style="background-image: url(./assets/img/profile_avatar.jpg);"></div>
+                            <div class="message__account-item-desc">
+                                <div class="message__account-item-desc-name">Đặng Nhật</div>
+                                <div class="message__account-item-desc-msg">
+                                    <div class="message__account-item-desc-msg-content">Ừ tất nhiên rồi</div>
+                                    <div class="message__account-item-desc-msg-day">5 ngày</div>
+                                </div>
+                            </div>
+                            <div class="message__account-item-more">
+                                <i class="uil uil-ellipsis-h message__account-item-more-icon"></i>
+                                <div class="message__account-item-more-container">
+                                    <div class="message__account-item-more-list">
+                                        <div class="message__account-item-more-item active">
+                                            <div class="message__account-item-more-item-symbol">
+                                                <i class="uil uil-check message__account-item-more-item-icon"></i>
+                                            </div>
+                                            <div class="message__account-item-more-item-text">Đánh dấu là chưa đọc</div>
+                                        </div>
+                                        <div class="message__account-item-more-item">
+                                            <div class="message__account-item-more-item-symbol">
+                                                <i class="uil uil-user message__account-item-more-item-icon"></i>
+                                            </div>
+                                            <div class="message__account-item-more-item-text">Xem trang cá nhân</div>
+                                        </div>
+                                    </div>
+                                    <div class="message__account-item-more-prevent"></div>
+                                    <div class="message__account-item-more-list">
+                                        <div class="message__account-item-more-item">
+                                            <div class="message__account-item-more-item-symbol">
+                                                <i class="uil uil-phone-alt message__account-item-more-item-icon"></i>
+                                            </div>
+                                            <div class="message__account-item-more-item-text">Gọi thoại</div>
+                                        </div>
+                                        <div class="message__account-item-more-item">
+                                            <div class="message__account-item-more-item-symbol">
+                                                <i class="uil uil-video message__account-item-more-item-icon"></i>
+                                            </div>
+                                            <div class="message__account-item-more-item-text">Chat video</div>
+                                        </div>
+                                    </div>
+                                    <div class="message__account-item-more-prevent"></div>
+                                    <div class="message__account-item-more-list">
+                                        <div class="message__account-item-more-item">
+                                            <div class="message__account-item-more-item-symbol">
+                                                <i class="uil uil-ban message__account-item-more-item-icon"></i>
+                                            </div>
+                                            <div class="message__account-item-more-item-text">Chặn</div>
+                                        </div>
+                                        <div class="message__account-item-more-item">
+                                            <div class="message__account-item-more-item-symbol">
+                                                <i class="uil uil-bookmark message__account-item-more-item-icon"></i>
+                                            </div>
+                                            <div class="message__account-item-more-item-text">Lưu trữ</div>
+                                        </div>
+                                        <div class="message__account-item-more-item">
+                                            <div class="message__account-item-more-item-symbol">
+                                                <i class="uil uil-trash message__account-item-more-item-icon"></i>
+                                            </div>
+                                            <div class="message__account-item-more-item-text">Xoá đoạn chat</div>
+                                        </div>
+                                        <div class="message__account-item-more-item">
+                                            <div class="message__account-item-more-item-symbol">
+                                                <i class="uil uil-exclamation-triangle message__account-item-more-item-icon"></i>
+                                            </div>
+                                            <div class="message__account-item-more-item-text">Báo cáo</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="message__account-item">
+                            <div class="message__account-item-img" style="background-image: url(./assets/img/profile_avatar.jpg);"></div>
+                            <div class="message__account-item-desc">
+                                <div class="message__account-item-desc-name">Đặng Nhật</div>
+                                <div class="message__account-item-desc-msg">
+                                    <div class="message__account-item-desc-msg-content">Ừ tất nhiên rồi</div>
+                                    <div class="message__account-item-desc-msg-day">5 ngày</div>
+                                </div>
+                            </div>
+                            <div class="message__account-item-more">
+                                <i class="uil uil-ellipsis-h message__account-item-more-icon"></i>
+                                <div class="message__account-item-more-container">
+                                    <div class="message__account-item-more-list">
+                                        <div class="message__account-item-more-item active">
+                                            <div class="message__account-item-more-item-symbol">
+                                                <i class="uil uil-check message__account-item-more-item-icon"></i>
+                                            </div>
+                                            <div class="message__account-item-more-item-text">Đánh dấu là chưa đọc</div>
+                                        </div>
+                                        <div class="message__account-item-more-item">
+                                            <div class="message__account-item-more-item-symbol">
+                                                <i class="uil uil-user message__account-item-more-item-icon"></i>
+                                            </div>
+                                            <div class="message__account-item-more-item-text">Xem trang cá nhân</div>
+                                        </div>
+                                    </div>
+                                    <div class="message__account-item-more-prevent"></div>
+                                    <div class="message__account-item-more-list">
+                                        <div class="message__account-item-more-item">
+                                            <div class="message__account-item-more-item-symbol">
+                                                <i class="uil uil-phone-alt message__account-item-more-item-icon"></i>
+                                            </div>
+                                            <div class="message__account-item-more-item-text">Gọi thoại</div>
+                                        </div>
+                                        <div class="message__account-item-more-item">
+                                            <div class="message__account-item-more-item-symbol">
+                                                <i class="uil uil-video message__account-item-more-item-icon"></i>
+                                            </div>
+                                            <div class="message__account-item-more-item-text">Chat video</div>
+                                        </div>
+                                    </div>
+                                    <div class="message__account-item-more-prevent"></div>
+                                    <div class="message__account-item-more-list">
+                                        <div class="message__account-item-more-item">
+                                            <div class="message__account-item-more-item-symbol">
+                                                <i class="uil uil-ban message__account-item-more-item-icon"></i>
+                                            </div>
+                                            <div class="message__account-item-more-item-text">Chặn</div>
+                                        </div>
+                                        <div class="message__account-item-more-item">
+                                            <div class="message__account-item-more-item-symbol">
+                                                <i class="uil uil-bookmark message__account-item-more-item-icon"></i>
+                                            </div>
+                                            <div class="message__account-item-more-item-text">Lưu trữ</div>
+                                        </div>
+                                        <div class="message__account-item-more-item">
+                                            <div class="message__account-item-more-item-symbol">
+                                                <i class="uil uil-trash message__account-item-more-item-icon"></i>
+                                            </div>
+                                            <div class="message__account-item-more-item-text">Xoá đoạn chat</div>
+                                        </div>
+                                        <div class="message__account-item-more-item">
+                                            <div class="message__account-item-more-item-symbol">
+                                                <i class="uil uil-exclamation-triangle message__account-item-more-item-icon"></i>
+                                            </div>
+                                            <div class="message__account-item-more-item-text">Báo cáo</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="message__account-item">
+                            <div class="message__account-item-img" style="background-image: url(./assets/img/profile_avatar.jpg);"></div>
+                            <div class="message__account-item-desc">
+                                <div class="message__account-item-desc-name">Đặng Nhật</div>
+                                <div class="message__account-item-desc-msg">
+                                    <div class="message__account-item-desc-msg-content">Ừ tất nhiên rồi</div>
+                                    <div class="message__account-item-desc-msg-day">5 ngày</div>
+                                </div>
+                            </div>
+                            <div class="message__account-item-more">
+                                <i class="uil uil-ellipsis-h message__account-item-more-icon"></i>
+                                <div class="message__account-item-more-container">
+                                    <div class="message__account-item-more-list">
+                                        <div class="message__account-item-more-item active">
+                                            <div class="message__account-item-more-item-symbol">
+                                                <i class="uil uil-check message__account-item-more-item-icon"></i>
+                                            </div>
+                                            <div class="message__account-item-more-item-text">Đánh dấu là chưa đọc</div>
+                                        </div>
+                                        <div class="message__account-item-more-item">
+                                            <div class="message__account-item-more-item-symbol">
+                                                <i class="uil uil-user message__account-item-more-item-icon"></i>
+                                            </div>
+                                            <div class="message__account-item-more-item-text">Xem trang cá nhân</div>
+                                        </div>
+                                    </div>
+                                    <div class="message__account-item-more-prevent"></div>
+                                    <div class="message__account-item-more-list">
+                                        <div class="message__account-item-more-item">
+                                            <div class="message__account-item-more-item-symbol">
+                                                <i class="uil uil-phone-alt message__account-item-more-item-icon"></i>
+                                            </div>
+                                            <div class="message__account-item-more-item-text">Gọi thoại</div>
+                                        </div>
+                                        <div class="message__account-item-more-item">
+                                            <div class="message__account-item-more-item-symbol">
+                                                <i class="uil uil-video message__account-item-more-item-icon"></i>
+                                            </div>
+                                            <div class="message__account-item-more-item-text">Chat video</div>
+                                        </div>
+                                    </div>
+                                    <div class="message__account-item-more-prevent"></div>
+                                    <div class="message__account-item-more-list">
+                                        <div class="message__account-item-more-item">
+                                            <div class="message__account-item-more-item-symbol">
+                                                <i class="uil uil-ban message__account-item-more-item-icon"></i>
+                                            </div>
+                                            <div class="message__account-item-more-item-text">Chặn</div>
+                                        </div>
+                                        <div class="message__account-item-more-item">
+                                            <div class="message__account-item-more-item-symbol">
+                                                <i class="uil uil-bookmark message__account-item-more-item-icon"></i>
+                                            </div>
+                                            <div class="message__account-item-more-item-text">Lưu trữ</div>
+                                        </div>
+                                        <div class="message__account-item-more-item">
+                                            <div class="message__account-item-more-item-symbol">
+                                                <i class="uil uil-trash message__account-item-more-item-icon"></i>
+                                            </div>
+                                            <div class="message__account-item-more-item-text">Xoá đoạn chat</div>
+                                        </div>
+                                        <div class="message__account-item-more-item">
+                                            <div class="message__account-item-more-item-symbol">
+                                                <i class="uil uil-exclamation-triangle message__account-item-more-item-icon"></i>
+                                            </div>
+                                            <div class="message__account-item-more-item-text">Báo cáo</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="message__account-item">
+                            <div class="message__account-item-img" style="background-image: url(./assets/img/profile_avatar.jpg);"></div>
+                            <div class="message__account-item-desc">
+                                <div class="message__account-item-desc-name">Đặng Nhật</div>
+                                <div class="message__account-item-desc-msg">
+                                    <div class="message__account-item-desc-msg-content">Ừ tất nhiên rồi</div>
+                                    <div class="message__account-item-desc-msg-day">5 ngày</div>
+                                </div>
+                            </div>
+                            <div class="message__account-item-more">
+                                <i class="uil uil-ellipsis-h message__account-item-more-icon"></i>
+                                <div class="message__account-item-more-container">
+                                    <div class="message__account-item-more-list">
+                                        <div class="message__account-item-more-item active">
+                                            <div class="message__account-item-more-item-symbol">
+                                                <i class="uil uil-check message__account-item-more-item-icon"></i>
+                                            </div>
+                                            <div class="message__account-item-more-item-text">Đánh dấu là chưa đọc</div>
+                                        </div>
+                                        <div class="message__account-item-more-item">
+                                            <div class="message__account-item-more-item-symbol">
+                                                <i class="uil uil-user message__account-item-more-item-icon"></i>
+                                            </div>
+                                            <div class="message__account-item-more-item-text">Xem trang cá nhân</div>
+                                        </div>
+                                    </div>
+                                    <div class="message__account-item-more-prevent"></div>
+                                    <div class="message__account-item-more-list">
+                                        <div class="message__account-item-more-item">
+                                            <div class="message__account-item-more-item-symbol">
+                                                <i class="uil uil-phone-alt message__account-item-more-item-icon"></i>
+                                            </div>
+                                            <div class="message__account-item-more-item-text">Gọi thoại</div>
+                                        </div>
+                                        <div class="message__account-item-more-item">
+                                            <div class="message__account-item-more-item-symbol">
+                                                <i class="uil uil-video message__account-item-more-item-icon"></i>
+                                            </div>
+                                            <div class="message__account-item-more-item-text">Chat video</div>
+                                        </div>
+                                    </div>
+                                    <div class="message__account-item-more-prevent"></div>
+                                    <div class="message__account-item-more-list">
+                                        <div class="message__account-item-more-item">
+                                            <div class="message__account-item-more-item-symbol">
+                                                <i class="uil uil-ban message__account-item-more-item-icon"></i>
+                                            </div>
+                                            <div class="message__account-item-more-item-text">Chặn</div>
+                                        </div>
+                                        <div class="message__account-item-more-item">
+                                            <div class="message__account-item-more-item-symbol">
+                                                <i class="uil uil-bookmark message__account-item-more-item-icon"></i>
+                                            </div>
+                                            <div class="message__account-item-more-item-text">Lưu trữ</div>
+                                        </div>
+                                        <div class="message__account-item-more-item">
+                                            <div class="message__account-item-more-item-symbol">
+                                                <i class="uil uil-trash message__account-item-more-item-icon"></i>
+                                            </div>
+                                            <div class="message__account-item-more-item-text">Xoá đoạn chat</div>
+                                        </div>
+                                        <div class="message__account-item-more-item">
+                                            <div class="message__account-item-more-item-symbol">
+                                                <i class="uil uil-exclamation-triangle message__account-item-more-item-icon"></i>
+                                            </div>
+                                            <div class="message__account-item-more-item-text">Báo cáo</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="message__account-item">
+                            <div class="message__account-item-img" style="background-image: url(./assets/img/profile_avatar.jpg);"></div>
+                            <div class="message__account-item-desc">
+                                <div class="message__account-item-desc-name">Đặng Nhật</div>
+                                <div class="message__account-item-desc-msg">
+                                    <div class="message__account-item-desc-msg-content">Ừ tất nhiên rồi</div>
+                                    <div class="message__account-item-desc-msg-day">5 ngày</div>
+                                </div>
+                            </div>
+                            <div class="message__account-item-more">
+                                <i class="uil uil-ellipsis-h message__account-item-more-icon"></i>
+                                <div class="message__account-item-more-container">
+                                    <div class="message__account-item-more-list">
+                                        <div class="message__account-item-more-item active">
+                                            <div class="message__account-item-more-item-symbol">
+                                                <i class="uil uil-check message__account-item-more-item-icon"></i>
+                                            </div>
+                                            <div class="message__account-item-more-item-text">Đánh dấu là chưa đọc</div>
+                                        </div>
+                                        <div class="message__account-item-more-item">
+                                            <div class="message__account-item-more-item-symbol">
+                                                <i class="uil uil-user message__account-item-more-item-icon"></i>
+                                            </div>
+                                            <div class="message__account-item-more-item-text">Xem trang cá nhân</div>
+                                        </div>
+                                    </div>
+                                    <div class="message__account-item-more-prevent"></div>
+                                    <div class="message__account-item-more-list">
+                                        <div class="message__account-item-more-item">
+                                            <div class="message__account-item-more-item-symbol">
+                                                <i class="uil uil-phone-alt message__account-item-more-item-icon"></i>
+                                            </div>
+                                            <div class="message__account-item-more-item-text">Gọi thoại</div>
+                                        </div>
+                                        <div class="message__account-item-more-item">
+                                            <div class="message__account-item-more-item-symbol">
+                                                <i class="uil uil-video message__account-item-more-item-icon"></i>
+                                            </div>
+                                            <div class="message__account-item-more-item-text">Chat video</div>
+                                        </div>
+                                    </div>
+                                    <div class="message__account-item-more-prevent"></div>
+                                    <div class="message__account-item-more-list">
+                                        <div class="message__account-item-more-item">
+                                            <div class="message__account-item-more-item-symbol">
+                                                <i class="uil uil-ban message__account-item-more-item-icon"></i>
+                                            </div>
+                                            <div class="message__account-item-more-item-text">Chặn</div>
+                                        </div>
+                                        <div class="message__account-item-more-item">
+                                            <div class="message__account-item-more-item-symbol">
+                                                <i class="uil uil-bookmark message__account-item-more-item-icon"></i>
+                                            </div>
+                                            <div class="message__account-item-more-item-text">Lưu trữ</div>
+                                        </div>
+                                        <div class="message__account-item-more-item">
+                                            <div class="message__account-item-more-item-symbol">
+                                                <i class="uil uil-trash message__account-item-more-item-icon"></i>
+                                            </div>
+                                            <div class="message__account-item-more-item-text">Xoá đoạn chat</div>
+                                        </div>
+                                        <div class="message__account-item-more-item">
+                                            <div class="message__account-item-more-item-symbol">
+                                                <i class="uil uil-exclamation-triangle message__account-item-more-item-icon"></i>
+                                            </div>
+                                            <div class="message__account-item-more-item-text">Báo cáo</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -202,6 +850,16 @@
     
                 </div>
             </div>
+        </div>
+
+        <div class="message__mobile hide-on-destop hide-on-table">
+            Sản phẩm chưa được tối ưu trên điện thoại, vui lòng sử dụng máy tính bảng, laptop 
+            để có trả nghiệm tốt hơn!
+        </div>
+
+        <div class="message__table hide-on-destop hide-on-mobile">
+            Sản phẩm chưa được tối ưu trên máy tính bảng, vui lòng sử dụng điện thoại, laptop 
+            để có trả nghiệm tốt hơn!
         </div>
     </div>
 </body>
