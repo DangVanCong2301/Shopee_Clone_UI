@@ -283,36 +283,41 @@ headerFix.forEach(e => {
     e.addEventListener('click', () => {
         const cartItem = e.parentNode.parentNode;
         if (e.innerText == "Sửa") {
-            cartItem.querySelector(".cart__mobile-item-body-product").classList.toggle("move");
+            cartItem.querySelector(".cart__mobile-item-body-container").classList.toggle("move");
             e.innerText = "Hoàn thành";
         } else {
-            cartItem.querySelector(".cart__mobile-item-body-product").classList.toggle("move");
+            cartItem.querySelector(".cart__mobile-item-body-container").classList.toggle("move");
             e.innerText = "Sửa";
         }
     });
 });
 
 function showBottomSheetVoucher() {
-    document.querySelector(".cart__mobile-voucher-bottom-sheet").classList.add("show");
+    document.querySelector(".cart__mobile-voucher-bottom-sheet-overlay").classList.add("show");
+    document.querySelector(".cart__mobile-voucher-bottom-sheet-container").classList.add("show");
 }
 
 function hideBottomSheetVoucher() {
-    document.querySelector(".cart__mobile-voucher-bottom-sheet").classList.remove("show");
+    document.querySelector(".cart__mobile-voucher-bottom-sheet-overlay").classList.remove("show");
+    document.querySelector(".cart__mobile-voucher-bottom-sheet-container").classList.remove("show");
 }
 
 window.addEventListener('click', (e) => {
-    if (e.target == document.querySelector(".cart__mobile-voucher-bottom-sheet")) {
-        document.querySelector(".cart__mobile-voucher-bottom-sheet").classList.remove("show");
+    if (e.target == document.querySelector(".cart__mobile-voucher-bottom-sheet-overlay")) {
+        document.querySelector(".cart__mobile-voucher-bottom-sheet-overlay").classList.remove("show");
+        document.querySelector(".cart__mobile-voucher-bottom-sheet-container").classList.remove("show");
     }
 });
 
 function showBottomSheetTransport() {
-    document.querySelector(".cart__mobile-transport-bottom-sheet").classList.add("show");
+    document.querySelector(".cart__mobile-transport-bottom-sheet-overlay").classList.add("show");
+    document.querySelector(".cart__mobile-transport-bottom-sheet-container").classList.add("show");
 }
 
 window.addEventListener('click', (e) => {
-    if (e.target == document.querySelector(".cart__mobile-transport-bottom-sheet")) {
-        document.querySelector(".cart__mobile-transport-bottom-sheet").classList.remove("show");
+    if (e.target == document.querySelector(".cart__mobile-transport-bottom-sheet-overlay")) {
+        document.querySelector(".cart__mobile-transport-bottom-sheet-overlay").classList.remove("show");
+        document.querySelector(".cart__mobile-transport-bottom-sheet-container").classList.remove("show");
     }
 });
 

@@ -825,24 +825,28 @@
     .cart__mobile-item-body {
         position: relative;
         height: 224px;
-        padding: 24px 12px 12px 12px ;
         border-top: 1px solid var(--border-color);
-        column-gap: 12px;
-        display: flex;
+        overflow: hidden;
+    }
+
+    .cart__mobile-item-body-container {
+        position: relative;
+        height: 224px;
+        width: 100%;
+        transition: all .3s ease;
     }
     
     .cart__mobile-item-body-product {
         position: absolute;
-        top: 24px;
-        left: 12px;
-        width: 636px;
+        width: 100%;
+        height: 100%;
         display: flex;
+        padding: 20px 12px 12px 12px;
         column-gap: 12px;
-        transition: left .3s ease-in-out;
     }
     
-    .cart__mobile-item-body-product.move {
-        left: -45%;
+    .cart__mobile-item-body-container.move {
+        transform: translateX(-200px);
     }
 
     .cart__mobile-item-body-product-similar {
@@ -854,7 +858,6 @@
         justify-content: center;
         color: var(--white-color);
         width: 100px;
-        height: 200px;
         cursor: pointer;
     }
 
@@ -871,7 +874,12 @@
     }
 
     .cart__mobile-item-body-tools {
+        position: absolute;
+        margin-top: 20px;
+        transform: translateX(100%);
         display: flex;
+        height: 100%;
+        width: 100%;
     }
 
     .cart__mobile-item-body-left {
@@ -1035,7 +1043,7 @@
         background-size: contain;
     }
 
-    .cart__mobile-voucher-bottom-sheet {
+    .cart__mobile-voucher-bottom-sheet-overlay {
         position: fixed;
         top: 0;
         left: 0;
@@ -1043,29 +1051,36 @@
         bottom: 0;
         background-color: rgba(0, 0, 0, .4);
         display: none;
-        z-index: 10;
+        z-index: 9;
     }
 
-    .cart__mobile-voucher-bottom-sheet.show {
+    .cart__mobile-voucher-bottom-sheet-overlay.show {
         display: block;
     }
 
     .cart__mobile-voucher-bottom-sheet-container {
-        position: absolute;
-        bottom: -100%;
+        position: fixed;
+        bottom: 0;
         left: 0;
         right: 0;
+        transform: translateY(100%);
         font-size: var(--normal-font-size);
         background-color: var(--white-color);
         border-radius: 4px 4px 0 0; 
         box-shadow: 0 4px 20px 0 rgba(28, 28, 51, .16);
         animation: showBottomSheet .4s ease forwards;
+        transition: all .3s ease;
+        z-index: 10;
     }
 
     @keyframes showBottomSheet {
         to {
             bottom: 0;
         }
+    }
+
+    .cart__mobile-voucher-bottom-sheet-container.show {
+        transform: translateY(0);
     }
 
     .cart__mobile-voucher-bottom-sheet-header {
@@ -1211,31 +1226,38 @@
         color: #727272;
     }
 
-    .cart__mobile-transport-bottom-sheet {
+    .cart__mobile-transport-bottom-sheet-overlay {
         position: fixed;
         top: 0;
         right: 0;
         left: 0;
         bottom: 0;
         background-color: rgba(0, 0, 0, .4);
-        z-index: 10;
+        z-index: 9;
         display: none;
     }
 
-    .cart__mobile-transport-bottom-sheet.show {
+    .cart__mobile-transport-bottom-sheet-overlay.show {
         display: block;
     }
 
     .cart__mobile-transport-bottom-sheet-container {
-        position: absolute;
-        bottom: -100%;
+        position: fixed;
+        bottom: 0;
         left: 0;
         right: 0;
+        transform: translateY(100%);
         font-size: var(--normal-font-size);
         background-color: var(--white-color);
         border-radius: 4px 4px 0 0; 
         box-shadow: 0 4px 20px 0 rgba(28, 28, 51, .16);
         animation: showBottomSheet .4s ease forwards;
+        transition: all .3s ease;
+        z-index: 10;
+    }
+
+    .cart__mobile-transport-bottom-sheet-container.show {
+        transform: translateY(0);
     }
 
     .cart__mobile-transport-bottom-sheet-header {
@@ -1288,7 +1310,7 @@
         font-size: var(--normal-font-size);
         background-color: var(--white-color);
         box-shadow: 0 0 1px rgba(0, 0, 0, .4);
-        z-index: 8;
+        z-index: 2;
     }
 
     .cart__mobile-checkout-voucher {

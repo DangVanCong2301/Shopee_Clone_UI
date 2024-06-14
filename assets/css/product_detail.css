@@ -44,6 +44,12 @@
 
 .detail__right-title {
     font-size: 20px;
+    line-height: 24px;
+    height: 24px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
     text-transform: capitalize;
     font-weight: 400;
     position: relative;
@@ -213,6 +219,7 @@
         grid-template-columns: repeat(2, 1fr);
         grid-gap: 1.5rem;
         box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+        border-radius: 4px;
     }
 
     .detail__right {
@@ -242,6 +249,24 @@
     .header__mobile-back,
     .header__mobile-more {
         display: none;
+    }
+
+    /* Rate */
+    .rate {
+        display: flex;
+        column-gap: 2rem;
+        justify-content: center;
+    }
+
+    .rate__me {
+        margin: 0 auto;
+    }
+
+    /* Comment */
+    .comment__add {
+        grid-template-areas: "avatar input button";
+        grid-template-columns: min-content auto min-content;
+        gap: 1rem;
     }
 }
 
@@ -273,7 +298,7 @@
 
     .header__mobile-back-icon {
         font-size: 2.4rem;
-        color: var(--white-color);
+        color: var(--primary-color);
     }
 
     .header__mobile-back-icon.scroll-detail,
@@ -295,7 +320,7 @@
 
     .header__mobile-more-icon {
         font-size: 2.4rem;
-        color: var(--white-color);
+        color: var(--primary-color);
     }
 
     .header__mobile-product-name {
@@ -321,6 +346,14 @@
         margin-top: 8px;
     }
 
+    .app__container {
+        margin-top: calc(30px + var(--header-height));
+    }
+
+    .detail__left {
+        padding-top: 4px;
+    }
+
     .detail__mobile-btns {
         position: fixed;
         bottom: 0;
@@ -332,6 +365,7 @@
         justify-content: space-between;
         background-color: var(--white-color);
         font-size: var(--normal-font-size);
+        z-index: 1;
     }
 
     .detail__mobile-btn-add {
@@ -372,6 +406,7 @@
         right: 0;
         bottom: 0;
         background-color: rgba(0, 0, 0, 0.4);
+        z-index: 9;
         display: none;
     }
 
@@ -390,6 +425,7 @@
         box-shadow: 0 4px 20px 0 rgba(28, 28, 51, .16);
         animation: showBottomSheet .4s ease forwards;
         transition: all .3s ease;
+        z-index: 10;
     }
 
     .detail__mobile-bottom-sheet.open {
