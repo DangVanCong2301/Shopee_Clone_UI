@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="sortcut icon" href="./assets/img/shopee_logo.png">
     <link rel="stylesheet" href="./assets/css/styles.css">
     <link rel="stylesheet" href="./assets/css/base.css">
     <link rel="stylesheet" href="./assets/css/grid.css">
@@ -12,11 +13,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <!--=============== ICONSCOUT ===============-->
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
-    <title>F4 SHOP - Giỏ hàng</title>
+    <title>Shopee - Giỏ hàng</title>
 </head>
 <body class="body">
     <div class="app">
-        <header class="header header__cart-mobile">
+        <header class="header header__cart-mobile hide-on-table">
             <div class="grid wide">
                 <nav class="header__navbar hide-on-mobile-table">
                     <ul class="header__navbar-list">
@@ -244,7 +245,11 @@
                 </li>
             </ul>
         </header>
-        <div class="app__container">
+        <div class="home__table hide-on-mobile hide-on-destop">
+            Sản phẩm chưa được tối ưu trên máy tính bảng, vui lòng sử dụng điện thoại và laptop 
+            để có trả nghiệm tốt hơn!
+        </div>
+        <div class="app__container hide-on-table">
             <div class="grid wide">
                 <div class="cart">
                     <div class="cart__no" style="display: none;">
@@ -314,35 +319,37 @@
                                     <div class="cart__mobile-item-header-fix">Sửa</div>
                                 </div>
                                 <div class="cart__mobile-item-body">
-                                    <div class="cart__mobile-item-body-product">
-                                        <div class="cart__mobile-item-body-left">
-                                            <div class="cart__mobile-item-box">
-                                                <input type="checkbox" class="cart__mobile-item-input" name="" id="">
+                                    <div class="cart__mobile-item-body-container">
+                                        <div class="cart__mobile-item-body-product">
+                                            <div class="cart__mobile-item-body-left">
+                                                <div class="cart__mobile-item-box">
+                                                    <input type="checkbox" class="cart__mobile-item-input" name="" id="">
+                                                </div>
+                                                <div class="cart__mobile-item-product-img" style="background-image: url(./assets/img/am_sieu_toc_1.jpg);"></div>
                                             </div>
-                                            <div class="cart__mobile-item-product-img" style="background-image: url(./assets/img/am_sieu_toc_1.jpg);"></div>
-                                        </div>
-                                        <div class="cart__mobile-item-body-right">
-                                            <div class="cart__mobile-item-product-name">
-                                                Bút Laze Trình Chiếu PowerPoint Kèm Remote Điều Khiển Không Dây Cho Laptop RF 2.4GHz
-                                            </div>
-                                            <div class="cart__mobile-item-product-type">
-                                                <span>Phân loại hàng: Bạc</span>
-                                                <i class="uil uil-angle-down cart__mobile-item-product-type-icon"></i>
-                                            </div>
-                                            <div class="cart__mobile-item-product-change-sub">
-                                                <span>Đổi ý miễn phí</span>
-                                            </div>
-                                            <div class="cart__mobile-item-product-voucher">
-                                                <img src="./assets/img/voucher.png" class="cart__mobile-item-product-voucher-img"></img>
-                                            </div>
-                                            <div class="cart__mobile-item-product-price">
-                                                <div class="cart__mobile-item-product-price-old">189.000đ</div>
-                                                <div class="cart__mobile-item-product-price-new">121.000đ</div>
-                                            </div>
-                                            <div class="cart__mobile-item-product-quantity">
-                                                <div class="cart__mobile-item-product-quantity-btn-plus">+</div>
-                                                <input type="text" class="cart__mobile-item-product-quantity-input" value="1">
-                                                <div class="cart__mobile-item-product-quantity-btn-less">-</div>
+                                            <div class="cart__mobile-item-body-right">
+                                                <div class="cart__mobile-item-product-name">
+                                                    Bút Laze Trình Chiếu PowerPoint Kèm Remote Điều Khiển Không Dây Cho Laptop RF 2.4GHz
+                                                </div>
+                                                <div class="cart__mobile-item-product-type">
+                                                    <span>Phân loại hàng: Bạc</span>
+                                                    <i class="uil uil-angle-down cart__mobile-item-product-type-icon"></i>
+                                                </div>
+                                                <div class="cart__mobile-item-product-change-sub">
+                                                    <span>Đổi ý miễn phí</span>
+                                                </div>
+                                                <div class="cart__mobile-item-product-voucher">
+                                                    <img src="./assets/img/voucher.png" class="cart__mobile-item-product-voucher-img"></img>
+                                                </div>
+                                                <div class="cart__mobile-item-product-price">
+                                                    <div class="cart__mobile-item-product-price-old">189.000đ</div>
+                                                    <div class="cart__mobile-item-product-price-new">121.000đ</div>
+                                                </div>
+                                                <div class="cart__mobile-item-product-quantity">
+                                                    <div class="cart__mobile-item-product-quantity-btn-plus">+</div>
+                                                    <input type="text" class="cart__mobile-item-product-quantity-input" value="1">
+                                                    <div class="cart__mobile-item-product-quantity-btn-less">-</div>
+                                                </div>
                                             </div>
                                         </div>
                                         <div class="cart__mobile-item-body-tools">
@@ -483,35 +490,37 @@
                                     <div class="cart__mobile-item-header-fix">Sửa</div>
                                 </div>
                                 <div class="cart__mobile-item-body">
-                                    <div class="cart__mobile-item-body-product">
-                                        <div class="cart__mobile-item-body-left">
-                                            <div class="cart__mobile-item-box">
-                                                <input type="checkbox" class="cart__mobile-item-input" name="" id="">
+                                    <div class="cart__mobile-item-body-container">
+                                        <div class="cart__mobile-item-body-product">
+                                            <div class="cart__mobile-item-body-left">
+                                                <div class="cart__mobile-item-box">
+                                                    <input type="checkbox" class="cart__mobile-item-input" name="" id="">
+                                                </div>
+                                                <div class="cart__mobile-item-product-img" style="background-image: url(./assets/img/tai_nghe_5.jpg);"></div>
                                             </div>
-                                            <div class="cart__mobile-item-product-img" style="background-image: url(./assets/img/tai_nghe_5.jpg);"></div>
-                                        </div>
-                                        <div class="cart__mobile-item-body-right">
-                                            <div class="cart__mobile-item-product-name">
-                                                Bút Laze Trình Chiếu PowerPoint Kèm Remote Điều Khiển Không Dây Cho Laptop RF 2.4GHz
-                                            </div>
-                                            <div class="cart__mobile-item-product-type">
-                                                <span>Phân loại hàng: Bạc</span>
-                                                <i class="uil uil-angle-down cart__mobile-item-product-type-icon"></i>
-                                            </div>
-                                            <div class="cart__mobile-item-product-change-sub">
-                                                <span>Đổi ý miễn phí</span>
-                                            </div>
-                                            <div class="cart__mobile-item-product-voucher">
-                                                <img src="./assets/img/voucher.png" class="cart__mobile-item-product-voucher-img"></img>
-                                            </div>
-                                            <div class="cart__mobile-item-product-price">
-                                                <div class="cart__mobile-item-product-price-old">189.000đ</div>
-                                                <div class="cart__mobile-item-product-price-new">121.000đ</div>
-                                            </div>
-                                            <div class="cart__mobile-item-product-quantity">
-                                                <div class="cart__mobile-item-product-quantity-btn-plus">+</div>
-                                                <input type="text" class="cart__mobile-item-product-quantity-input" value="1">
-                                                <div class="cart__mobile-item-product-quantity-btn-less">-</div>
+                                            <div class="cart__mobile-item-body-right">
+                                                <div class="cart__mobile-item-product-name">
+                                                    Bút Laze Trình Chiếu PowerPoint Kèm Remote Điều Khiển Không Dây Cho Laptop RF 2.4GHz
+                                                </div>
+                                                <div class="cart__mobile-item-product-type">
+                                                    <span>Phân loại hàng: Bạc</span>
+                                                    <i class="uil uil-angle-down cart__mobile-item-product-type-icon"></i>
+                                                </div>
+                                                <div class="cart__mobile-item-product-change-sub">
+                                                    <span>Đổi ý miễn phí</span>
+                                                </div>
+                                                <div class="cart__mobile-item-product-voucher">
+                                                    <img src="./assets/img/voucher.png" class="cart__mobile-item-product-voucher-img"></img>
+                                                </div>
+                                                <div class="cart__mobile-item-product-price">
+                                                    <div class="cart__mobile-item-product-price-old">189.000đ</div>
+                                                    <div class="cart__mobile-item-product-price-new">121.000đ</div>
+                                                </div>
+                                                <div class="cart__mobile-item-product-quantity">
+                                                    <div class="cart__mobile-item-product-quantity-btn-plus">+</div>
+                                                    <input type="text" class="cart__mobile-item-product-quantity-input" value="1">
+                                                    <div class="cart__mobile-item-product-quantity-btn-less">-</div>
+                                                </div>
                                             </div>
                                         </div>
                                         <div class="cart__mobile-item-body-tools">
@@ -526,6 +535,7 @@
                                     <i class="uil uil-angle-right-b cart__mobile-voucher-icon-arrow"></i>
                                 </div>
                                 <div class="cart__mobile-voucher-bottom-sheet">
+                                    <div class="cart__mobile-voucher-bottom-sheet-overlay"></div>
                                     <div class="cart__mobile-voucher-bottom-sheet-container">
                                         <div class="cart__mobile-voucher-bottom-sheet-header">
                                             <span>Hàng Tốt Giá Rẻ Shop Voucher</span>
@@ -560,6 +570,7 @@
                                     <div class="cart__mobile-free-ship-sub">Giảm 300.000đ phí vận chuyển đơn tối thiểu 0đ</div>
                                 </div>
                                 <div class="cart__mobile-transport-bottom-sheet">
+                                    <div class="cart__mobile-transport-bottom-sheet-overlay"></div>
                                     <div class="cart__mobile-transport-bottom-sheet-container">
                                         <div class="cart__mobile-transport-bottom-sheet-header">Khuyến mãi vận chuyển - Hàng tốt giá rẻ Shop</div>
                                         <div class="cart__mobile-transport-bottom-sheet-list">

@@ -7,7 +7,7 @@
 
     .header {
         position: fixed;
-        z-index: 10;
+        z-index: 1;
         top: 0;
         right: 0;
         left: 0;
@@ -707,24 +707,5 @@
 
     .footer__download-app-link {
         padding: 6px 8px;
-    }
-}
-
-@media screen and (min-width: 992px) {
-    
-    .comment__add {
-        grid-template-areas: "avatar input button";
-        grid-template-columns: min-content auto min-content;
-        gap: 1rem;
-    }
-
-    .rate {
-        grid-template-columns: max-content max-content;
-        column-gap: 2rem;
-        justify-content: center;
-    }
-
-    .rate__me {
-        margin: 0 auto;
     }
 }
