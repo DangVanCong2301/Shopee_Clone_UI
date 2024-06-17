@@ -140,7 +140,7 @@
                     </div>
 
                     <div class="header__mobile-back">
-                        <a href="index.html" class="header__mobile-back-link">
+                        <a href="javascript:backHistory()" class="header__mobile-back-link">
                             <i class="uil uil-arrow-left header__mobile-back-icon"></i>
                         </a>
                     </div>
@@ -228,9 +228,25 @@
                         </a>
                     </div>
                     <div class="header__mobile-more">
-                        <a href="#" class="header__mobile-more-link">
+                        <a href="javascript:openModalOrderMe()" class="header__mobile-more-link">
                             <i class="uil uil-ellipsis-h header__mobile-more-icon"></i>
                         </a>
+                    </div>
+                    <div class="header__mobile-more-modal hide-on-destop">
+                        <div class="header__mobile-more-modal-container">
+                            <a href="#" class="header__mobile-more-modal-order-me">
+                                <i class="uil uil-clipboard-alt header__mobile-more-modal-order-me-icon"></i>
+                                <span>Đơn hàng của tôi</span>
+                            </a>
+                            <a href="#" class="header__mobile-more-modal-order-me">
+                                <i class="uil uil-shopping-bag header__mobile-more-modal-order-me-icon"></i>
+                                <span>Trở về trang chủ</span>
+                            </a>
+                            <a href="#" class="header__mobile-more-modal-order-me">
+                                <i class="uil uil-question-circle header__mobile-more-modal-order-me-icon"></i>
+                                <span>Bạn cần trợ giúp</span>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -268,14 +284,9 @@
                     <h2 class="detail__right-title">
                         Bút Laze Trình Chiếu PowerPoint Kèm Remote Điều Khiển Không Dây Cho Laptop RF 2.4GHz
                     </h2>
-                    <div class="detail__number">
-                        <div class="detail__price">
-                            <p class="detail__price-old"><span>500.000 đ</span></p>
-                            <p class="detail__price-new"><span>500.000 đ</span></p>
-                        </div>
-                        <div class="detail__favorite" title="Yêu thích">
-                            <i class="uil uil-heart-alt detail__favorite-icon"></i>
-                        </div>
+                    <div class="detail__price">
+                        <p class="detail__price-old"><span>500.000 đ</span></p>
+                        <p class="detail__price-new"><span>500.000 đ</span></p>
                     </div>
                     <div class="detail__text">
                         <h2 class="detail__text-title">về mặt hàng này: </h2>
@@ -340,23 +351,28 @@
                             <div class="detail__mobile-bottom-sheet-add-to-cart">Thêm vào giỏ hàng</div>
                         </div>
                     </div>
-                    <div class="detail__social">
-                        <p class="detail__social-title">Chia sẻ: </p>
-                        <a class="detail__social-link" href="#">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                        <a class="detail__social-link" href="#">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                        <a class="detail__social-link" href="#">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a class="detail__social-link" href="#">
-                            <i class="fab fa-whatsapp"></i>
-                        </a>
-                        <a class="detail__social-link" href="#">
-                            <i class="fab fa-pinterest"></i>
-                        </a>
+                    <div class="detail__number">
+                        <div class="detail__social">
+                            <p class="detail__social-title">Chia sẻ: </p>
+                            <a class="detail__social-link" href="#">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a class="detail__social-link" href="#">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a class="detail__social-link" href="#">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a class="detail__social-link" href="#">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+                            <a class="detail__social-link" href="#">
+                                <i class="fab fa-pinterest"></i>
+                            </a>
+                        </div>
+                        <div class="detail__favorite" title="Yêu thích">
+                            <i class="uil uil-heart-alt detail__favorite-icon"></i>
+                        </div>
                     </div>
                 </div>
             </div>

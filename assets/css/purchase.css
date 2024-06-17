@@ -366,6 +366,17 @@
     color: #7f9fd3;
 }
 
+/* Mobile */
+@media (max-width: 739px) {
+    .app__container {
+        margin-top: calc(30px + var(--header-height));
+    }
+
+    .purchase {
+        margin: 0 0 20px;
+    }
+}
+
 @media screen and (min-width: 1024px) {
     .purchase__body-item-info {
         display: flex;
