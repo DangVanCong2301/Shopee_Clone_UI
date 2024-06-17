@@ -63,6 +63,10 @@
     align-items: center;
 }
 
+.detail__favorite {
+    cursor: pointer;
+}
+
 .detail__favorite-icon {
     font-size: 32px;
     color: var(--heart-color);

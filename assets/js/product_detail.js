@@ -44,3 +44,19 @@ window.addEventListener('click', (e) => {
         document.querySelector(".detail__mobile-bottom-sheet").classList.remove("open");
     }
 });
+
+// OpenModalOrderMe
+function openModalOrderMe() {
+    document.querySelector(".header__mobile-more-modal").classList.add("open");
+}
+
+window.addEventListener('click', (e) => {
+    if (e.target == document.querySelector(".header__mobile-more-modal")) {
+        document.querySelector(".header__mobile-more-modal").classList.remove("open");
+    }
+});
+
+// Back History
+function backHistory() {
+    window.history.back();
+}

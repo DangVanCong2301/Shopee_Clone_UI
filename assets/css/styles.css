@@ -1787,17 +1787,20 @@
     padding: 2px;
 }
 
-i.home-product-item__like-icon-fill {
+i.home-product-item__like-icon-fill,
+i.home-product-item__like-icon-empty {
     display: none;
     color: #f63d30;
 }
 
 .home-product-item__like--liked .home-product-item__like-icon-fill {
-    display: inline-block
+    /* display: inline-block */
+    display: none;
 }
 
 .home-product-item__like--liked .home-product-item__like-icon-empty {
-    display: none;
+    /* display: none; */
+    display: inline-block;
 }
 
 .home-product-item__rating {

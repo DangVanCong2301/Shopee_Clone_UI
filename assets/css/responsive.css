@@ -546,14 +546,14 @@
         display: block;
     }
 
-    .header__mobile-more-modal-order-me {
+    .header__mobile-more-modal-container {
         position: absolute;
         top: 16px;
         right: 16px;
         display: flex;
+        flex-direction: column;
+        row-gap: 4px;
         align-items: center;
-        text-decoration: none;
-        color: var(--text-color);
         background-color: var(--white-color);
         padding: 4px 8px;
         font-size: var(--normal-font-size);
@@ -561,6 +561,13 @@
         transform-origin: 90% top;
         animation: headerNotifyGrowth ease-in 0.3s;
         will-change: opacity, transform; /*Tối ưu chuyển động cho 2 thằng này*/
+    }
+
+    .header__mobile-more-modal-order-me {
+        text-decoration: none;
+        color: var(--text-color);
+        display: flex;
+        align-items: center;
     }
 
     @keyframes headerNotifyGrowth { 
