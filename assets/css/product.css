@@ -52,10 +52,6 @@
         color: var(--primary-color);
     }
 
-    .app__container {
-        margin-top: calc(20px + var(--header-height));
-    }
-
     .success-header {
         margin-top: 10px;
         display: flex;

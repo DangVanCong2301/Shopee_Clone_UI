@@ -5,17 +5,36 @@
     }
 
     .shop__mobile-info {
+        position: relative;
         padding: 16px;
-        background-image: linear-gradient(0, #da027f ,#e352a7);
+        /* background-image: linear-gradient(0, #da027f ,#e352a7); */
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
         color: var(--white-color);
         display: flex;
         column-gap: 16px;
+    }
+
+    .shop__mobile-info::before {
+        position: absolute;
+        content: '';
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: #000;
+        opacity: .3;
+        z-index: 1;
     }
 
     .shop__mobile-info-avatar {
         position: relative;
         width: 60px;
         height: 60px;
+        z-index: 2;
+        background-color: var(--white-color);
+        border-radius: 50%;
     }
 
     .shop__mobile-info-avatar-img {
@@ -42,6 +61,7 @@
         flex-direction: column;
         justify-content: space-between;
         flex: 1;
+        z-index: 2;
     }
 
     .shop__mobile-info-shop-name {
@@ -100,6 +120,7 @@
         flex-direction: column;
         justify-content: space-between;
         font-size: 14px;
+        z-index: 2;
     }
 
     .shop__mobile-info-btn-monitor,
