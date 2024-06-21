@@ -122,3 +122,30 @@ window.addEventListener('scroll', () => {
         document.querySelector(".shop__mobile-header").classList.remove("scroll");
     }
 });
+
+// View More Modal
+function openViewMoreModal() {
+    document.querySelector(".shop__mobile-shop-view-more-modal").classList.add("open");
+}
+
+function closeViewMoreModal() {
+    document.querySelector(".shop__mobile-shop-view-more-modal").classList.remove("open");
+}
+
+// View More Body Options
+const viewModalBodyTitle = document.querySelectorAll(".shop__mobile-shop-view-more-modal-body-title");
+for (let i = 0; i < viewModalBodyTitle.length; i++) {
+    viewModalBodyTitle[i].addEventListener('click', () => {
+        if (i == 0) {
+            viewModalBodyTitle[0].classList.add("active");
+            viewModalBodyTitle[1].classList.remove("active");
+            document.querySelector(".shop__mobile-shop-view-more-modal-body-product-selling").classList.remove("hide-on-mobile");
+            document.querySelector(".shop__mobile-shop-view-more-modal-body-product-good-price").classList.add("hide-on-mobile");
+        } else if (i == 1) {
+            viewModalBodyTitle[0].classList.remove("active");
+            viewModalBodyTitle[1].classList.add("active");
+            document.querySelector(".shop__mobile-shop-view-more-modal-body-product-selling").classList.add("hide-on-mobile");
+            document.querySelector(".shop__mobile-shop-view-more-modal-body-product-good-price").classList.remove("hide-on-mobile");
+        }
+    });
+}
