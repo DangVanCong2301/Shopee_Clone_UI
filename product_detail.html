@@ -484,38 +484,37 @@
                         </div>
                     </div>
                     <div class="comment__body">
-                        <div class="comment__container">
-                            <div class="comment__user">
-                                <img src="./assets/img/think_bout_you.jpg" alt="" class="comment__user-img">
-                                <p class="comment__username">Công Đặng</p>
-                                <p class="comment__at">2 tuần trước</p>
-                            </div>
-                            <div class="comment__controls">
-                                <div class="comment__reply">
-                                    <i class="uil uil-corner-up-left-alt comment__icon"></i>
-                                    Phản hồi
-                                </div>
-                            </div>
-                            <div class="comment__text">
-                                <span class="comment__reply-to"></span>
-                                <span class="comment__text-body">
-                                    Ấn tượng! Mặc dù có vẻ như tính năng kéo có thể được cải thiện.
-                                    Nhưng nhìn chung nó có vẻ đáng kinh ngạc. Bạn đã hoàn thành tốt
-                                    thiết kế và khả năng phản hồi ở nhiều điểm dừng khác nhau hoạt
-                                    động thực sự tốt.
-                                </span>
-                            </div>
-                        </div>
-                        <div class="comment__replies">
+                        <div class="comment__body-item">
+
                             <div class="comment__container">
                                 <div class="comment__user">
                                     <img src="./assets/img/think_bout_you.jpg" alt="" class="comment__user-img">
                                     <p class="comment__username">Công Đặng</p>
                                     <p class="comment__at">2 tuần trước</p>
                                 </div>
+                                <div class="comment__more">
+                                    <i class="uil uil-ellipsis-v comment__more-icon"></i>
+                                    <div class="comment__more-container">
+                                        <div class="comment__more-item">
+                                            <i class="uil uil-pen comment__more-item-icon"></i>
+                                            <span>Chỉnh sửa</span>
+                                        </div>
+                                        <div class="comment__more-item">
+                                            <i class="uil uil-trash comment__more-item-icon"></i>
+                                            <span>Xoá</span>
+                                        </div>
+                                    </div>
+                                </div>
                                 <div class="comment__controls">
-                                    <div class="comment__reply">
-                                        <i class="uil uil-corner-up-left-alt comment__icon"></i>
+                                    <div class="comment__like">
+                                        <i class="uil uil-thumbs-up comment__like-icon"></i>
+                                        <div class="comment__like-quantity">12</div>
+                                    </div>
+                                    <div class="comment__dislike">
+                                        <i class="uil uil-thumbs-down comment__dislike-icon"></i>
+                                        <div class="comment__dislike-quantity">12</div>
+                                    </div>
+                                    <div class="comment__reply" onclick="showReplyInput()">
                                         Phản hồi
                                     </div>
                                 </div>
@@ -528,6 +527,27 @@
                                         động thực sự tốt.
                                     </span>
                                 </div>
+                                <div class="comment__feetback">
+                                    <div class="comment__feetback-avatar" style="background-image: url(./assets/img/profile_avatar.jpg);"></div>
+                                    <div class="comment__feetback-desc">
+                                        <div class="comment__feetback-control">
+                                            <input type="text" placeholder="Phản hồi..." class="comment__feetback-input" onkeyup="changeReplyBtn(this)">
+                                        </div>
+                                        <div class="comment__feetback-btns">
+                                            <div class="comment__feetback-btn-felling">
+                                                <i class="uil uil-smile-beam comment__feetback-btn-felling-icon"></i>
+                                            </div>
+                                            <div class="comment__feetback-btn">
+                                                <div class="comment__feetback-btn-destroy" onclick="hideReplyInput()">Huỷ</div>
+                                                <div class="comment__feetback-btn-reply">Phản hồi</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="comment__reply-quantity" onclick="showReplyDesc()">
+                                    <i class="uil uil-angle-down comment__reply-quantity-icon"></i>
+                                    <span>2 phản hồi</span>
+                                </div>
                             </div>
                             <div class="comment__replies">
                                 <div class="comment__container">
@@ -536,14 +556,89 @@
                                         <p class="comment__username">Công Đặng</p>
                                         <p class="comment__at">2 tuần trước</p>
                                     </div>
-                                    <div class="comment__controls">
-                                        <div class="comment__delete">
-                                            <i class="uil uil-trash comment__icon"></i>
-                                            Xoá
+                                    <div class="comment__more">
+                                        <i class="uil uil-ellipsis-v comment__more-icon"></i>
+                                        <div class="comment__more-container">
+                                            <div class="comment__more-item">
+                                                <i class="uil uil-pen comment__more-item-icon"></i>
+                                                <span>Chỉnh sửa</span>
+                                            </div>
+                                            <div class="comment__more-item">
+                                                <i class="uil uil-trash comment__more-item-icon"></i>
+                                                <span>Xoá</span>
+                                            </div>
                                         </div>
-                                        <div class="comment__edit">
-                                            <i class="uil-edit comment__icon"></i>
-                                            Chỉnh sửa
+                                    </div>
+                                    <div class="comment__controls">
+                                        <div class="comment__like">
+                                            <i class="uil uil-thumbs-up comment__like-icon"></i>
+                                            <div class="comment__like-quantity">12</div>
+                                        </div>
+                                        <div class="comment__dislike">
+                                            <i class="uil uil-thumbs-down comment__dislike-icon"></i>
+                                            <div class="comment__dislike-quantity">12</div>
+                                        </div>
+                                        <div class="comment__reply">
+                                            Phản hồi
+                                        </div>
+                                    </div>
+                                    <div class="comment__text">
+                                        <span class="comment__reply-to"></span>
+                                        <span class="comment__text-body">
+                                            <span class="comment__reply-to">@CôngĐặng</span> Ấn tượng! Mặc dù có vẻ như tính năng kéo có thể được cải thiện.
+                                            Nhưng nhìn chung nó có vẻ đáng kinh ngạc. Bạn đã hoàn thành tốt
+                                            thiết kế và khả năng phản hồi ở nhiều điểm dừng khác nhau hoạt
+                                            động thực sự tốt.
+                                        </span>
+                                    </div>
+                                    <div class="comment__feetback">
+                                        <div class="comment__feetback-avatar" style="background-image: url(./assets/img/profile_avatar.jpg);"></div>
+                                        <div class="comment__feetback-desc">
+                                            <div class="comment__feetback-control">
+                                                <input type="text" placeholder="Phản hồi..." class="comment__feetback-input">
+                                            </div>
+                                            <div class="comment__feetback-btns">
+                                                <div class="comment__feetback-btn-felling">
+                                                    <i class="uil uil-smile-beam comment__feetback-btn-felling-icon"></i>
+                                                </div>
+                                                <div class="comment__feetback-btn">
+                                                    <div class="comment__feetback-btn-destroy">Huỷ</div>
+                                                    <div class="comment__feetback-btn-reply">Phản hồi</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="comment__container">
+                                    <div class="comment__user">
+                                        <img src="./assets/img/think_bout_you.jpg" alt="" class="comment__user-img">
+                                        <p class="comment__username">Công Đặng</p>
+                                        <p class="comment__at">2 tuần trước</p>
+                                    </div>
+                                    <div class="comment__more">
+                                        <i class="uil uil-ellipsis-v comment__more-icon"></i>
+                                        <div class="comment__more-container">
+                                            <div class="comment__more-item">
+                                                <i class="uil uil-pen comment__more-item-icon"></i>
+                                                <span>Chỉnh sửa</span>
+                                            </div>
+                                            <div class="comment__more-item">
+                                                <i class="uil uil-trash comment__more-item-icon"></i>
+                                                <span>Xoá</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="comment__controls">
+                                        <div class="comment__like">
+                                            <i class="uil uil-thumbs-up comment__like-icon"></i>
+                                            <div class="comment__like-quantity">12</div>
+                                        </div>
+                                        <div class="comment__dislike">
+                                            <i class="uil uil-thumbs-down comment__dislike-icon"></i>
+                                            <div class="comment__dislike-quantity">12</div>
+                                        </div>
+                                        <div class="comment__reply">
+                                            Phản hồi
                                         </div>
                                     </div>
                                     <div class="comment__text">
@@ -557,31 +652,47 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="comment__container">
-                                <div class="comment__user">
-                                    <img src="./assets/img/think_bout_you.jpg" alt="" class="comment__user-img">
-                                    <p class="comment__username">Công Đặng</p>
-                                    <p class="comment__at">2 tuần trước</p>
-                                </div>
-                                <div class="comment__controls">
-                                    <div class="comment__delete">
-                                        <i class="uil uil-trash comment__icon"></i>
-                                        Xoá
+                        </div>
+                        <div class="comment__container">
+                            <div class="comment__user">
+                                <img src="./assets/img/think_bout_you.jpg" alt="" class="comment__user-img">
+                                <p class="comment__username">Công Đặng</p>
+                                <p class="comment__at">2 tuần trước</p>
+                            </div>
+                            <div class="comment__more">
+                                <i class="uil uil-ellipsis-v comment__more-icon"></i>
+                                <div class="comment__more-container">
+                                    <div class="comment__more-item">
+                                        <i class="uil uil-pen comment__more-item-icon"></i>
+                                        <span>Chỉnh sửa</span>
                                     </div>
-                                    <div class="comment__edit">
-                                        <i class="uil-edit comment__icon"></i>
-                                        Chỉnh sửa
+                                    <div class="comment__more-item">
+                                        <i class="uil uil-trash comment__more-item-icon"></i>
+                                        <span>Xoá</span>
                                     </div>
                                 </div>
-                                <div class="comment__text">
-                                    <span class="comment__reply-to"></span>
-                                    <span class="comment__text-body">
-                                        <span class="comment__reply-to">@CôngĐặng</span> Ấn tượng! Mặc dù có vẻ như tính năng kéo có thể được cải thiện.
-                                        Nhưng nhìn chung nó có vẻ đáng kinh ngạc. Bạn đã hoàn thành tốt
-                                        thiết kế và khả năng phản hồi ở nhiều điểm dừng khác nhau hoạt
-                                        động thực sự tốt.
-                                    </span>
+                            </div>
+                            <div class="comment__controls">
+                                <div class="comment__like">
+                                    <i class="uil uil-thumbs-up comment__like-icon"></i>
+                                    <div class="comment__like-quantity">12</div>
                                 </div>
+                                <div class="comment__dislike">
+                                    <i class="uil uil-thumbs-down comment__dislike-icon"></i>
+                                    <div class="comment__dislike-quantity">12</div>
+                                </div>
+                                <div class="comment__reply">
+                                    Phản hồi
+                                </div>
+                            </div>
+                            <div class="comment__text">
+                                <span class="comment__reply-to"></span>
+                                <span class="comment__text-body">
+                                    <span class="comment__reply-to">@CôngĐặng</span> Ấn tượng! Mặc dù có vẻ như tính năng kéo có thể được cải thiện.
+                                    Nhưng nhìn chung nó có vẻ đáng kinh ngạc. Bạn đã hoàn thành tốt
+                                    thiết kế và khả năng phản hồi ở nhiều điểm dừng khác nhau hoạt
+                                    động thực sự tốt.
+                                </span>
                             </div>
                         </div>
                     </div>
