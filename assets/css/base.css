@@ -387,6 +387,7 @@ html {
     margin-bottom: 40px;
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
     border-radius: 4px;
+    font-size: var(--normal-font-size);
 }
 
 .comment__title {
@@ -402,8 +403,8 @@ html {
 .comment__container {
     display: grid;
     background-color: var(--white-color);
-    grid-template-areas: "user user user" "comment comment comment" "... ... controls";
-    gap: .5rem;
+    grid-template-areas: "user user more" "comment comment more" "controls ... ..." "input input input" "reply reply reply";
+    gap: 1rem;
     border-radius: 2px;
     margin-bottom: 1rem;
 }
@@ -430,12 +431,91 @@ html {
     font-size: var(--normal-font-size);
 }
 
+.comment__more {
+    position: relative;
+    grid-area: more;
+}
+
+.comment__more::before {
+    position: absolute;
+    content: '';
+    height: 30px;
+    width: 50px;
+    top: 10px;
+    right: 0;
+}
+
+.comment__more-container {
+    position: absolute;
+    top: 28px;
+    right: 0;
+    width: 150px;
+    background-color: var(--white-color);
+    padding: 8px 0;
+    row-gap: 16px;
+    border-radius: 4px;
+    box-shadow: 0 0 16px 0 rgba(0, 0, 0, .1), 0 8px 16px 0 rgba(0, 0, 0, .06);
+    animation: headerNotifyGrowth ease-in .3s;
+    will-change: opacity, transform;
+    transform-origin: 90% top;
+    display: none;
+}
+
+.comment__more:hover .comment__more-container {
+    display: block;
+}
+
+.comment__more-item {
+    display: flex;
+    column-gap: 16px;
+    align-items: center;
+    padding: 8px 16px;
+}
+
+.comment__more-item:hover {
+    background-color: #f8f8f8;
+}
+
+.comment__more-item-icon,
+.comment__more-icon {
+    font-size: 20px;
+    color: rgba(0, 0, 0, 0.54);
+}
+
 .comment__controls {
     grid-area: controls;
     display: flex;
-    gap: 1rem;
     justify-content: flex-end;
     align-self: center;
+}
+
+.comment__like,
+.comment__dislike {
+    display: flex;
+    align-items: center;
+    column-gap: 1rem;
+    cursor: pointer;
+}
+
+.comment__dislike {
+    margin-left: 1rem;
+}
+
+.comment__like-icon,
+.comment__dislike-icon {
+    font-size: 20px;
+    color: rgba(0, 0, 0, 0.54);
+}
+
+.comment__reply {
+    margin-left: 2rem;
+    cursor: pointer;
+}
+
+.comment__like-quantity,
+.comment__dislike-quantity {
+    font-size: 12px;
+    color: rgba(0, 0, 0, 0.54);
 }
 
 .comment__text {
@@ -445,27 +525,122 @@ html {
     text-align: justify;
 }
 
-.comment__reply,
-.comment__delete,
-.comment__edit {
-    font-size: var(--normal-font-size);
+.comment__feetback {
+    grid-area: input;
+    display: flex;
+    column-gap: 16px;
+    display: none;
+}
+
+.comment__feetback.show {
+    display: flex;
+}
+
+.comment__feetback-avatar {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.comment__feetback-control {
+    padding-right: 20px;
+}
+
+.comment__feetback-input {
+    border: none;
+    outline: none;
+    border-bottom: 1px solid var(--border-color);
+    padding: 6px 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.comment__feetback-input:focus {
+    border-bottom: 2px solid #888;
+}
+
+.comment__feetback-desc {
+    flex: 1;
+}
+
+.comment__feetback-input {
+    width: 100%;
+}
+
+.comment__feetback-btns {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    align-items: center;
+    padding-right: 20px;
+}
+
+.comment__feetback-btn-felling-icon {
+    font-size: 24px;
+    color: rgba(0, 0, 0, 0.54);
+    cursor: pointer;
+}
+
+.comment__feetback-btn {
+    display: flex;
+    column-gap: 16px;
+}
+
+.comment__feetback-btn-destroy {
+    text-align: center;
+    font-weight: bold;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.comment__feetback-btn-reply {
+    border-radius: 2px;
+    background-color: #f2f2f2;
+    text-align: center;
+    color: #b5b5b5;
+    padding: 10px 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.comment__feetback-btn-reply.active {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+
+.comment__reply-quantity {
+    grid-area: reply;
     display: flex;
     align-items: center;
+    column-gap: 1rem;
+    color: #256eff;
+    cursor: pointer;
 }
 
-.comment__delete {
-    color: var(--primary-color);
+.comment__reply-quantity-icon {
+    font-size: 24px;
+    transition: all .3s;
 }
 
-.comment__icon {
-    margin-right: 8px;
-    font-size: 2rem;
+.comment__reply-quantity-icon.rotate {
+    transform: rotate(180deg);
+}
+
+.comment__reply-quantity span {
+    font-weight: bold;
 }
 
 .comment__replies {
     margin-left: 2.5rem;
     padding-left: 2.4rem;
     border-left: 1px solid var(--border-color);
+    display: none;
+}
+
+.comment__replies.show {
+    display: block;
 }
 
 .comment__reply-to {

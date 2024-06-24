@@ -60,3 +60,25 @@ window.addEventListener('click', (e) => {
 function backHistory() {
     window.history.back();
 }
+
+// Reply Input
+function showReplyInput() {
+    document.querySelector(".comment__feetback").classList.add("show");
+}
+
+function hideReplyInput() {
+    document.querySelector(".comment__feetback").classList.remove("show");
+}
+
+function changeReplyBtn(input) {
+    if (input.value != "") {
+        document.querySelector(".comment__feetback-btn-reply").classList.add("active");
+    } else {
+        document.querySelector(".comment__feetback-btn-reply").classList.remove("active");
+    }
+}
+
+function showReplyDesc() {
+    document.querySelector(".comment__replies").classList.toggle("show");
+    document.querySelector(".comment__reply-quantity-icon").classList.toggle("rotate");
+}
