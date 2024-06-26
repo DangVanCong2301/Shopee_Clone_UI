@@ -447,7 +447,7 @@
 
     .shop__mobile-shop-category-product-item {
         position: relative;
-        /* min-width: 160px;  Chiều rộng tối thiểu */
+        max-width: 160px; /*Chiều rộng tối thiểu */
         border-radius: 2px;
         border: 1px solid var(--border-color);
         box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .1);
@@ -466,6 +466,7 @@
     .shop__mobile-shop-category-product-item-img {
         width: 160px;
         height: 160px;
+        border-right: 1px solid var(--border-color);
         background-position: center;
         background-repeat: no-repeat;
         background-size: contain;
@@ -621,7 +622,7 @@
     position: relative;
     margin-right: 30px;
     /* background-image: linear-gradient(0, #da027f ,#e352a7); */
-    background-image: url(../img/CanhDep1.jpg);
+    background-image: url(../img/canh_dep_1.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
