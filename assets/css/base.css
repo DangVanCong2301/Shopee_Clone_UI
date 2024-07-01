@@ -10,17 +10,24 @@
     --border-color:#dbdbdb;
     --star-gold-color:#ffce3e;
     --heart-color: #f63d30;
+    --danger-color: #ff7782;
+    --success-color: #41f1b6;
+    --warning-color: #ffbb55;
     --navbar-height: 34px;
     --header-height: 120px;
     --header-with-search-height: calc(var(--header-height) - var(--navbar-height));
     --header-sort-bar-height: 46px;
+
     --normal-font-size: 14px;
+    --body-font: 'Roboro', sans-serif;
     --h1-font-size: 1.5rem; 
     --font-semi-bold: 600;
 }
 
 * {
     box-sizing: inherit;
+    padding: 0;
+    margin: 0;
 }
 
 html {
@@ -28,6 +35,16 @@ html {
     line-height: 1.6rem;
     font-family: 'Roboto',sans-serif;
     box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+input, textarea, button {
+    border: none;
+    outline: none;
+    font-family: var(--body-font);
 }
 
 /* Modal */
