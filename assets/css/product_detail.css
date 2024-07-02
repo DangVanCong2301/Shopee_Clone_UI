@@ -265,13 +265,6 @@
     .rate__me {
         margin: 0 auto;
     }
-
-    /* Comment */
-    .comment__add {
-        grid-template-areas: "avatar input button";
-        grid-template-columns: min-content auto min-content;
-        gap: 1rem;
-    }
 }
 
 @media screen and (max-width: 768px) {
@@ -330,6 +323,12 @@
     .header__mobile-product-name {
         flex: 1;
         font-size: 20px;
+        line-height: 26px;
+        height: 26px;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
         opacity: 0;
     }
 

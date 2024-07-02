@@ -5,6 +5,7 @@ function loadImage() {
 }
 loadImage();
 
+// Show/Hide Detail Header
 window.addEventListener('scroll', () => {
     const y = this.pageYOffset;
     if (y > 80) {
@@ -59,6 +60,24 @@ window.addEventListener('click', (e) => {
 // Back History
 function backHistory() {
     window.history.back();
+}
+
+// Comment Add
+function showCommentAddBtn() {
+    document.querySelector(".comment__add-btns").classList.add("show");
+}
+
+function hideCommentAddBtn() {
+    console.log('a');
+    document.querySelector(".comment__add-btns").classList.remove("show");
+}
+
+function changeCommentAddBtn(input) {
+    if (input.value != "") {
+        document.querySelector(".comment__add-btn-reply").classList.add("active");
+    } else {
+        document.querySelector(".comment__add-btn-reply").classList.remove("active");
+    }
 }
 
 // Reply Input
