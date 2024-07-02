@@ -100,6 +100,10 @@
     .hide-on-destop {
         display: none;
     }
+
+    .header__mobile-more {
+        display: none;
+    }
 }
 
 /* Mobile */
@@ -113,6 +117,28 @@
     .header {
         background-image: linear-gradient(#fff, #fff);
         box-shadow: 0 1px 0 rgba(0, 0, 0, 0.05);
+    }
+
+    .header__mobile-back {
+        margin-right: 12px;
+        display: block;
+    }
+
+    .header__mobile-back-icon {
+        font-size: 3rem;
+        color: var(--primary-color);
+    }
+
+    .header__mobile-menu,
+    .header__mobile-more {
+        margin-left: 12px;
+        display: block;
+    }
+
+    .header__mobile-menu-icon,
+    .header__mobile-more-icon {
+        font-size: 2.4rem;
+        color: var(--primary-color);
     }
 
     .app__container {
