@@ -17,3 +17,11 @@ function hideMenu() {
     document.querySelector(".message__menu-bottom-account-collapse-nav").classList.remove("hide");
     document.querySelector(".message__container").classList.remove("expander");
 }
+
+// Show Dropdown Account Setting
+function showDropdownAccountSetting(event) {
+    const tag = event.target.parentNode;
+    const dropDown = event.target.parentNode.parentNode;
+    tag.querySelector(".message__account-detail-item-main-icon").classList.toggle("rotate");
+    dropDown.querySelector(".message__account-detail-item-collapse").classList.toggle("show");
+}
