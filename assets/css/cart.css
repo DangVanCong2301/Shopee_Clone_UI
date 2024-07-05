@@ -659,17 +659,6 @@
         padding-left: 12px;
     }
 
-    .header__mobile-title {
-        flex: 1;
-        text-align: left;
-        font-size: var(--normal-font-size);
-    }
-
-    .header__mobile-fix {
-        font-size: var(--normal-font-size);
-        cursor: pointer;
-    }
-
     .cart__mobile {
         margin: calc(20px + var(--header-with-search-height)) 0 20px 0;
     }

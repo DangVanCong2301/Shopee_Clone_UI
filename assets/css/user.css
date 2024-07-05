@@ -207,6 +207,7 @@ header {
 
 .auth-form__socials--google {
     background-color: var(--white-color);
+    border: 1px solid var(--border-color);
 }
 
 .auth-form__help {
@@ -244,6 +245,10 @@ header {
         display: flex;
         align-items: center;
         font-size: var(--normal-font-size);
+    }
+
+    .header__mobile-arrow {
+        cursor: pointer;
     }
 
     .header__mobile-arrow-icon {

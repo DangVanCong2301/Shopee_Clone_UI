@@ -57,6 +57,8 @@ btnPrevSliderShop.addEventListener('click', () => {
     document.getElementById(index).classList.add("slider-shop-cirle-fill");
 });
 
+// -------------------------- MOBILE ---------------------------------
+
 for (let i = 0; i < shopMobileTitle.length; i++) {
     shopMobileTitle[i].addEventListener('click', () => {
         if (i == 0) {
