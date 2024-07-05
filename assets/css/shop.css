@@ -620,13 +620,25 @@
     position: relative;
     margin-right: 30px;
     /* background-image: linear-gradient(0, #da027f ,#e352a7); */
-    background-image: url(../img/canh_dep_1.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     padding: 10px 16px;
     border-radius: 4px;
     color: var(--white-color);
+    overflow: hidden;
+}
+
+.shop__header-store::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: #000;
+    opacity: .3;
+    z-index: 1;
 }
 
 .shop__header-store-info {
@@ -644,6 +656,8 @@
     background-size: contain;
     border-radius: 50%;
     border: 4px solid #877c6f;
+    z-index: 2;
+    background-color: var(--white-color);
 }
 
 .shop__header-store-info-img span {
@@ -654,6 +668,10 @@
     padding: 1px 4px;
     border-radius: 2px;
     background-color: var(--primary-color);
+}
+
+.shop__header-store-info-desc {
+    z-index: 2;
 }
 
 .shop__header-store-info-name {
@@ -677,6 +695,7 @@
     border: 1px solid var(--white-color);
     text-align: center;
     border-radius: 2px;
+    z-index: 2;
 }
 
 .shop__header-store-btn-icon {
