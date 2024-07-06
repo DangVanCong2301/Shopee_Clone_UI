@@ -136,15 +136,21 @@
                 </nav>
                 <!--Header with search-->
                 <div class="header-with-search">
-                    <div class="header__logo hide-on-table">
+                    <div class="header__logo hide-on-table hide-on-checkout">
                         <a href="index.html" class="header__logo-link">
                             <span class="header__logo-icon ">F4 SHOP</span>
                         </a>
                     </div>
     
-                    <input class="header__search-box" type="checkbox" hidden id="mobile-search-checkbock">
+                    <div class="header__mobile-back hide-on-destop">
+                        <a href="index.html" class="header__mobile-back-link">
+                            <i class="uil uil-arrow-left header__mobile-back-icon"></i>
+                        </a>
+                    </div>
+
+                    <div class="header__mobile-checkout-title hide-on-destop">Thanh toán</div>
     
-                    <div class="header__search">
+                    <div class="header__search hide-on-checkout">
                         <div class="header__search-input-wrap">
                             <input type="text" class="header__search-input" onkeyup="searchProducts(this)"
                                 placeholder="Tìm kiếm">
@@ -181,7 +187,7 @@
                         </button>
                     </div>
                     <!--Cart layout-->
-                    <div class="header__cart">
+                    <div class="header__cart hide-on-checkout">
                         <a href="cart.html" class="header__cart-wrap">
                             <i class="header__cart-icon fa-solid fa-cart-shopping"></i>
                             <span class="header__cart-notice">0</span>
@@ -226,7 +232,7 @@
                     </div>
                 </div>
             </div>
-            <ul class="header__sort-bar">
+            <ul class="header__sort-bar hide-on-mobile">
                 <li class="header__sort-item">
                     <a href="" class="header__sort-link">Liên quan</a>
                 </li>
@@ -243,7 +249,151 @@
         </header>
         <div class="app__container">
             <div class="grid wide">
-                <div class="checkout">
+                <div class="checkout-mobile hide-on-destop">
+                    <div class="checkout-mobile__address">
+                        <div class="checkout-mobile__address-destination">
+                            <i class="uil uil-map-marker checkout-mobile__address-destination-icon"></i>
+                        </div>
+                        <div class="checkout-mobile__address-desc">
+                            <div class="checkout-mobile__address-desc-title">Địa chỉ nhận hàng</div>
+                            <span class="checkout-mobile__address-desc-name">Đặng Văn Công</span> <span class="checkout-mobile__address-desc-divide">|</span>
+                            <span class="checkout-mobile__address-desc-phone">(+84) 347797502</span>
+                            <div class="checkout-mobile__address-desc-direction">Số 20, Ngõ 259 Định Công, Phường Định Công, Quận Hoàng Mai, Hà Nội</div>
+                        </div>
+                        <div class="checkout-mobile__address-more">
+                            <i class="uil uil-angle-right-b checkout-mobile__address-more-icon"></i>
+                        </div>
+                    </div>
+                    <div class="checkout-mobile__lable">
+                        <div class="checkout-mobile__lable-box"></div>
+                    </div>
+                    <div class="checkout-mobile__list">
+                        <div class="checkout-mobile__item">
+                            <div class="checkout-mobile__item-header">
+                                <div class="checkout-mobile__item-header-favorite">Yêu thích</div>
+                                <div class="checkout-mobile__item-header-shop">Viet Mark</div>
+                            </div>
+                            <div class="checkout-mobile__item-product">
+                                <div class="checkout-mobile__item-product-thumb">
+                                    <img class="checkout-mobile__item-product-img" src="./assets/img/tai_nghe_5.jpg" />
+                                </div>
+                                <div class="checkout-mobile__item-product-info">
+                                    <div class="checkout-mobile__item-product-info-name">
+                                        Bút Laze Trình Chiếu PowerPoint Kèm Remote Điều Khiển Không Dây Cho Laptop RF 2.4GHz
+                                    </div>
+                                    <div class="checkout-mobile__item-product-bottom">
+                                        <div class="checkout-mobile__item-product-bottom-change">
+                                            <span>Đổi ý miễn phí</span>
+                                        </div>
+                                        <div class="checkout-mobile__item-product-numb">
+                                            <div class="checkout-mobile__item-product-numb-qunatity">x3</div>
+                                            <div class="checkout-mobile__item-product-numb-price">121.000đ</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="checkout-mobile__item-product-voucher">
+                                <div class="checkout-mobile__item-product-voucher-left">
+                                    <i class="uil uil-ellipsis-v checkout-mobile__item-product-voucher-icon-sub"></i>
+                                    <div class="checkout-mobile__item-product-voucher-sub">Voucher của Shop</div>
+                                </div>
+                                <div class="checkout-mobile__item-product-voucher-right">
+                                    <div class="checkout-mobile__item-product-voucher-choose">Chọn Voucher</div>
+                                    <i class="uil uil-angle-right-b checkout-mobile__item-product-voucher-icon-choose"></i>
+                                </div>
+                            </div>
+                            <div class="checkout-mobile__item-product-transport">
+                                <div class="checkout-mobile__item-product-transport-header">Vận chuyển</div>
+                                <div class="checkout-mobile__item-product-transport-type">
+                                    <div class="checkout-mobile__item-product-transport-type-sub">Nhanh</div>
+                                    <div class="checkout-mobile__item-product-transport-type-price">15.000đ</div>
+                                </div>
+                                <div class="checkout-mobile__item-product-transport-time">Nhận hàng vào 7 Tháng 7 - 8 Tháng 7</div>
+                                <div class="checkout-mobile__item-product-transport-express">
+                                    <div class="checkout-mobile__item-product-transport-express-sub">Hoặc chọn Hoả tốc để </div>
+                                    <a href="#" class="checkout-mobile__item-product-transport-express-link">
+                                        <i class="uil uil-truck"></i>
+                                        <span>Nhận hàng vào hôm nay</span>
+                                        <i class="uil uil-angle-right-b checkout-mobile__item-product-transport-express-icon-more"></i>
+                                    </a>
+                                </div>
+                                <div class="checkout-mobile__item-product-transport-inspection">
+                                    <span>Được đồng kiểm.</span>
+                                    <i class="uil uil-question-circle checkout-mobile__item-product-transport-inspection-icon"></i>
+                                </div>
+                            </div>
+                            <div class="checkout-mobile__item-product-message">
+                                <div class="checkout-mobile__item-product-message-sub">Tin nhắn:</div>
+                                <input type="text" class="checkout-mobile__item-product-message-input" placeholder="Để lại lời nhắn">
+                            </div>
+                            <div class="checkout-mobile__item-product-into-money">
+                                <div class="checkout-mobile__item-product-into-money-sub">Thành tiền (1 sản phẩm):</div>
+                                <div class="checkout-mobile__item-product-into-money-price">121.000đ</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="checkout-mobile__voucher">
+                        <div class="checkout-mobile__voucher-col">
+                            <i class="uil uil-ellipsis-v checkout-mobile__voucher-sub-icon"></i>
+                            <div class="checkout-mobile__voucher-title">Shopee Voucher</div>
+                        </div>
+                        <div class="checkout-mobile__voucher-col">
+                            <div class="checkout-mobile__voucher-choose">Chọn Voucher</div>
+                            <i class="uil uil-angle-right-b checkout-mobile__voucher-choose-icon"></i>
+                        </div>
+                    </div>
+                    <div class="checkout-mobile__type">
+                        <div class="checkout-mobile__type-header">
+                            <div class="checkout-mobile__type-header-col">
+                                <i class="uil uil-usd-circle checkout-mobile__type-header-sub-icon"></i>
+                                <div class="checkout-mobile__type-header-sub">Lựa chọn thanh toán</div>
+                            </div>
+                            <div class="checkout-mobile__type-header-col">
+                                <div class="checkout-mobile__type-header-sub">Thanh toán khi nhận hàng</div>
+                                <i class="uil uil-angle-right-b checkout-mobile__type-header-icon"></i>
+                            </div>
+                        </div>
+                        <div class="checkout-mobile__type-pay">
+                            Dùng ShopeePay để tận hưởng nhiều voucer ưu đãi.
+                        </div>
+                    </div>
+                    <div class="checkout-mobile__detail">
+                        <div class="checkout-mobile__detail-header">
+                            <i class="uil uil-notes checkout-mobile__detail-header-icon"></i>
+                            <div class="checkout-mobile__detail-header-sub">Chi tiết thanh toán</div>
+                        </div>
+                        <div class="checkout-mobile__detail-body">
+                            <div class="checkout-mobile__detail-total-price-product">
+                                <div class="checkout-mobile__detail-total-price-product-sub">Tổng tiền hàng</div>
+                                <div class="checkout-mobile__detail-total-price-product-numb">212.000đ</div>
+                            </div>
+                            <div class="checkout-mobile__detail-transport-price">
+                                <div class="checkout-mobile__detail-transport-price-sub">Phí vận chuyển</div>
+                                <div class="checkout-mobile__detail-transport-price-numb">212.000đ</div>
+                            </div>
+                        </div>
+                        <div class="checkout-mobile__detail-bottom">
+                            <div class="checkout-mobile__detail-bottom-sub">Thành tiền</div>
+                            <div class="checkout-mobile__detail-bottom-price">320.000đ</div>
+                        </div>
+                    </div>
+                    <div class="checkout-mobile__rules">
+                        <i class="uil uil-newspaper checkout-mobile__rules-icon"></i>
+                        <div class="checkout-mobile__rules-sub">
+                            Nhấn "Đặt hàng" đồng nghĩa với việc bạn đồng ý tuân theo <a href="#" class="checkout-mobile__rules-link">Điều khoản Shoppe</a>
+                        </div>
+                    </div>
+                    <div class="checkout-mobile__footer">
+                        <div class="checkout-mobile__footer-into-money">
+                            <div class="checkout-mobile__footer-into-money-sub">Thành tiền</div>
+                            <div class="checkout-mobile__footer-into-money-numb">320.000đ</div>
+                        </div>
+                        <div class="checkout-mobile__footer-btn">
+                            Đặt hàng
+                        </div>
+                    </div>
+                </div>
+                <div class="checkout hide-on-mobile">
                     <div class="checkout__label">
                         <div class="checkout__label-box"></div>
                     </div>
