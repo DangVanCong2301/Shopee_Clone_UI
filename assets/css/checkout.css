@@ -8,11 +8,13 @@
     padding: 28px 30px 24px 30px;
 }
 
-.checkout__label {
+.checkout__label,
+.checkout-mobile__lable {
     background-color: var(--white-color);
 }
 
-.checkout__label-box {
+.checkout__label-box,
+.checkout-mobile__lable-box {
     background-image: repeating-linear-gradient(45deg, #6fa6d6, #6fa6d6 33px, transparent 0, transparent 41px, #f18d9b 0, #f18d9b 74px, transparent 0, transparent 82px);
     background-position-x: -30px;
     background-size: 116px 3px;
@@ -20,7 +22,7 @@
     width: 100%;
 }
 
-.checkout__address-title {
+.checkout__address-title {    
     font-size: 20px;
     color: var(--primary-color);
     margin-bottom: 20px;
@@ -1126,4 +1128,430 @@
     display: flex;
     align-items: flex-end;
     justify-content: flex-end;
+}
+
+@media screen and (max-width: 739px) {
+    .hide-on-checkout {
+        display: none;
+    }
+
+    .header-with-search {
+        position: relative;
+    }
+
+    .checkout-mobile {
+        font-size: var(--normal-font-size);
+        color: var(--text-color);
+    }
+
+    .checkout-mobile__address {
+        background-color: var(--white-color);
+        box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .1);
+        padding: 12px 16px;
+        display: flex;
+        column-gap: 10px;
+        font-size: var(--normal-font-size);
+    }
+
+    .header__mobile-checkout-title {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 16px;
+        left: 40%;
+    }
+
+    .checkout-mobile__address-destination-icon {
+        font-size: 20px;
+        color: var(--primary-color);
+    }
+
+    .checkout-mobile__address-desc-title {
+        font-size: 16px;
+        margin: 4px 0 8px 0;
+    }
+
+    .checkout-mobile__address-desc-divide {
+        color: var(--border-color);
+        margin: 0 8px;
+    }
+
+    .checkout-mobile__address-desc-direction {
+        margin-top: 8px;
+        line-height: 20px;
+    }
+
+    .checkout-mobile__address-more-icon {
+        font-size: 20px;
+        color: rgba(0, 0, 0, .54);
+    }
+
+    .checkout-mobile__address-more {
+        display: flex;
+        align-items: center;
+    }
+
+    .checkout-mobile__list {
+        margin-top: 10px;
+    }
+
+    .checkout-mobile__item {
+        background-color: var(--white-color);
+        margin-bottom: 10px;
+    }
+
+    .checkout-mobile__item-header {
+        display: flex;
+        align-items: center;
+        column-gap: 8px;
+        padding: 12px 16px;
+    }
+
+    .checkout-mobile__item-header-favorite {
+        font-size: 13px;
+        background-color: var(--primary-color);
+        padding: 2px;
+        border-radius: 2px;
+        color: var(--white-color);
+    }
+
+    .checkout-mobile__item-product {
+        display: flex;
+        column-gap: 12px;
+        padding: 12px 16px;
+    }
+
+    .checkout-mobile__item-product-thumb {
+        flex: 2;
+    }
+
+    .checkout-mobile__item-product-img {
+        width: 100%;
+    }
+
+    .checkout-mobile__item-product-info {
+        flex: 8;
+        color: #a2a2a2;
+    }
+
+    .checkout-mobile__item-product-info-name {
+        height: 20px;
+        line-height: 20px;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+
+    .checkout-mobile__item-product-bottom {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 8px;
+    }
+
+    .checkout-mobile__item-product-bottom-change span {
+        border: 1px solid var(--primary-color);
+        color: var(--primary-color);
+        font-size: 10px;
+        border-radius: 2px;
+    }
+
+    .checkout-mobile__item-product-numb {
+        text-align: right;
+    }
+
+    .checkout-mobile__item-product-numb-qunatity {
+        margin-bottom: 8px;
+    }
+
+    .checkout-mobile__item-product-voucher {
+        padding: 12px 16px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .checkout-mobile__item-product-voucher-left,
+    .checkout-mobile__item-product-voucher-right {
+        display: flex;
+        align-items: center;
+        column-gap: 10px;
+    }
+
+    .checkout-mobile__item-product-voucher-icon-sub {
+        font-size: 16px;
+        color: var(--primary-color);
+    }
+
+    .checkout-mobile__item-product-voucher-sub {
+        font-size: 16px;
+    }
+
+    .checkout-mobile__item-product-voucher-choose {
+        font-size: 16px;
+        color: #a2a2a2;
+    }
+
+    .checkout-mobile__item-product-voucher-icon-choose {
+        font-size: 20px;
+        color: rgba(0, 0, 0, .54);
+    }
+
+    .checkout-mobile__item-product-transport {
+        background-color: #fafdff;
+        border-top: 1px solid var(--border-color);
+        display: flex;
+        flex-direction: column;
+        row-gap: 12px;
+    }
+
+    .checkout-mobile__item-product-transport-header {
+        padding: 20px 16px 0 16px;
+        font-size: 16px;
+    }
+
+    .checkout-mobile__item-product-transport-type {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 16px;
+    }
+
+    .checkout-mobile__item-product-transport-type-sub {
+        font-weight: bold;
+    }
+
+    .checkout-mobile__item-product-transport-time {
+        color: #a2a2a2;
+        padding-bottom: 12px;
+        margin: 0 16px;
+        border-bottom: 1px solid var(--border-color);
+    }
+
+    .checkout-mobile__item-product-transport-express {
+        display: flex;
+        align-items: center;
+        color: #a2a2a2;
+        padding: 0 16px 12px 16px;
+        border-bottom: 1px solid var(--border-color);
+    }
+
+    .checkout-mobile__item-product-transport-express-link {
+        color: #26aa99;
+        display: flex;
+        align-items: center;
+        margin-left: 4px;
+        column-gap: 4px;
+        flex: 1;
+    }
+
+    .checkout-mobile__item-product-transport-express-icon-more {
+        font-size: 20px;
+        color: rgba(0, 0, 0, .54);
+        margin-left: auto;
+    }
+
+    .checkout-mobile__item-product-transport-inspection {
+        padding: 0 16px 12px 16px;
+        border-bottom: 1px solid var(--border-color);
+        display: flex;
+        align-items: center;
+        column-gap: 8px;
+    }
+
+    .checkout-mobile__item-product-transport-inspection-icon {
+        font-size: 16px;
+        color: rgba(0, 0, 0, .54);
+    }
+
+    .checkout-mobile__item-product-message {
+        display: flex;
+        justify-content: space-between;
+        padding: 16px 16px;
+        border-bottom: 1px solid var(--border-color);
+    }
+
+    .checkout-mobile__item-product-message-input {
+        text-align: right;
+        font-family: 'Roboto', sans-serif;
+        color: var(--text-color);
+    }
+
+    .checkout-mobile__item-product-into-money {
+        display: flex;
+        justify-content: space-between;
+        padding: 16px;
+        font-weight: bold;
+        font-size: 16px;
+    }
+
+    .checkout-mobile__item-product-into-money-price {
+        color: var(--primary-color);
+    }
+
+    .checkout-mobile__voucher {
+        display: flex;
+        justify-content: space-between;
+        padding: 16px;
+        background-color: var(--white-color);
+        margin-bottom: 10px;
+    }
+
+    .checkout-mobile__voucher-col {
+        display: flex;
+        column-gap: 10px;
+        align-items: center;
+    }
+
+    .checkout-mobile__voucher-sub-icon {
+        font-size: 16px;
+        color: var(--primary-color);
+    }
+
+    .checkout-mobile__voucher-choose {
+        color: #a2a2a2;
+    }
+
+    .checkout-mobile__voucher-choose-icon {
+        font-size: 20px;
+        color: rgba(0, 0, 0, .54);
+    }
+
+    .checkout-mobile__type {
+        background-color: var(--white-color);
+        display: flex;
+        flex-direction: column;
+        row-gap: 16px;
+        padding: 16px;
+        margin-bottom: 10px;
+    }
+
+    .checkout-mobile__type-header {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .checkout-mobile__type-header-col {
+        display: flex;
+        column-gap: 10px;
+        align-items: center;
+    }
+
+    .checkout-mobile__type-header-sub-icon {
+        font-size: 20px;
+        color: var(--primary-color);
+    }
+
+    .checkout-mobile__type-header-icon {
+        font-size: 20px;
+        color: rgba(0, 0, 0, .54);
+    }
+
+    .checkout-mobile__type-pay {
+        padding: 10px;
+        background-color: #fff8e4;
+        border: 1px solid #f69113;
+        color: #f69113;
+        border-radius: 2px;
+        font-size: 12px;
+    }
+
+    .checkout-mobile__detail {
+        background-color: var(--white-color);
+        margin-bottom: 10px;
+        padding: 16px;
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+    }
+
+    .checkout-mobile__detail-header {
+        display: flex;
+        column-gap: 10px;
+        align-items: center;
+        font-size: 16px;
+    }
+
+    .checkout-mobile__detail-header-icon {
+        font-size: 20px;
+        color: #f69113;
+    }
+
+    .checkout-mobile__detail-body {
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+    }
+
+    .checkout-mobile__detail-total-price-product,
+    .checkout-mobile__detail-transport-price {
+        display: flex;
+        justify-content: space-between;
+        font-size: 12px;
+        color: #a2a2a2;
+    }
+
+    .checkout-mobile__detail-bottom {
+        margin-top: 4px;
+        display: flex;
+        justify-content: space-between;
+        font-size: 20px;
+    }
+
+    .checkout-mobile__detail-bottom-price {
+        color: var(--primary-color);
+    }
+
+    .checkout-mobile__rules {
+        background-color: var(--white-color);
+        padding: 16px;
+        display: flex;
+        column-gap: 10px;
+        margin-bottom: 10px;
+    }
+
+    .checkout-mobile__rules-icon {
+        font-size: 20px;
+        color: #f69113;
+    }
+
+    .checkout-mobile__rules-sub {
+        line-height: 20px;
+    }
+
+    .checkout-mobile__rules-link {
+        color: #05a;
+    }
+
+    .checkout-mobile__footer {
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        background-color: var(--white-color);
+        column-gap: 10px;
+    }
+
+    .checkout-mobile__footer-into-money-sub {
+        font-size: 16px;
+        color: #a2a2a2;
+        margin-bottom: 8px;
+    }
+
+    .checkout-mobile__footer-into-money-numb {
+        font-size: 20px;
+        color: var(--primary-color);
+    }
+
+    .checkout-mobile__footer-btn {
+        background-color: var(--primary-color);
+        padding: 0 20px;
+        height: 100%;
+        line-height: 60px;
+        color: var(--white-color);
+        font-size: 16px;
+        cursor: pointer;
+    }
 }
