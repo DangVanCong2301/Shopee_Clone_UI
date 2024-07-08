@@ -344,16 +344,12 @@ function openDeleteModal() {
     <div class="cart__delete">
         <div class="cart__delete-msg">Bạn có chắc muốn xoá sản phẩm?</div>
         <div class="cart__delete-btns">
-            <div class="cart__delete-btn-no" onclick="closeDeleteModal()">Không</div>
+            <div class="cart__delete-btn-no" onclick="exitModal()">Không</div>
             <div class="cart__delete-btn-agree">Đồng ý</div>
         </div>
     </div>
     `;
     document.querySelector(".modal__body").innerHTML = html;
-}
-
-function closeDeleteModal() {
-    document.querySelector(".modal").classList.remove("open");
 }
 
 window.addEventListener('click', (e) => {
@@ -369,10 +365,69 @@ function openDeleteAllModal() {
     <div class="cart__delete">
         <div class="cart__delete-msg">Bạn có chắc muốn 2 xoá sản phẩm?</div>
         <div class="cart__delete-btns">
-            <div class="cart__delete-btn-no" onclick="closeDeleteModal()">Không</div>
+            <div class="cart__delete-btn-no" onclick="exitModal()">Không</div>
             <div class="cart__delete-btn-agree">Đồng ý</div>
         </div>
     </div>
     `;
     document.querySelector(".modal__body").innerHTML = html;
 }
+
+function plusMobile(event) {
+    const parentElement = event.target.parentNode;
+    var plus = parentElement.querySelector(".cart__mobile-item-product-quantity-input").value;
+    var input = parentElement.querySelector(".cart__mobile-item-product-quantity-input");
+    if (parseInt(plus) < 10) {
+        input.value = parseInt(plus) + 1;
+    } else {
+        document.querySelector(".modal").classList.add("open");
+        let html = "";
+        html += `
+            <div class="confirm">
+                <div class="confirm__msg">Số lượng mặt hàng trong kho không đủ!</div>
+                <div class="confirm__btn-back">
+                    <div class="btn btn--primary" onclick="exitModal()">Trở lại</div>
+                </div>
+            </div>
+        `;
+        document.querySelector(".modal__body").innerHTML = html;
+    }
+}
+
+function lessMobile(event) {
+    const parentElement = event.target.parentNode;
+    var less = parentElement.querySelector(".cart__mobile-item-product-quantity-input").value;
+    var input = parentElement.querySelector(".cart__mobile-item-product-quantity-input");
+    if (parseInt(less) > 1) {
+        input.value = parseInt(less) - 1;
+    } else {
+        openDeleteModal()
+    }
+}
+
+// Tách lấy chữ số
+// Nguồn: http://vncoding.net/2015/10/30/tach-cac-chu-so-thuoc-hang-tram-hang-chuc-hang-don-vi/
+function money(number) {
+    let result = ``; // Nếu là chuỗi thì trán đặt biến là const
+    // Vì Const là một hằng số, vì vậy khi khai báo biến const thì bạn phải gán giá trị cho nó luôn, 
+    // sau này cũng không thể thay đổi giá trị cho biến.
+    // Nguồn: https://freetuts.net/bien-va-khai-bao-bien-trong-javascript-265.html
+    // Ví dụ số 9899999
+    let millions = Math.floor(number / 1000000); // Chia cho 1000000 và làm tròn số ta được 9
+    let hundred_thousand = Math.floor((number % 1000000) / 100000); // Chia lấy phần dư ta được 899999 và tiếp tục chia cho 100000 và làm tròn ta được 8
+    let tens_of_thousands = Math.floor((number % 1000000 % 100000) / 10000); // Tương tự lấy phần dư của hàng trục nghìn rồi chia cho 10000 ta được 9
+    let thousand = Math.floor((number % 1000000 % 100000 % 10000) / 1000); // Lấy phần dư hàng nghìn rồi chia cho 1000
+    let hundreds = Math.floor((number % 1000000 % 100000 % 10000 % 1000) / 100); // Lấy phần dư hàng trăm chia cho 100
+    let tens = Math.floor((number % 1000000 % 100000 % 10000 % 1000 % 100) / 10); // Lấy phần dư của hàng chục chia cho 10
+    let unit = Math.floor(number % 1000000 % 100000 % 10000 % 1000 % 100 % 10); // Lấy phần dư hàng đơn vị
+    if (millions == 0 && hundred_thousand != 0) {
+        result = `${hundred_thousand}${tens_of_thousands}${thousand}.${hundreds}${tens}${unit}`;
+    } else if (millions == 0 && hundred_thousand == 0) {
+        console.log('b');
+        result = `${tens_of_thousands}${thousand}.${hundreds}${tens}${unit}`;
+    } else {
+        result = `${millions}.${hundred_thousand}${tens_of_thousands}${thousand}.${hundreds}${tens}${unit}`;
+    }
+    return result;
+} 
+console.log(money(56000));

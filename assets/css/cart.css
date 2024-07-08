@@ -660,6 +660,7 @@
     }
 
     .cart__mobile {
+        color: var(--text-color);
         margin: calc(20px + var(--header-with-search-height)) 0 20px 0;
     }
 
@@ -974,12 +975,14 @@
         border-left: 1px solid var(--border-color);
         border-top-left-radius: 2px;
         border-bottom-left-radius: 2px;
+        cursor: pointer;
     }
 
     .cart__mobile-item-product-quantity-btn-less {
         border-right: 1px solid var(--border-color);
         border-top-right-radius: 2px;
         border-bottom-right-radius: 2px;
+        cursor: pointer;
     }
 
     .cart__mobile-item-product-quantity-input {
