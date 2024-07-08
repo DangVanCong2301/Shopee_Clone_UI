@@ -294,8 +294,7 @@
     }
 
     .header__mobile-back-icon {
-        font-size: 2.4rem;
-        color: var(--primary-color);
+        color: var(--white-color);
     }
 
     .header__mobile-back-icon.scroll-detail,
@@ -317,7 +316,7 @@
 
     .header__mobile-more-icon {
         font-size: 2.4rem;
-        color: var(--primary-color);
+        color: var(--white-color);
     }
 
     .header__mobile-product-name {
