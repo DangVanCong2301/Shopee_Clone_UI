@@ -1,3 +1,37 @@
+// Slider
+let index = 0;
+const productSliderNumber = document.querySelectorAll(".product__slider-item");
+const productSliderDots = document.querySelector(".product__slider-dots");
+
+for (let i = 0; i < productSliderNumber.length; i++) {
+    const div = document.createElement("div");
+    div.id = i;
+    productSliderDots.appendChild(div);
+}
+document.getElementById('0').classList.add('slider-product-circle-fill');
+
+const productSliderDot = document.querySelectorAll(".product__slider-dots div");
+for (let i = 0; i < productSliderDot.length; i++) {
+    productSliderDot[i].addEventListener('click', () => {
+        index = productSliderDot[i].id;
+        document.querySelector(".product__slider-list").style.right = index * 100 + "%";
+        document.querySelector(".slider-product-circle-fill").classList.remove("slider-product-circle-fill");
+        document.getElementById(index).classList.add("slider-product-circle-fill");
+    });
+}
+
+function productSliderAuto() {
+    index = index + 1;
+    if (index > productSliderNumber.length - 1) {
+        index = 0;
+    }
+    document.querySelector(".product__slider-list").style.right = index * 100 + "%";
+    document.querySelector(".slider-product-circle-fill").classList.remove("slider-product-circle-fill");
+    document.getElementById(index).classList.add("slider-product-circle-fill");
+}
+setInterval(productSliderAuto, 3000);
+
+// Get Product Item
 const productList = document.querySelectorAll(".home-product__list");
 
 function loadProducts() {
