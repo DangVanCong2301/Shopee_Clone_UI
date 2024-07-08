@@ -15,7 +15,15 @@
 </head>
 <body>
     <div class="app">
-        <div class="app__container">
+        <div class="admin__table hide-on-mobile hide-on-destop">
+            Sản phẩm chưa được tối ưu trên máy tính bảng, vui lòng sử dụng điện thoại và laptop 
+            để có trả nghiệm tốt hơn!
+        </div>
+        <div class="admin__mobile hide-on-table hide-on-destop">
+            Sản phẩm chưa được tối ưu trên điện thại, vui lòng sử dụng điện thoại và laptop 
+            để có trả nghiệm tốt hơn!
+        </div>
+        <div class="app__container hide-on-mobile">
             <div class="admin">
                 <div class="admin__aside">
                     <div class="admin__aside-top">
@@ -136,52 +144,85 @@
                     </div>
                     <div class="admin__main-recent-orders">
                         <div class="admin__main-recent-orders-title">Đơn hàng gần đây</div>
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>Tên sản phẩm</th>
-                                    <th>Số lượng</th>
-                                    <th>Thanh toán</th>
-                                    <th>Trạng thái</th>
-                                    <th></th>
+                        <div class="admin__order-header">
+                            <ul class="admin__order-header-list">
+                                <li class="admin__order-header-item admin__order-header-item--active">
+                                    Tất cả
+                                </li>
+                                <li class="admin__order-header-item">
+                                    Chờ thanh toán
+                                </li>
+                                <li class="admin__order-header-item">
+                                    Vận chuyển (1)
+                                </li>
+                                <li class="admin__order-header-item">
+                                    Chờ giao hàng
+                                </li>
+                                <li class="admin__order-header-item">
+                                    Hoàn thành
+                                </li>
+                                <li class="admin__order-header-item">
+                                    Đã huỷ
+                                </li>
+                                <li class="admin__order-header-item">
+                                    Trả hàng/hoàn tiền
+                                </li>
+                            </ul>
+                        </div>
+                        <table class="admin__order-table">
+                            <thead class="admin__order-table-header">
+                                <tr class="admin__order-table-header-row">
+                                    <th class="admin__order-table-header-col">Tên sản phẩm</th>
+                                    <th class="admin__order-table-header-col">Số lượng</th>
+                                    <th class="admin__order-table-header-col">Thanh toán</th>
+                                    <th class="admin__order-table-header-col">Trạng thái</th>
+                                    <th class="admin__order-table-header-col"></th>
                                 </tr>
                             </thead>
-                            <tbody>
-                                <!-- <tr>
-                                    <td>Tai nghe Bluetooth</td>
-                                    <td>3</td>
-                                    <td>500.000 đ</td>
-                                    <td class="warning">Chờ xác nhận</td>
-                                    <td class="primary">Chi tiết</td>
+                            <tbody class="admin__order-table-body">
+                                <tr class="admin__order-table-body-row">
+                                    <td class="admin__order-table-body-col">Tai nghe Bluetooth</td>
+                                    <td class="admin__order-table-body-col">3</td>
+                                    <td class="admin__order-table-body-col">500.000 đ</td>
+                                    <td class="admin__order-table-body-col warning">Chờ xác nhận</td>
+                                    <td class="admin__order-table-body-col primary">
+                                        <a href="#" class="admin__order-table-body-col-link">Chi tiết</a>
+                                    </td>
                                 </tr>
-                                <tr>
-                                    <td>Tai nghe Bluetooth</td>
-                                    <td>3</td>
-                                    <td>500.000 đ</td>
-                                    <td class="primary">Đã thanh toán</td>
-                                    <td class="primary">Chi tiết</td>
+                                <tr class="admin__order-table-body-row">
+                                    <td class="admin__order-table-body-col">Tai nghe Bluetooth</td>
+                                    <td class="admin__order-table-body-col">3</td>
+                                    <td class="admin__order-table-body-col">500.000 đ</td>
+                                    <td class="admin__order-table-body-col primary">Đã thanh toán</td>
+                                    <td class="admin__order-table-body-col primary">
+                                        <a href="#" class="admin__order-table-body-col-link">Chi tiết</a>
+                                    </td>
                                 </tr>
-                                <tr>
-                                    <td>Tai nghe Bluetooth</td>
-                                    <td>3</td>
-                                    <td>500.000 đ</td>
-                                    <td class="success">Đã giao hàng</td>
-                                    <td class="primary">Chi tiết</td>
+                                <tr class="admin__order-table-body-row">
+                                    <td class="admin__order-table-body-col">Tai nghe Bluetooth</td>
+                                    <td class="admin__order-table-body-col">3</td>
+                                    <td class="admin__order-table-body-col">500.000 đ</td>
+                                    <td class="admin__order-table-body-col success">Đã giao hàng</td>
+                                    <td class="admin__order-table-body-col primary">
+                                        <a href="#" class="admin__order-table-body-col-link">Chi tiết</a>
+                                    </td>
                                 </tr>
-                                <tr>
-                                    <td>Tai nghe Bluetooth</td>
-                                    <td>3</td>
-                                    <td>500.000 đ</td>
-                                    <td class="danger">Khách hàng huỷ</td>
-                                    <td class="primary">Chi tiết</td>
-                                </tr> -->
+                                <tr class="admin__order-table-body-row">
+                                    <td class="admin__order-table-body-col">Tai nghe Bluetooth</td>
+                                    <td class="admin__order-table-body-col">3</td>
+                                    <td class="admin__order-table-body-col">500.000 đ</td>
+                                    <td class="admin__order-table-body-col danger">Khách hàng huỷ</td>
+                                    <td class="admin__order-table-body-col primary">
+                                        <a href="#" class="admin__order-table-body-col-link">Chi tiết</a>
+                                    </td>
+                                </tr>
                             </tbody>
                         </table>
-                        <a href="">Xem tất cả</a>
+                        <a href="#" class="admin__order-more">Xem tất cả</a>
                     </div>
                 </div>
                 <div class="admin__right">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel ipsam quia expedita aut labore, ad doloremque, dicta dignissimos, et quasi voluptatibus quaerat eaque sapiente adipisci est nemo nostrum eos exercitationem.
+                    
                 </div>
             </div>
         </div>

@@ -13,6 +13,7 @@
     --danger-color: #ff7782;
     --success-color: #41f1b6;
     --warning-color: #ffbb55;
+    --link-color: #05a;
     --navbar-height: 34px;
     --header-height: 120px;
     --header-with-search-height: calc(var(--header-height) - var(--navbar-height));
