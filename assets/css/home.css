@@ -10,6 +10,28 @@
     margin-top: calc(30px + var(--header-height));
 }
 
+.home__suggest {
+    margin-bottom: 70px;
+}
+
+.home-suggest__more {
+    margin-top: 20px;
+    font-size: var(--normal-font-size);
+    display: flex;
+    justify-content: center;
+}
+
+.suggest__more-link {
+    color: var(--text-color);
+    background-color: var(--white-color);
+    padding: 0 20px;
+    height: 40px;
+    line-height: 40px;
+    border: 1px solid rgba(0, 0, 0, .09);
+    border-radius: 2px;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .03);
+}
+
 .success-header.scroll {
     position: fixed;
     top: calc(8px + var(--header-height));
