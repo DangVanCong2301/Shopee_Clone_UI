@@ -1,9 +1,10 @@
-function loadImage() {
+function loadingProductDetail() {
     setTimeout(() => {
         document.querySelector(".detai__left-progress").style.display = 'none';
+        document.querySelector(".detail__right-loading").style.display = 'none';
     }, 1000);
 }
-loadImage();
+loadingProductDetail();
 
 // Show/Hide Detail Header
 window.addEventListener('scroll', () => {

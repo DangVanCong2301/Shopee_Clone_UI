@@ -157,10 +157,8 @@ function loadProducts() {
                                                 <span class="home-product-item__sale-off-percent">53%</span>
                                                 <span class="home-product-item__sale-off-label">GIẢM</span>
                                             </div>
-                                            <div class="home-product-item__find-similar">
-                                            </div>
-                                            <a href="#" class="home-product-item__find-similar-link">Tìm sản phẩm tương tự</a>
                                         </a>
+                                        <a href="#" class="home-product-item__find-similar-link">Tìm sản phẩm tương tự</a>
                                     </div>
                                 </div>
         `;
@@ -208,9 +206,9 @@ window.addEventListener('scroll', () => {
     const y = this.pageYOffset;
     if (y > 1100) {
         //console.log(y);
-        document.querySelector(".success-header").classList.add("scroll");
+        document.querySelector(".suggest__header").classList.add("scroll");
     } else {
-        document.querySelector(".success-header").classList.remove("scroll");
+        document.querySelector(".suggest__header").classList.remove("scroll");
     }
 });
 
