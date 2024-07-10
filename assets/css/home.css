@@ -10,7 +10,7 @@
     margin-top: calc(30px + var(--header-height));
 }
 
-.home__suggest {
+.home-suggest {
     margin-bottom: 70px;
 }
 
@@ -21,7 +21,7 @@
     justify-content: center;
 }
 
-.suggest__more-link {
+.home-suggest__more-link {
     color: var(--text-color);
     background-color: var(--white-color);
     padding: 0 20px;
@@ -32,12 +32,12 @@
     box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .03);
 }
 
-.success-header.scroll {
+.suggest__header.scroll {
     position: fixed;
     top: calc(8px + var(--header-height));
     left: 0;
     right: 0;
     margin: 0;
     transition: all .3s;
-    z-index: 10;
+    z-index: 1;
 }

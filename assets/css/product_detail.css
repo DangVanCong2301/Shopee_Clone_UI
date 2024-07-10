@@ -20,11 +20,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
+    top: 16px;
+    right: 16px;
+    left: 16px;
+    bottom: 16px;
     background-color: #fafafa;
+    border-radius: 4px;
     transition: all .3s ease;
 }
 
@@ -39,7 +40,92 @@
 }
 
 .detail__right {
+    position: relative;
     padding: 2rem 1rem;
+}
+
+.detail__right-loading {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    left: 16px;
+    bottom: 16px;
+    border-radius: 4px;
+    background-color: var(--white-color);
+}
+
+.detail__right-loading-product-name {
+    height: 30px;
+    width: 50%;
+    background-color: #fafafa;
+    border-radius: 4px;
+}
+
+.detail__right-loading-product-price {
+    height: 30px;
+    width: 40%;
+    background-color: #fafafa;
+    border-radius: 4px;
+    margin-top: 16px;
+}
+
+.detail__right-loading-product-desc-title {
+    height: 26px;
+    width: 30%;
+    background-color: #fafafa;
+    border-radius: 4px;
+    margin-top: 16px;
+}
+
+.detail__right-loading-product-desc-text {
+    height: 200px;
+    width: 100%;
+    background-color: #fafafa;
+    border-radius: 4px;
+    margin-top: 16px;
+}
+
+.detail__right-loading-product-qnt {
+    height: 32px;
+    width: 30%;
+    background-color: #fafafa;
+    border-radius: 4px;
+    margin-top: 16px;
+}
+
+.detail__right-loading-product-btns {
+    display: flex;
+    column-gap: 16px;
+}
+
+.detail__right-loading-product-btn {
+    height: 36px;
+    width: 142px;
+    background-color: #fafafa;
+    border-radius: 4px;
+    margin-top: 16px;
+}
+
+.detail__right-loading-product-share {
+    display: flex;
+    column-gap: 16px;
+    align-items: center;
+}
+
+.detail__right-loading-product-share-title {
+    height: 26px;
+    width: 64px;
+    background-color: #fafafa;
+    border-radius: 4px;
+    margin-top: 16px;
+}
+
+.detail__right-loading-product-share-box {
+    height: 32px;
+    width: 32px;
+    border-radius: 50%;
+    background-color: #fafafa;
+    margin-top: 16px;
 }
 
 .detail__right-title {

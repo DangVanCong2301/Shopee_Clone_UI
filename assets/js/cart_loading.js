@@ -53,4 +53,4 @@ function loadingProgress() {
         }
     }, 1000);
 }
-loadingProgress();
+//loadingProgress();
