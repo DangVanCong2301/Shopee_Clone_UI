@@ -1,0 +1,198 @@
+.similar-product__header {
+    margin-top: 30px;
+    display: flex;
+    font-size: var(--normal-font-size);
+    color: var(--text-color);
+    background-color: var(--white-color);
+    border-radius: 4px;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .1);
+    padding: 26px 30px;
+}
+
+.similar-product__header-item {
+    display: flex;
+    column-gap: 20px;
+    flex: 1;
+    padding: 0 20px 0 0;
+}
+
+.similar-product__header-item-left {
+    position: relative;
+    width: 160px;
+    height: 160px;
+}
+
+.similar-product__header-item-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.similar-product__header-item-img {
+    width: 100%;
+    border-radius: 2px;
+}
+
+.similar-product__header-item-name {
+    font-size: 18px;
+    line-height: 20px;
+    height: 20px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+    margin: 5px 0 10px;
+}
+
+.similar-product__header-item-rate {
+    display: flex;
+    align-items: center;
+}
+
+.similar-product__header-item-rate-sub {
+    color: var(--primary-color);
+    text-decoration: underline;
+    margin-right: 5px;
+}
+
+.similar-product__header-item-rate-stars {
+    margin-right: 5px;
+    color: var(--primary-color);
+}
+
+.similar-product__header-item-rate-count {
+    color: rgba(0, 0, 0, .54);
+    margin: 0 8px 0 5px;
+}
+
+.similar-product__header-item-rate-title {
+    color: rgba(0, 0, 0, .54);
+    padding-left: 8px;
+    border-left: 1px solid var(--border-color);
+}
+
+.similar-product__header-item-price {
+    display: flex;
+    align-items: center;
+    column-gap: 12px;
+    font-size: 17px;
+    margin-bottom: 12px;
+}
+
+.similar-product__header-item-price-old {
+    color: rgba(0, 0, 0, .54);
+    text-decoration: line-through;
+}
+
+.similar-product__header-item-price-current {
+    color: var(--primary-color);
+    font-size: 28px;
+    line-height: 30px;
+}
+
+.similar-product__header-shop {
+    width: 300px;
+    padding: 0 0 0 30px;
+    border-left: 1px solid var(--border-color);
+}
+
+.similar-product__header-shop-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.similar-product__header-shop-avatar {
+    width: 30px;
+    height: 30px; 
+}
+
+.similar-product__header-shop-avatar-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.similar-product__header-shop-name {
+    font-size: 18px;
+    padding-left: 13px;
+}
+
+.similar-product__header-shop-chat-icon {
+    padding-left: 8px;
+    font-size: 16px;
+    color: #00bfa5;
+}
+
+.similar-product__header-shop-numb {
+    display: flex;
+    color: rgba(0, 0, 0, .54);
+}
+
+.similar-product__header-shop-numb span {
+    color: var(--primary-color);
+}
+
+.similar-product__header-shop-product {
+    padding-right: 20px;
+    border-right: 1px solid var(--border-color);
+}
+
+.similar-product__header-shop-rate {
+    padding-left: 20px;
+}
+
+@media (max-width: 739px) {
+    .similar-product__header {
+        flex-direction: column;
+        padding: 16px;
+    }
+
+    .similar-product__header-item {
+        padding-right: 0;
+        padding-bottom: 20px;
+    }
+
+    .similar-product__header-item-left {
+        width: 30%;
+    }
+
+    .similar-product__header-item-name {
+        font-size: 16px;
+        height: 40px;
+        -webkit-line-clamp: 2;
+    }
+
+    .similar-product__header-item-rate {
+        overflow-x: auto;
+        scroll-behavior: smooth;
+    }
+
+    .similar-product__header-item-rate::-webkit-scrollbar {
+        display: none;
+    }
+
+    .similar-product__header-item-rate-sub,
+    .similar-product__header-item-rate-stars,
+    .similar-product__header-item-rate-count,
+    .similar-product__header-item-rate-title {
+        flex-shrink: 0;
+    }
+
+    .similar-product__header-item-bottom {
+        text-align: right;
+    }
+
+    .similar-product__header-item-price {
+        justify-content: flex-end;
+    }
+
+    .similar-product__header-shop {
+        padding-top: 20px;
+        padding-left: 0;
+        border-left: none;
+        width: 100%;
+        border-top: 1px solid var(--border-color);
+    }
+}
