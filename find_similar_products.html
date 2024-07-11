@@ -8,10 +8,12 @@
     <link rel="stylesheet" href="./assets/css/base.css">
     <link rel="stylesheet" href="./assets/css/grid.css">
     <link rel="stylesheet" href="./assets/css/responsive.css">
+    <link rel="stylesheet" href="./assets/css/similar_product.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <!--=============== ICONSCOUT ===============-->
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
-    <title>Shopee - Gợi ý</title>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/solid.css" />
+    <title>Shopee - Sản phẩm tương tự</title>
 </head>
 <body>
     <div class="app">
@@ -269,9 +271,66 @@
         </div>
         <div class="app__container hide-on-table">
             <div class="grid wide">
+                <div class="similar-product__header">
+                    <div class="similar-product__header-item">
+                        <div class="similar-product__header-item-left">
+                            <img src="./assets/img/tai_nghe_5.jpg" alt="" class="similar-product__header-item-img">
+                            <div class="home-product-item__sale-off">
+                                <span class="home-product-item__sale-off-percent">53%</span>
+                                <span class="home-product-item__sale-off-label">GIẢM</span>
+                            </div>
+                        </div>
+                        <div class="similar-product__header-item-right">
+                            <div class="similar-product__header-item-top">
+                                <div class="similar-product__header-item-name">
+                                    Bút Laze Trình Chiếu PowerPoint Kèm Remote Điều Khiển Không Dây Cho Laptop RF 2.4GHz
+                                </div>
+                                <div class="similar-product__header-item-rate">
+                                    <div class="similar-product__header-item-rate-sub">4.9</div>
+                                    <div class="similar-product__header-item-rate-stars">
+                                        <i class="uis uis-star similar-product__header-item-rate-star"></i>
+                                        <i class="uis uis-star similar-product__header-item-rate-star"></i>
+                                        <i class="uis uis-star similar-product__header-item-rate-star"></i>
+                                        <i class="uis uis-star similar-product__header-item-rate-star"></i>
+                                        <i class="uis uis-star similar-product__header-item-rate-star"></i>
+                                    </div>
+                                    <div class="similar-product__header-item-rate-sub">4.9 trên 5</div>
+                                    <div class="similar-product__header-item-rate-count">(21 đánh giá)</div>
+                                    <div class="similar-product__header-item-rate-title">34 Sold Monthly</div>
+                                </div>
+                            </div>
+                            <div class="similar-product__header-item-bottom">
+                                <div class="similar-product__header-item-price">
+                                    <div class="similar-product__header-item-price-old">181.000 đ</div>
+                                    <div class="similar-product__header-item-price-current">121.000 đ</div>
+                                </div>
+                                <div class="similar-product__header-item-buy-now btn btn--primary">Mua ngay</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="similar-product__header-shop">
+                        <div class="similar-product__header-shop-info">
+                            <div class="similar-product__header-shop-avatar">
+                                <img src="./assets/img/vietmark_logo.png" alt="" class="similar-product__header-shop-avatar-img">
+                            </div>
+                            <div class="similar-product__header-shop-name">Viet Mark</div>
+                            <div class="similar-product__header-shop-chat">
+                                <i class="uil uil-comments-alt similar-product__header-shop-chat-icon"></i>
+                            </div>
+                        </div>
+                        <div class="similar-product__header-shop-numb">
+                            <div class="similar-product__header-shop-product">
+                                Sản phẩm <span>200</span>
+                            </div>
+                            <div class="similar-product__header-shop-rate">
+                                Đánh giá <span>N/A</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div class="home__suggest">
                     <div class="suggest__header">
-                        <div class="suggest__title">Gợi ý hôm nay</div>
+                        <div class="suggest__title">Sản phẩm tương tự</div>
                     </div>
                     <div class="suggest__container">
                         <div class="home-product">
@@ -686,6 +745,6 @@
         <span>Chat</span>
     </div>
 </body>
-<script src="./assets/js/suggest.js"></script>
+<script src="./assets/js/similar_product.js"></script>
 <script src="./assets/js/product_loading.js"></script>
 </html>

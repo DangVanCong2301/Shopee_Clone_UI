@@ -158,7 +158,7 @@ function loadProducts() {
                                                 <span class="home-product-item__sale-off-label">GIẢM</span>
                                             </div>
                                         </a>
-                                        <a href="#" class="home-product-item__find-similar-link">Tìm sản phẩm tương tự</a>
+                                        <a href="find_similar_products.html" class="home-product-item__find-similar-link">Tìm sản phẩm tương tự</a>
                                     </div>
                                 </div>
         `;
