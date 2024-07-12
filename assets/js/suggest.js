@@ -66,7 +66,7 @@ function loadProducts() {
                                             </div>
                                             <div class="home-product-item__find-similar">
                                             </div>
-                                            <a href="#" class="home-product-item__find-similar-link">Tìm sản phẩm tương tự</a>
+                                            <a href="#" class="home-product-item__find-similar-link hide-on-mobile">Tìm sản phẩm tương tự</a>
                                         </a>
                                     </div>
                                 </div>
