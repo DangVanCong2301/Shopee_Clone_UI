@@ -41,3 +41,9 @@
     transition: all .3s;
     z-index: 2;
 }
+
+@media screen and (max-width: 739px) {
+    .home-item:hover .home-product-item {
+        border: none;
+    }
+}

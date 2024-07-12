@@ -848,6 +848,11 @@
     font-size: 17px;
 }
 
+.address-form__add-title-sub {
+    font-size: 12px;
+    margin-top: 10px;
+}
+
 .address-form__add-body {
     padding-top: 15px;
     height: 500px;
@@ -888,6 +893,10 @@
     border: 1px solid var(--border-color);
 }
 
+.address-form__new-input.err {
+    border: 1px solid var(--primary-color);
+}
+
 .address-form__add-input-phone-suggest {
     position: absolute;
     margin-top: 5px;
@@ -911,7 +920,7 @@
     text-transform: capitalize;
 }
 
-.address-form__add-input:focus + .address-form__add-input-phone-suggest {
+.address-form__add-input-update:focus + .address-form__add-input-phone-suggest {
     display: block;
 }
 
@@ -923,6 +932,14 @@
     background-color: var(--white-color);
     transition: .3s;
     z-index: 0;
+}
+
+.address-form__add-label-new.err {
+    color: var(--primary-color);
+}
+
+.address-form__add-label-new.hide {
+    display: none;
 }
 
 .address-form__add-input:focus + .address-form__add-label,
@@ -954,6 +971,14 @@
     cursor: pointer;
 }
 
+.address-form__new-choose {
+    display: none;
+}
+
+.address-form__new-choose.show {
+    display: block;
+}
+
 .address-form__add-detail {
     position: absolute;
     width: 100%;
@@ -963,11 +988,6 @@
     box-shadow: rgba(0, 0, 0, .54) 0px 2px 4px;
     overflow: hidden;
     z-index: 2;
-    display: none;
-}
-
-.address-form__add-detail--active {
-    display: block;
 }
 
 .address-form__add-detail-header {
@@ -983,7 +1003,7 @@
     cursor: pointer;
 }
 
-.address-form__add-detail-title--active {
+.address-form__new-choose-title.active {
     color: var(--primary-color);
     border-bottom: 2px solid var(--primary-color);
 }
@@ -1054,6 +1074,7 @@
 .address-form__add-detail-district-item,
 .address-form__add-detail-street-item {
     padding: 10px 12px;
+    cursor: pointer;
 }
 
 .address-form__add-please {
