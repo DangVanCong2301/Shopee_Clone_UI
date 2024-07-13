@@ -1183,14 +1183,6 @@
         font-size: var(--normal-font-size);
     }
 
-    .header__mobile-checkout-title {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        font-size: 16px;
-        left: 40%;
-    }
-
     .checkout-mobile__address-destination-icon {
         font-size: 20px;
         color: var(--primary-color);
