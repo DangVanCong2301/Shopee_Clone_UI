@@ -68,7 +68,11 @@ header {
 .auth__left-sub {
     font-size: 24px;
     color: var(--white-color);
-    font-weight: bold;
+    /* font-weight: bold; */
+}
+
+.auth__left-sub.sub-2 {
+    margin-top: 20px;
 }
 
 .auth__right {
