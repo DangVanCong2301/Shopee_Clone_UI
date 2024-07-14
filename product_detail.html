@@ -271,128 +271,187 @@
         </div>
         <div class="app__container hide-on-table">
             <div class="detail">
-                <!-- card left -->
-                <div class="detail__left">
-                    <img src="./assets/img/tai_nghe_5.jpg" alt="product image" class="detail__left-img"/>
-                    <div class="detai__left-progress">
-                        <!-- <div class="spinner detai__left-progress-spinner"></div> -->
-                        <i class="uil uil-shopping-bag detai__left-progress-icon"></i>
+                <div class="detail__product">
+                    <!-- card left -->
+                    <div class="detail__left">
+                        <img src="./assets/img/tai_nghe_5.jpg" alt="product image" class="detail__left-img"/>
+                        <div class="detai__left-progress">
+                            <!-- <div class="spinner detai__left-progress-spinner"></div> -->
+                            <i class="uil uil-shopping-bag detai__left-progress-icon"></i>
+                        </div>
+                    </div>
+                    <!-- card right -->
+                    <div class="detail__right">
+                        <h2 class="detail__right-title">
+                            Bút Laze Trình Chiếu PowerPoint Kèm Remote Điều Khiển Không Dây Cho Laptop RF 2.4GHz
+                        </h2>
+                        <div class="detail__price">
+                            <p class="detail__price-old"><span>500.000 đ</span></p>
+                            <p class="detail__price-new"><span>500.000 đ</span></p>
+                        </div>
+                        <div class="detail__text">
+                            <h2 class="detail__text-title">về mặt hàng này: </h2>
+                            <p class="detail__text-desc">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim repudiandae necessitatibus ab, at amet sed beatae. Sapiente, aspernatur 
+                                perspiciatis cum ducimus quis exercitationem veniam labore libero quibusdam doloribus perferendis? Facere!
+                            </p>
+                        </div>
+                        <div class="detail__btns hide-on-mobile">
+                            <div class="detail__btn-count">
+                                <button type="button" class="detail__btn-count-btn"
+                                    onclick="">-</button>
+                                <input type="text" name="quantity" id="qnt" value="0" class="detail__btn-count-input" />
+                                <button type="button" class="detail__btn-count-btn"
+                                    onclick="">+</button>
+                            </div>
+                            <button type="button" class="detail__btn-add"> Thêm vào giỏ 
+                                <i class="fas fa-shopping-cart detail__cart-icon"></i>
+                            </button>
+                            <button type="button" class="btn btn--primary detail__btn-buy-now">Mua ngay</button>
+                        </div>
+                        <div class="detail__mobile-btns"> 
+                            <div class="detail__mobile-btn-add" onclick="showBottomSheet()"> Thêm vào giỏ 
+                                <i class="fas fa-shopping-cart detail__cart-icon"></i>
+                            </div>
+                            <div class="detail__mobile-btn-buy-now">Mua ngay</div>
+                        </div>
+                        <div class="detail__mobile-bottom-sheet-modal">
+                            <div class="detail__mobile-bottom-sheet-overlay"></div>
+                            <div class="detail__mobile-bottom-sheet">
+                                <div class="detail__mobile-bottom-sheet-info">
+                                    <div class="detail__mobile-bottom-sheet-info-img" style="background-image: url(./assets/img/am_sieu_toc_1.jpg);"></div>
+                                    <div class="detail__mobile-bottom-sheet-info-desc">
+                                        <div class="detail__mobile-bottom-sheet-info-price">114.000đ - 225.000đ</div>
+                                        <div class="detail__mobile-bottom-sheet-info-warehouse">Kho: 12345</div>
+                                    </div>
+                                </div>
+                                <div class="detail__mobile-bottom-sheet-close" onclick="closeBottomSheet()">
+                                    <i class="uil uil-times detail__mobile-bottom-sheet-close-icon"></i>
+                                </div>
+                                <div class="detail__mobile-bottom-sheet-type">
+                                    <div class="detail__mobile-bottom-sheet-type-title">Loại</div>
+                                    <div class="detail__mobile-bottom-sheet-type-list">
+                                        <div class="detail__mobile-bottom-sheet-type-item active">
+                                            <div class="detail__mobile-bottom-sheet-type-item-img" style="background-image: url(./assets/img/am_sieu_toc_1.jpg);"></div>
+                                            <div class="detail__mobile-bottom-sheet-type-item-name">Socany 3 cấp độ</div>
+                                        </div>
+                                        <div class="detail__mobile-bottom-sheet-type-item">
+                                            <div class="detail__mobile-bottom-sheet-type-item-img" style="background-image: url(./assets/img/am_sieu_toc_1.jpg);"></div>
+                                            <div class="detail__mobile-bottom-sheet-type-item-name">Socany 3 cấp độ</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="detail__mobile-bottom-sheet-quantity">
+                                    <div class="detail__mobile-bottom-sheet-quantity-title">Số lượng</div>
+                                    <div class="detail__mobile-bottom-sheet-quantity-btns">
+                                        <div class="detail__mobile-bottom-sheet-quantity-btn-plus">+</div>
+                                        <input type="text" class="detail__mobile-bottom-sheet-quantity-input" value="1">
+                                        <div class="detail__mobile-bottom-sheet-quantity-btn-less">-</div>
+                                    </div>
+                                </div>
+                                <div class="detail__mobile-bottom-sheet-add-to-cart">Thêm vào giỏ hàng</div>
+                            </div>
+                        </div>
+                        <div class="detail__number">
+                            <div class="detail__social">
+                                <p class="detail__social-title">Chia sẻ: </p>
+                                <a class="detail__social-link" href="#">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a class="detail__social-link" href="#">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a class="detail__social-link" href="#">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a class="detail__social-link" href="#">
+                                    <i class="fab fa-whatsapp"></i>
+                                </a>
+                                <a class="detail__social-link" href="#">
+                                    <i class="fab fa-pinterest"></i>
+                                </a>
+                            </div>
+                            <div class="detail__favorite" title="Yêu thích">
+                                <i class="uil uil-heart-alt detail__favorite-icon"></i>
+                            </div>
+                        </div>
+                        <div class="detail__right-loading">
+                            <div class="detail__right-loading-product-name"></div>
+                            <div class="detail__right-loading-product-price"></div>
+                            <div class="detail__right-loading-product-desc">
+                                <div class="detail__right-loading-product-desc-title"></div>
+                                <div class="detail__right-loading-product-desc-text"></div>
+                            </div>
+                            <div class="detail__right-loading-product-qnt"></div>
+                            <div class="detail__right-loading-product-btns">
+                                <div class="detail__right-loading-product-btn"></div>
+                                <div class="detail__right-loading-product-btn"></div>
+                            </div>
+                            <div class="detail__right-loading-product-share">
+                                <div class="detail__right-loading-product-share-title"></div>
+                                <div class="detail__right-loading-product-share-box"></div>
+                                <div class="detail__right-loading-product-share-box"></div>
+                                <div class="detail__right-loading-product-share-box"></div>
+                                <div class="detail__right-loading-product-share-box"></div>
+                                <div class="detail__right-loading-product-share-box"></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <!-- card right -->
-                <div class="detail__right">
-                    <h2 class="detail__right-title">
-                        Bút Laze Trình Chiếu PowerPoint Kèm Remote Điều Khiển Không Dây Cho Laptop RF 2.4GHz
-                    </h2>
-                    <div class="detail__price">
-                        <p class="detail__price-old"><span>500.000 đ</span></p>
-                        <p class="detail__price-new"><span>500.000 đ</span></p>
-                    </div>
-                    <div class="detail__text">
-                        <h2 class="detail__text-title">về mặt hàng này: </h2>
-                        <p class="detail__text-desc">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim repudiandae necessitatibus ab, at amet sed beatae. Sapiente, aspernatur 
-                            perspiciatis cum ducimus quis exercitationem veniam labore libero quibusdam doloribus perferendis? Facere!
-                        </p>
-                    </div>
-                    <div class="detail__btns hide-on-mobile">
-                        <div class="detail__btn-count">
-                            <button type="button" class="detail__btn-count-btn"
-                                onclick="">-</button>
-                            <input type="text" name="quantity" id="qnt" value="0" class="detail__btn-count-input" />
-                            <button type="button" class="detail__btn-count-btn"
-                                onclick="">+</button>
+                <div class="detail__shop">
+                    <div class="detail__shop-left">
+                        <div class="detail__shop-avatar">
+                            <img src="./assets/img/am_sieu_toc_1.jpg" class="detail__shop-avatar-img" alt="">
+                            <span class="detail__shop-avatar-favorite">Yêu thích</span>
                         </div>
-                        <button type="button" class="detail__btn-add"> Thêm vào giỏ 
-                            <i class="fas fa-shopping-cart detail__cart-icon"></i>
-                        </button>
-                        <button type="button" class="btn btn--primary detail__btn-buy-now">Mua ngay</button>
-                    </div>
-                    <div class="detail__mobile-btns"> 
-                        <div class="detail__mobile-btn-add" onclick="showBottomSheet()"> Thêm vào giỏ 
-                            <i class="fas fa-shopping-cart detail__cart-icon"></i>
-                        </div>
-                        <div class="detail__mobile-btn-buy-now">Mua ngay</div>
-                    </div>
-                    <div class="detail__mobile-bottom-sheet-modal">
-                        <div class="detail__mobile-bottom-sheet-overlay"></div>
-                        <div class="detail__mobile-bottom-sheet">
-                            <div class="detail__mobile-bottom-sheet-info">
-                                <div class="detail__mobile-bottom-sheet-info-img" style="background-image: url(./assets/img/am_sieu_toc_1.jpg);"></div>
-                                <div class="detail__mobile-bottom-sheet-info-desc">
-                                    <div class="detail__mobile-bottom-sheet-info-price">114.000đ - 225.000đ</div>
-                                    <div class="detail__mobile-bottom-sheet-info-warehouse">Kho: 12345</div>
+                        <div class="detail__shop-info">
+                            <div class="detail__shop-info-name">VietMark</div>
+                            <div class="detail__shop-info-active">Online 33 phút trước</div>
+                            <div class="detail__shop-info-direction hide-on-destop">
+                                <i class="uil uil-map-marker detail__shop-info-direction-icon"></i>
+                                <span>Hà Nội</span>
+                            </div>
+                            <div class="detail__shop-info-btns hide-on-mobile">
+                                <div class="detail__shop-info-btn-chat">
+                                    <i class="uil uil-comment-alt detail__shop-info-btn-chat-icon"></i>
+                                    <span>Chat ngay</span>
+                                </div>
+                                <div class="detail__shop-info-btn-view">
+                                    <i class="uil uil-store-alt detail__shop-info-btn-view-icon"></i>
+                                    <span>Chat ngay</span>
                                 </div>
                             </div>
-                            <div class="detail__mobile-bottom-sheet-close" onclick="closeBottomSheet()">
-                                <i class="uil uil-times detail__mobile-bottom-sheet-close-icon"></i>
+                        </div>
+                        <div class="detail__shop-info-btn-view-mobile hide-on-destop">
+                            <div class="detail__shop-info-btn-view">
+                                <span>Xem Shop</span>
                             </div>
-                            <div class="detail__mobile-bottom-sheet-type">
-                                <div class="detail__mobile-bottom-sheet-type-title">Loại</div>
-                                <div class="detail__mobile-bottom-sheet-type-list">
-                                    <div class="detail__mobile-bottom-sheet-type-item active">
-                                        <div class="detail__mobile-bottom-sheet-type-item-img" style="background-image: url(./assets/img/am_sieu_toc_1.jpg);"></div>
-                                        <div class="detail__mobile-bottom-sheet-type-item-name">Socany 3 cấp độ</div>
-                                    </div>
-                                    <div class="detail__mobile-bottom-sheet-type-item">
-                                        <div class="detail__mobile-bottom-sheet-type-item-img" style="background-image: url(./assets/img/am_sieu_toc_1.jpg);"></div>
-                                        <div class="detail__mobile-bottom-sheet-type-item-name">Socany 3 cấp độ</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="detail__mobile-bottom-sheet-quantity">
-                                <div class="detail__mobile-bottom-sheet-quantity-title">Số lượng</div>
-                                <div class="detail__mobile-bottom-sheet-quantity-btns">
-                                    <div class="detail__mobile-bottom-sheet-quantity-btn-plus">+</div>
-                                    <input type="text" class="detail__mobile-bottom-sheet-quantity-input" value="1">
-                                    <div class="detail__mobile-bottom-sheet-quantity-btn-less">-</div>
-                                </div>
-                            </div>
-                            <div class="detail__mobile-bottom-sheet-add-to-cart">Thêm vào giỏ hàng</div>
                         </div>
                     </div>
-                    <div class="detail__number">
-                        <div class="detail__social">
-                            <p class="detail__social-title">Chia sẻ: </p>
-                            <a class="detail__social-link" href="#">
-                                <i class="fab fa-facebook-f"></i>
-                            </a>
-                            <a class="detail__social-link" href="#">
-                                <i class="fab fa-twitter"></i>
-                            </a>
-                            <a class="detail__social-link" href="#">
-                                <i class="fab fa-instagram"></i>
-                            </a>
-                            <a class="detail__social-link" href="#">
-                                <i class="fab fa-whatsapp"></i>
-                            </a>
-                            <a class="detail__social-link" href="#">
-                                <i class="fab fa-pinterest"></i>
-                            </a>
+                    <div class="detail__shop-right">
+                        <div class="detail__shop-item">
+                            <div class="detail__shop-item-name">Đánh giá</div>
+                            <div class="detail__shop-item-numb">25,9k</div>
                         </div>
-                        <div class="detail__favorite" title="Yêu thích">
-                            <i class="uil uil-heart-alt detail__favorite-icon"></i>
+                        <div class="detail__shop-item">
+                            <div class="detail__shop-item-name">Tỉ lệ phản hồi</div>
+                            <div class="detail__shop-item-numb">99%</div>
                         </div>
-                    </div>
-                    <div class="detail__right-loading">
-                        <div class="detail__right-loading-product-name"></div>
-                        <div class="detail__right-loading-product-price"></div>
-                        <div class="detail__right-loading-product-desc">
-                            <div class="detail__right-loading-product-desc-title"></div>
-                            <div class="detail__right-loading-product-desc-text"></div>
+                        <div class="detail__shop-item">
+                            <div class="detail__shop-item-name hide-on-mobile">Tham gia</div>
+                            <div class="detail__shop-item-numb hide-on-mobile">5 năm trước</div>
                         </div>
-                        <div class="detail__right-loading-product-qnt"></div>
-                        <div class="detail__right-loading-product-btns">
-                            <div class="detail__right-loading-product-btn"></div>
-                            <div class="detail__right-loading-product-btn"></div>
+                        <div class="detail__shop-item">
+                            <div class="detail__shop-item-name">Sản phẩm</div>
+                            <div class="detail__shop-item-numb">142</div>
                         </div>
-                        <div class="detail__right-loading-product-share">
-                            <div class="detail__right-loading-product-share-title"></div>
-                            <div class="detail__right-loading-product-share-box"></div>
-                            <div class="detail__right-loading-product-share-box"></div>
-                            <div class="detail__right-loading-product-share-box"></div>
-                            <div class="detail__right-loading-product-share-box"></div>
-                            <div class="detail__right-loading-product-share-box"></div>
+                        <div class="detail__shop-item">
+                            <div class="detail__shop-item-name hide-on-mobile">Thời gian phản hồi</div>
+                            <div class="detail__shop-item-numb hide-on-mobile">trong vài giờ</div>
+                        </div>
+                        <div class="detail__shop-item">
+                            <div class="detail__shop-item-name hide-on-mobile">Người theo dõi</div>
+                            <div class="detail__shop-item-numb hide-on-mobile">2,6k</div>
                         </div>
                     </div>
                 </div>
