@@ -42,6 +42,10 @@
     align-items: center;
 }
 
+.checkout__address-desc.hide {
+    display: none;
+}
+
 .checkout__address-desc-name,
 .checkout__address-desc-phone {
     font-weight: 700;
@@ -674,27 +678,17 @@
     width: 500px;
     box-shadow: rgba(0, 0, 0, .54) 0px 2px 4px;
     position: relative;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 .address-form__container {
     position: relative;
     font-size: var(--normal-font-size);
     height: 100%;
-    /* display: none; */
 }
 
-.address-form__update {
-    position: absolute;
-    right: -110%;
-    top: 0;
-}
-
-.address-form__new {
-    position: absolute;
-    right: 100%;
-    width: 100%;
-    top: 0;
+.address-form__container.hide {
+    display: none;
 }
 
 .address-form__title {
@@ -839,50 +833,69 @@
 }
 
 /* Address Form Add */
-.address-form__add {
+.address-form__update,
+.address-form__new {
     position: relative;
     padding: 24px;
     font-size: var(--normal-font-size);
 }
 
-.address-form__add-title {
+.address-form__update.hide {
+    display: none;
+}
+
+.address-form__new.hide {
+    display: none;
+}
+
+.address-form__update-title,
+.address-form__new-title {
     font-size: 17px;
 }
 
-.address-form__add-title-sub {
+.address-form__update-title-sub,
+.address-form__new-title-sub {
     font-size: 12px;
     margin-top: 10px;
 }
 
-.address-form__add-body {
+.address-form__update-body,
+.address-form__new-body {
     padding-top: 15px;
     height: 500px;
     overflow-y: auto;
     padding-bottom: 50px;
 }
 
-.address-form__add-body::-webkit-scrollbar {
+.address-form__update-body::-webkit-scrollbar,
+.address-form__new-body::-webkit-scrollbar {
     display: none;
 }
 
-.address-form__add-div {
+.address-form__update-div,
+.address-form__new-div {
     margin: 6px 0 16px 0;
     position: relative;
 }
 
-.address-form__add-box {
+.address-form__update-box,
+.address-form__new-box {
     display: grid;
     grid-template-columns: 1fr 1fr; /* Chia đều 2 been */
     column-gap: 1rem;
 }
 
-.address-form__add-box-left,
-.address-form__add-box-right {
+.address-form__update-box-left,
+.address-form__update-box-right,
+.address-form__new-box-left,
+.address-form__new-box-right {
     position: relative;
 }
 
-.address-form__add-input,
-.address-form__add-textarea {
+.address-form__update-input,
+.address-form__new-input,
+.address-form__update-textarea,
+.address-form__new-textarea {
     background: transparent;
     position: relative;
     z-index: 1;
@@ -901,7 +914,7 @@
     border: 1px solid var(--primary-color);
 }
 
-.address-form__add-input-phone-suggest {
+.address-form__update-input-phone-suggest {
     position: absolute;
     margin-top: 5px;
     width: 100%;
@@ -913,7 +926,7 @@
     display: none;
 }
 
-.address-form__add-input-phone-suggest button {
+.address-form__update-input-phone-suggest button {
     border: 1px solid var(--primary-color);
     padding: 4px 10px;
     background-color: initial;
@@ -924,11 +937,12 @@
     text-transform: capitalize;
 }
 
-.address-form__add-input-update:focus + .address-form__add-input-phone-suggest {
+.address-form__update-input-phone:focus + .address-form__update-input-phone-suggest {
     display: block;
 }
 
-.address-form__add-label {
+.address-form__update-label,
+.address-form__new-label {
     position: absolute;
     left: 1rem;
     top: 1rem;
@@ -951,8 +965,10 @@
     display: none;
 }
 
-.address-form__add-input:focus + .address-form__add-label,
-.address-form__add-textarea:focus + .address-form__add-label {
+.address-form__update-input:focus + .address-form__update-label,
+.address-form__new-input:focus + .address-form__new-label,
+.address-form__new-textarea:focus + .address-form__new-label,
+.address-form__update-textarea:focus + .address-form__update-label {
     top: -.6rem;
     left: .8rem;
     font-size: 12px;
@@ -962,15 +978,21 @@
     z-index: 10; 
 }
 
-.address-form__add-input:focus {
+.address-form__update-input:focus {
     border: 1px solid #999;
 }
 
-.address-form__add-textarea {
+.address-form__new-input:focus {
+    border: 1px solid #999;
+}
+
+.address-form__update-textarea,
+.address-form__new-textarea {
     resize: none; 
 }
 
-.address-form__add-div-icon {
+.address-form__update-div-icon,
+.address-form__new-div-icon {
     font-size: 20px;
     position: absolute;
     right: 1rem;
@@ -980,152 +1002,180 @@
     cursor: pointer;
 }
 
+.address-form__update-choose {
+    display: none;
+}
+
 .address-form__new-choose {
     display: none;
+}
+
+.address-form__update-choose.show {
+    display: block;
 }
 
 .address-form__new-choose.show {
     display: block;
 }
 
-.address-form__add-detail {
+.address-form__update-choose-detail,
+.address-form__new-choose-detail {
     position: absolute;
     width: 100%;
     height: 250px;
     margin-top: 5px;
     background-color: var(--white-color);
     box-shadow: rgba(0, 0, 0, .54) 0px 2px 4px;
-    overflow: hidden;
     z-index: 2;
 }
 
-.address-form__add-detail-header {
+.address-form__update-choose-detail-header,
+.address-form__new-choose-detail-header {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr; 
     align-items: center;
     border-bottom: 1px solid var(--border-color);
 }
 
-.address-form__add-detail-title {
+.address-form__update-choose-detail-title,
+.address-form__new-choose-detail-title {
     padding: 16px 24px;
     text-align: center;
     cursor: pointer;
 }
 
-.address-form__new-choose-title.active {
+.address-form__update-choose-detail-title.active,
+.address-form__new-choose-detail-title.active {
     color: var(--primary-color);
     border-bottom: 2px solid var(--primary-color);
 }
 
-.address-form__add-detail-body {
+.address-form__update-choose-detail-body,
+.address-form__new-choose-detail-body {
     width: 100%;
     height: 100%;
     display: grid;
     position: absolute;
 }
 
-.address-form__add-detail-city-list,
-.address-form__add-detail-district-list,
-.address-form__add-detail-street-list {
+.address-form__update-choose-detail-city-list,
+.address-form__update-choose-detail-district-list,
+.address-form__update-choose-detail-street-list,
+.address-form__new-choose-detail-city-list,
+.address-form__new-choose-detail-district-list,
+.address-form__new-choose-detail-street-list {
     position: relative;
     list-style: none;
     max-height: 170px;
     overflow-y: auto;
 }
 
-.address-form__add-detail-city {
-    padding: 4px 12px 12px 0px;
-    position: absolute;
-    width: 100%;
+.address-form__new-choose-detail-city.hide,
+.address-form__new-choose-detail-district.hide,
+.address-form__new-choose-detail-street.hide,
+.address-form__update-choose-detail-city.hide,
+.address-form__update-choose-detail-district.hide,
+.address-form__update-choose-detail-street.hide {
+    display: none;
 }
 
-.address-form__add-detail-district {
-    position: absolute;
-    padding: 4px 12px 12px 0px;
-    right: -100%;
-    width: 100%;
-}
-
-.address-form__add-detail-street {
-    position: absolute;
-    padding: 4px 12px 12px 0px;
-    right: -200%;
-    width: 100%;
-}
-
-.address-form__add-detail-city-item:hover,
+.address-form__update-choose-detail-city-item:hover,
+.address-form__update-choose-detail-district-item:hover,
+.address-form__update-choose-detail-street-item:hover,
+.address-form__new-choose-detail-city-item:hover,
 .address-form__add-detail-district-item:hover,
 .address-form__add-detail-street-item:hover {
     background-color: #f7f7f7;
 }
 
-.address-form__add-detail-city-list::-webkit-scrollbar,
-.address-form__add-detail-district-list::-webkit-scrollbar,
-.address-form__add-detail-street-list::-webkit-scrollbar {
+.address-form__update-choose-detail-city-list::-webkit-scrollbar,
+.address-form__update-choose-detail-district-list::-webkit-scrollbar,
+.address-form__update-choose-detail-street-list::-webkit-scrollbar,
+.address-form__new-choose-detail-city-list::-webkit-scrollbar,
+.address-form__new-choose-detail-district-list::-webkit-scrollbar,
+.address-form__new-choose-detail-street-list::-webkit-scrollbar {
     width: 7px;
 }
 
-.address-form__add-detail-city-list::-webkit-scrollbar-track,
-.address-form__add-detail-district-list::-webkit-scrollbar-track,
-.address-form__add-detail-street-list::-webkit-scrollbar-track {
+.address-form__update-choose-detail-city-list::-webkit-scrollbar-track,
+.address-form__update-choose-detail-district-list::-webkit-scrollbar-track,
+.address-form__update-choose-detail-street-list::-webkit-scrollbar-track,
+.address-form__new-choose-detail-city-list::-webkit-scrollbar-track,
+.address-form__new-choose-detail-district-list::-webkit-scrollbar-track,
+.address-form__new-choose-detail-street-list::-webkit-scrollbar-track {
     border-radius: 2px;
     background: var(--border-color);
 }
 
-.address-form__add-detail-city-list::-webkit-scrollbar-thumb,
-.address-form__add-detail-district-list::-webkit-scrollbar-thumb,
-.address-form__add-detail-street-list::-webkit-scrollbar-thumb {
+.address-form__update-choose-detail-city-list::-webkit-scrollbar-thumb,
+.address-form__update-choose-detail-district-list::-webkit-scrollbar-thumb,
+.address-form__update-choose-detail-street-list::-webkit-scrollbar-thumb,
+.address-form__new-choose-detail-city-list::-webkit-scrollbar-thumb,
+.address-form__new-choose-detail-district-list::-webkit-scrollbar-thumb,
+.address-form__new-choose-detail-street-list::-webkit-scrollbar-thumb {
     border-radius: 2px;
     background: #999;
 }
 
-.address-form__add-detail-city-item,
-.address-form__add-detail-district-item,
-.address-form__add-detail-street-item {
+.address-form__update-choose-detail-city-item,
+.address-form__update-choose-detail-district-item,
+.address-form__update-choose-detail-street-item,
+.address-form__new-choose-detail-city-item,
+.address-form__new-choose-detail-district-item,
+.address-form__new-choose-detail-street-item {
     padding: 10px 12px;
     cursor: pointer;
 }
 
-.address-form__add-please {
+.address-form__update-please,
+.address-form__new-please {
     display: flex;
     column-gap: 8px;
     padding: 12px;
     background-color: #fff8e4;
 }
 
-.address-form__add-please-icon {
+.address-form__update-please-icon,
+.address-form__new-please-icon {
     font-size: 16px;
     color: #f69113;
 }
 
-.address-form__add-please-desc {
+.address-form__update-please-desc,
+.address-form__new-please-desc {
     line-height: 1.5;
 }
 
-.address-form__add-please-desc-title {
+.address-form__update-please-desc-title,
+.address-form__new-please-desc-title {
     font-size: 14px;
     color: #f69113;
 }
 
-.address-form__add-please-desc-subtitle {
+.address-form__update-please-desc-subtitle,
+.address-form__new-please-desc-subtitle {
     font-size: 12px;
     color: rgba(0, 0, 0, .64);
 }
 
-.address-form__add-type {
+.address-form__update-type,
+.address-form__new-type {
     margin: 10px 0 20px 0;
 }
 
-.address-form__add-type-title {
+.address-form__update-type-title,
+.address-form__new-type-title {
     margin-bottom: 8px;
 }
 
-.address-form__add-type-btns {
+.address-form__update-type-btns,
+.address-form__new-type-btns {
     display: flex;
     column-gap: 10px;
 }
 
-.address-form__add-type-btn {
+.address-form__update-type-btn,
+.address-form__new-type-btn {
     border: 1px solid rgba(0, 0, 0, .09);
     padding: 0 12px;
     height: 40px;
@@ -1133,7 +1183,8 @@
     border-radius: 2px;
 }
 
-.address-form__add-set-default {
+.address-form__update-set-default,
+.address-form__new-set-default {
     display: flex;
     column-gap: 8px;
     align-items: center;
@@ -1141,14 +1192,16 @@
     color: rgba(0, 0, 0, .54);
 }
 
-.address-form__add-set-default-input {
+.address-form__update-set-default-input,
+.address-form__new-set-default-input {
     height: 16px;
     width: 16px;
     color: var(--primary-color);
     background: var(--primary-color);
 }
 
-.address-form__add-footer {
+.address-form__update-footer,
+.address-form__new-footer {
     bottom: 0;
     right: 24px;
     left: 24px;

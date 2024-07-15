@@ -111,6 +111,7 @@ function addEvent() {
         if (fullNameNewAddressValidate() && phoneNewAddressValidate() && chooseNewAddressValidate() && descNewAddressValidate()) {
             setCookie("userID", 1, 30);
             closeAddressModal();
+            document.querySelector(".checkout__address-desc").classList.remove("hide");
             toast({title: "Thông báo", msg: `Thêm địa chỉ thành công`, type: "success", duration: 5000}); 
         };
     });

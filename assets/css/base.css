@@ -55,9 +55,9 @@ input, textarea, button {
     right: 0;
     bottom: 0;
     left: 0;
-    /* display: flex;  */
+    display: flex; 
     animation: fadeIn linear 0.1s;
-    display: none;
+    /* display: none; */
     z-index: 10;
 }
 

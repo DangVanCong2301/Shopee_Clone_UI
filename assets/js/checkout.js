@@ -1,8 +1,8 @@
 const modal = document.querySelector(".modal");
-const addressNewChooseTitle = document.querySelectorAll(".address-form__new-choose-title");
-const addressNewChooseCityList = document.querySelector(".address-form__new-choose-city");
-const addressNewChooseDistrictList = document.querySelector(".address-form__new-choose-district");
-const addressNewChooseStreetList = document.querySelector(".address-form__new-choose-street");
+const addressNewChooseTitle = document.querySelectorAll(".address-form__new-choose-detail-title");
+const addressNewChooseCityList = document.querySelector(".address-form__new-choose-detail-city");
+const addressNewChooseDistrictList = document.querySelector(".address-form__new-choose-detail-district");
+const addressNewChooseStreetList = document.querySelector(".address-form__new-choose-detail-street");
 
 const mainForm = document.querySelector(".address-form__container");
 const updateAddressForm = document.querySelector(".address-form__update");
@@ -43,6 +43,12 @@ let districts = [
         FK_iCityID: 2,
         sDistrictName: "Hải Hậu",
         sCityName: "Nam Định"
+    },
+    {
+        PK_iDistrictID: 5,
+        FK_iCityID: 2,
+        sDistrictName: "Xuân Trường",
+        sCityName: "Nam Định"
     }
 ]
 
@@ -67,11 +73,19 @@ let streets = [
         sStreetName: "Lê Thanh Nghị",
         sDistrictName: "Hai Bà Trưng",
         sCityName: "Hà Nội"
+    },
+    {
+        PK_iStreetID: 4,
+        FK_iDistrictID: 5,
+        sStreetName: "Xóm 7",
+        sDistrictName: "Xuân Trường",
+        sCityName: "Nam Định"
     }
 ]
 
 function getAPICheckout() {
-    if (getCookies("userID") == "") {
+    if (getCookies("userID") == null) {
+        document.querySelector(".checkout__address-desc").classList.add("hide");
         modal.classList.add('open');
         openNewAddressForm();
     }
@@ -83,11 +97,11 @@ getAPICheckout();
 function setDataAddressNewChoose() {
     let htmlCities = "";
     for (let i = 0 ; i < cities.length; i++) {
-        htmlCities += " <li class='address-form__add-detail-city-item' onclick='chooseCityNew(" + cities[i].PK_iCityID + ")'>";
+        htmlCities += " <li class='address-form__new-choose-detail-city-item' onclick='chooseCityNew(" + cities[i].PK_iCityID + ")'>";
         htmlCities += "" + cities[i].sCityName + "";
         htmlCities += " </li>";
     }
-    document.querySelector(".address-form__new-choose-city-list").innerHTML = htmlCities;
+    document.querySelector(".address-form__new-choose-detail-city-list").innerHTML = htmlCities;
 }
 
 function chooseCityNew(PK_iCityID) {
@@ -101,13 +115,13 @@ function chooseCityNew(PK_iCityID) {
             addAddressNewChooseDistrictList();
             htmlDistricts +=
                 `
-                    <li class="address-form__add-detail-district-item" onclick="chooseDistrictNew(${districts[i].PK_iDistrictID})">
+                    <li class="address-form__new-choose-detail-district-item" onclick="chooseDistrictNew(${districts[i].PK_iDistrictID})">
                         ${districts[i].sDistrictName}
                     </li>
                 `;
         }
     }
-    document.querySelector(".address-form__new-choose-district-list").innerHTML = htmlDistricts;
+    document.querySelector(".address-form__new-choose-detail-district-list").innerHTML = htmlDistricts;
     document.querySelector(".address-form__new-label-choose").style.display = 'none';
     document.querySelector(".address-form__new-input-choose").value = city.sCityName;
 }
@@ -123,13 +137,13 @@ function chooseDistrictNew(PK_iDistrictID) {
             addAddressNewChooseStreetList();
             htmlStreets += 
             `
-                <li class="address-form__add-detail-street-item" onclick="chooseStreetNew(${streets[i].PK_iStreetID})">
+                <li class="address-form__new-choose-detail-street-item" onclick="chooseStreetNew(${streets[i].PK_iStreetID})">
                     ${streets[i].sStreetName}
                 </li>
             `;
         }
     }
-    document.querySelector(".address-form__new-choose-street-list").innerHTML = htmlStreets;
+    document.querySelector(".address-form__new-choose-detail-street-list").innerHTML = htmlStreets;
     document.querySelector(".address-form__new-input-choose").value = district.sCityName + ", " + district.sDistrictName;
     changeTitleAddressNewChoose();
 }
@@ -138,7 +152,8 @@ function chooseStreetNew(PK_iStreetID) {
     var street = streets.find((obj) => {
         return obj.PK_iStreetID === PK_iStreetID;
     });
-    document.querySelector(".address-form__new-input-choose").value = street.sCityName + ", " + street.sDistrictName + ", " + street.sStreetName;
+    document.querySelector(".address-form__new-choose").classList.remove("show");
+    document.querySelector(".address-form__new-input-choose").value = "Phố " + street.sStreetName + ", Quận " + street.sDistrictName + ", " + street.sCityName ;
 }
 
 function changeTitleAddressNewChoose() {
@@ -178,18 +193,18 @@ function addAddressNewChooseDistrictList() {
     addressNewChooseTitle[1].classList.add("active");
     addressNewChooseTitle[0].classList.remove("active");
     addressNewChooseTitle[2].classList.remove("active");
-    addressNewChooseCityList.style.right = '100%';
-    addressNewChooseStreetList.style.right = '-200%';
-    addressNewChooseDistrictList.style.right = '0';
+    addressNewChooseCityList.classList.add("hide");
+    addressNewChooseDistrictList.classList.remove("hide");
+    addressNewChooseStreetList.classList.add("hide")
 }
 
 function addAddressNewChooseStreetList() {
     addressNewChooseTitle[2].classList.add("active");
     addressNewChooseTitle[0].classList.remove("active");
     addressNewChooseTitle[1].classList.remove("active");
-    addressNewChooseCityList.style.right = '100%';
-    addressNewChooseDistrictList.style.right = '-100%';
-    addressNewChooseStreetList.style.right = '0';
+    addressNewChooseCityList.classList.add("hide");
+    addressNewChooseDistrictList.classList.add("hide");
+    addressNewChooseStreetList.classList.remove("hide");
 }
 
 function showAddressNewChoose() {
