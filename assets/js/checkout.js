@@ -1,4 +1,10 @@
 const modal = document.querySelector(".modal");
+
+const addressUpdateChooseTitle = document.querySelectorAll(".address-form__update-choose-detail-title");
+const addressUpdateChooseCityList = document.querySelector(".address-form__update-choose-detail-city");
+const addressUpdateChooseDistrictList = document.querySelector(".address-form__update-choose-detail-district");
+const addressUpdateChooseStreetList = document.querySelector(".address-form__update-choose-detail-street");
+
 const addressNewChooseTitle = document.querySelectorAll(".address-form__new-choose-detail-title");
 const addressNewChooseCityList = document.querySelector(".address-form__new-choose-detail-city");
 const addressNewChooseDistrictList = document.querySelector(".address-form__new-choose-detail-district");
@@ -6,7 +12,7 @@ const addressNewChooseStreetList = document.querySelector(".address-form__new-ch
 
 const mainForm = document.querySelector(".address-form__container");
 const updateAddressForm = document.querySelector(".address-form__update");
-const addAddressForm = document.querySelector(".address-form__new");
+const newAddressForm = document.querySelector(".address-form__new");
 
 let cities = [
     {
@@ -23,31 +29,31 @@ let districts = [
     {
         PK_iDistrictID: 1,
         FK_iCityID: 1,
-        sDistrictName: "Hoàng Mai",
+        sDistrictName: "Quận Hoàng Mai",
         sCityName: "Hà Nội"
     },
     {
         PK_iDistrictID: 2,
         FK_iCityID: 1,
-        sDistrictName: "Thanh Xuân",
+        sDistrictName: "Quận Thanh Xuân",
         sCityName: "Hà Nội"
     },
     {
         PK_iDistrictID: 3,
         FK_iCityID: 1,
-        sDistrictName: "Hai Bà Trưng",
+        sDistrictName: "Quận Hai Bà Trưng",
         sCityName: "Hà Nội"
     },
     {
         PK_iDistrictID: 4,
         FK_iCityID: 2,
-        sDistrictName: "Hải Hậu",
+        sDistrictName: "Huyện Hải Hậu",
         sCityName: "Nam Định"
     },
     {
         PK_iDistrictID: 5,
         FK_iCityID: 2,
-        sDistrictName: "Xuân Trường",
+        sDistrictName: "Huyện Xuân Trường",
         sCityName: "Nam Định"
     }
 ]
@@ -56,29 +62,29 @@ let streets = [
     {
         PK_iStreetID: 1,
         FK_iDistrictID: 1,
-        sStreetName: "Định Công",
-        sDistrictName: "Hoàng Mai",
+        sStreetName: "Phố Định Công",
+        sDistrictName: "Quận Hoàng Mai",
         sCityName: "Hà Nội"
     },
     {
         PK_iStreetID: 2,
         FK_iDistrictID: 1,
-        sStreetName: "Trần Nguyên Đán",
-        sDistrictName: "Hoàng Mai",
+        sStreetName: "Phố Trần Nguyên Đán",
+        sDistrictName: "Quận Hoàng Mai",
         sCityName: "Hà Nội"
     },
     {
         PK_iStreetID: 3,
         FK_iDistrictID: 3,
-        sStreetName: "Lê Thanh Nghị",
-        sDistrictName: "Hai Bà Trưng",
+        sStreetName: "Phố Lê Thanh Nghị",
+        sDistrictName: "Quận Hai Bà Trưng",
         sCityName: "Hà Nội"
     },
     {
         PK_iStreetID: 4,
         FK_iDistrictID: 5,
-        sStreetName: "Xóm 7",
-        sDistrictName: "Xuân Trường",
+        sStreetName: "Xã Xuân Phú",
+        sDistrictName: "Huyện Xuân Trường",
         sCityName: "Nam Định"
     }
 ]
@@ -90,9 +96,21 @@ function getAPICheckout() {
         openNewAddressForm();
     }
 
+    setDataAddressUpdateChoose();
+
     setDataAddressNewChoose();
 }
 getAPICheckout();
+
+function setDataAddressUpdateChoose() {
+    let htmlCities = "";
+    for (let i = 0 ; i < cities.length; i++) {
+        htmlCities += " <li class='address-form__update-choose-detail-city-item' onclick='chooseCityUpdate(" + cities[i].PK_iCityID + ")'>";
+        htmlCities += "" + cities[i].sCityName + "";
+        htmlCities += " </li>";
+    }
+    document.querySelector(".address-form__update-choose-detail-city-list").innerHTML = htmlCities;
+}
 
 function setDataAddressNewChoose() {
     let htmlCities = "";
@@ -102,6 +120,28 @@ function setDataAddressNewChoose() {
         htmlCities += " </li>";
     }
     document.querySelector(".address-form__new-choose-detail-city-list").innerHTML = htmlCities;
+}
+
+function chooseCityUpdate(PK_iCityID) {
+    var city = cities.find((obj) => {
+        return obj.PK_iCityID === PK_iCityID;
+    });
+
+    let htmlDistricts = "";
+    for (let i = 0; i < districts.length; i++) {
+        if (districts[i].FK_iCityID == PK_iCityID) {
+            addAddressUpdateChooseDistrictList();
+            htmlDistricts +=
+                `
+                    <li class="address-form__new-choose-detail-district-item" onclick="chooseDistrictUpdate(${districts[i].PK_iDistrictID})">
+                        ${districts[i].sDistrictName}
+                    </li>
+                `;
+        }
+    }
+    document.querySelector(".address-form__update-choose-detail-district-list").innerHTML = htmlDistricts;
+    document.querySelector(".address-form__update-label-choose").style.display = 'none';
+    document.querySelector(".address-form__update-input-choose").value = city.sCityName;
 }
 
 function chooseCityNew(PK_iCityID) {
@@ -126,6 +166,28 @@ function chooseCityNew(PK_iCityID) {
     document.querySelector(".address-form__new-input-choose").value = city.sCityName;
 }
 
+function chooseDistrictUpdate(PK_iDistrictID) {
+    var district = districts.find((obj) => {
+        return obj.PK_iDistrictID === PK_iDistrictID;
+    });
+
+    let htmlStreets = "";
+    for (let i = 0; i < streets.length; i++) {
+        if (streets[i].FK_iDistrictID == PK_iDistrictID) {
+            addAddressUpdateChooseStreetList();
+            htmlStreets += 
+            `
+                <li class="address-form__update-choose-detail-street-item" onclick="chooseStreetUpdate(${streets[i].PK_iStreetID})">
+                    ${streets[i].sStreetName}
+                </li>
+            `;
+        }
+    }
+    document.querySelector(".address-form__update-choose-detail-street-list").innerHTML = htmlStreets;
+    document.querySelector(".address-form__update-input-choose").value = district.sCityName + ", " + district.sDistrictName;
+    changeTitleAddressUpdateChoose();
+}
+
 function chooseDistrictNew(PK_iDistrictID) {
     var district = districts.find((obj) => {
         return obj.PK_iDistrictID === PK_iDistrictID;
@@ -148,12 +210,36 @@ function chooseDistrictNew(PK_iDistrictID) {
     changeTitleAddressNewChoose();
 }
 
+function chooseStreetUpdate(PK_iStreetID) {
+    var street = streets.find((obj) => {
+        return obj.PK_iStreetID === PK_iStreetID;
+    });
+    document.querySelector(".address-form__update-choose").classList.remove("show");
+    document.querySelector(".address-form__update-input-choose").value = street.sStreetName + ", " + street.sDistrictName + ", " + street.sCityName ;
+}
+
 function chooseStreetNew(PK_iStreetID) {
     var street = streets.find((obj) => {
         return obj.PK_iStreetID === PK_iStreetID;
     });
     document.querySelector(".address-form__new-choose").classList.remove("show");
-    document.querySelector(".address-form__new-input-choose").value = "Phố " + street.sStreetName + ", Quận " + street.sDistrictName + ", " + street.sCityName ;
+    document.querySelector(".address-form__new-input-choose").value = street.sStreetName + ", " + street.sDistrictName + ", " + street.sCityName ;
+}
+
+function changeTitleAddressUpdateChoose() {
+    for (let i = 0; i < addressUpdateChooseTitle.length; i++) {
+        addressUpdateChooseTitle[i].addEventListener('click', () => {
+            if (i == 0) {
+                addAddressUpdateChooseCityList();
+            } else if (i == 1) {
+                addAddressUpdateChooseDistrictList();
+            } else if (i == 2) {
+                addAddressUpdateChooseStreetList()
+            } else {
+                addAddressUpdateChooseCityList();
+            }
+        })
+    }
 }
 
 function changeTitleAddressNewChoose() {
@@ -180,13 +266,31 @@ function closeAddressModal() {
     modal.classList.remove('open')
 }
 
+function addAddressUpdateChooseCityList() {
+    addressUpdateChooseTitle[0].classList.add("active");
+    addressUpdateChooseTitle[1].classList.remove("active");
+    addressUpdateChooseTitle[2].classList.remove("active");
+    addressUpdateChooseCityList.classList.remove("hide");
+    addressUpdateChooseDistrictList.classList.add("hide");
+    addressUpdateChooseStreetList.classList.add("hide");
+}
+
 function addAddressNewChooseCityList() {
     addressNewChooseTitle[0].classList.add("active");
     addressNewChooseTitle[1].classList.remove("active");
     addressNewChooseTitle[2].classList.remove("active");
-    addressNewChooseCityList.style.right = '0';
-    addressNewChooseDistrictList.style.right = '-100%';
-    addressNewChooseStreetList.style.right = "-200%";
+    addressNewChooseCityList.classList.remove("hide");
+    addressNewChooseDistrictList.classList.add("hide");
+    addressNewChooseStreetList.classList.add("hide");
+}
+
+function addAddressUpdateChooseDistrictList() {
+    addressUpdateChooseTitle[1].classList.add("active");
+    addressUpdateChooseTitle[0].classList.remove("active");
+    addressUpdateChooseTitle[2].classList.remove("active");
+    addressUpdateChooseCityList.classList.add("hide");
+    addressUpdateChooseDistrictList.classList.remove("hide");
+    addressUpdateChooseStreetList.classList.add("hide")
 }
 
 function addAddressNewChooseDistrictList() {
@@ -198,6 +302,15 @@ function addAddressNewChooseDistrictList() {
     addressNewChooseStreetList.classList.add("hide")
 }
 
+function addAddressUpdateChooseStreetList() {
+    addressUpdateChooseTitle[2].classList.add("active");
+    addressUpdateChooseTitle[0].classList.remove("active");
+    addressUpdateChooseTitle[1].classList.remove("active");
+    addressUpdateChooseCityList.classList.add("hide");
+    addressUpdateChooseDistrictList.classList.add("hide");
+    addressUpdateChooseStreetList.classList.remove("hide");
+}
+
 function addAddressNewChooseStreetList() {
     addressNewChooseTitle[2].classList.add("active");
     addressNewChooseTitle[0].classList.remove("active");
@@ -207,25 +320,30 @@ function addAddressNewChooseStreetList() {
     addressNewChooseStreetList.classList.remove("hide");
 }
 
+function showAddressUpdateChoose() {
+    document.querySelector(".address-form__update-choose").classList.toggle("show");
+}
+
 function showAddressNewChoose() {
     document.querySelector(".address-form__new-choose").classList.toggle("show");
 }
 
 function openUpdate() {
-    mainForm.style.right = "100%";
-    updateAddressForm.style.right = "0";
+    mainForm.classList.add("hide");
+    updateAddressForm.classList.remove("hide");
+    newAddressForm.classList.add("hide");
 }
 
 function backMainForm() {
-    mainForm.style.right = '0';
-    updateAddressForm.style.right = "100%";
-    addAddressForm.style.right = "100%";
+    mainForm.classList.remove("hide");
+    updateAddressForm.classList.add("hide");
+    newAddressForm.classList.add("hide");
 }
 
 function openNewAddressForm() {
-    mainForm.style.right = '100%';
-    updateAddressForm.style.right = '100%';
-    addAddressForm.style.right = '0';
+    mainForm.classList.add("hide");
+    updateAddressForm.classList.add("hide");
+    newAddressForm.classList.remove("hide");
 }
 
 // Set 1 cookie (Nguồn: https://www.tabnine.com/academy/javascript/how-to-set-cookies-javascript/)
