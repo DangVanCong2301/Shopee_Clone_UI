@@ -871,7 +871,7 @@
         </div>
         <div class="modal__body">
             <div class="address-form">
-                <div class="address-form__container hide">
+                <div class="address-form__container">
                     <div class="address-form__title">Địa chỉ của tôi</div>
                     <div class="address-form__body">
                         <ul class="address-form__list">
@@ -943,7 +943,7 @@
                             </div>
                         </div>
                         <div class="address-form__update-div">
-                            <input type="text" class="address-form__update-input" onclick="toggleDetail()">
+                            <input type="text" class="address-form__update-input address-form__update-input-choose" onclick="showAddressUpdateChoose()">
                             <div class="address-form__update-choose">
                                 <div class="address-form__update-choose-detail">
                                     <div class="address-form__update-choose-detail-header">
@@ -954,46 +954,12 @@
                                     <div class="address-form__update-choose-detail-body">
                                         <div class="address-form__update-choose-detail-city">
                                             <ul class="address-form__update-choose-detail-city-list">
-                                                <li class="address-form__update-choose-detail-city-item">
-                                                    Hà Nội
-                                                </li>
-                                                <li class="address-form__update-choose-detail-city-item">
-                                                    Nam Định
-                                                </li>
-                                                <li class="address-form__update-choose-detail-city-item">
-                                                    Hà Nội
-                                                </li>
-                                                <li class="address-form__update-choose-detail-city-item">
-                                                    Nam Định
-                                                </li>
-                                                <li class="address-form__update-choose-detail-city-item">
-                                                    Hà Nội
-                                                </li>
-                                                <li class="address-form__update-choose-detail-city-item">
-                                                    Nam Định
-                                                </li>
+                                                
                                             </ul>
                                         </div>
                                         <div class="address-form__update-choose-detail-district hide">
                                             <ul class="address-form__update-choose-detail-district-list">
-                                                <li class="address-form__update-choose-detail-district-item">
-                                                    Hoàng Mai
-                                                </li>
-                                                <li class="address-form__update-choose-detail-district-item">
-                                                    Hai Bà Trưng
-                                                </li>
-                                                <li class="address-form__update-choose-detail-district-item">
-                                                    Hoàng Mai
-                                                </li>
-                                                <li class="address-form__update-choose-detail-district-item">
-                                                    Hai Bà Trưng
-                                                </li>
-                                                <li class="address-form__update-choose-detail-district-item">
-                                                    Hoàng Mai
-                                                </li>
-                                                <li class="address-form__update-choose-detail-district-item">
-                                                    Hai Bà Trưng
-                                                </li>
+                                                
                                             </ul>
                                         </div>
                                         <div class="address-form__update-choose-detail-street hide">
@@ -1022,7 +988,7 @@
                                 </div>
                             </div>
                             <i class="uil uil-angle-down address-form__update-div-icon"></i>
-                            <label for="" class="address-form__update-label">Tỉnh/Thành phố, Quận/Huyện, Phường/Xã</label>
+                            <label for="" class="address-form__update-label address-form__update-label-choose">Tỉnh/Thành phố, Quận/Huyện, Phường/Xã</label>
                         </div>
                         <div class="address-form__update-div">
                             <textarea name="" id="" class="address-form__update-textarea"></textarea>
@@ -1060,7 +1026,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="address-form__new hide">
+                <div class="address-form__new">
                     <div class="address-form__new-title">
                         Địa chỉ mới
                         <div class="address-form__new-title-sub">Để đặt hàng, vui lòng thêm địa chỉ nhận hàng</div>
@@ -1106,7 +1072,7 @@
                                 </div>
                             </div>
                             <i class="uil uil-angle-down address-form__new-div-icon"></i>
-                            <label for="" class="address-form__add-label address-form__new-label-choose">Tỉnh/Thành phố, Quận/Huyện, Phường/Xã</label>
+                            <label for="" class="address-form__new-label address-form__new-label-choose">Tỉnh/Thành phố, Quận/Huyện, Phường/Xã</label>
                         </div>
                         <div class="address-form__new-div">
                             <textarea name="" id="" class="address-form__new-textarea"></textarea>
