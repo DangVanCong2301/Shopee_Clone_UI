@@ -96,7 +96,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="admin__main-text-muted">24 tiếng trước</div>
+                            <small class="admin__main-text-muted">24 tiếng trước</small>
                         </div>
                         <!-- End Of Sales -->
                         <div class="admin__main-expenses">
@@ -117,7 +117,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="admin__main-text-muted">24 tiếng trước</div>
+                            <small class="admin__main-text-muted">24 tiếng trước</small>
                         </div>
                         <!-- End Of Expenses -->
                         <div class="admin__main-income">
@@ -138,7 +138,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="admin__main-text-muted">24 tiếng trước</div>
+                            <small class="admin__main-text-muted">24 tiếng trước</small>
                         </div>
                         <!-- End Of Income -->
                     </div>
@@ -146,7 +146,7 @@
                         <div class="admin__main-recent-orders-title">Đơn hàng gần đây</div>
                         <div class="admin__order-header">
                             <ul class="admin__order-header-list">
-                                <li class="admin__order-header-item admin__order-header-item--active">
+                                <li class="admin__order-header-item active">
                                     Tất cả
                                 </li>
                                 <li class="admin__order-header-item">
@@ -172,8 +172,8 @@
                         <table class="admin__order-table">
                             <thead class="admin__order-table-header">
                                 <tr class="admin__order-table-header-row">
-                                    <th class="admin__order-table-header-col">Tên sản phẩm</th>
-                                    <th class="admin__order-table-header-col">Số lượng</th>
+                                    <th class="admin__order-table-header-col">Mã đơn hàng</th>
+                                    <th class="admin__order-table-header-col">Sản phẩm</th>
                                     <th class="admin__order-table-header-col">Thanh toán</th>
                                     <th class="admin__order-table-header-col">Trạng thái</th>
                                     <th class="admin__order-table-header-col"></th>
@@ -181,7 +181,7 @@
                             </thead>
                             <tbody class="admin__order-table-body">
                                 <tr class="admin__order-table-body-row">
-                                    <td class="admin__order-table-body-col">Tai nghe Bluetooth</td>
+                                    <td class="admin__order-table-body-col">DH123</td>
                                     <td class="admin__order-table-body-col">3</td>
                                     <td class="admin__order-table-body-col">500.000 đ</td>
                                     <td class="admin__order-table-body-col warning">Chờ xác nhận</td>
@@ -190,7 +190,7 @@
                                     </td>
                                 </tr>
                                 <tr class="admin__order-table-body-row">
-                                    <td class="admin__order-table-body-col">Tai nghe Bluetooth</td>
+                                    <td class="admin__order-table-body-col">DH435</td>
                                     <td class="admin__order-table-body-col">3</td>
                                     <td class="admin__order-table-body-col">500.000 đ</td>
                                     <td class="admin__order-table-body-col primary">Đã thanh toán</td>
@@ -199,7 +199,7 @@
                                     </td>
                                 </tr>
                                 <tr class="admin__order-table-body-row">
-                                    <td class="admin__order-table-body-col">Tai nghe Bluetooth</td>
+                                    <td class="admin__order-table-body-col">DH432</td>
                                     <td class="admin__order-table-body-col">3</td>
                                     <td class="admin__order-table-body-col">500.000 đ</td>
                                     <td class="admin__order-table-body-col success">Đã giao hàng</td>
@@ -208,7 +208,7 @@
                                     </td>
                                 </tr>
                                 <tr class="admin__order-table-body-row">
-                                    <td class="admin__order-table-body-col">Tai nghe Bluetooth</td>
+                                    <td class="admin__order-table-body-col">DH987</td>
                                     <td class="admin__order-table-body-col">3</td>
                                     <td class="admin__order-table-body-col">500.000 đ</td>
                                     <td class="admin__order-table-body-col danger">Khách hàng huỷ</td>
@@ -222,10 +222,108 @@
                     </div>
                 </div>
                 <div class="admin__right">
-                    
+                    <div class="admin__right-top">
+                        <button class="admin__right-top-menu-btn">
+                            <i class="uil uil-bars admin__right-top-menu-icon"></i>
+                        </button>
+                        <div class="admin__right-top-theme-toggler" onclick="toggleTheme(this)">
+                            <i class="uil uil-sun admin__right-top-theme-icon active"></i>
+                            <i class="uil uil-moon admin__right-top-theme-icon"></i>
+                        </div>
+                        <div class="admin__right-top-profile">
+                            <div class="admin__right-top-profile-info">
+                                <p class="admin__right-top-profile-info-text">Xin chào, Công Đặng</p>
+                                <small class="admin__right-top-profile-info-name">Admin</small>
+                            </div>
+                            <div class="admin__right-top-profile-photo">
+                                <img src="./assets/img/profile_avatar.jpg" alt="" class="admin__right-top-profile-photo-img">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="admin__right-recent-updates">
+                        <div class="admin__right-recent-updates-title">Cập nhật gần đây</div>
+                        <div class="admin__right-recent-updates-list">
+                            <div class="admin__right-recent-updates-item">
+                                <div class="admin__right-recent-updates-item-profile-photo">
+                                    <img src="./assets/img/profile_avatar.jpg" alt="" class="admin__right-recent-updates-item-profile-photo-img">
+                                </div>
+                                <div class="admin__right-recent-updates-item-message">
+                                    <p class="admin__right-recent-updates-item-message-text"><b class="admin__right-recent-updates-item-message-name">Công Đặng</b> nhận được đơn đặt hàng từ Fithou bằng công nghệ GPS </p>
+                                    <small class="admin__right-recent-updates-item-message-time">2 tiếng trước</small>
+                                </div>
+                            </div>
+                            <div class="admin__right-recent-updates-item">
+                                <div class="admin__right-recent-updates-item-profile-photo">
+                                    <img src="./assets/img/profile_avatar.jpg" alt="" class="admin__right-recent-updates-item-profile-photo-img">
+                                </div>
+                                <div class="admin__right-recent-updates-item-message">
+                                    <p class="admin__right-recent-updates-item-message-text"><b class="admin__right-recent-updates-item-message-name">Công Đặng</b> nhận được đơn đặt hàng từ Fithou bằng công nghệ GPS </p>
+                                    <small class="admin__right-recent-updates-item-message-time">2 tiếng trước</small>
+                                </div>
+                            </div>
+                            <div class="admin__right-recent-updates-item">
+                                <div class="admin__right-recent-updates-item-profile-photo">
+                                    <img src="./assets/img/profile_avatar.jpg" alt="" class="admin__right-recent-updates-item-profile-photo-img">
+                                </div>
+                                <div class="admin__right-recent-updates-item-message">
+                                    <p class="admin__right-recent-updates-item-message-text"><b class="admin__right-recent-updates-item-message-name">Công Đặng</b> nhận được đơn đặt hàng từ Fithou bằng công nghệ GPS </p>
+                                    <small class="admin__right-recent-updates-item-message-time">2 tiếng trước</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="admin__right-sales-analytics">
+                        <div class="admin__right-sales-analytics-title">Phân tích bán hàng</div>
+                        <div class="admin__right-sales-analytics-item online">
+                            <div class="admin__right-sales-analytics-item-icon">
+                                <i class="uil uil-shopping-cart-alt"></i>
+                            </div>
+                            <div class="admin__right-sales-analytics-item-right">
+                                <div class="admin__right-sales-analytics-item-info">
+                                    <div class="admin__right-sales-analytics-item-sub">ĐẶT HÀNG ONLINE</div>
+                                    <small class="admin__right-sales-analytics-item-time">24 tiếng trước</small>
+                                </div>
+                                <div class="admin__right-sales-analytics-item-percent success">+39%</div>
+                                <div class="admin__right-sales-analytics-item-quantity">1300</div>
+                            </div>
+                        </div>
+                        <div class="admin__right-sales-analytics-item offline">
+                            <div class="admin__right-sales-analytics-item-icon">
+                                <i class="uil uil-shopping-bag"></i>
+                            </div>
+                            <div class="admin__right-sales-analytics-item-right">
+                                <div class="admin__right-sales-analytics-item-info">
+                                    <div class="admin__right-sales-analytics-item-sub">ĐẶT HÀNG OFFLINE</div>
+                                    <small class="admin__right-sales-analytics-item-time">24 tiếng trước</small>
+                                </div>
+                                <div class="admin__right-sales-analytics-item-percent danger">-17%</div>
+                                <div class="admin__right-sales-analytics-item-quantity">1300</div>
+                            </div>
+                        </div>
+                        <div class="admin__right-sales-analytics-item customers">
+                            <div class="admin__right-sales-analytics-item-icon">
+                                <i class="uil uil-users-alt"></i>
+                            </div>
+                            <div class="admin__right-sales-analytics-item-right">
+                                <div class="admin__right-sales-analytics-item-info">
+                                    <div class="admin__right-sales-analytics-item-sub">KHÁCH HÀNG MỚI</div>
+                                    <small class="admin__right-sales-analytics-item-time">24 tiếng trước</small>
+                                </div>
+                                <div class="admin__right-sales-analytics-item-percent success">+25%</div>
+                                <div class="admin__right-sales-analytics-item-quantity">1300</div>
+                            </div>
+                        </div>
+                        <div class="admin__right-sales-analytics-item add-product">
+                            <div class="admin__right-sales-analytics-item-add-product">
+                                <i class="uil uil-plus"></i>
+                                <div class="admin__right-sales-analytics-item-add-product-sub">Thêm sản phẩm</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </body>
+<script src="./assets/js/admin.js"></script>
 </html>
