@@ -987,6 +987,14 @@
     border: 1px solid #999;
 }
 
+.address-form__new-textarea:focus {
+    border: 1px solid #999;
+}
+
+.address-form__update-textarea:focus {
+    border: 1px solid #999;
+}
+
 .address-form__update-textarea,
 .address-form__new-textarea {
     resize: none; 
