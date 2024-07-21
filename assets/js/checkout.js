@@ -621,6 +621,76 @@ function openNewAddressForm() {
     addEvent();
 }
 
+// Transport Modal
+function openTransportModal() {
+    document.querySelector(".modal").classList.add("open");
+    document.querySelector(".modal__body").innerHTML = 
+    `
+            <div class="transport-form">
+                <div class="transport-form__header">
+                    <div class="transport-form__header-title">Chọn đơn vị vân chuyển</div>
+                </div>
+                <div class="transport-form__body">
+                    <div class="transport-form__body-header">
+                        <div class="transport-form__body-title">
+                            KÊNH VẬN CHUYỂN LIÊN KẾT VỚI SHOPEE
+                        </div>
+                        <div class="transport-form__header-sub">
+                            Bạn có thể theo dõi đơn hàng trên ứng dụng Shopee khi chọn một trong các đơn vị vận chuyển:
+                        </div>
+                    </div>
+                    <div class="transport-form__body-list">
+                        <div class="transport-form__body-item active">
+                            <div class="transport-form__body-item-left">
+                                <div class="transport-form__body-item-name">
+                                    <div class="transport-form__body-item-type">Nhanh</div>
+                                    <div class="transport-form__body-item-price">16.500 đ</div>
+                                </div>
+                                <div class="transport-form__body-item-time">
+                                    <div class="transport-form__body-item-time-text">
+                                        Nhận hàng vào 22 Tháng 7 - 24 Tháng 7
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="transport-form__body-item-right">
+                                <i class="uil uil-check"></i>
+                            </div>
+                        </div>
+                        <div class="transport-form__body-item">
+                            <div class="transport-form__body-item-left">
+                                <div class="transport-form__body-item-name">
+                                    <div class="transport-form__body-item-type">Hoả tốc</div>
+                                    <div class="transport-form__body-item-price">60.000 đ</div>
+                                </div>
+                                <div class="transport-form__body-item-time">
+                                    <div class="transport-form__body-item-time-sub">
+                                        <i class="uil uil-truck transport-form__body-item-time-sub-icon"></i>
+                                        <span>Nhận hàng vào hôm nay</span>
+                                        <i class="uil uil-question-circle transport-form__body-item-time-sub-icon-ques"></i>
+                                    </div>
+                                    <div class="transport-form__body-item-time-text">
+                                        (Kênh Hoả Tốc không hỗ trợ Shopee Đồng Kiểm)
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="transport-form__body-item-right">
+                                <i class="uil uil-check"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="transport-form__footer">
+                    <div class="transport-form__btn btn" onclick="closeTransportModal()">TRỞ LẠI</div>
+                    <div class="transport-form__btn btn btn--primary">HOÀN THÀNH</div>
+                </div>
+            </div>
+    `;
+}
+
+function closeTransportModal() {
+    document.querySelector(".modal").classList.remove("open");
+}
+
 // Set 1 cookie (Nguồn: https://www.tabnine.com/academy/javascript/how-to-set-cookies-javascript/)
 let userID = 1;
 
