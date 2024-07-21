@@ -36,7 +36,7 @@
 html {
     font-size: var(--normal-font-size);
     line-height: 1.6rem;
-    font-family: 'Roboto',sans-serif;
+    font-family: 'Roboto', sans-serif;
     box-sizing: border-box;
 }
 
@@ -115,7 +115,6 @@ input, textarea, button {
     text-decoration: none;
     border: none;
     border-radius: 2px;
-    font-size:1.5rem;
     padding: 0 ;
     color: var(--text-color);
     cursor: pointer;
@@ -158,12 +157,8 @@ input, textarea, button {
     justify-content: space-between;
 }
 
-.select-input__label {
-    font-size:1.4rem;
-}
-
 .select-input-icon {
-    font-size: 1.4rem;
+    font-size: 16px;
     color: #4a4a4a;
     position: relative;
     top: 1px;
@@ -198,7 +193,6 @@ input, textarea, button {
 }
 
 .select-input__link {
-    font-size:1.4rem;
     text-decoration: none;
     color: var(--text-color);
     display: block;
@@ -789,7 +783,7 @@ input, textarea, button {
 .pagination-item__link {
     display: block; /*Có mới đặt được chiều ngang*/
     text-decoration: none;
-    font-size: 2rem;
+    font-size: 18px;
     color: #939393;
     font-weight: 300;
     min-width: 40px;

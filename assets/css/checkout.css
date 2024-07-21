@@ -669,6 +669,111 @@
     text-align: right;
 }
 
+/* Transport Modal */
+.transport-form {
+    background-color: var(--white-color);
+    border-radius: 3px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, .14);
+    width: 720px;
+    color: var(--text-color);
+}
+
+.transport-form__header-title {
+    font-size: 20px;
+    padding: 30px 30px 0;
+}
+
+.transport-form__body {
+    padding: 12px 30px 0;
+}
+
+.transport-form__body-title {
+    color: #929292;
+}
+
+.transport-form__header-sub {
+    font-size: 12px;
+    margin-top: 3px;
+    color: #bbb;
+}
+
+.transport-form__body-list {
+    margin-top: 12px;
+}
+
+.transport-form__body-item {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    background-color: #fafafa;
+    box-shadow: inset 4px 0 0 rgba(0, 0, 0, .09);
+    margin-bottom: 4px;
+} 
+
+.transport-form__body-item.active {
+    box-shadow: inset 4px 0 0 var(--primary-color);
+}
+
+.transport-form__body-item-left {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    row-gap: 8px;
+}
+
+.transport-form__body-item-name {
+    display: flex;
+    column-gap: 24px;
+}
+
+.transport-form__body-item-price {
+    color: var(--primary-color);
+}
+
+.transport-form__body-item-time-sub {
+    color: #26aa99;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+}
+
+.transport-form__body-item-time-sub-icon {
+    font-size: var(--normal-font-size);
+}
+
+.transport-form__body-item-time-sub span {
+    margin: 0 4px 0 2px;
+}
+
+.transport-form__body-item-time-sub-icon-ques {
+    font-size: var(--normal-font-size);
+    color: #929292;
+}
+
+.transport-form__body-item-time-text {
+    margin-top: 8px;
+    font-size: 12px;
+    color: #929292;
+}
+
+.transport-form__body-item-right {
+    font-size: 20px;
+    color: var(--primary-color);
+    display: none;
+}
+
+.transport-form__body-item.active .transport-form__body-item-right {
+    display: block;
+}
+
+.transport-form__footer {
+    border-top: 1px dashed rgba(0, 0, 0, .09);
+    display: flex;
+    justify-content: flex-end;
+    column-gap: 16px;
+    padding: 20px 0;
+    margin: 0 30px;
+}
 
 /* Address Modal */
 .address-form {
