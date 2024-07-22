@@ -477,7 +477,7 @@ function backMainForm() {
                     <div class="address-form__title">Địa chỉ của tôi</div>
                     <div class="address-form__body">
                         <ul class="address-form__list">
-                            <li class="address-form__item">
+                            <li class="address-form__item default">
                                 <div class="address-form__item-box">
                                     <input type="radio" name="address" class="address-form__item-input">
                                 </div>
