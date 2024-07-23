@@ -250,7 +250,6 @@
     height: 36px;
     border: 1px solid var(--primary-color);
     border-radius: 2px;
-    font-size: 1.5rem;
     padding: 0;
     color: var(--primary-color);
     cursor: pointer;
@@ -339,6 +338,9 @@
     position: absolute;
     bottom: -7px;
     left: 10px;
+    height: 18px;
+    display: flex;
+    align-items: center;
     padding: 3px 4px;
     font-size: 12px;
     background-color: var(--primary-color);
@@ -847,6 +849,23 @@ https://viblo.asia/p/ban-da-biet-flex-grow-va-flex-shrink-hoat-dong-the-nao-chua
         display: flex;
         justify-content: space-between;
         column-gap: 10px;
+    }
+
+    .detail__right-loading {
+        padding: 12px;
+        margin-top: 16px;
+    }
+
+    .detail__right-loading-product-qnt {
+        display: none;
+    }
+
+    .detail__right-loading-product-desc-text {
+        height: 120px;
+    }
+
+    .detail__right-loading-product-btns {
+        display: none;
     }
 }
 
