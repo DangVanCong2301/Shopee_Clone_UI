@@ -3,6 +3,10 @@
     margin: 30px auto 16px;
 }
 
+.detail__product {
+    background-color: var(--white-color);
+}
+
 .detail__left {
     padding: 0 4px;
     position: relative;
@@ -10,7 +14,7 @@
 }
 
 .detail__left-img {
-    border-radius: 15px;
+    border-radius: 4px;
     max-width: 100%;
 }
 
@@ -40,7 +44,7 @@
 
 .detail__right {
     position: relative;
-    padding: 2rem 1rem;
+    padding: 2rem 0;
 }
 
 .detail__right-loading {
@@ -146,6 +150,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-top: 1rem;
 }
 
 .detail__favorite {
@@ -160,7 +165,7 @@
 .detail__price {
     display: flex;
     gap: 1rem;
-    padding: 1rem 0;
+    padding: 1rem 0 26px 0;
     font-size: 20px;
 }
 
@@ -176,6 +181,139 @@
 
 .detail__price-new span {
     color: var(--primary-color);
+}
+
+.detail__policy,
+.detail__transport {
+    display: flex;
+    margin-bottom: 26px;
+}
+
+.detail__policy-title,
+.detail__transport-title {
+    width: 140px;
+    color: #757575;
+}
+
+.detail__policy-desc {
+    display: flex;
+    column-gap: 12px;
+    align-items: center;
+}
+
+.detail__policy-desc-time-icon {
+    font-size: 16px;
+    color: var(--primary-color);
+    font-size: 16px;
+}
+
+.detail__policy-desc-change {
+    color: rgba(0, 0, 0, 0.54);
+    display: flex;
+    align-items: center;
+}
+
+.detail__policy-desc-change-ques {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin-left: 10px;
+}
+
+.detail__policy-desc-change-ques-icon {
+    font-size: 16px;
+}
+
+.detail__policy-desc-change-more {
+    position: absolute;
+    top: 28px;
+    width: 450px;
+    background-color: var(--white-color);
+    text-align: justify;
+    line-height: 20px;
+    color: var(--text-color);
+    padding: 16px;
+    box-shadow: 0 0 16px 0 rgba(0, 0, 0, .1), 0 8px 16px 0 rgba(0, 0, 0, .06);
+    border-radius: 4px;
+    display: none;
+}
+
+.detail__policy-desc-change-ques:hover .detail__policy-desc-change-more {
+    display: block;
+}
+
+.detail__policy-desc-change-more-link {
+    color: var(--link-color);
+}
+
+.detail__policy-desc-change-more::before {
+    position: absolute;
+    content: '';
+    border-width: 20px 20px;
+    border-style: solid;
+    border-color: transparent transparent var(--white-color) transparent;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.detail__transport-desc-top-img {
+    height: 20px;
+}
+
+.detail__transport-desc-top {
+    display: flex;
+}
+
+.detail__transport-desc-top-sub {
+    margin: 0 0 12px 8px;
+}
+
+.detail__transport-desc-bottom {
+    display: flex;
+    column-gap: 8px;
+}
+
+.detail__transport-desc-bottom-left {
+    width: 26px;
+}
+
+.detail__transport-desc-bottom-icon {
+    font-size: 16px;
+}
+
+.detail__transport-desc-bottom-right {
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+}
+
+.detail__transport-location,
+.detail__transport-price {
+    display: flex;
+    align-items: center;
+    column-gap: 16px;
+}
+
+.detail__transport-location-title,
+.detail__transport-price-title {
+    width: 110px;
+    color: #757575;
+}
+
+.detail__transport-price-name,
+.detail__transport-location-name {
+    display: flex;
+    align-items: center;
+}
+
+.detail__transport-price-down-icon,
+.detail__transport-location-down-icon {
+    font-size: 20px;
+    margin-left: 6px;
+    cursor: pointer;
+    color: rgba(0, 0, 0, 0.54);
 }
 
 .detail__text {
@@ -273,7 +411,6 @@
     display: flex;
     align-items: center;
     column-gap: 1rem;
-    padding-top: 1rem;
 }
 
 .detail__social-title {
@@ -418,19 +555,18 @@ https://viblo.asia/p/ban-da-biet-flex-grow-va-flex-shrink-hoat-dong-the-nao-chua
 
 @media screen and (min-width: 992px) {
     .detail__product {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-gap: 1.5rem;
+        display: flex;
         box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
         border-radius: 4px;
-        background-color: var(--white-color);
     }
 
     .detail__right {
-        padding: 20px 35px 0 20px;
+        flex: 1;
+        padding: 20px 35px 20px 20px;
     }
 
     .detail__left {
+        width: 450px;
         padding: 16px;
     }
 
@@ -574,6 +710,44 @@ https://viblo.asia/p/ban-da-biet-flex-grow-va-flex-shrink-hoat-dong-the-nao-chua
 
     .detail__left {
         padding-top: 4px;
+    }
+
+    .detail__right-title {
+        padding: 0 16px;
+    }
+
+    .detail__price {
+        padding: 16px 16px 26px 16px;
+    }
+
+    .detail__text {
+        padding: 0 16px;
+    }
+
+    .detail__number {
+        padding: 16px 16px 0 16px;
+    }
+
+    .detail__policy-destop-mobile-container {
+        display: flex;
+        align-items: center;
+        column-gap: 16px;
+        padding: 16px;
+        background-color: #fff5f4;
+    }
+
+    .detail__policy-destop-mobile-icon {
+        font-size: 36px;
+        color: var(--primary-color);
+    }
+
+    .detail__policy-destop-mobile-title {
+        color: var(--primary-color);
+        margin-bottom: 8px;
+    }
+
+    .detail__policy-destop-mobile-sub {
+        color: #757575;
     }
 
     .detail__mobile-btns {
