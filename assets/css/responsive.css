@@ -7,7 +7,7 @@
 
     .header {
         position: fixed;
-        z-index: 4;
+        z-index: 1;
         top: 0;
         right: 0;
         left: 0;
@@ -141,7 +141,7 @@
     }
 
     .header__mobile-back-icon {
-        font-size: 3rem;
+        font-size: 24px;
         color: var(--primary-color);
     }
 

@@ -324,6 +324,7 @@ input, textarea, button {
 
 .rate__title-point {
     font-size: 36px;
+    line-height: 22px;
 } 
 
 .rate__title-total {

@@ -164,6 +164,7 @@
 
 .detail__price {
     display: flex;
+    align-items: center;
     gap: 1rem;
     padding: 1rem 0 26px 0;
     font-size: 20px;
@@ -308,12 +309,75 @@
     align-items: center;
 }
 
-.detail__transport-price-down-icon,
+.detail__transport-price-down {
+    position: relative;
+    display: flex;
+    margin-left: 6px;
+    justify-content: center;
+    align-items: center;
+}
+
+.detail__transport-price-down-icon {
+    font-size: 20px;
+    cursor: pointer;
+    color: rgba(0, 0, 0, 0.54);
+}
+
 .detail__transport-location-down-icon {
     font-size: 20px;
     margin-left: 6px;
     cursor: pointer;
     color: rgba(0, 0, 0, 0.54);
+}
+
+.detail__transport-price-more {
+    position: absolute;
+    top: 28px;
+    width: 450px;
+    background-color: var(--white-color);
+    text-align: justify;
+    line-height: 20px;
+    color: var(--text-color);
+    padding: 16px;
+    box-shadow: 0 0 16px 0 rgba(0, 0, 0, .1), 0 8px 16px 0 rgba(0, 0, 0, .06);
+    border-radius: 4px;
+    z-index: 1;
+    display: none;
+}
+
+.detail__transport-price-down:hover .detail__transport-price-more {
+    display: block;
+}
+
+.detail__transport-price-more::before {
+    position: absolute;
+    content: '';
+    border-width: 20px 20px;
+    border-style: solid;
+    border-color: transparent transparent var(--white-color) transparent;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.detail__transport-price-more-name {
+    display: flex;
+}
+
+.detail__transport-price-more-title {
+    flex: 1;
+}
+
+.detail__transport-price-more-sub,
+.detail__transport-price-more-price {
+    color: var(--primary-color);
+    margin-left: 4px;
+}
+
+.detail__transport-price-more-time {
+    font-size: 12px;
+    color: #757575;
+    margin-top: 10px;
 }
 
 .detail__text {
@@ -350,8 +414,6 @@
 
 .detail__btn-count-input,
 .detail__btn-count-btn {
-    border: 1.5px solid #ddd;
-    border-radius: 25px;
     text-align: center;
     padding: 0.45rem 0.8rem;
     outline: 0;
@@ -359,6 +421,8 @@
 }
 
 .detail__btn-count-input {
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
     width: 60px;
 }
 
@@ -375,12 +439,11 @@
     background-color: #f5f5f5;
     width: 32px;
     height: 32px;
-    border-radius: 6px;
+    border-radius: 2px;
     outline: none;
     border: 1px solid #ccc;
     font-size: 14px;
     cursor: pointer;
-    font-weight: 600;
 }
 
 .detail__btn-add {
@@ -553,6 +616,297 @@ https://viblo.asia/p/ban-da-biet-flex-grow-va-flex-shrink-hoat-dong-the-nao-chua
     color: var(--primary-color);
 }
 
+/* Address Form */
+.address-form {
+    background-color: var(--white-color);
+    border-radius: 2px;
+    width: 500px;
+    box-shadow: rgba(0, 0, 0, .54) 0px 2px 4px;
+    position: relative;
+    /* overflow: hidden; */
+}
+
+.address-form__container {
+    position: relative;
+    font-size: var(--normal-font-size);
+    height: 100%;
+}
+
+.address-form__container.hide {
+    display: none;
+}
+
+.address-form__header {
+    height: 56px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 24px;
+    border-bottom: 1px solid rgba(0, 0, 0, .09);
+}
+
+.address-form__title {
+    font-size: 17px;
+    text-transform: capitalize;
+    line-height: 1.5;
+}
+
+.address-form__close-icon {
+    font-size: 20px;
+    color: rgba(0, 0, 0, .54);
+}
+
+.address-form__body {
+    padding: 24px 24px 24px 24px;
+}
+
+.address-form__search {
+    display: flex;
+    align-items: center;
+    column-gap: 16px;
+}
+
+.address-form__search-input {
+    height: 38px;
+    flex: 1;
+    border: 1px solid var(--border-color);
+    border-radius: 3px;
+    padding: 10px;
+    font-family: var(--body-font);
+}
+
+.address-form__search-btn {
+    height: 38px;
+    background-color: var(--primary-color);
+    border-radius: 3px;
+    padding: 0 18px;
+    color: var(--white-color);
+    cursor: pointer;
+}
+
+.address-form__search-btn:hover {
+    opacity: .9;
+}
+
+.address-form__list {
+    list-style: none;
+    max-height: 300px;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+}
+
+.address-form__list::-webkit-scrollbar {
+    display: none;
+}
+
+.address-form__item {
+    padding: 16px 0;
+    display: flex;
+    border-bottom: 1px solid rgba(0, 0, 0, .09);
+}
+
+.address-form__item:last-child {
+    border-bottom: 1px solid transparent;
+}
+
+.address-form__item-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 4px;
+}
+
+.address-form__item-header-info {
+    display: flex;
+    align-items: center;
+}
+
+.address-form__item-box {
+    padding-right: 4px;
+}
+
+.address-form__item-input {
+    margin: 0 8px auto 0;
+    accent-color: var(--primary-color);
+    width: 18px;
+    height: 18px;
+}
+
+.address-form__item-content {
+    line-height: 1.5;
+    width: 100%;
+}
+
+.address-form__item-name {
+    position: relative;
+    font-size: 16px;
+    color: rgba(0, 0, 0, .87);
+    line-height: 1.5;
+}
+
+.address-form__item-name::before {
+    content: '';
+    position: absolute;
+    border-left: 0.5px solid rgba(0, 0, 0, .26);
+    height: 20px;
+    right: -17px;
+    top: 30%;
+    transform: translateY(-30%);
+    display: block;
+    margin-right: 8px;
+}
+
+.address-form__item-phone {
+    margin-left: 16px;
+    color: rgba(0, 0, 0, .54);
+}
+
+.address-form__item-update {
+    text-decoration: none;
+    text-transform: capitalize;
+    color: rgb(64, 128, 238);
+}
+
+.address-form__item-body {
+    font-size: 14px;
+    color: rgba(0, 0, 0, .54);
+}
+
+.address-form__item-sub {
+    margin: 4px 0;
+    border: .5px solid var(--primary-color);
+    color: var(--primary-color);
+    background: none;
+    padding: 2px 4px;
+    border-radius: 1px;
+    display: none;
+}
+
+.address-form__item.default .address-form__item-sub {
+    display: block;
+}
+
+.address-form__add-btn {
+    min-width: 140px;
+    padding: 10px;
+    border: 1px solid var(--primary-color);
+    background-color: transparent;
+    border-radius: 2px;
+    font-size: 14px;
+    color: var(--primary-color);
+    font-size: 14px;
+    text-transform: capitalize;
+}
+
+.address-form__add-btn:hover {
+    background-color: #f7f7f7;
+}
+
+.address-form__add-btn-icon {
+    font-size: 16px;
+    color: rgba(0, 0, 0, .54);
+    margin-right: 8px;
+}
+
+.address-form__footer {
+    position: absolute;
+    bottom: 0;
+    padding: 0 24px;
+    height: 64px;
+    width: 100%;
+    border-top: 1px solid rgba(0, 0, 0, .09);
+    right: 0;
+    left: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    column-gap: 1rem;
+}
+
+.address-form__btn-destroy {
+    border: 1px solid var(--primary-color);
+    background-color: var(--white-color);
+    color: var(--primary-color);
+}
+
+/* Address Form Mobile */
+.address-form-mobile {
+    background-color: #f5f5f5;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 100vh;
+    z-index: 1;
+    display: none;
+}
+
+.address-form-mobile.open {
+    display: block;
+}
+
+.address-form-mobile__header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 16px;
+    background-color: var(--white-color);
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.05);
+}
+
+.address-form-mobile__header-back-icon {
+    font-size: 24px;
+    color: var(--primary-color);
+}
+
+.address-form-mobile__header-title {
+    font-size: 18px;
+}
+
+.address-form-mobile__search {
+    padding: 68px 16px 4px 16px;
+    background-color: var(--white-color);
+}
+
+.address-form-mobile__search-input {
+    height: 50px;
+    border-radius: 4px;
+    padding: 10px;
+    background-color: #f5f5f5;
+    width: 100%;
+}
+
+.address-form-mobile__body {
+    padding: 40px 0 16px 0;
+}
+
+.address-form-mobile__body-title {
+    padding: 0 16px 16px 16px;
+    color: #757575;
+}
+
+.address-form-mobile__body-list {
+    padding: 0 16px;
+    background-color: var(--white-color);
+}
+
+.address-form-mobile__body-add {
+    padding: 16px;
+    display: flex;
+    border-top: 1px solid var(--border-color);
+    background-color: var(--white-color);
+    column-gap: 16px;
+    align-items: center;
+}
+
+.address-form-mobile__body-add-sub {
+    flex: 1;
+}
+
 @media screen and (min-width: 992px) {
     .detail__product {
         display: flex;
@@ -671,7 +1025,7 @@ https://viblo.asia/p/ban-da-biet-flex-grow-va-flex-shrink-hoat-dong-the-nao-chua
     }
 
     .header__mobile-more-icon {
-        font-size: 2.4rem;
+        font-size: 24px;
         color: var(--white-color);
     }
 
@@ -748,6 +1102,142 @@ https://viblo.asia/p/ban-da-biet-flex-grow-va-flex-shrink-hoat-dong-the-nao-chua
 
     .detail__policy-destop-mobile-sub {
         color: #757575;
+    }
+
+    .detail-mobile__transport {
+        margin-top: 16px;
+        padding: 16px;
+        background-color: var(--white-color);
+    }
+
+    .detail-mobile__transport-free,
+    .detail-mobile__transport-price {
+        display: flex;
+        column-gap: 12px;
+        align-items: center;
+    }
+
+    .detail-mobile__transport-price {
+        margin-top: 12px;
+    }
+
+    .detail-mobile__transport-free-thumb,
+    .detail-mobile__transport-price-truck {
+        width: 30px;
+    }
+
+    .detail-mobile__transport-free-img {
+        height: 20px;
+    }
+
+    .detail-mobile__transport-price-truck-icon,
+    .detail-mobile__transport-price-down-icon,
+    .detail-mobile__transport-price-modal-location-down-icon,
+    .address-form-mobile__body-add-icon,
+    .address-form-mobile__body-add-more {
+        font-size: 20px;
+        color: rgba(0, 0, 0, .54);
+    }
+
+    .detail-mobile__transport-price-detail {
+        display: flex;
+        align-items: center;
+        column-gap: 4px;
+    }
+
+    .detail-mobile__transport-price-modal-overlay {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.4);
+        z-index: 1;
+        display: none;
+    }
+
+    .detail-mobile__transport-price-modal-overlay.show {
+        display: block;
+    }
+
+    .detail-mobile__transport-price-modal-container {
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        transform: translateY(100%);
+        background-color: #f5f5f5;
+        border-radius: 4px 4px 0 0;
+        overflow: hidden;
+        box-shadow: 0 4px 20px 0 rgba(28, 28, 51, .16);
+        animation: showBottomSheet .4s ease forwards;
+        transition: all .3s ease;
+        z-index: 1;
+    }
+
+    .detail-mobile__transport-price-modal-container.show {
+        transform: translateY(0);
+    }
+
+    .detail-mobile__transport-price-modal-header {
+        padding: 16px;
+        text-align: center;
+        font-size: 18px;
+        border-bottom: 1px solid var(--border-color);
+        background-color: var(--white-color);
+    }
+
+    .detail-mobile__transport-price-modal-location {
+        padding: 10px 16px;
+        column-gap: 4px;
+        display: flex;
+        align-items: center;
+        background-color: var(--white-color);
+    }
+
+    .detail-mobile__transport-price-modal-location-sub {
+        color: #757575;
+        width: 110px;
+    }
+
+    .detail-mobile__transport-price-modal-location-desc {
+        flex: 1;
+        line-height: 20px;
+        height: 20px;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+
+    .detail-mobile__transport-price-modal-body {
+        background-color: var(--white-color);
+        margin: 16px 0 50px 0;
+        padding: 16px;
+    }
+
+    .detail-mobile__transport-price-modal-body-detail {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .detail-mobile__transport-price-modal-body-numb {
+        color: var(--primary-color);
+    }
+
+    .detail-mobile__transport-price-modal-body-time {
+        font-size: 12px;
+        color: #757575;
+        margin-top: 10px;
+    }
+
+    .detail-mobile__transport-price-modal-btn {
+        padding: 16px;
+        text-align: center;
+        margin: 0 8px 8px 8px;
+        background-color: var(--primary-color);
+        border-radius: 4px;
+        color: var(--white-color);
     }
 
     .detail__mobile-btns {
@@ -871,7 +1361,7 @@ https://viblo.asia/p/ban-da-biet-flex-grow-va-flex-shrink-hoat-dong-the-nao-chua
     }
 
     .detail__mobile-bottom-sheet-close-icon {
-        font-size: 2.4rem;
+        font-size: 20px;
         color: #747474;
     }
 

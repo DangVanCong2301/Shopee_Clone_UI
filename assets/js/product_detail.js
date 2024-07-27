@@ -30,6 +30,42 @@ window.addEventListener('scroll', () => {
     }
 });
 
+// Address Modal
+function openAddressModal() {
+    document.querySelector(".modal").classList.add('open');
+}
+
+function closeModal() {
+    document.querySelector(".modal").classList.remove('open');
+}
+
+function openAddressFormModalMobile() {
+    document.querySelector(".address-form-mobile").classList.add("open");
+}
+
+function closeAddressFormModalMobile() {
+    document.querySelector(".address-form-mobile").classList.remove("open");
+}
+
+// Bottom Sheet Transport
+function openBottomSheetTransport() {
+    document.querySelector(".detail-mobile__transport-price-modal-overlay").classList.add("show");
+    document.querySelector(".detail-mobile__transport-price-modal-container").classList.add("show");
+}
+
+function closeBottomSheetTransport() {
+    document.querySelector(".detail-mobile__transport-price-modal-overlay").classList.remove("show");
+    document.querySelector(".detail-mobile__transport-price-modal-container").classList.remove("show");
+}
+
+window.addEventListener("click", (e) => {
+    if (e.target == document.querySelector(".detail-mobile__transport-price-modal-overlay")) {
+        document.querySelector(".detail-mobile__transport-price-modal-overlay").classList.remove("show");
+        document.querySelector(".detail-mobile__transport-price-modal-container").classList.remove("show");
+    }
+});
+
+// Add To Cart Bottom Sheet
 function showBottomSheet() {
     document.querySelector(".detail__mobile-bottom-sheet-overlay").classList.add("open");
     document.querySelector(".detail__mobile-bottom-sheet").classList.add("open");

@@ -338,7 +338,7 @@
                                                 <div class="detail__transport-location-title">Vận chuyển tới</div>
                                                 <div class="detail__transport-location-name">
                                                     Phường Định Công, Quận Hoàng Mai, Hà Nội 
-                                                    <span class="detail__transport-location-down">
+                                                    <span class="detail__transport-location-down" onclick="openAddressModal()">
                                                         <i class="uil uil-angle-down detail__transport-location-down-icon"></i>
                                                     </span>
                                                 </div>
@@ -349,6 +349,14 @@
                                                     0 đ - 16.500 đ 
                                                     <span class="detail__transport-price-down">
                                                         <i class="uil uil-angle-down detail__transport-price-down-icon"></i>
+                                                        <div class="detail__transport-price-more">
+                                                            <div class="detail__transport-price-more-name">
+                                                                <div class="detail__transport-price-more-title">Nhanh</div>
+                                                                <div class="detail__transport-price-more-price">16.500 đ</div>
+                                                                <div class="detail__transport-price-more-sub hide-on-destop">Miễn phí vận chuyển</div>
+                                                            </div>
+                                                            <div class="detail__transport-price-more-time">Nhận hàng vào 28 Tháng 7 - 30 Tháng 7</div>
+                                                        </div>
                                                     </span>
                                                 </div>
                                             </div>
@@ -394,7 +402,7 @@
                                     </div>
                                 </div>
                                 <div class="detail__mobile-bottom-sheet-close" onclick="closeBottomSheet()">
-                                    <i class="uil uil-times detail__mobile-bottom-sheet-close-icon"></i>
+                                    <i class="uil uil-multiply detail__mobile-bottom-sheet-close-icon"></i>
                                 </div>
                                 <div class="detail__mobile-bottom-sheet-type">
                                     <div class="detail__mobile-bottom-sheet-type-title">Loại</div>
@@ -462,6 +470,109 @@
                                 <div class="detail__right-loading-product-share-box"></div>
                                 <div class="detail__right-loading-product-share-box"></div>
                                 <div class="detail__right-loading-product-share-box"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="detail-mobile__transport hide-on-destop">
+                    <div class="detail-mobile__transport-free">
+                        <div class="detail-mobile__transport-free-thumb">
+                            <img src="./assets/img/free_ship.png" alt="" class="detail-mobile__transport-free-img">
+                        </div>
+                        <div class="detail-mobile__transport-free-sub">Miễn phí vận chuyển</div>
+                    </div>
+                    <div class="detail-mobile__transport-price">
+                        <div class="detail-mobile__transport-price-truck">
+                            <i class="uil uil-truck detail-mobile__transport-price-truck-icon"></i>
+                        </div>
+                        <div class="detail-mobile__transport-price-detail">
+                            <div class="detail-mobile__transport-price-sub">Phí vận chuyển: 0 đ - 16.500 đ</div>
+                            <div class="detail-mobile__transport-price-down" onclick="openBottomSheetTransport()">
+                                <i class="uil uil-angle-down detail-mobile__transport-price-down-icon"></i>
+                            </div>
+                            <div class="detail-mobile__transport-price-modal">
+                                <div class="detail-mobile__transport-price-modal-overlay"></div>
+                                <div class="detail-mobile__transport-price-modal-container">
+                                    <div class="detail-mobile__transport-price-modal-header">Phí Vận Chuyển</div>
+                                    <div class="detail-mobile__transport-price-modal-location">
+                                        <div class="detail-mobile__transport-price-modal-location-sub">Vận chuyển đến: </div>
+                                        <div class="detail-mobile__transport-price-modal-location-desc">Phường Định Công, Quận Hoàng Mai, Hà Nội</div>
+                                        <div class="detail-mobile__transport-price-modal-location-down" onclick="openAddressFormModalMobile()">
+                                            <i class="uil uil-angle-right-b detail-mobile__transport-price-modal-location-down-icon"></i>
+                                        </div>
+                                    </div>
+                                    <div class="detail-mobile__transport-price-modal-body">
+                                        <div class="detail-mobile__transport-price-modal-body-detail">
+                                            <div class="detail-mobile__transport-price-modal-body-sub">Nhanh</div>
+                                            <div class="detail-mobile__transport-price-modal-body-numb">16.500 đ</div>
+                                        </div>
+                                        <div class="detail-mobile__transport-price-modal-body-time">Nhận hàng vào 28 Tháng 7 - 30 Tháng 7</div>
+                                    </div>
+                                    <div class="detail-mobile__transport-price-modal-btn" onclick="closeBottomSheetTransport()">
+                                        OK
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="address-form-mobile">
+                            <div class="address-form-mobile__header">
+                                <div class="address-form-mobile__header-back" onclick="closeAddressFormModalMobile()">
+                                    <i class="uil uil-arrow-left address-form-mobile__header-back-icon"></i>
+                                </div>
+                                <div class="address-form-mobile__header-title">Địa chỉ nhận hàng</div>
+                            </div>
+                            <div class="address-form-mobile__search">
+                                <input type="text" class="address-form-mobile__search-input" placeholder="Tìm Thành phố, Quận/Huyện">
+                            </div>
+                            <div class="address-form-mobile__body">
+                                <div class="address-form-mobile__body-title">Địa chỉ của tôi</div>
+                                <div class="address-form-mobile__body-list">
+                                    <ul class="address-form__list">
+                                        <li class="address-form__item default">
+                                            <div class="address-form__item-box">
+                                                <input type="radio" name="address" class="address-form__item-input">
+                                            </div>
+                                            <div class="address-form__item-content">
+                                                <div class="address-form__item-header">
+                                                    <div class="address-form__item-header-info">
+                                                        <div class="address-form__item-name">Đặng Văn Công</div>
+                                                        <div class="address-form__item-phone">(+84) 347797502</div>
+                                                    </div>
+                                                </div>
+                                                <div class="address-form__item-body">
+                                                    <div class="address-form__item-body-row">Số 20, Ngõ 259 Định Công, Phường Định Công</div>
+                                                    <div class="address-form__item-body-row">Quận Hoàng Mai, Hà Nội</div>
+                                                </div>
+                                                <button class="address-form__item-sub">Mặc định</button>
+                                            </div>
+                                        </li>
+                                        <li class="address-form__item">
+                                            <div class="address-form__item-box">
+                                                <input type="radio" name="address" class="address-form__item-input">
+                                            </div>
+                                            <div class="address-form__item-content">
+                                                <div class="address-form__item-header">
+                                                    <div class="address-form__item-header-info">
+                                                        <div class="address-form__item-name">Đặng Văn Công</div>
+                                                        <div class="address-form__item-phone">(+84) 347797502</div>
+                                                    </div>
+                                                </div>
+                                                <div class="address-form__item-body">
+                                                    <div class="address-form__item-body-row">Số 20, Ngõ 259 Định Công, Phường Định Công</div>
+                                                    <div class="address-form__item-body-row">Quận Hoàng Mai, Hà Nội</div>
+                                                </div>
+                                                <button class="address-form__item-sub">Mặc định</button>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="address-form-mobile__body-add">
+                                    <i class="uil uil-plus-circle address-form-mobile__body-add-icon"></i>
+                                    <div class="address-form-mobile__body-add-sub">Thêm địa chỉ</div>
+                                    <div class="address-form-mobile__body-add-more">
+                                        <i class="uil uil-angle-right-b address-form-mobile__body-add-more"></i>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -969,6 +1080,71 @@
                 </div>
             </div>
         </footer>
+    </div>
+    <div class="modal">
+        <div class="modal__overlay">
+
+        </div>
+        <div class="modal__body">
+            <div class="address-form">
+                <div class="address-form__container">
+                    <div class="address-form__header">
+                        <div class="address-form__title">Địa chỉ nhận hàng</div>
+                        <div class="address-form__close" onclick="closeModal()">
+                            <i class="uil uil-multiply address-form__close-icon"></i>
+                        </div>
+                    </div>
+                    <div class="address-form__body">
+                        <div class="address-form__search">
+                            <input type="text" class="address-form__search-input" placeholder="Tìm Thành phố, Quận/Huyện">
+                            <button class="address-form__search-btn">Sử dụng</button>
+                        </div>
+                        <ul class="address-form__list">
+                            <li class="address-form__item default">
+                                <div class="address-form__item-box">
+                                    <input type="radio" name="address" class="address-form__item-input">
+                                </div>
+                                <div class="address-form__item-content">
+                                    <div class="address-form__item-header">
+                                        <div class="address-form__item-header-info">
+                                            <div class="address-form__item-name">Đặng Văn Công</div>
+                                            <div class="address-form__item-phone">(+84) 347797502</div>
+                                        </div>
+                                    </div>
+                                    <div class="address-form__item-body">
+                                        <div class="address-form__item-body-row">Số 20, Ngõ 259 Định Công, Phường Định Công</div>
+                                        <div class="address-form__item-body-row">Quận Hoàng Mai, Hà Nội</div>
+                                    </div>
+                                    <button class="address-form__item-sub">Mặc định</button>
+                                </div>
+                            </li>
+                            <li class="address-form__item">
+                                <div class="address-form__item-box">
+                                    <input type="radio" name="address" class="address-form__item-input">
+                                </div>
+                                <div class="address-form__item-content">
+                                    <div class="address-form__item-header">
+                                        <div class="address-form__item-header-info">
+                                            <div class="address-form__item-name">Đặng Văn Công</div>
+                                            <div class="address-form__item-phone">(+84) 347797502</div>
+                                        </div>
+                                    </div>
+                                    <div class="address-form__item-body">
+                                        <div class="address-form__item-body-row">Số 20, Ngõ 259 Định Công, Phường Định Công</div>
+                                        <div class="address-form__item-body-row">Quận Hoàng Mai, Hà Nội</div>
+                                    </div>
+                                    <button class="address-form__item-sub">Mặc định</button>
+                                </div>
+                            </li>
+                        </ul>
+                        <button class="address-form__add-btn" onclick="openNewAddressForm()">
+                            <i class="uil uil-plus address-form__add-btn-icon"></i>
+                            <span>Thêm địa chỉ mới</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 <script src="./assets/js/product_detail.js"></script>
