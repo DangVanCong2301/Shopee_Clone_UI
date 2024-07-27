@@ -1,5 +1,6 @@
 .cart {
     margin-top: 20px;
+    color: var(--text-color);
 }
 
 .cart__instruct {
@@ -228,11 +229,13 @@
 }
 
 .cart__body-header span {
-    display: block;
     padding: 2px 3px;
     background-color: var(--primary-color);
     color: var(--white-color);
     font-size: 10px;
+    height: 18px;
+    display: flex;
+    align-items: center;
     border-radius: 2px;
 }
 
@@ -469,75 +472,6 @@
     border-top-color: transparent;
 }
 
-/* Old Code */
-
-.cart .table {
-    height: 500px;
-    overflow: auto;
-    /* min-width: 1000px; */
-    border-collapse: collapse;
-}
-
-.cart .table__total-count {
-    padding: 20px;
-    text-align: center;
-    font-size: 15px; 
-}
-
-.cart .table__total-price {
-    padding: 20px;
-    font-size: 15px;
-}
-
-
-.cart thead th {
-    position: sticky;
-    top: 0;
-    background-color: #f6f8fc;
-    color: #8493a5;
-    font-size: 15px;
-}
-
-.cart th, td {
-    border-bottom: 1px solid #dddddd;
-    padding: 10px 20px;
-    word-break: break-all; /*Thuộc tính word-break sẽ làm cho những chữ trong một từ không còn là một thể thống nhất, nghĩa là có thể xuống hàng bất cứ vị trí nào trong từ*/
-    text-align: center;
-    font-size: 15px;
-}
-
-.cart table {
-    width: 100%;
-    table-layout: fixed;
-}
-
-.cart td img {
-    height: 60px;
-    width: 60px;
-    object-fit: cover;
-    border-radius: 15px;
-    border: 2px solid #ced0d2;
-}
-
-.cart table tbody tr {
-    background-color: var(--white-color);
-}
-
-.cart__product-name {
-    line-height: 2rem;
-    max-height: 4rem;
-    overflow: hidden;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2;
-    text-align: left;
-}
-
-.cart tr:hover td {
-    color: #0298cf;
-    cursor: pointer;
-    background-color: #f6f9fc;
-}
-
 .cart button {
     outline: none;
     border-radius: 2px;
@@ -552,7 +486,9 @@
     height: 32px;
     padding: 8px;
     border-radius: 6px;
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .cart .btn-tool__edit {
@@ -568,13 +504,10 @@
 }
 
 .cart__count-input {
-    border: 1.5px solid #ddd;
-    border-radius: 25px;
+    border: 1px solid var(--border-color);
     text-align: center;
     padding: 0.45rem 0.8rem;
     outline: 0;
-    margin-right: 0.2rem;
-    margin-bottom: 1rem;
 }
 
 .cart__btn-add,
@@ -586,7 +519,6 @@
     border: 1px solid #ccc;
     font-size: 14px;
     cursor: pointer;
-    font-weight: 600;
 }
 
 .cart__count-input {
@@ -594,7 +526,6 @@
     width: 60px;
     text-align: center;
     font-size: 14px;
-    font-weight: 600;
     border: 1px solid #e5e5e5;
     border-left: none;
     border-right: none;

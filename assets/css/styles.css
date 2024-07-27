@@ -1828,8 +1828,7 @@ i.home-product-item__like-icon-empty {
     color: var(--primary-color);
     background-color: currentColor; /*Ăn theo màu chủ đạo*/
     font-weight: 500;
-    line-height: 1.6rem;
-    padding-right: 4px;
+    padding: 2px 3px;
     border-bottom-right-radius: 3px;
     border-top-right-radius: 3px;
 }
