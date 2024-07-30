@@ -204,10 +204,10 @@
     display: block;
     position: absolute;
     border-left: 1px solid #ec8d8d;
-    height: 12px;
-    right: -6px;
-    top: 30%;
-    transform: translateY(-30%);
+    height: 14px;
+    right: -5px;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .header__navbar-icon-link {
@@ -277,6 +277,7 @@
 .header__qr-download-img {
     height: 15px;
 }
+
 /*Header notfication*/
 .header__notify {
     position: absolute;
@@ -1012,7 +1013,7 @@
     align-items: center;
     justify-content: center;
     margin-left: 100px;
-    row-gap: 12px;
+    /* row-gap: 12px; */
 }
 
 .banner__slider-right {
