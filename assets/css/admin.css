@@ -16,6 +16,14 @@
     background-color: #181a1e;
 }
 
+.dark-theme-variables .admin__aside-sidebar-link.active {
+    color: var(--primary-color);
+}
+
+.dark-theme-variables .admin__main-date-input {
+    color: var(--text-color);
+}
+
 .dark-theme-variables .admin__order-table-body-col {
     color: var(--color-dark-variant);
 }
@@ -32,9 +40,12 @@
     color:  var(--text-color);
 }
 
+
+/*  */
 .admin {
     display: grid;
     width: 96%;
+    height: 100vh;
     margin: 0 auto;
     gap: 1.8rem;
     grid-template-columns: calc(54px + 186px) auto 300px;
@@ -325,12 +336,34 @@
     transition: all .3s ease;
 }
 
+.admin__order-table-header-row {
+    display: flex;
+}
+
 .admin__order-table-header-col {
     height: 42px;
+    line-height: 42px;
+    font-weight: bold;
+    flex: 1;
+    text-align: center;
+    background-color: var(--white-color);
+}
+
+.admin__order-table-body {
+    max-height: 180px;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+}
+
+.admin__order-table-body-row {
+    display: flex;
 }
 
 .admin__order-table-body-col {
     height: 42px;
+    line-height: 42px;
+    flex: 1;
+    text-align: center;
     border-bottom: 1px solid var(--border-color);
 }
 
@@ -431,9 +464,13 @@
     margin-bottom: .8rem;
 }
 
+.admin__right-recent-updates-container {
+    position: relative;
+}
+
 .admin__right-recent-updates-list {
-    background-color: var(--white-color);
     padding: 16px;
+    background-color: var(--white-color);
     border-radius: 4px;
     box-shadow: var(--normal-box-shadow);
     transition: all .3s ease;
@@ -503,6 +540,31 @@
 .admin__right-sales-analytics-title {
     font-size: 20px;
     margin-bottom: .8rem;
+}
+
+.admin__right-sales-analytics-container {
+    position: relative;
+}
+
+.admin__right-sales-analytics-list {
+    height: 200px;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+    padding-bottom: 60px;
+}
+
+.admin__right-sales-analytics-list::-webkit-scrollbar {
+    display: none;
+}
+
+.admin__right-sales-analytics-blur-bottom {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    height: 50px;
+    background: linear-gradient(hsla(0, 0%, 100%, .7), #fff);
+    opacity: .25;
 }
 
 .admin__right-sales-analytics-item {
