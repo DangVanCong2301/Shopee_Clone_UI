@@ -1,3 +1,10 @@
+function loadingProductSimilar() {
+    setTimeout(() => {
+        document.querySelector(".similar-product__loading").style.display = 'none';
+    }, 1000);
+}
+loadingProductSimilar();
+
 function loadProducts() {
     let html = "";
     for (let i = 1; i <= 15; i++) {
