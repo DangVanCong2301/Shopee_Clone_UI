@@ -1761,6 +1761,7 @@
 .home-product-item__action {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin: 6px 10px 0;
 }
 
