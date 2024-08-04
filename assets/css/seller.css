@@ -1,0 +1,109 @@
+.seller-auth {
+    display: grid;
+    place-items: center;
+    padding: 40px 0;
+    background-color: #fefaf7;
+}
+
+.seller-auth__content {
+    position: relative;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.seller-auth__left {
+    color: var(--primary-color);
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.seller-auth__title-county {
+    font-size: 24px;
+    margin-bottom: 12px;
+}
+
+.seller-auth__title {
+    font-size: 30px;
+}
+
+.seller-auth__title-list {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+.seller-auth__title-item {
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+}
+
+.seller-auth__title-item-icon {
+    font-size: 24px;
+}
+
+/* Modal Confirm */
+.modal__confirm {
+    border-radius: 4px;
+    padding: 30px;
+    background-color: var(--white-color);
+    box-shadow: 0 3px 10px 0 rgba(0, 0, 0, .14);
+}
+
+.modal__confirm-text {
+    width: 380px;
+    font-size: 16px;
+    color: #555;
+}
+
+.modal__confirm-btns {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    column-gap: 10px;
+}
+
+.modal__confirm-btn-destroy {
+    border-radius: 3px;
+    border: 1px solid var(--border-color);
+    line-height: 1.5;
+    padding: 8px 16px;
+    text-align: center;
+    color: #555;
+}
+
+.modal__confirm-btn-destroy:hover {
+    background-color: rgba(0, 0, 0, .02);
+    cursor: pointer;
+}
+
+.modal__confirm-btn-method {
+    flex: 1;
+    border-radius: 3px;
+    border: 1px solid var(--border-color);
+    line-height: 1.5;
+    padding: 8px 16px;
+    text-align: center;
+    color: #555;
+}
+
+.modal__confirm-btn-method:hover {
+    background-color: rgba(0, 0, 0, .02);
+    cursor: pointer;
+}
+
+.modal__confirm-btn-send {
+    padding: 8px 16px;
+    color: var(--white-color);
+    border-radius: 3px;
+    line-height: 1.5;
+    background-color: var(--primary-color);
+    cursor: pointer;
+}
+
+.modal__confirm-btn-send:hover {
+    opacity: .9;
+}
