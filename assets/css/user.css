@@ -15,6 +15,7 @@ header {
     align-items: center;
     background-color: var(--white-color);
     height: 80px;
+    box-shadow: 0 6px 6px rgba(0, 0, 0, .06);
 }
 
 .header__text {
@@ -213,6 +214,7 @@ header {
 
 .auth-form__btn:hover {
     opacity: .9;
+    cursor: pointer;
 }
 
 .auth-form__or {
