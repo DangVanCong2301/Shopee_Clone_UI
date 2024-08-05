@@ -34,6 +34,7 @@ function closeModal() {
 function openConfirmPage() {
     closeModal();
     document.querySelector(".seller-auth__sign-up").classList.add("hide-on-destop");
+    document.querySelector(".seller-auth__sign-in").classList.add("hide-on-destop");
     document.querySelector(".seller-confirm").classList.remove("hide-on-destop");
 }
 
