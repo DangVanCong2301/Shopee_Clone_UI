@@ -17,7 +17,7 @@
 </head>
 
 <body>
-    <div class="app">
+    <div class="app hight">
         <header class="header hide-on-table">
             <div class="header__container grid wide">
                 <div class="header__text hide-on-mobile">
@@ -34,7 +34,25 @@
                     </div>
                     <div class="header__account-info">
                         <span class="header__account-info-name">congdang365</span>
-                        <i class="uil uil-angle-down header__account-info-icon"></i>
+                        <div class="header__account-info-down">
+                            <i class="uil uil-angle-down header__account-info-icon"></i>
+                        </div>
+                    </div>
+                    <div class="header__account-manager">
+                        <ul class="header__navbar-user-menu">
+                            <li class="header__navbar-user-item">
+                                <div class="header__account-manager-info">
+                                    <img src="./assets/img/no_user.jpg" alt="" class="header__account-manager-img">
+                                    <div class="header__account-manager-name">congdang365</div>
+                                </div>
+                            </li>
+                            <li class="header__navbar-user-item header__navbar-user-item--separate">
+                                <a href="/User/Logout">
+                                    <i class="uil uil-signout header__account-manager-icon"></i>
+                                    Đăng xuất
+                                </a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -50,17 +68,17 @@
         <div class="container">
             <div class="app__container">
                 <div class="grid wide">
-                    <div class="portal__start hide-on-destop">
+                    <div class="portal__start">
                         <div class="portal__start-box">
                             <i class="uil uil-clipboard-notes portal__start-box-icon"></i>
                         </div>
                         <div class="portal__start-welcome">Chào mừng đến với Shopee!</div>
                         <div class="portal__start-please">Vui lòng cung cấp thông tin để thành lập tài khoản người <br> bán trên Shopee</div>
                         <div class="portal__start-btn">
-                            <div class="btn btn--primary">Bắt đầu đăng ký</div>
+                            <div class="btn btn--primary" onclick="openShopPortal()">Bắt đầu đăng ký</div>
                         </div>
                     </div>
-                    <div class="portal__container">
+                    <div class="portal__container hide-on-destop">
                         <div class="portal__steps">
                             <div class="portal__step active">
                                 <div class="portal__step-box"></div>
@@ -87,6 +105,7 @@
                                 <div class="portal__step-name">Hoàn tất</div>
                             </div>
                         </div>
+                        <div class="portal__body"></div>
                         <div class="portal__shop hide-on-destop">
                             <div class="portal__shop-container">
                                 <div class="portal__shop-form">
@@ -270,7 +289,7 @@
                                 <div class="portal__shop-btn-next">Tiếp theo</div>
                             </div>
                         </div>
-                        <div class="portal__identification">
+                        <div class="portal__identification hide-on-destop">
                             <div class="portal__shop-container">
                                 <div class="portal__tax-remind">
                                     <i class="uil uil-exclamation-octagon portal__tax-remind-icon"></i>
@@ -371,6 +390,18 @@
                                 <div class="portal__shop-btn-back">Quay lại</div>
                                 <div class="portal__shop-btn-save">Lưu</div>
                                 <div class="portal__shop-btn-next">Tiếp theo</div>
+                            </div>
+                        </div>
+                        <div class="portal__success hide-on-destop">
+                            <div class="portal__success-container">
+                                <div class="portal__success-box">
+                                    <i class="uil uil-check portal__success-box-icon"></i>
+                                </div>
+                                <div class="portal__success-title">Đăng ký thành công</div>
+                                <div class="portal__success-sub">Hãy bán sản phẩm đầu tiên để khởi động hành trình bán hàng cùng <br> Shopee nhé!</div>
+                                <div class="portal__success-btn">
+                                    <div class="btn btn--primary">Thêm sản phẩm</div>
+                                </div>
                             </div>
                         </div>
                     </div>

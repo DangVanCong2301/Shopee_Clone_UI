@@ -3,6 +3,10 @@
     background-color: #f5f5f5;
 }
 
+.app.hight {
+    height: 100vh;
+}
+
 .header {
     height: 60px;
     background-color: var(--white-color);
@@ -28,9 +32,122 @@
 }
 
 .header__account {
+    position: relative;
     display: flex;
     align-items: center;
     column-gap: 12px;
+    cursor: pointer;
+}
+
+.header__account-info {
+    display: flex;
+    align-items: center;
+    column-gap: 6px;
+}
+
+.header__account-info-down {
+    transition: .3s;
+}
+
+.header__account-manager {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: none;
+}
+
+.header__navbar-user-menu {
+    margin-top: 10px;
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    padding-left: 0px;
+    top: 100%;
+    width: 200px;
+    list-style: none;
+    background-color: var(--white-color);
+    border-radius: 2px;
+    right: 0;
+    transform-origin: 90% top;
+    animation: headerNotifyGrowth ease-in 0.3s;
+    will-change: opacity,transform; /*Tối ưu chuyển động cho 2 thằng này*/
+    box-shadow: 0 2px 10px #ccc;
+}
+
+@keyframes headerNotifyGrowth {
+    from {
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+    .header__navbar-user-menu::before {
+        content: '';
+        position: absolute;
+        right: 4px; /*Tạo góc*/
+        top: -24px;
+        border-width: 16px 20px;
+        border-style: solid;
+        border-color: transparent transparent var(--white-color) transparent;
+        cursor: pointer;
+    }
+
+    .header__navbar-user-menu::after {
+        content: '';
+        display: block;
+        position: absolute; /*Cầu nối*/
+        width: 84%;
+        height: 30px;
+        top: -16px;
+        right: 0;
+        /*background-color: #ee4d2d;*/
+    }
+
+.header__account:hover .header__account-manager {
+    display: block;
+}
+
+.header__account:hover .header__account-info-down {
+    transform: rotate(180deg);
+}
+
+.header__navbar-user-item--separate {
+    border-top: 1px solid rgba(0,0,0,0.05);
+}
+
+.header__navbar-user-item a {
+    margin: 8px 0;
+    text-decoration: none;
+    color: var(--text-color);
+    padding: 4px 16px;
+    display: block;
+    column-gap: 8px;
+    display: flex;
+    align-items: center;
+}
+
+.header__account-manager-icon {
+    font-size: 20px;
+    color: rgba(0, 0, 0, .54);
+}
+
+.header__account-manager-info {
+    display: flex;
+    flex-direction: column;
+    row-gap: 12px;
+    align-items: center;
+    padding: 12px;
+}
+
+.header__account-manager-img {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
 }
 
 .header__logo-img {
@@ -68,7 +185,7 @@
 .portal__start-box {
     width: 180px;
     height: 180px;
-    background-image: linear-gradient(0, #d3dadd, #d5cdcc);
+    background-color: #87bcb4;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -77,7 +194,7 @@
 
 .portal__start-box-icon {
     font-size: 100px;
-    color: var(--sub-link-color);
+    color: var(--white-color);
 }
 
 .portal__start-welcome {
@@ -132,6 +249,10 @@
     background-color: rgba(0, 0, 0, .24);
 }
 
+.portal__step-line-1.active {
+    background-color: var(--primary-color);
+}
+
 .portal__step-line-2 {
     position: absolute;
     top: 15px;
@@ -139,6 +260,10 @@
     height: .5px;
     width: 120px;
     background-color: rgba(0, 0, 0, .24);
+}
+
+.portal__step-line-2.active {
+    background-color: var(--primary-color);
 }
 
 .portal__step-line-3 {
@@ -150,6 +275,10 @@
     background-color: rgba(0, 0, 0, .24);
 }
 
+.portal__step-line-3.active {
+    background-color: var(--primary-color);
+}
+
 .portal__step-line-4 {
     position: absolute;
     top: 15px;
@@ -157,6 +286,10 @@
     height: .5px;
     width: 120px;
     background-color: rgba(0, 0, 0, .24);
+}
+
+.portal__step-line-4.active {
+    background-color: var(--primary-color);
 }
 
 .portal__step-box {
@@ -278,9 +411,6 @@
     display: flex;
     flex-direction: column;
     row-gap: 20px;
-    height: 280px;
-    overflow-y: auto;
-    scroll-behavior: smooth;
 }
 
 .portal__transport-body::-webkit-scrollbar {
@@ -509,9 +639,55 @@
     accent-color: var(--primary-color);
 }
 
+.portal__success {
+    justify-content: center;
+    border-top: 1px solid var(--border-color);
+}
+
+.portal__success-container {
+    padding: 40px 0;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+.portal__success-box {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    margin: 0 auto 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #5c7;
+}
+
+.portal__success-box-icon {
+    font-size: 30px;
+    color: var(--white-color);
+}
+
+.portal__success-title {
+    font-size: 18px;
+    text-align: center;
+}
+
+.portal__success-sub {
+    line-height: 20px;
+    text-align: center;
+}
+
+.portal__success-btn {
+    text-align: center;
+}
+
 /* Responsive */
 @media screen and (min-width: 992px) {
     .portal__start {
+        display: flex;
+    }
+
+    .portal__success {
         display: flex;
     }
 }
