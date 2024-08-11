@@ -30,3 +30,10 @@ function toggleTheme(div) {
     localStorage.setItem("selected-theme", getCurrentTheme());
     localStorage.setItem("selected-icon", getCurrentActive());
 }
+
+// Toggle Sibar Menu
+document.querySelectorAll(".admin__aside-sidebar-link").forEach(e => {
+    e.addEventListener('click', () => {
+        e.classList.toggle("active");
+    });
+});
