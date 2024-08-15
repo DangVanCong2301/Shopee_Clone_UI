@@ -4,6 +4,7 @@
 
 :root {
     --primary-color:#ee4d2d;
+    --second-color: #d0011b;
     --white-color:#fff;
     --black-color:#000;
     --text-color:#333;
@@ -381,6 +382,16 @@ input, textarea, button {
     width: 66px;
     height: 66px;
     border: 6px solid #fff;
+    border-top-color: transparent;
+    border-radius: 50%;
+    animation: spinner .7s linear infinite;
+}
+
+.spinner-btn {
+    display: block;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #dedede;
     border-top-color: transparent;
     border-radius: 50%;
     animation: spinner .7s linear infinite;

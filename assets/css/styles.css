@@ -1608,8 +1608,8 @@
 .category-item__name {
     font-weight: 400;
     color: var(--text-color);
-    line-height: 1.8rem;
-    height: 3.6rem;
+    line-height: 20px;
+    height: 40px;
     overflow: hidden;
     display: block;
     text-align: center;

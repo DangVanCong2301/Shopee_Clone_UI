@@ -3,8 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/base.css">
     <title>Design Logo</title>
     <style>
+        html {
+            font-family: 'Roboto', sans-serif;
+        }
+
         .container {
             display: flex;
             justify-content: center;
@@ -13,27 +18,84 @@
             height: 100vh;
         }
 
-        .logo {
-            width: 400px;
-            height: 400px;
+        .logo__f4-shop {
+            display: flex;
+            flex-direction: column;
+            row-gap: 10px;
+            align-items: center;
+        }
+
+        .logo__f4-shop-title {
             display: flex;
             justify-content: center;
             align-items: center;
-            background-color: #ee4d2d;
-            font-family: 'Roboto',sans-serif;
+            font-family: 'Roboto', sans-serif;
+            font-size: 50px;
+            font-weight: bold;
+            color: var(--primary-color);
+            padding: 0 16px;
         }
 
-        .logo__name {
-            font-size: 250px;
-            font-weight: bold;
-            color: #fff;
+        .logo__laneige {
+            margin-top: 100px;
+            position: relative;
+            color: var(--text-color);
         }
+
+        .logo__laneige-title {
+            color: #6791ff;
+            font-size: 50px;
+        }
+
+        .logo__laneige span {
+            position: absolute;
+            right: -62px;
+            font-size: 20px;
+            top: -9px;
+        } 
+        
+        .logo__vietmark {
+            margin-top: 100px;
+            position: relative;
+            color: var(--text-color);
+        }
+
+        .logo__vietmark-title {
+            color: #da027f;
+            font-size: 50px;
+            font-weight: bold;
+        }
+
+        .logo__cocolux {
+            margin-top: 100px;
+            position: relative;
+            color: var(--text-color);
+        }
+
+        .logo__cocolux-title {
+            color: #000000;
+            font-size: 50px;
+            font-weight: bold;
+        }
+        
     </style>
 </head>
 <body>
     <div class="container">
         <div class="logo">
-            <div class="logo__name">F4</div>
+            <div class="logo__f4-shop">
+                <div class="logo__f4-shop-title">F4 Shop</div>
+            </div>
+            <div class="logo__laneige">
+                <div class="logo__laneige-title">LANEIGE</div>
+                <span>Official</span>
+            </div>
+            <div class="logo__vietmark">
+                <div class="logo__vietmark-title">Viet Mark</div>
+            </div>
+            <div class="logo__cocolux">
+                <div class="logo__cocolux-title">COCOLUX</div>
+            </div>
         </div>
     </div>
 </body>
