@@ -29,6 +29,10 @@
     cursor: pointer;
 }
 
+.purchase__header-item-count {
+    color: var(--primary-color);
+}
+
 .purchase__header-item.active{
     color: var(--primary-color);
     border-bottom: 2px solid var(--primary-color);
@@ -80,8 +84,14 @@
 
 .purchase__body-header-btns {
     display: flex;
+    align-items: center;
     column-gap: 8px;
     font-size: 12px;
+}
+
+.purchase__body-header-shop {
+    font-size: var(--normal-font-size);
+    color: var(--text-color);
 }
 
 .purchase__body-header-btn {

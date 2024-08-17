@@ -221,3 +221,15 @@ function hideChangeShopUsername() {
     document.querySelector(".admin__setup-shop-table-col-value-username").classList.remove("hide-on-destop");
     document.querySelector(".admin__setup-shop-table-col-btn-username").classList.remove("hide-on-destop");
 }
+
+// Show Propose
+function showPropse() {
+    document.querySelector(".admin__add-product-table-industry-propose").classList.remove("hide-on-destop");
+}
+
+document.querySelectorAll(".admin__add-product-table-industry-propose-item-input").forEach(e => {
+    e.addEventListener('change', () => {
+        document.querySelector(".admin__add-product-table-industry-input").value = e.parentNode.querySelector(".admin__add-product-table-industry-propose-item-label").innerText;
+        document.querySelector(".admin__add-product-table-industry-propose").classList.add("hide-on-destop");
+    });
+});
