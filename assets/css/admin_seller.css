@@ -1459,7 +1459,6 @@
     padding: 16px;
     background-color: var(--white-color);
     border-radius: 4px;
-    box-shadow: 0px 0px 3px #666;
     position: sticky;
     bottom: 0;
     left: 0;
@@ -1467,6 +1466,16 @@
     display: flex;
     justify-content: flex-end;
     column-gap: 16px;
+}
+
+.admin__add-product-footer::before {
+    position: absolute;
+    content: "";
+    background: linear-gradient(transparent,rgba(0,0,0,.06));
+    height: 20px;
+    width: 100%;
+    left: 0;
+    top: -20px;
 }
 
 .admin__add-product-btn {
