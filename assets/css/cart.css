@@ -98,6 +98,10 @@
     margin-bottom: 15px;
 }
 
+.cart__body:last-child {
+    margin-bottom: 0;
+}
+
 /* No Cart */
 .cart__no {
     display: flex;
@@ -382,7 +386,6 @@
 
 .cart__purchase {
     position: relative;
-    margin-top: 15px;
     background-color: var(--white-color);
 }
 

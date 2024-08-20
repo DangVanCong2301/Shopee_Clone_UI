@@ -1509,6 +1509,73 @@
     opacity: .9;
 }
 
+.admin__add-product-detail {
+    padding: 20px;
+    border-radius: 4px;
+    box-shadow: var(--normal-box-shadow);
+    background-color: var(--white-color);
+    margin-bottom: 12px;
+}
+
+.admin__add-product-detail-table-row {
+    margin-bottom: 16px;
+}
+
+.admin__add-product-sell {
+    padding: 20px;
+    border-radius: 4px;
+    box-shadow: var(--normal-box-shadow);
+    background-color: var(--white-color);
+}
+
+.admin__add-product-sell-table-type {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    padding: 0 16px;
+    justify-content: center;
+    border: 1px dashed var(--border-color);
+    border-radius: 4px;
+    color: var(--primary-color);
+}
+
+.admin__add-product-sell-table-type-icon {
+    font-size: 18px;
+}
+
+.admin__add-product-sell-table-price {
+    height: 40px;
+    display: flex;
+    column-gap: 20px;
+    align-items: center;
+    padding: 0 16px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+}
+
+.admin__add-product-sell-table-price-unit {
+    position: relative;
+    color: rgba(0, 0, 0, .54);
+}
+
+.admin__add-product-sell-table-price-unit::before {
+    position: absolute;
+    content: '';
+    height: 20px;
+    width: 1px;
+    background-color: var(--border-color);
+    right: -10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.admin__add-product-sell-table-discount-sub {
+    font-size: 12px;
+    color: rgba(0, 0, 0, .54);
+    margin-top: 10px;
+}
+
 /* Responsive */
 /* PC */
 @media screen and (min-width: 992px) {
