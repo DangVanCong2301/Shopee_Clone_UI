@@ -124,7 +124,7 @@
             <div class="admin">
                 <div class="admin__aside">
                     <div class="admin__aside-sidebar">
-                        <a href="#" class="admin__aside-sidebar-link active">
+                        <div class="admin__aside-sidebar-link active">
                             <div class="admin__aside-sidebar-container">
                                 <div class="admin__aside-sidebar-symb">
                                     <i class="uil uil-th admin__aside-sidebar-icon"></i>
@@ -138,7 +138,7 @@
                                 <div class="admin__aside-sidebar-colappse-item">
                                     <div class="admin__aside-sidebar-symb">
                                     </div>
-                                    <div class="admin__aside-sidebar-sub">Tất cả</div>
+                                    <a href="javascript:showAll(event)" class="admin__aside-sidebar-sub">Tất cả</a>
                                 </div>
                                 <div class="admin__aside-sidebar-colappse-item">
                                     <div class="admin__aside-sidebar-symb">
@@ -161,8 +161,8 @@
                                     <div class="admin__aside-sidebar-sub">Cài đặt vận chuyển</div>
                                 </div>
                             </div>
-                        </a>
-                        <a href="#" class="admin__aside-sidebar-link active">
+                        </div>
+                        <div class="admin__aside-sidebar-link active">
                             <div class="admin__aside-sidebar-container">
                                 <div class="admin__aside-sidebar-symb">
                                     <i class="uil uil-sitemap admin__aside-sidebar-icon"></i>
@@ -181,11 +181,11 @@
                                 <div class="admin__aside-sidebar-colappse-item">
                                     <div class="admin__aside-sidebar-symb">
                                     </div>
-                                    <div class="admin__aside-sidebar-sub">Thêm sản phẩm</div>
+                                    <div class="admin__aside-sidebar-sub" onclick="showAddProduct(event)">Thêm sản phẩm</div>
                                 </div>
                             </div>
-                        </a>
-                        <a href="#" class="admin__aside-sidebar-link">
+                        </div>
+                        <div class="admin__aside-sidebar-link">
                             <div class="admin__aside-sidebar-container">
                                 <div class="admin__aside-sidebar-symb">
                                     <i class="uil uil-mobile-android admin__aside-sidebar-icon"></i>
@@ -207,8 +207,8 @@
                                     <div class="admin__aside-sidebar-sub">Mã giảm giá của Shop</div>
                                 </div>
                             </div>
-                        </a>
-                        <a href="#" class="admin__aside-sidebar-link">
+                        </div>
+                        <div class="admin__aside-sidebar-link">
                             <div class="admin__aside-sidebar-container">
                                 <div class="admin__aside-sidebar-symb">
                                     <i class="uil uil-chat admin__aside-sidebar-icon"></i>
@@ -230,8 +230,8 @@
                                     <div class="admin__aside-sidebar-sub">Quản lý đánh giá</div>
                                 </div>
                             </div>
-                        </a>
-                        <a href="#" class="admin__aside-sidebar-link">
+                        </div>
+                        <div class="admin__aside-sidebar-link">
                             <div class="admin__aside-sidebar-container">
                                 <div class="admin__aside-sidebar-symb">
                                     <i class="uil uil-wallet admin__aside-sidebar-icon"></i>
@@ -258,8 +258,8 @@
                                     <div class="admin__aside-sidebar-sub">Tài khoản ngân hàng</div>
                                 </div>
                             </div>
-                        </a>
-                        <a href="#" class="admin__aside-sidebar-link">
+                        </div>
+                        <div class="admin__aside-sidebar-link">
                             <div class="admin__aside-sidebar-container">
                                 <div class="admin__aside-sidebar-symb">
                                     <i class="uil uil-chart-line admin__aside-sidebar-icon"></i>
@@ -281,8 +281,8 @@
                                     <div class="admin__aside-sidebar-sub">Hiệu quả hoạt động</div>
                                 </div>
                             </div>
-                        </a>
-                        <a href="#" class="admin__aside-sidebar-link active">
+                        </div>
+                        <div class="admin__aside-sidebar-link active">
                             <div class="admin__aside-sidebar-container">
                                 <div class="admin__aside-sidebar-symb">
                                     <i class="uil uil-store admin__aside-sidebar-icon"></i>
@@ -296,7 +296,7 @@
                                 <div class="admin__aside-sidebar-colappse-item">
                                     <div class="admin__aside-sidebar-symb">
                                     </div>
-                                    <div class="admin__aside-sidebar-sub">Hồ sơ Shop</div>
+                                    <div class="admin__aside-sidebar-sub" onclick="showProfileShop()">Hồ sơ Shop</div>
                                 </div>
                                 <div class="admin__aside-sidebar-colappse-item">
                                     <div class="admin__aside-sidebar-symb">
@@ -309,7 +309,7 @@
                                     <div class="admin__aside-sidebar-sub" onclick="showSetupShop()">Thiết lập Shop</div>
                                 </div>
                             </div>
-                        </a>
+                        </div>
                         <a href="#" class="admin__aside-sidebar-link">
                             <div class="admin__aside-sidebar-container">
                                 <div class="admin__aside-sidebar-symb">
@@ -321,7 +321,7 @@
                     </div>
                 </div>
                 <div class="admin__container">
-                    <div class="admin__main hide-on-destop">
+                    <div class="admin__main">
                         <div class="admin__main-container">
                             <div class="admin__main-left">
                                 <div class="admin__main-analys">
@@ -568,7 +568,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="admin__add-product">
+                    <div class="admin__add-product hide-on-destop">
                         <div class="admin__add-product-container">
                             <div class="admin__add-product-header">
                                 <div class="admin__add-product-header-item active">
@@ -719,8 +719,44 @@
                                                 <div class="admin__add-product-table-col-sub admin__add-product-table-col-sub-center">Thương hiệu</div>
                                                 <div class="admin__add-product-table-col-value">
                                                     <div class="admin__add-product-table-industry-container">
-                                                        <input type="text" class="admin__add-product-table-industry-input" placeholder="Chọn ngành hàng">
-                                                        <i class="uil uil-angle-down admin__add-product-table-industry-icon"></i>
+                                                        <input type="text" class="admin__add-product-table-industry-input admin__add-product-detail-table-brand-input" onclick="showSelectBrand()" placeholder="Chọn ngành hàng">
+                                                        <div class="admin__add-product-detail-table-brand-symbol">
+                                                            <i class="uil uil-angle-down admin__add-product-table-industry-icon"></i>
+                                                        </div>
+                                                        <div class="admin__add-product-detail-table-brand-select">
+                                                            <div class="admin__add-product-detail-table-brand-select-search">
+                                                                <div class="admin__add-product-detail-table-brand-select-search-container">
+                                                                    <i class="uil uil-search admin__add-product-table-industry-icon"></i>
+                                                                    <input type="text" placeholder="Vui lòng nhập tốt thiểu 2 ký tự" class="admin__add-product-detail-table-brand-select-search-input">
+                                                                </div>
+                                                            </div>
+                                                            <div class="admin__add-product-detail-table-brand-select-list">
+                                                                <div class="admin__add-product-detail-table-brand-select-item">
+                                                                    No Brand
+                                                                </div>
+                                                                <div class="admin__add-product-detail-table-brand-select-item">
+                                                                    Alego
+                                                                </div>
+                                                                <div class="admin__add-product-detail-table-brand-select-item">
+                                                                    Dior
+                                                                </div>
+                                                                <div class="admin__add-product-detail-table-brand-select-item">
+                                                                    Adidas
+                                                                </div>
+                                                                <div class="admin__add-product-detail-table-brand-select-item">
+                                                                    Nike
+                                                                </div>
+                                                                <div class="admin__add-product-detail-table-brand-select-item">
+                                                                    Puma
+                                                                </div>
+                                                                <div class="admin__add-product-detail-table-brand-select-item">
+                                                                    Guici
+                                                                </div>
+                                                            </div>
+                                                            <div class="admin__add-product-detail-table-brand-select-footer">
+                                                                Không có trong danh sách? <a href="#" class="admin__add-product-detail-table-brand-select-link">Nhấn vào để thêm thương hiệu của bạn</a>
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -763,6 +799,61 @@
                                                 <div class="admin__add-product-sell-table-type l-2-4">
                                                     <i class="uil uil-plus admin__add-product-sell-table-type-icon"></i>
                                                     <span class="admin__add-product-sell-table-type-sub">Thêm nhóm phân loại</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="admin__add-product-table-row l-5">
+                                            <div class="admin__add-product-table-col-sub admin__add-product-table-col-sub-center">Giá</div>
+                                            <div class="admin__add-product-table-col-value">
+                                                <div class="admin__add-product-sell-table-price">
+                                                    <div class="admin__add-product-sell-table-price-unit">đ</div>
+                                                    <input type="text" class="admin__add-product-sell-table-price-input" placeholder="Nhập vào">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="admin__add-product-table-row l-5">
+                                            <div class="admin__add-product-table-col-sub admin__add-product-table-col-sub-center">Kho hàng</div>
+                                            <div class="admin__add-product-table-col-value">
+                                                <input type="text" class="admin__add-product-table-input-name" value="0">
+                                            </div>
+                                        </div>
+                                        <div class="admin__add-product-table-row">
+                                            <div class="admin__add-product-table-col-sub admin__add-product-table-col-sub-center">Giảm giá</div>
+                                            <div class="admin__add-product-table-col-value">
+                                                <div class="admin__add-product-sell-table-discount">
+                                                    <div class="admin__add-product-sell-table-type l-2-4">
+                                                        <i class="uil uil-plus admin__add-product-sell-table-type-icon"></i>
+                                                        <span class="admin__add-product-sell-table-type-sub">Thêm khoảng giảm giá</span>
+                                                    </div>
+                                                    <div class="admin__add-product-sell-table-discount-sub">
+                                                        Mua nhiều giảm giá sẽ bị ẩn khi sản phẩm đang tham gia Mua Kèm Deal Sốc hay Combo Khuyến Mãi 
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="admin__add-product-table-row">
+                                            <div class="admin__add-product-table-col-sub admin__add-product-table-col-sub-center">Bảng quy đổi kích cỡ</div>
+                                            <div class="admin__add-product-table-col-value">
+                                                <input type="text" class="admin__add-product-table-input-name" placeholder="Tăng khả năng hiển thị cho sản phẩm với Bảng quy đổi kích cỡ mới">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="admin__add-product-transport">
+                                <div class="admin__setup-shop-container">
+                                    <div class="admin__profile-shop-body-header">
+                                        <div class="admin__add-product-title">
+                                            Thông tin vận chuyển
+                                        </div>
+                                    </div>
+                                    <div class="admin__add-product-table">
+                                        <div class="admin__add-product-table-row l-5">
+                                            <div class="admin__add-product-table-col-sub">Cân nặng (Sau khi đóng gói)</div>
+                                            <div class="admin__add-product-table-col-value">
+                                                <div class="admin__add-product-sell-table-price">
+                                                    <div class="admin__add-product-sell-table-price-unit">gr</div>
+                                                    <input type="text" class="admin__add-product-sell-table-price-input" placeholder="Nhập vào">
                                                 </div>
                                             </div>
                                         </div>
