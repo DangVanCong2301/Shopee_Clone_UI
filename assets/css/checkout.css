@@ -503,23 +503,26 @@
     height: 40px;
     display: flex;
     align-items: center;
-    border-radius: 2px;
+    border-radius: 4px;
     border: 1px solid var(--border-color);
 }
 
 .checkout__payment-header-vnpay-btn {
     font-weight: bold;
+    border-radius: 4px;
 }
 
 .checkout__payment-header-paypal-btn {
     font-weight: bold;
     font-style: italic;
     background-color: #f6be38;
+    border-radius: 4px;
 }
 
 .checkout__payment-header-momo-btn {
     background-color: #ad006c;
     font-weight: bold;
+    border-radius: 4px;
     color: var(--white-color);
 }
 
@@ -547,7 +550,6 @@
 
 .checkout__payment-sub-img {
     height: 82px;
-    width: 82px;
     background-position: center;
     background-size: contain;
 }

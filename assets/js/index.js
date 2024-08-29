@@ -31,7 +31,7 @@ function sliderAuto() {
     document.getElementById(index).classList.add("banner-circle-fill");
 }
 
-setInterval(sliderAuto, 3000)
+//setInterval(sliderAuto, 3000)
 
 // Next/Prev Banner
 const btnNextBanner = document.querySelector(".banner-left-content__top-btn-icon-next");

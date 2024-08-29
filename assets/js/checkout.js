@@ -621,9 +621,13 @@ function openNewAddressForm() {
     addEvent();
 }
 
+function openModal() {
+    document.querySelector(".modal").classList.add("open");
+}
+
 // Transport Modal
 function openTransportModal() {
-    document.querySelector(".modal").classList.add("open");
+    openModal();
     document.querySelector(".modal__body").innerHTML = 
     `
             <div class="transport-form">
@@ -680,14 +684,80 @@ function openTransportModal() {
                     </div>
                 </div>
                 <div class="transport-form__footer">
-                    <div class="transport-form__btn btn" onclick="closeTransportModal()">TRỞ LẠI</div>
+                    <div class="transport-form__btn btn" onclick="closeModal()">TRỞ LẠI</div>
                     <div class="transport-form__btn btn btn--primary">HOÀN THÀNH</div>
                 </div>
             </div>
     `;
 }
 
-function closeTransportModal() {
+function openPaymentsType() {
+    openModal();
+    document.querySelector(".modal__body").innerHTML = 
+    `
+            <div class="transport-form">
+                <div class="transport-form__header">
+                    <div class="transport-form__header-title">Chọn phương thức thanh toán</div>
+                </div>
+                <div class="transport-form__body">
+                    <div class="transport-form__body-list">
+                        <div class="transport-form__body-item active">
+                            <div class="transport-form__body-item-left">
+                                <div class="transport-form__body-item-name">
+                                    <div class="checkout__payment-header-cod-btn">Thanh toán khi nhận hàng (COD)</div>
+                                </div>
+                            </div>
+                            <div class="transport-form__body-item-right">
+                                <i class="uil uil-check"></i>
+                            </div>
+                        </div>
+                        <div class="transport-form__body-item">
+                            <div class="transport-form__body-item-left">
+                                <div class="transport-form__body-item-name">
+                                    <div class="checkout__payment-header-momo-btn">
+                                        MOMO
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="transport-form__body-item-right">
+                                <i class="uil uil-check"></i>
+                            </div>
+                        </div>
+                        <div class="transport-form__body-item">
+                            <div class="transport-form__body-item-left">
+                                <div class="transport-form__body-item-name">
+                                    <div class="checkout__payment-header-vnpay-btn">
+                                        <span>VN</span><span>PAY</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="transport-form__body-item-right">
+                                <i class="uil uil-check"></i>
+                            </div>
+                        </div>
+                        <div class="transport-form__body-item">
+                            <div class="transport-form__body-item-left">
+                                <div class="transport-form__body-item-name">
+                                    <div class="checkout__payment-header-paypal-btn">
+                                        <span>Pay</span> <span>Pal</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="transport-form__body-item-right">
+                                <i class="uil uil-check"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="transport-form__footer">
+                    <div class="transport-form__btn btn" onclick="closeModal()">TRỞ LẠI</div>
+                    <div class="transport-form__btn btn btn--primary">HOÀN THÀNH</div>
+                </div>
+            </div>
+    `;
+}
+
+function closeModal() {
     document.querySelector(".modal").classList.remove("open");
 }
 

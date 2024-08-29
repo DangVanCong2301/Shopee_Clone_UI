@@ -449,7 +449,7 @@ function openChangeShopUsernameModal() {
         <div class="modal__confirm">
             <div class="modal__confirm-header">
                 <div class="modal__confirm-title">Chú ý</div>
-                <i class="uil uil-multiply modal__confirm-close"></i>
+                <i class="uil uil-multiply modal__confirm-close" onclick="closeModal()"></i>
             </div>
             <div class="modal__confirm-desc">
                 Bạn có chắc muốn thay đổi tên đăng nhập thành [congdang.vn]? 
@@ -941,5 +941,61 @@ function showProfileShop() {
                             </div>
                         </div>
                     </div>
+    `;
+}
+
+// Pich Up
+function openPickUpModal() {
+    openModal();
+    document.querySelector(".modal__body").innerHTML = 
+    `
+            <div class="transport-form">
+                <div class="transport-form__header">
+                    <div class="transport-form__header-title">Giao đơn hàng</div>
+                </div>
+                <div class="transport-form__body">
+                    <div class="transport-form__body-header">
+                        <div class="transport-form__body-title">
+                            Mã đơn hàng: ĐH01
+                        </div>
+                    </div>
+                    <div class="transport-form__body-list">
+                        <div class="transport-form__body-item active">
+                            <div class="transport-form__body-item-left">
+                                <div class="transport-form__body-item-name">
+                                    <div class="transport-form__body-item-type">Tôi sẽ tự mang hàng tới bưu cục</div>
+                                </div>
+                                <div class="transport-form__body-item-time">
+                                    <div class="transport-form__body-item-time-text">
+                                        Bạn có thể gửi đơn hàng tại bất kỳ bưu cục BEST Express nào thuộc cùng Tỉnh/Thành phố
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="transport-form__body-item-right">
+                                <i class="uil uil-check"></i>
+                            </div>
+                        </div>
+                        <div class="transport-form__body-item">
+                            <div class="transport-form__body-item-left">
+                                <div class="transport-form__body-item-name">
+                                    <div class="transport-form__body-item-type">Đơn vị vận chuyển đến lấy hàng</div>
+                                </div>
+                                <div class="transport-form__body-item-time">
+                                    <div class="transport-form__body-item-time-text">
+                                        BEST Express sẽ đến lấy hàng theo địa chỉ lấy hàng mà bạn đã xác nhận 
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="transport-form__body-item-right">
+                                <i class="uil uil-check"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="transport-form__footer">
+                    <div class="transport-form__btn btn" onclick="closeModal()">TRỞ LẠI</div>
+                    <div class="transport-form__btn btn btn--primary">XÁC NHẬN</div>
+                </div>
+            </div>
     `;
 }

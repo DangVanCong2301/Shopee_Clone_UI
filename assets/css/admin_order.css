@@ -383,6 +383,10 @@
     color: var(--white-color);
 }
 
+.header__search-btn:hover {
+    opacity: .9;
+}
+
 .header__search-btn-icon {
     font-size: 20px;
 }
