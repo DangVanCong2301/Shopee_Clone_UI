@@ -325,7 +325,7 @@
 }
 
 .header__logo-img {
-    width: 120px;
+    height: 40px;
 }
 
 .header__account-avatar {
@@ -556,6 +556,15 @@
     display: none;
 }
 
+.admin__main-left {
+    height: 100vh;
+    overflow-y: auto;
+}
+
+.admin__main-left::-webkit-scrollbar {
+    display: none;
+}
+
 .admin__main-title {
     font-size: 20px;
     font-weight: bold;
@@ -587,6 +596,12 @@
 .admin__main-insights {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    gap: 1.6rem;
+}
+
+.admin__main-to-do-list-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     gap: 1.6rem;
 }
 

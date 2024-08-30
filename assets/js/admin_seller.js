@@ -56,7 +56,7 @@ function showAll() {
                                                 <i class="uil uil-analytics admin__main-icon"></i>
                                             </div>
                                             <div class="admin__main-middle">
-                                                <div class="admin__main-left">
+                                                <div class="admin__main-middle-left">
                                                     <div class="admin__main-middle-title">Tổng bán hàng</div>
                                                     <div class="admin__main-middle-price">1.500.000đ</div>
                                                 </div>
@@ -77,7 +77,7 @@ function showAll() {
                                                 <i class="uil uil-chart admin__main-box-icon"></i>
                                             </div>
                                             <div class="admin__main-middle">
-                                                <div class="admin__main-left">
+                                                <div class="admin__main-middle-left">
                                                     <div class="admin__main-middle-title">Tổng bán hàng</div>
                                                     <div class="admin__main-middle-price">1.500.000đ</div>
                                                 </div>
@@ -98,7 +98,7 @@ function showAll() {
                                                 <i class="uil uil-comparison admin__main-box-icon"></i>
                                             </div>
                                             <div class="admin__main-middle">
-                                                <div class="admin__main-left">
+                                                <div class="admin__main-middle-left">
                                                     <div class="admin__main-middle-title">Tổng thu</div>
                                                     <div class="admin__main-middle-price">1.500.000đ</div>
                                                 </div>
@@ -114,6 +114,86 @@ function showAll() {
                                             <small class="admin__main-text-muted">24 tiếng trước</small>
                                         </div>
                                         <!-- End Of Income -->
+                                    </div>
+                                </div>
+                                <div class="admin__main-analys admin__main-to-do-list">
+                                    <div class="admin__main-title admin__main-to-do-list-title">Danh sách cần làm</div>
+                                    <div class="admin__main-to-do-list-list">
+                                        <div class="admin__main-sales">
+                                            <div class="admin__main-to-do-list-item">
+                                                <div class="admin__main-to-do-list-numb">
+                                                    0
+                                                </div>
+                                                <div class="admin__main-to-do-list-sub">
+                                                    Chờ xác nhận
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- End Of Sales -->
+                                        <div class="admin__main-expenses">
+                                            <div class="admin__main-to-do-list-item" onclick="showWaitingPickup()">
+                                                <div class="admin__main-to-do-list-numb">
+                                                    0
+                                                </div>
+                                                <div class="admin__main-to-do-list-sub">
+                                                    Chờ lấy hàng
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- End Of Expenses -->
+                                        <div class="admin__main-income">
+                                            <div class="admin__main-to-do-list-item">
+                                                <div class="admin__main-to-do-list-numb">
+                                                    0
+                                                </div>
+                                                <div class="admin__main-to-do-list-sub">
+                                                    Đã xử lý
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- End Of Income -->
+                                         <!-- End Of Expenses -->
+                                        <div class="admin__main-income">
+                                            <div class="admin__main-to-do-list-item">
+                                                <div class="admin__main-to-do-list-numb">
+                                                    0
+                                                </div>
+                                                <div class="admin__main-to-do-list-sub">
+                                                    Đơn huỷ
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- End Of Income -->
+                                        <div class="admin__main-expenses">
+                                            <div class="admin__main-to-do-list-item">
+                                                <div class="admin__main-to-do-list-numb">
+                                                    0
+                                                </div>
+                                                <div class="admin__main-to-do-list-sub">
+                                                    Trả hàng, hoàn tiền
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="admin__main-expenses">
+                                            <div class="admin__main-to-do-list-item">
+                                                <div class="admin__main-to-do-list-numb">
+                                                    0
+                                                </div>
+                                                <div class="admin__main-to-do-list-sub">
+                                                    Sản phẩm bị khoá
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="admin__main-expenses">
+                                            <div class="admin__main-to-do-list-item">
+                                                <div class="admin__main-to-do-list-numb">
+                                                    0
+                                                </div>
+                                                <div class="admin__main-to-do-list-sub">
+                                                    Sản phẩm hết hàng
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="admin__main-recent-orders">
@@ -944,6 +1024,105 @@ function showProfileShop() {
     `;
 }
 
+// Open Waiting Pickup
+function showWaitingPickup() {
+    document.querySelector(".admin__container").innerHTML = 
+    `
+                    <div class="admin__orders-waiting">
+                        <div class="admin__add-product-container">
+                            <div class="admin__add-product-header">
+                                <div class="admin__add-product-header-item active">
+                                    Tất cả
+                                </div>
+                                <div class="admin__add-product-header-item">
+                                    Chờ xác nhận  
+                                </div>
+                                <div class="admin__add-product-header-item">
+                                    Đang giao
+                                </div>
+                                <div class="admin__add-product-header-item">
+                                    Đã giao
+                                </div>
+                            </div>
+                            <div class="admin__setup-shop-body">
+                                <div class="admin__setup-shop-container">
+                                    <div class="admin__profile-shop-body-header">
+                                        <div class="admin__add-product-title">
+                                            1 Đơn hàng 
+                                        </div>
+                                    </div>
+                                    <div class="admin__order-container">
+                                        <div class="admin__order-table">
+                                            <div class="admin__order-table-header">
+                                                <div class="admin__order-table-header-row">
+                                                    <div class="admin__order-table-header-col">Mã đơn hàng</div>
+                                                    <div class="admin__order-table-header-col">Sản phẩm</div>
+                                                    <div class="admin__order-table-header-col">Thanh toán</div>
+                                                    <div class="admin__order-table-header-col">Trạng thái</div>
+                                                    <div class="admin__order-table-header-col">Thao tác</div>
+                                                    <div class="admin__order-table-header-col">Xem</div>
+                                                </div>
+                                            </div>
+                                            <div class="admin__order-table-body">
+                                                <div class="admin__order-table-body-row">
+                                                    <div class="admin__order-table-body-col">DH123</div>
+                                                    <div class="admin__order-table-body-col">3</div>
+                                                    <div class="admin__order-table-body-col">500.000 đ</div>
+                                                    <div class="admin__order-table-body-col warning">Chờ xác nhận</div>
+                                                    <div class="admin__order-table-body-col primary">
+                                                        <a href="javascript:openPickUpModal()" class="admin__order-table-body-col-link">Chuẩn bị hàng</a>
+                                                    </div>
+                                                    <div class="admin__order-table-body-col primary">
+                                                        <a href="#" class="admin__order-table-body-col-link">Chi tiết</a>
+                                                    </div>
+                                                </div>
+                                                <div class="admin__order-table-body-row">
+                                                    <div class="admin__order-table-body-col">DH435</div>
+                                                    <div class="admin__order-table-body-col">3</div>
+                                                    <div class="admin__order-table-body-col">500.000 đ</div>
+                                                    <div class="admin__order-table-body-col primary">Đã thanh toán</div>
+                                                    <div class="admin__order-table-body-col primary">
+                                                        <a href="#" class="admin__order-table-body-col-link">Chuẩn bị hàng</a>
+                                                    </div>
+                                                    <div class="admin__order-table-body-col primary">
+                                                        <a href="#" class="admin__order-table-body-col-link">Chi tiết</a>
+                                                    </div>
+                                                </div>
+                                                <div class="admin__order-table-body-row">
+                                                    <div class="admin__order-table-body-col">DH432</div>
+                                                    <div class="admin__order-table-body-col">3</div>
+                                                    <div class="admin__order-table-body-col">500.000 đ</div>
+                                                    <div class="admin__order-table-body-col success">Đã giao hàng</div>
+                                                    <div class="admin__order-table-body-col primary">
+                                                        <a href="#" class="admin__order-table-body-col-link">Chuẩn bị hàng</a>
+                                                    </div>
+                                                    <div class="admin__order-table-body-col primary">
+                                                        <a href="#" class="admin__order-table-body-col-link">Chi tiết</a>
+                                                    </div>
+                                                </div>
+                                                <div class="admin__order-table-body-row">
+                                                    <div class="admin__order-table-body-col">DH987</div>
+                                                    <div class="admin__order-table-body-col">3</div>
+                                                    <div class="admin__order-table-body-col">500.000 đ</div>
+                                                    <div class="admin__order-table-body-col danger">Khách hàng huỷ</div>
+                                                    <div class="admin__order-table-body-col primary">
+                                                        <a href="#" class="admin__order-table-body-col-link">Chuẩn bị hàng</a>
+                                                    </div>
+                                                    <div class="admin__order-table-body-col primary">
+                                                        <a href="#" class="admin__order-table-body-col-link">Chi tiết</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a href="#" class="admin__order-more">Xem tất cả</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    `;
+}
+
 // Pich Up
 function openPickUpModal() {
     openModal();
@@ -988,6 +1167,52 @@ function openPickUpModal() {
                             </div>
                             <div class="transport-form__body-item-right">
                                 <i class="uil uil-check"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="transport-form__footer">
+                    <div class="transport-form__btn btn" onclick="closeModal()">TRỞ LẠI</div>
+                    <div class="transport-form__btn btn btn--primary" onclick="openPickupAddressModal()">XÁC NHẬN</div>
+                </div>
+            </div>
+    `;
+}
+
+function openPickupAddressModal() {
+    document.querySelector(".modal__body").innerHTML = 
+    `
+            <div class="transport-form">
+                <div class="transport-form__header">
+                    <div class="transport-form__header-title">Giao đơn hàng</div>
+                </div>
+                <div class="transport-form__body">
+                    <div class="transport-form__body-header">
+                        <div class="transport-form__body-title">
+                            Đơn vị vận chuyển
+                        </div>
+                        <div class="transport-form__header-sub">
+                            BEST Express
+                        </div>
+                    </div>
+                    <div class="waiting-form__body">
+                        <div class="checkout__label">
+                            <div class="checkout__label-box"></div>
+                        </div>
+                        <div class="checkout__address">
+                            <div class="checkout__address-title">
+                                <i class="uil uil-map-marker checkout__address-title-icon"></i>
+                                <span>Địa lấy hàng</span>
+                            </div>
+                            <div class="checkout__address-desc">
+                                <div class="waiting-form__seller-info">
+                                    <div class="checkout__address-desc-name">Đặng Văn Công</div>
+                                    <div class="checkout__address-desc-phone">(+84) 347797502</div>
+                                    <div class="waiting-form__seller-info-pickup">Đến lấy hàng</div>
+                                    <div class="waiting-form__seller-info-return">Trả hàng</div>
+                                    <a href="javascript:openAddressModal()" class="checkout__address-desc-change">Thay đổi</a>
+                                </div>
+                                <div class="checkout__address-desc-direction">Số 20, Ngõ 259 Định Công, Phường Định Công, Quận Hoàng Mai, Hà Nội</div>
                             </div>
                         </div>
                     </div>

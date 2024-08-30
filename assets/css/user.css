@@ -32,7 +32,7 @@ header {
 }
 
 .header__logo-img {
-    width: 130px;
+    width: 160px;
 }
 
 .header__text-name {
@@ -62,8 +62,12 @@ header {
     align-items: center;
 }
 
+.auth__left-img {
+    margin-bottom: 20px;
+}
+
 .auth__content-logo {
-    width: 300px;
+    width: 260px;
 }
 
 .auth__left-sub {
