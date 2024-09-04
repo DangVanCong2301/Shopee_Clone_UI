@@ -1,0 +1,72 @@
+.order-code {
+    background-color: var(--white-color);
+    width: 600px;
+    height: 700px;
+    margin: 100px auto 0;
+    border-radius: 4px;
+    box-shadow: 0 0 16px 0 rgba(0, 0, 0, .1), 0 8px 16px 0 rgba(0, 0, 0, .06);
+    padding: 10px;
+}
+
+.order-code__container {
+    border: 2px solid var(--text-color);
+    height: 100%;
+}
+
+.order-code__header {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 16px 4px;
+}
+
+.order-code__header-logo {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    row-gap: 4px;
+}
+
+.order-code__header-logo-shopeeme-img,
+.order-code__header-logo-spx-img {
+    height: 46px;
+}
+
+.order-code__header-id {
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;    
+}
+
+.order-code__header-id-barcode-img {
+    display: flex;
+    justify-content: space-between;
+}
+
+.order-code__header-id-barcode-img {
+    height: 46px;
+    margin: 0 auto;
+}
+
+.order-code__address {
+    display: flex;
+    padding: 0px 4px 0;
+    border-top: 2px dashed var(--text-color);
+    display: flex;
+    line-height: 20px;
+}
+
+.order-code__address-from-title,
+.order-code__address-to-title {
+    font-weight: bold;
+}
+
+.order-code__address-from,
+.order-code__address-to {
+    flex: 1;
+    padding-top: 4px;
+}
+
+.order-code__address-to {
+    border-left: 2px dashed var(--text-color);
+    padding-left: 4px;
+}
