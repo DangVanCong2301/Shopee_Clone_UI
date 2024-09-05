@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <!--=============== ICONSCOUT ===============-->
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
-    <title>Thanh toán - MoMo</title>
+    <title>ShopeeMe - Đơn hàng</title>
 </head>                     
 <body>
     <div class="app">
@@ -67,6 +67,63 @@
                             </div>
                         </div>
                     </div>
+                    <div class="order-code__area">
+                        <div class="order-code__area-1"></div>
+                        <div class="order-code__area-2">HN-20-05-HM14</div>
+                        <div class="order-code__area-3">DC-20</div>
+                    </div>
+                    <div class="order-code__body">
+                        <div class="order-code__body-left">
+                            <div class="order-code__body-product-top">
+                                <div class="order-code__body-product-title">Nội dung hàng (Tổng SL sản phẩm: 1)</div>
+                                <div class="order-code__body-product-list">
+                                    <div class="order-code__body-product-item">
+                                        1. Dây sạc bọc dù HOCO dài 2m 1.2m 2m 3m Cáp sạc dùng cho 6 7 8 xsmax 11 12 13 ..., 
+                                        SL: 1
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="order-code__body-product-bottom">
+                                Người gửi phải cam kết hàng hoá có đầy đủ các hoá đơn, chứng từ, giấy phép 
+                                cần thiết theo quy định của pháp luật và đính kèm bên trong đơn hàng này (Lưu ý: 
+                                Một số sản phẩm có thể bị ẩn do danh sách quá dài).
+                            </div>
+                        </div>
+                        <div class="order-code__body-right">
+                            <div class="order-code__body-qr">
+                                <img src="./assets/img/qr_code.png" class="order-code__body-qr-img" alt="">
+                            </div>
+                            <div class="order-code__body-id">HN-20-35-BT02R</div>
+                            <div class="order-code__body-date">
+                                <div class="order-code__body-date-title">Ngày đặt hàng:</div>
+                                <div class="order-code__body-date-time">21-05-2024</div>
+                                <div class="order-code__body-date-hour">17:15</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="order-code__footer">
+                        <div class="order-code__footer-top">
+                            <div class="order-code__footer-left">
+                                <div class="order-code__footer-money-title">Tiền thu Người nhận:</div>
+                                <div class="order-code__footer-money-numb">22,900 VND</div>
+                            </div>
+                            <div class="order-code__footer-right">
+                                <div class="order-code__footer-mass">Khối lượng tối đa: 36g</div>
+                                <div class="order-code__footer-signature">
+                                    <div class="order-code__footer-signature-title">Chữ ký người nhận</div>
+                                    <div class="order-code__footer-signature-sub">Xác nhận hàng nguyên vẹn, không móp/méo, bể/vỡ</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="order-code__footer-bottom">
+                            <div class="order-code__footer-bottom-title">Chỉ dẫn giao hàng: <span>Được đồng kiểm</span></div>
+                            <div class="order-code__footer-bottom-sub">Chuyển hoàn sau 3 lần phát; Lưu kho tối đa 5 ngày</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="order-code__pdf" onclick="downloadPdf()">
+                    <i class="uil uil-file-download"></i>
+                    <span>Tải PDF</span>
                 </div>
             </div>
         </div>
@@ -83,6 +140,7 @@
         
     </div>
 </body>
-<script src="./assets/js/momo_payment.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.2/html2pdf.bundle.min.js"></script>
+<script src="./assets/js/order_code.js"></script>
 <script src="./assets/js/site.js"></script>
 </html>
