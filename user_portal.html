@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopee - Thông tin người mua</title>
+    <link rel="sortcut icon" href="./assets/img/shopee_logo.png">
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/grid.css">
+    <link rel="stylesheet" href="./assets/css/user.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+    <link rel="stylesheet" href="./assets/css/user_portal.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <!--=============== ICONSCOUT ===============-->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/solid.css" />
+</head>
+
+<body>
+    <div class="app hight">
+        <header class="header hide-on-table">
+            <div class="grid wide">
+                <div class="header__mobile hide-on-destop">
+                    <div class="header__mobile-arrow">
+                        <i class="uil uil-arrow-left header__mobile-arrow-icon"></i>
+                    </div>
+                    <div class="header__mobile-title">Đăng nhập</div>
+                    <div class="header__mobile-question">
+                        <i class="uil uil-question-circle header__mobile-question"></i>
+                    </div>
+                </div>
+                <div class="header__text hide-on-mobile">
+                    <div class=" header__text-logo">
+                        <a href="index.html" class="header__text-link">
+                            <img class="header__logo-img" src="./assets/img/shopeeme_logo_primary.png" alt="">
+                        </a>
+                    </div>
+                    <div class="header__text-name">Thông tin người mua</div>
+                </div>
+            </div>
+        </header>
+        <div class="home__table hide-on-mobile hide-on-destop">
+            Sản phẩm chưa được tối ưu trên máy tính bảng, vui lòng sử dụng điện thoại và laptop 
+            để có trả nghiệm tốt hơn!
+        </div>
+        <div class="container">
+            <div class="app__container">
+                <div class="user-portal">
+                    <div class="grid wide">
+                        <div class="user-portal__start hide-on-destop">
+                            <div class="portal__start">
+                                <div class="portal__start-box">
+                                    <i class="uil uil-clipboard-notes portal__start-box-icon"></i>
+                                </div>
+                                <div class="portal__start-welcome">Chào mừng đến với ShopeeMe!</div>
+                                <div class="portal__start-please">Vui lòng cung cấp thông tin để hoàn thành tài khoản người <br> mua trên ShopeeMe</div>
+                                <div class="portal__start-btn">
+                                    <div class="btn btn--primary" onclick="openShopPortal()">Cung cấp thông tin</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portal__container">
+                            <div class="portal__steps">
+                                <div class="portal__step active">
+                                    <div class="portal__step-box"></div>
+                                    <div class="portal__step-name">Thông tài khoản</div>
+                                </div>
+                                <div class="portal__step-line-1"></div>
+                                <div class="portal__step">
+                                    <div class="portal__step-box"></div>
+                                    <div class="portal__step-name">Hoàn tất</div>
+                                </div>
+                            </div>
+                            <div class="portal__body"></div>
+                            <div class="portal__shop">
+                                <div class="portal__shop-container">
+                                    <div class="portal__shop-form">
+                                        <div class="portal__shop-row">
+                                            <div class="portal__shop-col-1">Tên đăng nhập</div>
+                                            <div class="portal__shop-col-2 l-6">
+                                                <div class="portal__shop-box">
+                                                    <input type="text" class="portal__shop-input-name">
+                                                    <span>10/30</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="portal__shop-row">
+                                            <div class="portal__shop-col-1">Ảnh đại diện</div>
+                                            <div class="portal__shop-col-2">
+                                                <div class="admin__profile-shop-table-logo">
+                                                    <div class="admin__profile-shop-table-logo-thumb">
+                                                        <img src="./assets/img/no_user.jpg" class="admin__profile-shop-table-logo-img" alt="">
+                                                        <div class="admin__profile-shop-table-logo-pic">Sửa</div>
+                                                    </div>
+                                                    <ul class="admin__profile-shop-table-logo-sub">
+                                                        <li class="admin__profile-shop-table-logo-sub-text">
+                                                            Kích thước hình ảnh tiêu chuẩn: Chiều rộng 300px, Chiều cao 300px
+                                                        </li>
+                                                        <li class="admin__profile-shop-table-logo-sub-text">
+                                                            Dung lượng file tối đa 2.0MB
+                                                        </li>
+                                                        <li class="admin__profile-shop-table-logo-sub-text">
+                                                            Định dạng file được hỗ trợ: JPG, JPEG, PNG
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="portal__shop-row">
+                                            <div class="portal__shop-col-1">Tên đầy đủ</div>
+                                            <div class="portal__shop-col-2 l-6">
+                                                <div class="portal__shop-box">
+                                                    <input type="text" class="portal__shop-input-name">
+                                                    <span>10/30</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="portal__shop-row">
+                                            <div class="portal__shop-col-1">Giới tính</div>
+                                            <div class="portal__shop-col-2">
+                                                <div class="profile__table-box">
+                                                    <span>
+                                                        <input type="radio" name="gender" id="">
+                                                    </span>
+                                                    <label for="">Nam</label>
+                                                    <span>
+                                                        <input type="radio" name="gender" id="">
+                                                    </span>
+                                                    <label for="">Nữ</label>
+                                                    <span>
+                                                        <input type="radio" name="gender" id="">
+                                                    </span>
+                                                    <label for="">Khác</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="portal__shop-row">
+                                            <div class="portal__shop-col-1">Ngày sinh</div>
+                                            <div class="portal__shop-col-2">
+                                                <input type="date" class="user-portal__input-birth" name="" id="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="portal__shop-bottom">
+                                    <div class="portal__shop-btn-save">Lưu</div>
+                                    <div class="portal__shop-btn-next">Tiếp theo</div>
+                                </div>
+                            </div>
+                            <div class="portal__success hide-on-destop">
+                                <div class="portal__success-container">
+                                    <div class="portal__success-box">
+                                        <i class="uil uil-check portal__success-box-icon"></i>
+                                    </div>
+                                    <div class="portal__success-title">Đăng ký thành công</div>
+                                    <div class="portal__success-sub">Hãy bán sản phẩm đầu tiên để khởi động hành trình bán hàng cùng <br> Shopee nhé!</div>
+                                    <div class="portal__success-btn">
+                                        <div class="btn btn--primary">Thêm sản phẩm</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="./assets/js/user.js"></script>
+</body>
