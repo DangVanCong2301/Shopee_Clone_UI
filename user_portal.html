@@ -8,7 +8,6 @@
     <link rel="sortcut icon" href="./assets/img/shopee_logo.png">
     <link rel="stylesheet" href="./assets/css/base.css">
     <link rel="stylesheet" href="./assets/css/grid.css">
-    <link rel="stylesheet" href="./assets/css/user.css">
     <link rel="stylesheet" href="./assets/css/responsive.css">
     <link rel="stylesheet" href="./assets/css/user_portal.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
@@ -128,10 +127,6 @@
                                                         <input type="radio" name="gender" id="">
                                                     </span>
                                                     <label for="">Nữ</label>
-                                                    <span>
-                                                        <input type="radio" name="gender" id="">
-                                                    </span>
-                                                    <label for="">Khác</label>
                                                 </div>
                                             </div>
                                         </div>
@@ -144,19 +139,26 @@
                                     </div>
                                 </div>
                                 <div class="portal__shop-bottom">
-                                    <div class="portal__shop-btn-save">Lưu</div>
-                                    <div class="portal__shop-btn-next">Tiếp theo</div>
+                                    <div class="portal__shop-btn-save hide-on-destop">Lưu</div>
+                                    <div class="portal__shop-btn-next" onclick="saveUserPoral()">
+                                        <div class="user-portal__btn-save">
+                                            <div class="user-portal__btn-save-spinner hide-on-destop"></div>
+                                            <div class="user-portal__btn-save-text">Lưu</div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="portal__success hide-on-destop">
-                                <div class="portal__success-container">
-                                    <div class="portal__success-box">
-                                        <i class="uil uil-check portal__success-box-icon"></i>
-                                    </div>
-                                    <div class="portal__success-title">Đăng ký thành công</div>
-                                    <div class="portal__success-sub">Hãy bán sản phẩm đầu tiên để khởi động hành trình bán hàng cùng <br> Shopee nhé!</div>
-                                    <div class="portal__success-btn">
-                                        <div class="btn btn--primary">Thêm sản phẩm</div>
+                            <div class="user-portal__success hide-on-destop">
+                                <div class="portal__success">
+                                    <div class="portal__success-container">
+                                        <div class="portal__success-box">
+                                            <i class="uil uil-check portal__success-box-icon"></i>
+                                        </div>
+                                        <div class="portal__success-title">Đăng ký thành công</div>
+                                        <div class="portal__success-sub">Hãy mua sản phẩm đầu tiên để khởi động hành trình mua hàng cùng <br> ShopeeMe nhé!</div>
+                                        <div class="portal__success-btn">
+                                            <div class="btn btn--primary">Mua sản phẩm</div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -167,5 +169,9 @@
         </div>
     </div>
 </div>
-<script src="./assets/js/user.js"></script>
+<div class="" id="toast">
+        
+</div>
+<script src="./assets/js/site.js"></script>
+<script src="./assets/js/user_portal.js"></script>
 </body>
