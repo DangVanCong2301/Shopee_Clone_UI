@@ -151,6 +151,9 @@ header {
 
 .auth-msg__err {
     color: var(--primary-color);
+    font-size: 12px;
+    margin-top: 10px;
+    display: block;
 }
 
     .auth-form__input:focus {

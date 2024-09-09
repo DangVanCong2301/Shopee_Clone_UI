@@ -76,12 +76,13 @@
                                 <div class="portal__shop-container">
                                     <div class="portal__shop-form">
                                         <div class="portal__shop-row">
-                                            <div class="portal__shop-col-1">Tên đăng nhập</div>
+                                            <div class="portal__shop-col-1 portal__tax-code-name">Tên đăng nhập</div>
                                             <div class="portal__shop-col-2 l-6">
-                                                <div class="portal__shop-box">
-                                                    <input type="text" class="portal__shop-input-name">
+                                                <div class="portal__shop-box user-portal__box-username">
+                                                    <input type="text" value="Công Đặng" readonly class="portal__shop-input-name">
                                                     <span>10/30</span>
                                                 </div>
+                                                <div class="user-portal__msg-err user-portal__msg-err-username hide-on-destop">Tên đăng nhập không được trống!</div>
                                             </div>
                                         </div>
                                         <div class="portal__shop-row">
@@ -107,16 +108,17 @@
                                             </div>
                                         </div>
                                         <div class="portal__shop-row">
-                                            <div class="portal__shop-col-1">Tên đầy đủ</div>
+                                            <div class="portal__shop-col-1 portal__tax-code-name">Tên đầy đủ</div>
                                             <div class="portal__shop-col-2 l-6">
-                                                <div class="portal__shop-box">
-                                                    <input type="text" class="portal__shop-input-name">
+                                                <div class="portal__shop-box user-portal__box-fullname">
+                                                    <input type="text" class="portal__shop-input-name user-portal__input-fullname">
                                                     <span>10/30</span>
                                                 </div>
+                                                <div class="user-portal__msg-err user-portal__msg-err-fullname hide-on-destop">Tên đầy đủ không được trống!</div>
                                             </div>
                                         </div>
                                         <div class="portal__shop-row">
-                                            <div class="portal__shop-col-1">Giới tính</div>
+                                            <div class="portal__shop-col-1 portal__tax-code-name">Giới tính</div>
                                             <div class="portal__shop-col-2">
                                                 <div class="profile__table-box">
                                                     <span>
@@ -128,19 +130,21 @@
                                                     </span>
                                                     <label for="">Nữ</label>
                                                 </div>
+                                                <div class="user-portal__msg-err user-portal__msg-err-gender hide-on-destop">Bạn chưa chọn giới tính!</div>
                                             </div>
                                         </div>
                                         <div class="portal__shop-row">
-                                            <div class="portal__shop-col-1">Ngày sinh</div>
+                                            <div class="portal__shop-col-1 portal__tax-code-name">Ngày sinh</div>
                                             <div class="portal__shop-col-2">
                                                 <input type="date" class="user-portal__input-birth" name="" id="">
+                                                <div class="user-portal__msg-err user-portal__msg-err-birth hide-on-destop">Bạn chưa nhập ngày sinh!</div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="portal__shop-bottom">
                                     <div class="portal__shop-btn-save hide-on-destop">Lưu</div>
-                                    <div class="portal__shop-btn-next" onclick="saveUserPoral()">
+                                    <div class="portal__shop-btn-next user-portal__btn-save-portal">
                                         <div class="user-portal__btn-save">
                                             <div class="user-portal__btn-save-spinner hide-on-destop"></div>
                                             <div class="user-portal__btn-save-text">Lưu</div>
@@ -157,7 +161,7 @@
                                         <div class="portal__success-title">Đăng ký thành công</div>
                                         <div class="portal__success-sub">Hãy mua sản phẩm đầu tiên để khởi động hành trình mua hàng cùng <br> ShopeeMe nhé!</div>
                                         <div class="portal__success-btn">
-                                            <div class="btn btn--primary">Mua sản phẩm</div>
+                                            <a href="index.html" class="btn btn--primary">Mua sản phẩm</a>
                                         </div>
                                     </div>
                                 </div>

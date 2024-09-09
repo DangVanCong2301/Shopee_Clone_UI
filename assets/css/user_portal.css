@@ -165,6 +165,24 @@ header {
     border: 1px solid var(--border-color);
 }
 
+.user-portal__box-username.err,
+.user-portal__box-fullname.err,
+.user-portal__input-birth.err {
+    border: 1px solid var(--primary-color);
+}
+
+.user-portal__msg-err {
+    font-size: 12px;
+    color: var(--primary-color);
+    margin-top: 10px;
+}
+
+.portal__tax-code-name {
+    margin-bottom: auto;
+    height: 40px;
+    line-height: 40px;
+}
+
 .portal__shop-input-name,
 .portal__shop-input-email {
     height: 100%;
@@ -260,6 +278,7 @@ header {
     display: flex;
     align-items: center;
     column-gap: 20px;
+    height: 40px;
 }
 .profile__table-box input[type=radio] {
     height: 24px;
