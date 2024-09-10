@@ -67,7 +67,6 @@
     width: 100%;
     height: 40px;
     padding: 0 12px;
-    font-size: 1.4rem;
     border: 1px solid var(--border-color);
     border-radius: 2px;
     outline: none;
@@ -94,7 +93,6 @@
 .profile__table input[type=date] {
     height: 40px;
     padding: 0 12px;
-    font-size: 1.4rem;
     border: 1px solid var(--border-color);
     border-radius: 2px;
     outline: none;
@@ -106,7 +104,8 @@
 /* Profile Left */
 .profile__left {
     margin: 20px 0;
-    display: grid;
+    display: flex;
+    flex-direction: column;
     row-gap: 1rem;
 }
 
@@ -117,6 +116,7 @@
     gap: 1rem;
     font-size: var(--normal-font-size);
     line-height: 1.5;
+    overflow: hidden;
 }
 
 .profile__left-avatar {
@@ -152,12 +152,14 @@
 }
 
 .profile__left-link {
+    display: flex;
+    align-items: center;
     text-decoration: none;
     color: var(--text-color);
 }
 
 .profile__left-link i {
-    font-size: 2rem;
+    font-size: 24px;
     padding-right: 10px;
     color: #7f9fd3;
 }
