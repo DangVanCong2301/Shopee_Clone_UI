@@ -71,12 +71,12 @@
                                         </div>
                                         <div class="auth-form__form">
                                             <div class="auth-form__group">
-                                                <input type="text" class="auth-form__input"placeholder="Số điện thoại của bạn" />
-                                                <span class="auth-msg auth-msg__err"></span>
+                                                <input type="text" class="auth-form__input seller-auth__input-phone"placeholder="Số điện thoại của bạn" />
+                                                <span class="auth-msg auth-msg__err seller-auth__msg-phone hide-on-destop">Số điện thoại không được trống!</span>
                                             </div>
                                             <div class="auth-form__group">
-                                                <input type="password" class="auth-form__input"placeholder="Mật khẩu" />
-                                                <span class="auth-msg auth-msg__err"></span>
+                                                <input type="password" class="auth-form__input seller-auth__input-password" placeholder="Mật khẩu" />
+                                                <span class="auth-msg auth-msg__err seller-auth__msg-password hide-on-destop">Mật khẩu không được trống!</span>
                                             </div>
                                         </div>
                                         <div class="auth-form__aside">
@@ -87,7 +87,7 @@
                                             </div>
                                         </div>
                                         <div class="auth-form__controls">
-                                            <div class="auth-form__btn" onclick="openConfirmModal()">TIẾP THEO</div>
+                                            <div class="auth-form__btn seller-auth__btn-submit">ĐĂNG NHẬP</div>
                                         </div>
                                     </form>
                                     <div class="auth-form__or">
@@ -108,12 +108,6 @@
                                                 Google
                                             </span>
                                         </a>
-                                    </div>
-                                    <div class="auth-form__agree">
-                                        <div class="auth-form__agree-text">Bằng việc đăng ký, bạn đã đồng ý với Shopee về</div>
-                                        <div class="auth-form__agree-text">
-                                            <a href="#" class="auth-form__agree-link">Điều khoản dịch vụ </a> & <a href="#" class="auth-form__agree-link">Chính sách bảo mật</a>
-                                        </div>
                                     </div>
                                     <div class="auth-form__footer">Bạn mới biết đến Shopee? <a href="javascript:openSignupSeller()" class="auth-form__footer-link">Đăng ký</a></div>
                                 </div>
@@ -149,16 +143,16 @@
                                 <div class="auth-form">
                                     <form action="/User/Login" method="post" class="auth-form__container">
                                         <div class="auth-form__header">
-                                            <h3 class="auth-form__heading">Đăng nhập</h3>
+                                            <h3 class="auth-form__heading">Đăng ký</h3>
                                         </div>
                                         <div class="auth-form__form">
                                             <div class="auth-form__group">
-                                                <input type="text" class="auth-form__input"placeholder="Số điện thoại của bạn" />
-                                                <span class="auth-msg auth-msg__err"></span>
+                                                <input type="text" class="auth-form__input seller-auth__regis-input-phone"placeholder="Số điện thoại của bạn" />
+                                                <span class="auth-msg auth-msg__err seller-auth__msg-regis-phone hide-on-destop">Điện thoại không được trống!</span>
                                             </div>
                                         </div>
                                         <div class="auth-form__controls">
-                                            <div class="auth-form__btn" onclick="openConfirmModal()">TIẾP THEO</div>
+                                            <div class="auth-form__btn seller-auth__regis-btn">TIẾP THEO</div>
                                         </div>
                                     </form>
                                     <div class="auth-form__or">
@@ -287,6 +281,7 @@
                                     Bước cuối! Thiết lập mật khẩu để hoàn tất việc đăng ký
                                 </div>
                                 <input type="text" class="seller-confirm__method-body-input-password" placeholder="Mật khẩu">
+                                <div class="auth-msg auth-msg__err seller-auth__msg-regis-passowrd hide-on-destop">Điện thoại không được trống!</div>
                                 <div class="seller-confirm__method-body-input-password-rule">
                                     <div class="seller-confirm__method-body-input-password-rule-item">
                                         Ít nhất một ký tự viết thường

@@ -188,6 +188,13 @@ header {
     font-family: var(--body-font);
 }
 
+.seller-auth__input-phone.err,
+.seller-auth__input-password.err,
+.seller-auth__regis-input-phone.err,
+.seller-confirm__method-body-input-password.err {
+    border: 1px solid var(--primary-color);
+}
+
 .auth-msg__err {
     color: var(--primary-color);
     font-size: 12px;
