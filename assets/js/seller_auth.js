@@ -72,7 +72,7 @@ function openConfirmPage(number) {
                                     <div class="seller-confirm__method-sub-phone">(+84) ${number}</div>
                                 </div>
                                 <div class="seller-confirm__method-list">
-                                    <div class="seller-confirm__method-item" onclick="openZaloConfirm()">
+                                    <div class="seller-confirm__method-item" onclick="openZaloConfirm(${number})">
                                         <div class="seller-confirm__method-item-img">
                                             <img src="./assets/img/zalo_img.png" class="seller-confirm__method-item-thumb" alt="">
                                         </div>
@@ -93,81 +93,6 @@ function openConfirmPage(number) {
                                 </div>
                             </div>
                         </div>
-                        <div class="seller-confirm__method-container hide-on-destop">
-                            <div class="seller-confirm__method-header">
-                                <div class="seller-confirm__method-header-back">
-                                    <i class="uil uil-arrow-left seller-confirm__method-header-back-icon"></i>
-                                </div>
-                                <div class="seller-confirm__method-header-sub">Nhập mã xác nhận</div>
-                            </div>
-                            <div class="seller-confirm__method-body">
-                                <div class="seller-confirm__method-body-sub">
-                                    Mã xác thực sẽ được gửi qua Zalo đến 
-                                    <div class="seller-confirm__method-zalo">
-                                        <img src="./assets/img/zalo_img.png" class="seller-confirm__method-zalo-img" alt="">
-                                        <div class="seller-confirm__method-zalo-phone">(+84) 347 797 502</div>
-                                    </div>
-                                </div>
-                                <div class="seller-confirm__method-body-enter">
-                                    <input type="password" value="1" class="seller-confirm__method-body-input">
-                                    <input type="password" value="1" class="seller-confirm__method-body-input">
-                                    <input type="password" value="1" class="seller-confirm__method-body-input">
-                                    <input type="password" value="1" class="seller-confirm__method-body-input">
-                                    <input type="password" value="1" class="seller-confirm__method-body-input">
-                                    <input type="password" value="1" class="seller-confirm__method-body-input">
-                                </div>
-                                <div class="seller-confirm__method-body-please">Vui lòng chờ 20 giây để thử lại</div>
-                                <div class="seller-confirm__method-btn">Kế tiếp</div>
-                            </div>
-                        </div>
-                        <div class="seller-confirm__method-container hide-on-destop">
-                            <div class="seller-confirm__method-header">
-                                <div class="seller-confirm__method-header-back">
-                                    <i class="uil uil-arrow-left seller-confirm__method-header-back-icon"></i>
-                                </div>
-                                <div class="seller-confirm__method-header-sub">Thiết lập mật khẩu</div>
-                            </div>
-                            <div class="seller-confirm__method-body">
-                                <div class="seller-confirm__method-body-sub">
-                                    Bước cuối! Thiết lập mật khẩu để hoàn tất việc đăng ký
-                                </div>
-                                <input type="text" class="seller-confirm__method-body-input-password" placeholder="Mật khẩu">
-                                <div class="seller-confirm__method-body-input-password-rule">
-                                    <div class="seller-confirm__method-body-input-password-rule-item">
-                                        Ít nhất một ký tự viết thường
-                                    </div>
-                                    <div class="seller-confirm__method-body-input-password-rule-item">
-                                        Ít nhất một ký tự viết hoa 
-                                    </div>
-                                    <div class="seller-confirm__method-body-input-password-rule-item">
-                                        8 - 16 ký tự 
-                                    </div>
-                                    <div class="seller-confirm__method-body-input-password-rule-item">
-                                        Chỉ các chữ cái, số, ký tự phổ biến mới có thể được sử dụng
-                                    </div>
-                                </div>
-                                <div class="seller-confirm__method-btn">Đăng ký</div>
-                            </div>
-                        </div>
-                        <div class="seller-confirm__method-container hide-on-destop">
-                            <div class="seller-confirm__method-header">
-                                <div class="seller-confirm__method-header-success">Đăng ký thành công</div>
-                            </div>
-                            <div class="seller-confirm__method-body">
-                                <div class="seller-confirm__method-body-sub">
-                                    <div class="seller-confirm__method-body-success-box">
-                                        <i class="uil uil-check seller-confirm__method-body-success-box-icon"></i>
-                                    </div>
-                                </div>
-                                <div class="seller-confirm__method-body-success-text">Bạn đã tạo tài khoản Shopee thành công với số 
-                                    <div class="seller-confirm__method-body-success-phone">(+84) 347 797 502</div>
-                                </div>
-                                <div class="seller-confirm__method-body-success-riderect">
-                                    Bạn sẽ chuyển hướng đến Kênh người bán trong vòng 7 giây
-                                </div>
-                                <div class="seller-confirm__method-btn">Đến kênh người bán</div>
-                            </div>
-                        </div>
                     </div>
                 </div>
     `;
@@ -178,7 +103,7 @@ function backMainPage() {
     document.querySelector(".seller-confirm").classList.add("hide-on-destop");
 }
 
-function openZaloConfirm() {
+function openZaloConfirm(number) {
     document.querySelectorAll(".seller-confirm__vector")[0].classList.add("active");
     document.querySelector(".seller-confirm__method-container").innerHTML = 
     `
@@ -194,7 +119,7 @@ function openZaloConfirm() {
                                     Mã xác thực sẽ được gửi qua Zalo đến 
                                     <div class="seller-confirm__method-zalo">
                                         <img src="./assets/img/zalo_img.png" class="seller-confirm__method-zalo-img" alt="">
-                                        <div class="seller-confirm__method-zalo-phone">(+84) 347 797 502</div>
+                                        <div class="seller-confirm__method-zalo-phone">(+84) ${number}</div>
                                     </div>
                                 </div>
                                 <div class="seller-confirm__method-body-enter">
@@ -206,13 +131,13 @@ function openZaloConfirm() {
                                     <input type="password" value="1" class="seller-confirm__method-body-input">
                                 </div>
                                 <div class="seller-confirm__method-body-please">Vui lòng chờ 20 giây để thử lại</div>
-                                <div class="seller-confirm__method-btn" onclick="openPasswordConfirm()">Kế tiếp</div>
+                                <div class="seller-confirm__method-btn" onclick="openPasswordConfirm(${number})">Kế tiếp</div>
                             </div>
                         </div>
     `;
 }
 
-function openPasswordConfirm() {
+function openPasswordConfirm(number) {
     document.querySelectorAll(".seller-confirm__step")[1].classList.add("active");
     document.querySelector(".seller-confirm__method-container").innerHTML = 
     `
@@ -254,12 +179,12 @@ function openPasswordConfirm() {
     document.querySelector(".seller-confirm__method-btn").addEventListener("click", () => {
         setPasswordSellerRegisValidate();
         if (setPasswordSellerRegisValidate()) {
-            openSuccessConfirm();
+            openSuccessConfirm(number);
         }
     });
 }
 
-function openSuccessConfirm() {
+function openSuccessConfirm(number) {
     document.querySelectorAll(".seller-confirm__vector")[1].classList.add("active");
     document.querySelectorAll(".seller-confirm__step")[2].classList.add("active");
     document.querySelector(".seller-confirm__method-container").innerHTML = 
@@ -274,7 +199,7 @@ function openSuccessConfirm() {
                                     </div>
                                 </div>
                                 <div class="seller-confirm__method-body-success-text">Bạn đã tạo tài khoản Shopee thành công với số 
-                                    <div class="seller-confirm__method-body-success-phone">(+84) 347 797 502</div>
+                                    <div class="seller-confirm__method-body-success-phone">(+84) ${number}</div>
                                 </div>
                                 <div class="seller-confirm__method-body-success-riderect">
                                     Bạn sẽ chuyển hướng đến Kênh người bán trong vòng 7 giây
