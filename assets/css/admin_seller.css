@@ -116,6 +116,8 @@
 }
 
 .header__notify-header {
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
     height: 40px;
     background-color: var(--white-color);
 }

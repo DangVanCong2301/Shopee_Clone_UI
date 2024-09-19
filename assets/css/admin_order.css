@@ -126,7 +126,7 @@
     top: 150%;
     width: 404px;
     right: 0;
-    border: 1px solid rgba(0,0,0,0.1);
+    box-shadow: 0 2px 10px #ccc;
     background-color: var(--white-color);
     cursor: default;
     transform-origin: 90% top;
@@ -419,6 +419,26 @@
     align-items: center;
     padding: 0 30px;
     border-top: 1px solid var(--border-color);
+}
+
+.admin-order__times {
+    background-color: var(--white-color);
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .1);
+    padding: 28px 30px 24px 30px;
+    display: flex;
+    margin-bottom: 12px;
+    display: flex;
+    column-gap: 10px;
+    color: var(--primary-color);
+}
+
+.admin-order__times-title {
+    font-size: 20px;
+}
+
+.admin-order__times-value {
+    font-size: 20px;
+    font-weight: bold;
 }
 
 /* Responsive */
