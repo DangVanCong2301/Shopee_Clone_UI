@@ -418,7 +418,7 @@
     display: flex;
     align-items: center;
     padding: 0 30px;
-    border-top: 1px solid var(--border-color);
+    border-top: 1px dotted var(--border-color);
 }
 
 .admin-order__times {
@@ -439,6 +439,10 @@
 .admin-order__times-value {
     font-size: 20px;
     font-weight: bold;
+}
+
+.admin-order__item-bottom {
+    border-top: 1px dashed var(--border-color);
 }
 
 /* Responsive */
