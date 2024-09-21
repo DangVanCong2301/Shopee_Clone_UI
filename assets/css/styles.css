@@ -23,11 +23,12 @@
     list-style: none;
     padding-left: 0;
     display: flex;
+    column-gap: 14px;
     align-items: center;
 }
 
 .header__navbar-item {
-    margin: 12px 0 8px 8px;
+    margin: 12px 0 8px;
     position: relative; /*Định vị tuyệt đối cho thành phần*/
 }
 
@@ -205,7 +206,7 @@
     position: absolute;
     border-left: 1px solid #ec8d8d;
     height: 14px;
-    right: -5px;
+    right: -8px;
     top: 50%;
     transform: translateY(-50%);
 }
