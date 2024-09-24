@@ -445,6 +445,22 @@
     border-top: 1px dashed var(--border-color);
 }
 
+.checkout__payment-order-btn-container {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    margin-left: auto;
+}
+
+.checkout__payment-order-btn-spinner {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #dedede;
+    border-top-color: transparent;
+    border-radius: 50%;
+    animation: spinner .7s linear infinite;
+}
+
 /* Responsive */
 /*Table */
 @media (min-width: 740px) and (max-width: 1023px) {
