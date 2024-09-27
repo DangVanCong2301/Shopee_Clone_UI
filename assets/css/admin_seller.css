@@ -473,6 +473,12 @@
 
 .admin__aside-sidebar-sub {
     flex: 1;
+    line-height: 20px;
+    height: 20px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
 }
 
 .admin__aside-sidebar-colappse-item .admin__aside-sidebar-sub {
