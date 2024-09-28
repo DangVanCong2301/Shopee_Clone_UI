@@ -416,3 +416,122 @@ function showWaitingConfirm() {
                     </div>
     `;
 }
+
+function openModal() {
+    document.querySelector(".modal").classList.add("open");
+}
+
+function closeModal() {
+    document.querySelector(".modal").classList.remove("open");
+}
+
+function openUpdateAccount() {
+    openModal();
+    let htmlUpdateAccount = "";
+    htmlUpdateAccount += 
+    `
+            <div class="address-form">
+                <div class="address-form__new">
+                    <div class="admin-account__update-title">
+                        Cập nhật tài khoản
+                    </div>
+                    <div class="address-form__new-body">
+                        <div class="admin-account__update-form">
+                            <div class="admin-account__update-div">
+                                <label for="" class="admin-account__update-label">Quyền</label>
+                                <div class="admin-account__update-box-ra">
+                                    <div class="admin-account__update-box-ra1">
+                                        <input type="radio" name="role-account" class="admin-account__update-radio">
+                                        <label for="" class="admin-account__update-radio-label">Admin</label>
+                                    </div>
+                                    <div class="admin-account__update-box-ra1">
+                                        <input type="radio" name="role-account" class="admin-account__update-radio">
+                                        <label for="" class="admin-account__update-radio-label">Người dùng</label>
+                                    </div>
+                                    <div class="admin-account__update-box-ra1">
+                                        <input type="radio" name="role-account" class="admin-account__update-radio">
+                                        <label for="" class="admin-account__update-radio-label">Lấy hàng</label>
+                                    </div>
+                                    <div class="admin-account__update-box-ra1">
+                                        <input type="radio" name="role-account" class="admin-account__update-radio">
+                                        <label for="" class="admin-account__update-radio-label">Giao hàng</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="admin-account__update-div">
+                                <label for="" class="admin-account__update-label">Email</label>
+                                <input type="text" class="address-form__new-input admin-account__update-input" readonly value="dangcong@gmail.com">
+                            </div>
+                            <div class="admin-account__update-div">
+                                <label for="" class="admin-account__update-label">Tên đăng nhập</label>
+                                <input type="text" class="address-form__new-input admin-account__update-input">
+                            </div>
+                            <div class="admin-account__update-div">
+                                <label for="" class="admin-account__update-label">Ảnh hồ sơ</label>
+                                <div class="admin__profile-shop-table-logo">
+                                    <div class="admin__profile-shop-table-logo-thumb">
+                                        <img src="./assets/img/no_user.jpg" class="admin__profile-shop-table-logo-img" alt="">
+                                        <div class="admin__profile-shop-table-logo-pic">Sửa</div>
+                                    </div>
+                                    <ul class="admin__profile-shop-table-logo-sub">
+                                        <li class="admin__profile-shop-table-logo-sub-text">
+                                            Kích thước hình ảnh tiêu chuẩn: Chiều rộng 300px, Chiều cao 300px
+                                        </li>
+                                        <li class="admin__profile-shop-table-logo-sub-text">
+                                            Dung lượng file tối đa 2.0MB
+                                        </li>
+                                        <li class="admin__profile-shop-table-logo-sub-text">
+                                            Định dạng file được hỗ trợ: JPG, JPEG, PNG
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="admin-account__update-div l-4">
+                                <label for="" class="admin-account__update-label">Ngày sinh</label>
+                                <input type="date" class="admin-account__update-input-date">
+                            </div>
+                            <div class="admin-account__update-div">
+                                <label for="" class="admin-account__update-label">Giới tính</label>
+                                <div class="admin-account__update-box-ra">
+                                    <div class="admin-account__update-box-ra1">
+                                        <input type="radio" name="gender-account" class="admin-account__update-radio">
+                                        <label for="" class="admin-account__update-radio-label">Nam</label>
+                                    </div>
+                                    <div class="admin-account__update-box-ra1">
+                                        <input type="radio" name="gender-account" class="admin-account__update-radio">
+                                        <label for="" class="admin-account__update-radio-label">Nữ</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="address-form__new-footer">
+                        <div class="address-form__new-footer-btns">
+                            <button class="btn" onclick="closeModal()">Thoát</button>
+                            <button class="btn btn--primary address-form__new-btn">Cập nhât</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    `;
+    document.querySelector(".modal__body").innerHTML = htmlUpdateAccount;
+}
+
+function openDeleteAccount() {
+    openModal();
+    document.querySelector(".modal__body").innerHTML = 
+    `
+                    <div class="modal__confirm">
+                        <div class="modal__confirm-header">
+                            <div class="modal__confirm-title">Thông báo</div>
+                        </div>
+                        <div class="modal__confirm-desc">
+                            Bạn có chắc muốn xoá tài khoản này?
+                        </div>
+                        <div class="modal__confirm-btns">
+                            <div class="modal__confirm-btn-destroy" onclick="closeModal()">Huỷ</div>
+                            <div class="modal__confirm-btn-send">Xoá</div>
+                        </div>
+                    </div>
+    `;
+}

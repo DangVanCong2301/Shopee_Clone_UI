@@ -76,6 +76,10 @@ input, textarea, button {
     display: flex;
 }
 
+.modal.hide {
+    display: none;
+}
+
 .modal__body {
     --growth-from:0.7;
     --growth-to:1;

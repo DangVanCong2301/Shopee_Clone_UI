@@ -741,6 +741,169 @@
     color: var(--link-color);
 }
 
+.admin-account__control {
+    position: relative;
+    height: 24px;
+    width: 48px;
+    border-radius: 16px;
+    background-color: #b7b7b7;
+    cursor: pointer;
+}
+
+.admin-account__control-circle {
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    left: 2px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    background-color: var(--white-color);
+    transition: left .3s ease-in-out;
+}
+
+.admin-account__control.active {
+    background-color: #5c7;
+}
+
+.admin-account__control.active .admin-account__control-circle {
+    left: 26px;
+}
+
+.admin__order-table-body-col.del {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.admin__order-table-body-col.islock {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.admin-account__control-del {
+    height: 32px;
+    width: 32px;
+    border-radius: 4px;
+    box-shadow: 0 0 3px #666;
+    background-color: var(--primary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.admin-account__control-del-icon {
+    color: var(--white-color);
+}
+
+.admin-account__more {
+    position: absolute;
+}
+
+.admin-account__more::before {
+    position: absolute;
+    content: '';
+    height: 30px;
+    width: 50px;
+    top: 10px;
+    right: 0;
+    /* background-color: var(--primary-color); */
+    z-index: 2;
+}
+
+.admin-account__more-icon,
+.admin-account__more-item-icon {
+    font-size: 20px;
+    color: rgba(0, 0, 0, .54);
+}
+
+.admin-account__more-container {
+    position: absolute;
+    top: 28px;
+    right: 0;
+    width: 150px;
+    background-color: var(--white-color);
+    padding: 8px 0;
+    row-gap: 16px;
+    border-radius: 4px;
+    box-shadow: 0 0 16px 0 rgba(0, 0, 0, .1), 0 8px 16px 0 rgba(0, 0, 0, .06);
+    animation: headerNotifyGrowth ease-in .3s;
+    will-change: opacity, transform;
+    transform-origin: 90% top;
+    display: none;
+    z-index: 1;
+}
+
+.admin-account__more-item {
+    display: flex;
+    column-gap: 16px;
+    align-items: center;
+    padding: 8px 16px;
+    cursor: pointer;
+}
+
+.admin-account__more-item:hover {
+    background-color: #f8f8f8;
+}
+
+.admin-account__more:hover .admin-account__more-container {
+    display: block;
+}
+
+/* Update Account */
+.admin-account__update-form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+.admin-account__update-title {
+    font-size: 18px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.admin-account__update-div {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+.admin-account__update-box-ra {
+    height: 40px;
+    display: flex;
+    column-gap: 16px;
+    align-items: center;
+}
+
+.admin-account__update-box-ra1 {
+    display: flex;
+    align-items: center;
+    column-gap: 16px;
+}
+
+.admin-account__update-radio {
+    width: 24px;
+    height: 24px;
+    accent-color: var(--primary-color);
+}
+
+.admin-account__update-input {
+    height: 40px;
+}
+
+.admin-account__update-input-date {
+    height: 40px;
+    padding: 0 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 2px;
+    outline: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 /* Transport Modal */
 .transport-form {
     background-color: var(--white-color);

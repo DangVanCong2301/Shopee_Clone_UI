@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="./assets/css/base.css">
     <link rel="stylesheet" href="./assets/css/grid.css">
     <link rel="stylesheet" href="./assets/css/responsive.css">
-    <link rel="stylesheet" href="./assets/css/admin_seller.css">
+    <link rel="stylesheet" href="./assets/css/admin_shopee.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <!--=============== ICONSCOUT ===============-->
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
@@ -321,7 +321,7 @@
                     </div>
                 </div>
                 <div class="admin__container">
-                    <div class="admin__main">
+                    <div class="admin__main hide-on-destop">
                         <div class="admin__main-container">
                             <div class="admin__main-left">
                                 <div class="admin__main-analys">
@@ -1263,6 +1263,72 @@
                             </div>
                         </div>
                     </div>
+                    <div class="admin__orders-waiting">
+                        <div class="admin__add-product-container">
+                            <div class="admin__add-product-header">
+                                <div class="admin__add-product-header-item active">
+                                    Tất cả
+                                </div>
+                                <div class="admin__add-product-header-item">
+                                    Bị khoá 
+                                </div>
+                            </div>
+                            <div class="admin__setup-shop-body">
+                                <div class="admin__setup-shop-container">
+                                    <div class="admin__profile-shop-body-header">
+                                        <div class="admin__add-product-title">
+                                            1 tài khoản
+                                        </div>
+                                    </div>
+                                    <div class="admin__order-container">
+                                        <div class="admin__order-table">
+                                            <div class="admin__order-table-header">
+                                                <div class="admin__order-table-header-row">
+                                                    <div class="admin__order-table-header-col">Tên đăng nhập</div>
+                                                    <div class="admin__order-table-header-col">Email</div>
+                                                    <div class="admin__order-table-header-col">Họ tên</div>
+                                                    <div class="admin__order-table-header-col">Ngày tạo</div>
+                                                    <div class="admin__order-table-header-col">Khoá</div>
+                                                    <div class="admin__order-table-header-col">Công cụ</div>
+                                                </div>
+                                            </div>
+                                            <div class="admin__order-table-body">
+                                                <div class="admin__order-table-body-row">
+                                                    <div class="admin__order-table-body-col">dangcong23012002</div>
+                                                    <div class="admin__order-table-body-col">dangcong@gmail.com</div>
+                                                    <div class="admin__order-table-body-col">Đặng Văn Công</div>
+                                                    <div class="admin__order-table-body-col">2/9/2024</div>
+                                                    <div class="admin__order-table-body-col islock">
+                                                        <div class="admin-account__control active"> 
+                                                            <div class="admin-account__control-circle">
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="admin__order-table-body-col del">
+                                                        <div class="admin-account__more">
+                                                            <i class="uil uil-ellipsis-v admin-account__more-icon"></i>
+                                                            <div class="admin-account__more-container">
+                                                                <div class="admin-account__more-item" onclick="openUpdateAccount()">
+                                                                    <i class="uil uil-pen admin-account__more-item-icon"></i>
+                                                                    <span>Chỉnh sửa</span>
+                                                                </div>
+                                                                <div class="admin-account__more-item" onclick="openDeleteAccount()">
+                                                                    <i class="uil uil-trash admin-account__more-item-icon"></i>
+                                                                    <span>Xoá</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a href="#" class="admin__order-more">Xem tất cả</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1272,7 +1338,89 @@
             
         </div>
         <div class="modal__body">
-            
+            <div class="address-form hide-on-destop">
+                <div class="address-form__new">
+                    <div class="admin-account__update-title">
+                        Cập nhật tài khoản
+                    </div>
+                    <div class="address-form__new-body">
+                        <div class="admin-account__update-form">
+                            <div class="admin-account__update-div">
+                                <label for="" class="admin-account__update-label">Quyền</label>
+                                <div class="admin-account__update-box-ra">
+                                    <div class="admin-account__update-box-ra1">
+                                        <input type="radio" name="role-account" class="admin-account__update-radio">
+                                        <label for="" class="admin-account__update-radio-label">Admin</label>
+                                    </div>
+                                    <div class="admin-account__update-box-ra1">
+                                        <input type="radio" name="role-account" class="admin-account__update-radio">
+                                        <label for="" class="admin-account__update-radio-label">Người dùng</label>
+                                    </div>
+                                    <div class="admin-account__update-box-ra1">
+                                        <input type="radio" name="role-account" class="admin-account__update-radio">
+                                        <label for="" class="admin-account__update-radio-label">Lấy hàng</label>
+                                    </div>
+                                    <div class="admin-account__update-box-ra1">
+                                        <input type="radio" name="role-account" class="admin-account__update-radio">
+                                        <label for="" class="admin-account__update-radio-label">Giao hàng</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="admin-account__update-div">
+                                <label for="" class="admin-account__update-label">Email</label>
+                                <input type="text" class="address-form__new-input admin-account__update-input" readonly value="dangcong@gmail.com">
+                            </div>
+                            <div class="admin-account__update-div">
+                                <label for="" class="admin-account__update-label">Tên đăng nhập</label>
+                                <input type="text" class="address-form__new-input admin-account__update-input">
+                            </div>
+                            <div class="admin-account__update-div">
+                                <label for="" class="admin-account__update-label">Ảnh hồ sơ</label>
+                                <div class="admin__profile-shop-table-logo">
+                                    <div class="admin__profile-shop-table-logo-thumb">
+                                        <img src="./assets/img/no_user.jpg" class="admin__profile-shop-table-logo-img" alt="">
+                                        <div class="admin__profile-shop-table-logo-pic">Sửa</div>
+                                    </div>
+                                    <ul class="admin__profile-shop-table-logo-sub">
+                                        <li class="admin__profile-shop-table-logo-sub-text">
+                                            Kích thước hình ảnh tiêu chuẩn: Chiều rộng 300px, Chiều cao 300px
+                                        </li>
+                                        <li class="admin__profile-shop-table-logo-sub-text">
+                                            Dung lượng file tối đa 2.0MB
+                                        </li>
+                                        <li class="admin__profile-shop-table-logo-sub-text">
+                                            Định dạng file được hỗ trợ: JPG, JPEG, PNG
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="admin-account__update-div l-4">
+                                <label for="" class="admin-account__update-label">Ngày sinh</label>
+                                <input type="date" class="admin-account__update-input-date">
+                            </div>
+                            <div class="admin-account__update-div">
+                                <label for="" class="admin-account__update-label">Giới tính</label>
+                                <div class="admin-account__update-box-ra">
+                                    <div class="admin-account__update-box-ra1">
+                                        <input type="radio" name="gender-account" class="admin-account__update-radio">
+                                        <label for="" class="admin-account__update-radio-label">Nam</label>
+                                    </div>
+                                    <div class="admin-account__update-box-ra1">
+                                        <input type="radio" name="gender-account" class="admin-account__update-radio">
+                                        <label for="" class="admin-account__update-radio-label">Nữ</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="address-form__new-footer">
+                        <div class="address-form__new-footer-btns">
+                            <button class="btn" onclick="backMainForm()">Trở lại</button>
+                            <button class="btn btn--primary address-form__new-btn">Hoàn thành</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     <div class="" id="toast">
