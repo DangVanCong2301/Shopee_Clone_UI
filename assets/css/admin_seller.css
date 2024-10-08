@@ -1914,6 +1914,208 @@
     opacity: .9;
 }
 
+/* List Product */
+.admin__product-header {
+    background-color: var(--white-color);
+    display: flex;
+    align-items: center;
+    height: 55px;
+    font-size: var(--normal-font-size);
+    padding: 0 20px;
+    margin-bottom: 10px;
+    border-radius: 2px;
+    background-color: var(--white-color);
+    /* box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .05); */
+}
+
+.admin__product-header-sub {
+    flex: 2;
+}
+
+.admin__product-header-type,
+.admin__product-header-cre-time, 
+.admin__product-header-up-time, 
+.admin__product-header-qnt, 
+.admin__product-header-operation {
+    flex: 1;
+    text-align: center;
+    color: #888;
+}
+
+.admin__product-list {
+    max-height: 454px;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+}
+
+.admin__product-list::-webkit-scrollbar {
+    display: none;
+}
+
+.admin__product-item {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+    padding: 0 20px 20px;
+    font-size: 14px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.admin__product-item:last-child {
+    border-bottom: transparent;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .05);
+}
+
+.admin__product-item-input {
+    padding: 0 20px 0 20px;
+}
+
+.admin__product-item-input-checkbox {
+    width: 18px;
+    height: 18px;
+    accent-color: var(--primary-color);
+}
+
+.admin__product-item-info {
+    flex: 2;
+    display: flex;
+    align-items: center;
+}
+
+.admin__product-item-img {
+    height: 80px;
+    width: 80px;
+    background-position: center;
+    background-size: contain;
+}
+
+.admin__product-item-desc {
+    padding: 5px 20px 0 10px;
+    flex: 1;
+}
+
+.admin__product-item-name {
+    line-height: 2rem;
+    max-height: 4rem;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    margin-bottom: 5px;
+}
+
+.admin__product-item-voucher {
+    height: 18px;
+}
+
+.admin__product-item-type {
+    color: rgba(0, 0, 0, .54);
+}
+
+.admin__product-item-type, 
+.admin__product-item-cre-time, 
+.admin__product-item-update-time, 
+.admin__product-item-qnt, 
+.admin__product-item-operation {
+    text-align: center;
+    flex: 1;
+}
+
+.admin__product-pagination {
+    position: relative;
+    padding-top: 20px;
+    padding-left: 0;
+}
+
+/* Tool More */
+.admin-tool__more {
+    position: relative;
+}
+
+.admin-tool__more::before {
+    position: absolute;
+    content: '';
+    height: 30px;
+    width: 50px;
+    top: 10px;
+    right: 62px;
+    /* background-color: var(--primary-color); */
+    z-index: 2;
+}
+
+.admin-tool__more-icon,
+.admin-tool__more-item-icon {
+    font-size: 20px;
+    color: rgba(0, 0, 0, .54);
+}
+
+.admin-tool__more-container {
+    position: absolute;
+    top: 28px;
+    right: 0;
+    width: 150px;
+    background-color: var(--white-color);
+    padding: 8px 0;
+    row-gap: 16px;
+    border-radius: 4px;
+    box-shadow: 0 0 16px 0 rgba(0, 0, 0, .1), 0 8px 16px 0 rgba(0, 0, 0, .06);
+    animation: headerNotifyGrowth ease-in .3s;
+    will-change: opacity, transform;
+    transform-origin: 50% top;
+    display: none;
+    z-index: 1;
+}
+
+.admin-tool__more-item {
+    display: flex;
+    column-gap: 16px;
+    align-items: center;
+    padding: 8px 16px;
+    cursor: pointer;
+}
+
+.admin-tool__more-item:hover {
+    background-color: #f8f8f8;
+}
+
+.admin-tool__more:hover .admin-tool__more-container {
+    display: block;
+}
+
+/* Product Update Form */
+.admin-account__update-form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+.admin-account__update-title {
+    font-size: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.admin-account__update-label {
+    font-weight: bold;
+}
+
+.admin-account__update-div {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+.admin__update-product-pic {
+    display: flex;
+    column-gap: 10px;
+}
+
+.admin__update-product-pic-value {
+    width: 100px;
+    height: 100px;
+    border-radius: 4px;
+}
+
 /* Responsive */
 /* PC */
 @media screen and (min-width: 992px) {
