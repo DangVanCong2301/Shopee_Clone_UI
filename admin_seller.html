@@ -138,17 +138,17 @@
                                 <div class="admin__aside-sidebar-colappse-item">
                                     <div class="admin__aside-sidebar-symb">
                                     </div>
-                                    <a href="javascript:showAll(event)" class="admin__aside-sidebar-sub">Tất cả</a>
+                                    <a href="javascript:showAll()" class="admin__aside-sidebar-sub">Tất cả</a>
                                 </div>
                                 <div class="admin__aside-sidebar-colappse-item">
                                     <div class="admin__aside-sidebar-symb">
                                     </div>
-                                    <div class="admin__aside-sidebar-sub">Giao hàng loạt</div>
+                                    <div class="admin__aside-sidebar-sub" onclick="showBulkDelivery()">Giao hàng loạt</div>
                                 </div>
                                 <div class="admin__aside-sidebar-colappse-item">
                                     <div class="admin__aside-sidebar-symb">
                                     </div>
-                                    <div class="admin__aside-sidebar-sub">Đơn huỷ</div>
+                                    <div class="admin__aside-sidebar-sub" onclick="showCancellation()">Đơn huỷ</div>
                                 </div>
                                 <div class="admin__aside-sidebar-colappse-item">
                                     <div class="admin__aside-sidebar-symb">
@@ -1330,7 +1330,7 @@
                                                     <div class="admin-tool__more">
                                                         <i class="uil uil-ellipsis-v admin-tool__more-icon"></i>
                                                         <div class="admin-tool__more-container">
-                                                            <div class="admin-tool__more-item" onclick="openUpdateAccount()">
+                                                            <div class="admin-tool__more-item" onclick="openUpdateProduct()">
                                                                 <i class="uil uil-pen admin-tool__more-item-icon"></i>
                                                                 <span>Chỉnh sửa</span>
                                                             </div>
@@ -1511,7 +1511,7 @@
             </div>  
         </div>
     </div>
-    <div class="modal">
+    <div class="modal open">
         <div class="modal__overlay">
             
         </div>
@@ -1538,14 +1538,15 @@
                                     </div>
                                     <div class="admin__update-product-pic">
                                         <img src="./assets/img/tai_nghe_5.jpg" class="admin__update-product-pic-value" alt="">
-                                        <div class="admin__add-product-table-add-img-pic">
+                                        <label for="input-file" class="admin__add-product-table-add-img-pic">
                                             <div class="admin__add-product-table-add-img-pic-container">
                                                 <i class="uil uil-image-plus admin__add-product-table-add-img-pic-icon"></i>
                                                 <div class="admin__add-product-table-add-img-pic-sub">
                                                     Cập nhật hình ảnh (0/9)
                                                 </div>
                                             </div>
-                                        </div>
+                                            <input type="file" accept="image/jpeg, image/png, image/jpg" onchange="uploadImage()" class="admin__update-product-file" id="input-file">
+                                        </label>
                                     </div>
                                 </div>
                             </div>
@@ -1557,19 +1558,21 @@
                                 <label for="" class="admin-account__update-label">Ngành hàng</label>
                                 <div class="admin__add-product-table-industry">
                                     <div class="admin__add-product-table-industry-container">
-                                        <input type="text" class="admin__add-product-table-industry-input" placeholder="Chọn ngành hàng">
-                                        <i class="uil uil-pen admin__add-product-table-industry-icon"></i>
+                                        <input type="text" class="admin__add-product-table-industry-input" readonly value="Sắc đẹp > Trang điểm môi" placeholder="Chọn ngành hàng">
+                                        <i class="uil uil-pen admin__add-product-table-industry-icon" onclick="showUpdateIndustry()"></i>
                                     </div>
-                                    <div class="admin__add-product-table-industry-propose">
-                                        <div class="admin__add-product-table-industry-propose-title">Ngành hàng được đề xuất</div>
-                                        <div class="admin__add-product-table-industry-list">
-                                            <div class="admin__add-product-table-industry-propose-item">
-                                                <input type="radio" class="admin__add-product-table-industry-propose-item-input">
-                                                <label for="admin__add-product-table-industry-propose-item-input" class="admin__add-product-table-industry-propose-item-label">Sắc đẹp &gt; Trang điểm mắt </label>
-                                            </div>
-                                            <div class="admin__add-product-table-industry-propose-item">
-                                                <input type="radio" class="admin__add-product-table-industry-propose-item-input">
-                                                <label for="admin__add-product-table-industry-propose-item-input" class="admin__add-product-table-industry-propose-item-label">Sắc đẹp &gt; Kem trị mụn </label>
+                                    <div class="admin__update-product-industry-propose">
+                                        <div class="admin__add-product-table-industry-propose">
+                                            <div class="admin__add-product-table-industry-propose-title">Ngành hàng được đề xuất</div>
+                                            <div class="admin__add-product-table-industry-list">
+                                                <div class="admin__add-product-table-industry-propose-item">
+                                                    <input type="radio" checked class="admin__add-product-table-industry-propose-item-input">
+                                                    <label for="admin__add-product-table-industry-propose-item-input" class="admin__add-product-table-industry-propose-item-label">Sắc đẹp &gt; Trang điểm mắt </label>
+                                                </div>
+                                                <div class="admin__add-product-table-industry-propose-item">
+                                                    <input type="radio" class="admin__add-product-table-industry-propose-item-input">
+                                                    <label for="admin__add-product-table-industry-propose-item-input" class="admin__add-product-table-industry-propose-item-label">Sắc đẹp &gt; Kem trị mụn </label>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -1589,20 +1592,60 @@
                             <div class="admin-account__update-div">
                                 <label for="" class="admin-account__update-label">Giảm giá (Nếu có)</label>
                                 <div class="admin__add-product-sell-table-discount">
-                                    <div class="admin__add-product-sell-table-type l-6">
-                                        <i class="uil uil-plus admin__add-product-sell-table-type-icon"></i>
-                                        <span class="admin__add-product-sell-table-type-sub">Thêm khoảng giảm giá</span>
+                                    <div class="admin__update-product-discount">
+                                        <div class="admin__add-product-sell-table-price">
+                                            <div class="admin__add-product-sell-table-price-unit">%</div>
+                                            <input type="text" value="5" readonly class="admin__add-product-sell-table-price-input" placeholder="Nhập vào">
+                                        </div>
+                                        <div class="admin__add-product-sell-table-type" onclick="showUpdateProductDiscount()">
+                                            <i class="uil uil-plus admin__add-product-sell-table-type-icon"></i>
+                                            <span class="admin__add-product-sell-table-type-sub">Thêm khoảng giảm giá</span>
+                                        </div>
                                     </div>
                                     <div class="admin__add-product-sell-table-discount-sub">
                                         Mua nhiều giảm giá sẽ bị ẩn khi sản phẩm đang tham gia Mua Kèm Deal Sốc hay Combo Khuyến Mãi 
+                                    </div>
+                                    <div class="admin__update-product-discount-choose">
+                                        <div class="admin__add-product-table-industry-propose">
+                                            <div class="admin__add-product-table-industry-propose-title">Mức giảm giá được đề xuất</div>
+                                            <div class="admin__add-product-table-industry-list">
+                                                <div class="admin__add-product-table-industry-propose-item">
+                                                    <input type="radio" checked class="admin__add-product-table-industry-propose-item-input">
+                                                    <label for="admin__add-product-table-industry-propose-item-input" class="admin__add-product-table-industry-propose-item-label">0%</label>
+                                                </div>
+                                                <div class="admin__add-product-table-industry-propose-item">
+                                                    <input type="radio" class="admin__add-product-table-industry-propose-item-input">
+                                                    <label for="admin__add-product-table-industry-propose-item-input" class="admin__add-product-table-industry-propose-item-label">5%</label>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="admin-account__update-div">
                                 <label for="" class="admin-account__update-label">Vận chuyển</label>
                                 <div class="admin__add-product-table-industry-container">
-                                    <input type="text" class="admin__add-product-table-industry-input" placeholder="Chọn ngành hàng">
+                                    <input type="text" class="admin__add-product-table-industry-input" readonly placeholder="Chọn giá vận chuyển">
                                     <i class="uil uil-pen admin__add-product-table-industry-icon"></i>
+                                </div>
+                                <div class="admin__update-product-transport-choose">
+                                    <div class="admin__add-product-table-industry-propose">
+                                        <div class="admin__add-product-table-industry-propose-title">Giá vận chuyển đề xuất</div>
+                                        <div class="admin__add-product-table-industry-list">
+                                            <div class="admin__add-product-table-industry-propose-item">
+                                                <input type="radio" checked class="admin__add-product-table-industry-propose-item-input">
+                                                <label for="admin__add-product-table-industry-propose-item-input" class="admin__add-product-table-industry-propose-item-label">Miễn phí vận chuyển (0 đ)</label>
+                                            </div>
+                                            <div class="admin__add-product-table-industry-propose-item">
+                                                <input type="radio" class="admin__add-product-table-industry-propose-item-input">
+                                                <label for="admin__add-product-table-industry-propose-item-input" class="admin__add-product-table-industry-propose-item-label">Nhanh (0 đ - 16.500 đ)</label>
+                                            </div>
+                                            <div class="admin__add-product-table-industry-propose-item">
+                                                <input type="radio" class="admin__add-product-table-industry-propose-item-input">
+                                                <label for="admin__add-product-table-industry-propose-item-input" class="admin__add-product-table-industry-propose-item-label">Hoả tốc (50.000 đ - 60.500 đ)</label>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>

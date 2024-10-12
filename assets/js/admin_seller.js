@@ -477,6 +477,45 @@ function showSetupShop() {
     `;
 }
 
+// Show Bulk delivery
+function showBulkDelivery() {
+    openModal();
+    document.querySelector(".modal__body").innerHTML = 
+            `
+                <div class="modal__confirm">
+                    <div class="modal__confirm-header">
+                        <div class="modal__confirm-title">Thông báo</div>
+                    </div>
+                    <div class="modal__confirm-desc">
+                        Chức năng này chưa được hoàn thiện!
+                    </div>
+                    <div class="modal__confirm-btns">
+                        <div class="modal__confirm-btn-send"onclick="closeModal()">Đồng ý</div>
+                    </div>
+                </div>
+            `;
+}
+
+// Show Cancellation
+function showCancellation() {
+    openModal();
+    document.querySelector(".modal__body").innerHTML = 
+            `
+                <div class="modal__confirm">
+                    <div class="modal__confirm-header">
+                        <div class="modal__confirm-title">Thông báo</div>
+                    </div>
+                    <div class="modal__confirm-desc">
+                        Chức năng này chưa được hoàn thiện!
+                    </div>
+                    <div class="modal__confirm-btns">
+                        <div class="modal__confirm-btn-destroy" onclick="closeModal()">Huỷ</div>
+                        <div class="modal__confirm-btn-send"onclick="closeModal()">Đồng ý</div>
+                    </div>
+                </div>
+            `;
+}
+
 // Setup Profile Shop
 function setupProfileShop() {
     document.querySelector(".admin__profile-shop-body-header-right").classList.add("hide-on-destop");
@@ -1223,4 +1262,127 @@ function openPickupAddressModal() {
                 </div>
             </div>
     `;
+}
+
+// Update Product
+function openUpdateProduct() {
+    openModal();
+    document.querySelector(".modal__body").innerHTML = 
+    `
+            <div class="address-form">
+                <div class="address-form__new">
+                    <div class="admin-account__update-title">
+                        Cập nhật sản phẩm
+                    </div>
+                    <div class="address-form__new-body">
+                        <div class="admin-account__update-form">
+                            <div class="admin-account__update-div">
+                                <label for="" class="admin-account__update-label">Hình ảnh sản phẩm</label>
+                                <div class="admin__add-product-table-col-value">
+                                    <div class="admin__add-product-table-add-img-check">
+                                        <div class="admin__add-product-table-add-img-rb">
+                                            <input type="radio" name="ratio-img" id="" class="admin__add-product-table-add-img-input">
+                                            <label for="admin__add-product-table-add-img" class="admin__add-product-table-add-img-label">Hình ảnh tỉ lệ 1:1</label>
+                                        </div>
+                                        <div class="admin__add-product-table-add-img-rb">
+                                            <input type="radio" name="ratio-img" id="" class="admin__add-product-table-add-img-input">
+                                            <label for="admin__add-product-table-add-img" class="admin__add-product-table-add-img-label">Hình ảnh tỉ lệ 3:4</label>
+                                        </div>
+                                    </div>
+                                    <div class="admin__update-product-pic">
+                                        <img src="./assets/img/tai_nghe_5.jpg" class="admin__update-product-pic-value" alt="">
+                                        <div class="admin__add-product-table-add-img-pic">
+                                            <div class="admin__add-product-table-add-img-pic-container">
+                                                <i class="uil uil-image-plus admin__add-product-table-add-img-pic-icon"></i>
+                                                <div class="admin__add-product-table-add-img-pic-sub">
+                                                    Cập nhật hình ảnh (0/9)
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="admin-account__update-div">
+                                <label for="" class="admin-account__update-label">Tên sản phẩm</label>
+                                <input type="text" class="admin__add-product-table-input-name" placeholder="Tên sản phẩm + Thương hiệu + Model + Thông số kỹ thuật" onblur="showPropse()">
+                            </div>
+                            <div class="admin-account__update-div">
+                                <label for="" class="admin-account__update-label">Ngành hàng</label>
+                                <div class="admin__add-product-table-industry">
+                                    <div class="admin__add-product-table-industry-container">
+                                        <input type="text" class="admin__add-product-table-industry-input" placeholder="Chọn ngành hàng">
+                                        <i class="uil uil-pen admin__add-product-table-industry-icon"></i>
+                                    </div>
+                                    <div class="admin__add-product-table-industry-propose">
+                                        <div class="admin__add-product-table-industry-propose-title">Ngành hàng được đề xuất</div>
+                                        <div class="admin__add-product-table-industry-list">
+                                            <div class="admin__add-product-table-industry-propose-item">
+                                                <input type="radio" class="admin__add-product-table-industry-propose-item-input">
+                                                <label for="admin__add-product-table-industry-propose-item-input" class="admin__add-product-table-industry-propose-item-label">Sắc đẹp &gt; Trang điểm mắt </label>
+                                            </div>
+                                            <div class="admin__add-product-table-industry-propose-item">
+                                                <input type="radio" class="admin__add-product-table-industry-propose-item-input">
+                                                <label for="admin__add-product-table-industry-propose-item-input" class="admin__add-product-table-industry-propose-item-label">Sắc đẹp &gt; Kem trị mụn </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="admin-account__update-div">
+                                <label for="" class="admin-account__update-label">Mô tả sản phẩm</label>
+                                <textarea name="" id="" class="admin__add-product-table-desc-textarea"></textarea>
+                            </div>
+                            <div class="admin-account__update-div">
+                                <label for="" class="admin-account__update-label">Giá</label>
+                                <div class="admin__add-product-sell-table-price">
+                                    <div class="admin__add-product-sell-table-price-unit">đ</div>
+                                    <input type="text" class="admin__add-product-sell-table-price-input" placeholder="Nhập vào">
+                                </div>
+                            </div>
+                            <div class="admin-account__update-div">
+                                <label for="" class="admin-account__update-label">Giảm giá (Nếu có)</label>
+                                <div class="admin__add-product-sell-table-discount">
+                                    <div class="admin__add-product-sell-table-type l-6">
+                                        <i class="uil uil-plus admin__add-product-sell-table-type-icon"></i>
+                                        <span class="admin__add-product-sell-table-type-sub">Thêm khoảng giảm giá</span>
+                                    </div>
+                                    <div class="admin__add-product-sell-table-discount-sub">
+                                        Mua nhiều giảm giá sẽ bị ẩn khi sản phẩm đang tham gia Mua Kèm Deal Sốc hay Combo Khuyến Mãi 
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="admin-account__update-div">
+                                <label for="" class="admin-account__update-label">Vận chuyển</label>
+                                <div class="admin__add-product-table-industry-container">
+                                    <input type="text" class="admin__add-product-table-industry-input" placeholder="Chọn ngành hàng">
+                                    <i class="uil uil-pen admin__add-product-table-industry-icon"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="address-form__new-footer">
+                        <div class="address-form__new-footer-btns">
+                            <button class="btn" onclick="closeModal()">Thoát</button>
+                            <button class="btn btn--primary address-form__new-btn">Cập nhât</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    `;
+}
+
+// Upload Image
+function uploadImage() {
+    let profilePic = document.querySelector(".admin__update-product-pic-value");
+    let inputFile = document.getElementById("input-file");
+    console.log(inputFile.files[0].name);
+    profilePic.src = URL.createObjectURL(inputFile.files[0])
+}
+
+function showUpdateIndustry() {
+    document.querySelector(".admin__update-product-industry-propose").classList.toggle("show");
+}
+
+function showUpdateProductDiscount() {
+    document.querySelector(".admin__update-product-discount-choose").classList.toggle("show");
 }

@@ -1611,6 +1611,10 @@
     cursor: pointer;
 } 
 
+.admin__update-product-file {
+    display: none;
+}
+
 .admin__add-product-table-add-img-pic-icon {
     font-size: 24px;
 }
@@ -1735,8 +1739,10 @@
 }
 
 .admin__add-product-table-industry-icon {
+    padding: 0 4px;
     font-size: 18px;
     color: rgba(0, 0, 0, .54);
+    cursor: pointer;
 }
 
 .admin__add-product-table-desc-textarea {
@@ -1813,6 +1819,7 @@
     border: 1px dashed var(--border-color);
     border-radius: 4px;
     color: var(--primary-color);
+    cursor: pointer;
 }
 
 .admin__add-product-sell-table-type-icon {
@@ -2114,6 +2121,27 @@
     width: 100px;
     height: 100px;
     border-radius: 4px;
+}
+
+.admin__update-product-industry-propose {
+    display: none;
+}
+
+.admin__update-product-industry-propose.show {
+    display: block;
+}
+
+.admin__update-product-discount {
+    display: flex;
+    column-gap: 10px;
+}
+
+.admin__update-product-discount-choose {
+    display: none;
+}
+
+.admin__update-product-discount-choose.show {
+    display: block;
 }
 
 /* Responsive */
