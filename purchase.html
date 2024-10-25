@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <!--=============== ICONSCOUT ===============-->
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/solid.css">
     <title>Shopee - Mua hàng</title>
 </head>
 <body>
@@ -512,6 +513,76 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="purchase__wait-delivery hide-on-destop hide-on-mobile">
+                                <div class="purchase__wait-settlement">
+                                    <div class="purchase__wait-settlement-no-orders">
+                                        <i class="uil uil-clipboard-notes purchase__wait-settlement-no-orders-icon"></i>
+                                        <div class="purchase__wait-settlement-no-orders-sub">Chưa có đơn hàng</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="purchase__complete hide-on-destop hide-on-mobile">
+                                <div class="purchase__item">
+                                    <div class="purchase__body">
+                                        <div class="purchase__body-header-wait">
+                                            <div class="purchase__body-header-btns">
+                                                <button class="purchase__body-header-btn"><i class="uil uil-chat"></i><span>Chat</span></button>
+                                                <a class="purchase__body-header-btn-link"><i class="uil uil-shop"></i><span>Xem Shop</span></a>
+                                            </div>
+                                            <div class="purchase__body-title">
+                                                <div class="purchase__body-header-subwait">Vận chuyển</div>
+                                            </div>
+                                        </div>
+                                        <div class="purchase__body-container">
+                                            <ul class="purchase__body-list">
+                                                <li class="purchase__body-item">
+                                                    <a class="purchase__body-item-link">
+                                                        <div class="purchase__body-item-img">
+                                                            <img src="./assets/img/sac_du_phong.png" alt="">
+                                                        </div>
+                                                        <div class="purchase__body-item-info">
+                                                            <div class="purchase__body-item-info-left">
+                                                                <div class="purchase__body-item-title">
+                                                                    Bút Laze Trình Chiếu PowerPoint Kèm Remote Điều Khiển Không Dây Cho Laptop RF 2.4GHz
+                                                                </div>
+                                                                <div class="purchase__body-item-sub">
+                                                                    <div class="purchase__body-item-desc">Phân loại hàng: Bạc</div>
+                                                                    <span class="purchase__body-item-qnt">x 3</span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="purchase__body-item-info-right">
+                                                                <div class="purchase__body-item-old-price">189.000 đ</div>
+                                                                <div class="purchase__body-item-price">121.000 đ</div>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="purchase__prevent">
+                                        <div class="purchase__prevent-box purchase__prevent-box-left"></div>
+                                        <div class="purchase__prevent-box purchase__prevent-box-right"></div>
+                                    </div>
+                                    <div class="purchase__bottom">
+                                        <div class="purchase__bottom-head">
+                                            <div class="purchase__bottom-head-sub-price">
+                                                <i class="uil uil-shield-check"></i>
+                                                <span>Thành tiền:</span>
+                                            </div>
+                                            <div class="purchase__bottom-head-price">121.000 đ</div>
+                                        </div>
+                                        <div class="purchase__bottom-btns purchase__bottom-btns-transport">
+                                            <div class="purchase__bottom-btns-sub">Đơn hàng sẽ được chuẩn bị và chuyển đi trước <span>22-5-2024</span></div>
+                                            <div class="">
+                                                <button class="btn btn--primary purchase__bottom-btn hide-on-mobile">Đã nhận hàng</button>
+                                                <a href="" class="btn purchase__bottom-link hide-on-mobile">Trả hàng/hoàn tiền</a>
+                                                <a href="#" class="btn btn--primary hide-on-destop">Liên hệ Shop</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -608,6 +679,116 @@
                 </div>
             </div>
         </footer>
+    </div>
+    <div class="modal open">
+        <div class="modal__overlay">
+
+        </div>
+        <div class="modal__body">
+            <div class="reviewer-form">
+                <div class="reviewer-form__header">
+                    <div class="reviewer-form__header-title">Đánh giá sản phẩm</div>
+                </div>
+                <div class="reviewer-form__body">
+                    <div class="reviewer-form__div">
+                        <div class="reviewer-form__div-title">Sản phẩm</div>
+                        <ul class="purchase__body-list">
+                            <li class="purchase__body-item">
+                                <a class="purchase__body-item-link">
+                                    <div class="purchase__body-item-img">
+                                        <img src="./assets/img/sac_du_phong.png" alt="">
+                                    </div>
+                                    <div class="purchase__body-item-info">
+                                        <div class="purchase__body-item-info-left">
+                                            <div class="purchase__body-item-title">
+                                                Bút Laze Trình Chiếu PowerPoint Kèm Remote Điều Khiển Không Dây Cho Laptop RF 2.4GHz
+                                            </div>
+                                            <div class="purchase__body-item-sub">
+                                                <div class="purchase__body-item-desc">Phân loại hàng: Bạc</div>
+                                                <span class="purchase__body-item-qnt">x 3</span> <br>
+                                                <span class="purchase__body-item-return">Trả hàng miễn phí 15 ngày</span>
+                                            </div>
+                                        </div>
+                                        <div class="purchase__body-item-info-right">
+                                            <div class="purchase__body-item-old-price">189.000 đ</div>
+                                            <div class="purchase__body-item-price">121.000 đ</div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="reviewer-form__div">
+                        <div class="reviewer-form__div-title">Chất lượng sản phẩm</div>
+                        <div class="reviewer-form__quality">
+                            <div class="reviewer-form__quality-stars">
+                                <input type="radio" name="rate" value="5" id="rate-5">
+                                <label for="rate-5" class="uis uis-star"></label>
+                                <input type="radio" name="rate" value="4" id="rate-4">
+                                <label for="rate-4" class="uis uis-star"></label>
+                                <input type="radio" name="rate" value="3" id="rate-3">
+                                <label for="rate-3" class="uis uis-star"></label>
+                                <input type="radio" name="rate" value="2" id="rate-2">
+                                <label for="rate-2" class="uis uis-star"></label>
+                                <input type="radio" name="rate" value="1" id="rate-1">
+                                <label for="rate-1" class="uis uis-star"></label>
+                            </div>
+                            <div class="reviewer-form__quality-text hide-on-destop">Tuyệt vời</div>
+                        </div>
+                    </div>
+                    <div class="reviewer-form__div">
+                        <div class="reviewer-form__div-title">Mô tả sản phẩm</div>
+                        <textarea name="" id="" class="reviewer-form__textarea"></textarea>
+                        <div class="reviewer-form__thumb">
+                            <img src="./assets/img/tai_nghe_5.jpg" class="reviewer-form__thumb-img-value" alt="">
+                            <label for="input-file" class="reviewer-form__thumb-img reviewer-form__thumb-img-add">
+                                <div class="reviewer-form__thumb-img-container">
+                                    <i class="uil uil-image-plus reviewer-form__thumb-img-icon"></i>
+                                    <div class="reviewer-form__thumb-img-sub">
+                                        Thêm hình ảnh (0/9)
+                                    </div>
+                                </div>
+                                <input type="file" accept="image/jpeg, image/png, image/jpg" onchange="uploadImage()" class="reviewer-form__thumb-img-file" id="input-file">
+                            </label>
+                            <div class="reviewer-form__thumb-img">
+                                <div class="reviewer-form__thumb-img-container">
+                                    <i class="uil uil-video reviewer-form__thumb-img-icon"></i>
+                                    <div class="reviewer-form__thumb-img-sub">
+                                        Thêm video
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="reviewer-form__service">
+                        <div class="reviewer-form__div-title">Dịch vụ của người bán</div>
+                        <div class="reviewer-form__quality-stars">
+                            <i class="uis uis-star"></i>
+                            <i class="uis uis-star"></i>
+                            <i class="uis uis-star"></i>
+                            <i class="uis uis-star"></i>
+                            <i class="uis uis-star"></i>
+                        </div>
+                        <div class="reviewer-form__service-text">Tuyệt vời</div>
+                    </div>
+                    <div class="reviewer-form__service">
+                        <div class="reviewer-form__div-title">Dịch vụ vận chuyển</div>
+                        <div class="reviewer-form__quality-stars">
+                            <i class="uis uis-star"></i>
+                            <i class="uis uis-star"></i>
+                            <i class="uis uis-star"></i>
+                            <i class="uis uis-star"></i>
+                            <i class="uis uis-star"></i>
+                        </div>
+                        <div class="reviewer-form__service-text">Tuyệt vời</div>
+                    </div>
+                </div>
+                <div class="reviewer-form__footer">
+                    <div class="reviewer-form__btn btn" onclick="closeModal()">TRỞ LẠI</div>
+                    <div class="reviewer-form__btn btn btn--primary">HOÀN THÀNH</div>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 <script src="./assets/js/purchase.js"></script>
