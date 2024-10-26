@@ -1156,6 +1156,24 @@ i.home-product-item__like-icon-empty {
     display: block;
 }
 
+.comment__reviewer-stars {
+    font-size: 20px;
+    color: var(--second-color);
+}
+
+.comment__rate-time {
+    font-size: 12px;
+    color: rgba(0, 0, 0, .54);
+    margin: 4px 0 14px;
+}
+
+.comment__reviewer-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 4px;
+    margin-top: 12px;
+}
+
 .comment__reply-to {
     color: #256eff;
 }

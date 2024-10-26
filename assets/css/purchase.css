@@ -385,7 +385,6 @@
 }
 
 /* Reviewer Modal */
-/* Transport Modal */
 .reviewer-form {
     background-color: var(--white-color);
     border-radius: 3px;
@@ -471,6 +470,16 @@
 .reviewer-form__quality-stars input#rate-5:checked ~ label {
     color: #fd7;
     text-shadow: 0 0 20px #952;
+}
+
+.reviewer-form__textarea.err {
+    border: 1px solid var(--primary-color);
+}
+
+.reviewer-form__msg-err {
+    color: var(--primary-color);
+    font-size: 12px;
+    margin-top: 10px;
 }
 
 .reviewer-form__textarea {
