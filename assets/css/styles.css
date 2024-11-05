@@ -927,9 +927,9 @@
     display: inline-block;
 }
 
-/* .header__search-input:focus ~ .header__search-history {
+.header__search-input:focus ~ .header__search-history {
     display: block;
-} */
+}
 /*Search history*/
 .header__search-history {
     position: absolute;

@@ -228,3 +228,32 @@ function loadProducts() {
     });
 }
 loadProducts();
+
+// Send Make Friend
+function sendMakeFriendModal() {
+    openModal();
+    document.querySelector(".modal__body").innerHTML = 
+            `
+                <div class="modal__confirm">
+                    <div class="modal__confirm-header">
+                        <div class="modal__confirm-title">Thông báo</div>
+                    </div>
+                    <div class="modal__confirm-desc">
+                        Bạn chưa kết bạn với shop này, gửi lời kết bạn tới <b>Viet Mark</b>?
+                    </div>
+                    <div class="modal__confirm-btns">
+                        <div class="modal__confirm-btn-destroy" onclick="closeModal()">Huỷ</div>
+                        <div class="modal__confirm-btn-send"onclick="closeModal()">Đồng ý</div>
+                    </div>
+                </div>
+            `;
+}
+
+// Modal
+function openModal() {
+    document.querySelector(".modal").classList.add("open");
+}
+
+function closeModal() {
+    document.querySelector(".modal").classList.remove("open");
+}

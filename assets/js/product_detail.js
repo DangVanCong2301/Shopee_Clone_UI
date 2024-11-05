@@ -138,3 +138,15 @@ function showReplyDesc() {
     document.querySelector(".comment__replies").classList.toggle("show");
     document.querySelector(".comment__reply-quantity-icon").classList.toggle("rotate");
 }
+
+const date = new Date("2024-10-26T21:19:48.847");
+
+// British English uses day-month-year order
+console.log(date.toLocaleDateString('en-GB')); // 24/04/2023
+
+function formatdate(date) {
+    const dateFormat = new Date(date);
+
+    return dateFormat.toLocaleDateString('en-GB'); // 24/04/2023
+}
+console.log(formatdate("2024-10-26T21:19:48.847"));

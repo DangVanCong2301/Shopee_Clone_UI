@@ -1704,6 +1704,7 @@
     text-align: center;
     border-radius: 2px;
     z-index: 2;
+    cursor: pointer;
 }
 
 .shop__header-store-btn-icon {

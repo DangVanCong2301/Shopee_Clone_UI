@@ -1178,6 +1178,12 @@ i.home-product-item__like-icon-empty {
     color: #256eff;
 }
 
+.comment__no-list {
+    text-align: center;
+    font-size: 16px;
+    color: rgba(0, 0, 0, .54);
+}
+
 /*Pagination*/
 .pagination {
     display: flex;

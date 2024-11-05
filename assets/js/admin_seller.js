@@ -516,6 +516,34 @@ function showCancellation() {
             `;
 }
 
+// Show Chat Management
+function openAceptFriendModal() {
+    openModal();
+    document.querySelector(".modal__body").innerHTML = 
+    `
+            <div class="modal__confirm">
+                <div class="modal__confirm-header">
+                    <div class="modal__confirm-title">Thông báo</div>
+                </div>
+                <div class="modal__confirm-desc">
+                    <div class="admin__right-recent-updates-item" onclick="openAceptFriendModal()">
+                        <div class="admin__right-recent-updates-item-profile-photo">
+                            <img src="./assets/img/profile_avatar.jpg" alt="" class="admin__right-recent-updates-item-profile-photo-img">
+                        </div>
+                        <div class="admin__right-recent-updates-item-message">
+                            <p class="admin__right-recent-updates-item-message-text"><b class="admin__right-recent-updates-item-message-name">Công Đặng</b> đã gửi cho bạn lời mời kết bạn </p>
+                            <small class="admin__right-recent-updates-item-message-time">2 tiếng trước</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal__confirm-btns">
+                    <div class="modal__confirm-btn-destroy" onclick="closeModal()">Huỷ</div>
+                    <div class="modal__confirm-btn-send"onclick="closeModal()">Chấp nhận kết bạn</div>
+                </div>
+            </div>
+    `;
+}
+
 // Setup Profile Shop
 function setupProfileShop() {
     document.querySelector(".admin__profile-shop-body-header-right").classList.add("hide-on-destop");
