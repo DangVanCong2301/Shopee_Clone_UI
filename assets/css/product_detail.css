@@ -154,12 +154,19 @@
 }
 
 .detail__favorite {
-    cursor: pointer;
+    display: flex;
+    column-gap: 10px;
+    align-items: center;
 }
 
 .detail__favorite-icon {
+    cursor: pointer;
     font-size: 32px;
     color: var(--heart-color);
+}
+
+.detail__favorite-text {
+    font-size: 16px;
 }
 
 .detail__price {

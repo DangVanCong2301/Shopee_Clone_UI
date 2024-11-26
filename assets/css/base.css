@@ -1408,8 +1408,24 @@ i.home-product-item__like-icon-empty {
     font-size: var(--normal-font-size);
 }
 
+.chat__body-shop-no {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+    color: rgba(0, 0, 0, .54);
+}
+
 .chat__shop-list {
     list-style: none;
+    height: 400px;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+}
+
+.chat__shop-list::-webkit-scrollbar {
+    display: none;
 }
 
 .chat__shop-item {
@@ -1474,7 +1490,7 @@ i.home-product-item__like-icon-empty {
     -webkit-line-clamp: 1;
 }
 
-.chat__body-shop-name {
+.chat__body-shop-name-container {
     position: relative;
     height: 40px;
     display: flex;
@@ -1593,7 +1609,6 @@ i.home-product-item__like-icon-empty {
 
 .chat__body-message-container {
     height: calc(100% - 130px);
-    background-color: #f3f3f3;
     padding: 16px;
     overflow-y: auto;
     scroll-behavior: smooth;
@@ -1605,6 +1620,7 @@ i.home-product-item__like-icon-empty {
 
 .chat__body-message {
     position: relative;
+    background-color: #f3f3f3;
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -1612,13 +1628,31 @@ i.home-product-item__like-icon-empty {
     border-top: 1px solid var(--border-color);
 }
 
+.chat__body-message-welcome {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto 0;
+}
+
+.chat__body-message-welcome-img {
+    width: 200px;
+}
+
+.chat__body-message-welcome-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 20px 0 10px;
+}
+
 .chat__body-message-bottom {
     position: absolute;
     bottom: 0;
     right: 0;
     left: 0;
-    height: 130px;
+    height: 100px;
     border-top: 1px solid var(--border-color);
+    background-color: var(--white-color);
 }
 
 .chat__body-message-bottom-box {

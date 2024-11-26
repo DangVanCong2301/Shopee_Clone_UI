@@ -1399,6 +1399,15 @@ function openUpdateProduct() {
     `;
 }
 
+// Send btn
+function changeSendBtn(input) {
+    if (input.value != "") {
+        document.querySelector(".admin__chat-msg-footer-reply-send").classList.remove("hide-on-destop");
+    } else {
+        document.querySelector(".admin__chat-msg-footer-reply-send").classList.add("hide-on-destop");
+    }
+}
+
 // Upload Image
 function uploadImage() {
     let profilePic = document.querySelector(".admin__update-product-pic-value");

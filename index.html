@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <!--=============== ICONSCOUT ===============-->
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
-    <title>ShopeeMe - Trang chủ</title>
+    <title>Shopee - Trang chủ</title>
 </head>
 <body>
     <div class="app">
@@ -193,12 +193,12 @@
                             </a>
                             <!--No cart: header__cart-list--no-cart-->
                             <div class="header__cart-container">
-                                <!-- <div class="header__cart-list header__cart-list--no-cart">
+                                <div class="header__cart-list header__cart-list--no-cart hide-on-destop">
                                     <img src="./assets/img/no-cart.png" alt="" class="header__cart-no-cart-img">
                                     <span class="header__cart-list-no-cart-msg">
                                         Chưa có sản phẩm
                                     </span>
-                                </div> -->
+                                </div>
                                 <div class="header__cart-list">
                                     <h4 class="header__cart-heading">Sản phẩm đã thêm</h4>
                                     <ul class="header__cart-list-item">
@@ -950,7 +950,10 @@
                     </div>
                 </div>
                 <div class="chat__body-shop">
-                    <ul class="chat__shop-list">
+                    <div class="chat__body-shop-no">
+                        Không tìm thấy <br> cuộc hội thoại nào
+                    </div>
+                    <ul class="chat__shop-list hide-on-destop">
                         <li class="chat__shop-item active">
                             <div class="chat__shop-item-img" style="background-image: url(./assets/img/vietmark_logo.png);"></div>
                             <div class="chat__shop-item-info">
@@ -979,44 +982,53 @@
                 </div>
             </div>
             <div class="chat__body-right">
-                <div class="chat__body-shop-name">
-                    <span>vietmark_store</span>
-                    <i class="uil uil-angle-down chat__body-shop-name-icon"></i>
-                    <div class="chat__body-shop-name-sub">
-                        <div class="chat__body-shop-name-sub-header">
-                            <div class="chat__body-shop-name-sub-header-img" style="background-image: url(./assets/img/vietmark_logo.png);"></div>
-                            <div class="chat__body-shop-name-sub-header-title">Viet Mark</div>
-                        </div>
-                        <ul class="chat__body-shop-name-sub-list">
-                            <li class="chat__body-shop-name-sub-item">
-                                <span>Tắt thông báo</span>
-                                <div class="chat__body-shop-name-sub-control">
-                                    <div class="chat__body-shop-name-sub-control-circle"></div>
-                                </div>
-                            </li>
-                            <li class="chat__body-shop-name-sub-item">
-                                <span>Chặn người dùng</span>
-                                <div class="chat__body-shop-name-sub-control">
-                                    <div class="chat__body-shop-name-sub-control-circle"></div>
-                                </div>
-                            </li>
-                            <li class="chat__body-shop-name-sub-item">
-                                <a href="#" class="chat__body-shop-name-sub-item-link">
-                                    <span>Tố cáo người dùng</span>
+                <div class="chat__body-shop-name hide-on-destop">
+                    <div class="chat__body-shop-name-container">
+                        <span>vietmark_store</span>
+                        <i class="uil uil-angle-down chat__body-shop-name-icon"></i>
+                        <div class="chat__body-shop-name-sub">
+                            <div class="chat__body-shop-name-sub-header">
+                                <div class="chat__body-shop-name-sub-header-img" style="background-image: url(./assets/img/vietmark_logo.png);"></div>
+                                <div class="chat__body-shop-name-sub-header-title">Viet Mark</div>
+                            </div>
+                            <ul class="chat__body-shop-name-sub-list">
+                                <li class="chat__body-shop-name-sub-item">
+                                    <span>Tắt thông báo</span>
+                                    <div class="chat__body-shop-name-sub-control">
+                                        <div class="chat__body-shop-name-sub-control-circle"></div>
+                                    </div>
+                                </li>
+                                <li class="chat__body-shop-name-sub-item">
+                                    <span>Chặn người dùng</span>
+                                    <div class="chat__body-shop-name-sub-control">
+                                        <div class="chat__body-shop-name-sub-control-circle"></div>
+                                    </div>
+                                </li>
+                                <li class="chat__body-shop-name-sub-item">
+                                    <a href="#" class="chat__body-shop-name-sub-item-link">
+                                        <span>Tố cáo người dùng</span>
+                                        <i class="uil uil-angle-right-b chat__body-shop-name-sub-item-icon"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="chat__body-shop-name-sub-bottom">
+                                <a href="#" class="chat__body-shop-name-sub-bottm-link">
+                                    <span>Xem thông tin cá nhân</span>
                                     <i class="uil uil-angle-right-b chat__body-shop-name-sub-item-icon"></i>
                                 </a>
-                            </li>
-                        </ul>
-                        <div class="chat__body-shop-name-sub-bottom">
-                            <a href="#" class="chat__body-shop-name-sub-bottm-link">
-                                <span>Xem thông tin cá nhân</span>
-                                <i class="uil uil-angle-right-b chat__body-shop-name-sub-item-icon"></i>
-                            </a>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="chat__body-message">
-                    <div class="chat__body-message-container">
+                    <div class="chat__body-message-welcome">
+                        <img src="./assets/img/sme_chat.png" class="chat__body-message-welcome-img" alt="">
+                        <div class="chat__body-message-welcome-title">Chào mừng bạn đến với SMe Chat</div>
+                        <div class="chat__body-message-welcome-sub">
+                            Bắt đầu trả lời người mua
+                        </div>
+                    </div>
+                    <div class="chat__body-message-container hide-on-destop">
                         <div class="chat__message-time">
                             <span>23 Th05</span>
                         </div>
@@ -1101,7 +1113,7 @@
                             <div class="chat__message-shop-time-short">13:28</div>
                         </div>
                     </div>
-                    <div class="chat__body-message-bottom">
+                    <div class="chat__body-message-bottom hide-on-destop">
                         <div class="chat__body-message-bottom-box">
                             <textarea type="text" class="chat__body-message-bottom-input" placeholder="Nhập nội dung tin nhắn"></textarea>
                         </div>

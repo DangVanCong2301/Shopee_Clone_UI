@@ -216,3 +216,47 @@ function showChatWindowMobile() {
     document.querySelector(".chat__header-menu-bar").classList.toggle("active");
     document.querySelector(".chat__mobile-window").classList.toggle("show");
 }
+
+function getDate() {
+    // Khai báo đối tượng Date
+    var date = new Date("2024-11-06 16:24:58.660");
+
+    // Lấy số thứ tự của ngày hiện tại
+    var current_day = date.getDay();
+
+    // Biến lưu tên của thứ
+    var day_name = '';
+
+    // Lấy tên thứ của ngày hiện tại
+    switch (current_day) {
+        case 0:
+            day_name = "CN";
+            break;
+        case 1:
+            day_name = "Thứ 2";
+            break;
+        case 2:
+            day_name = "Thứ 3";
+            break;
+        case 3:
+            day_name = "Thứ 4";
+            break;
+        case 4:
+            day_name = "Thứ 5";
+            break;
+        case 5:
+            day_name = "Thứ 6";
+            break;
+        case 6:
+            day_name = "Thứ 7";
+    }
+    return day_name;
+}
+console.log(getDate());
+
+function getTime() {
+    var date = new Date("2024-11-06 16:24:58.660");
+    var current_time = date.getHours() + ":" + date.getMinutes();
+    return current_time;
+}
+console.log(getTime());
