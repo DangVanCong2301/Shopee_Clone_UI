@@ -710,12 +710,77 @@
             </div>
         </footer>
     </div>
-    <div class="modal">
+    <div class="modal open">
         <div class="modal__overlay">
 
         </div>
         <div class="modal__body">
             <div class="reviewer-form">
+                <div class="reviewer-form__header">
+                    <div class="reviewer-form__header-title">Chọn lý do huỷ</div>
+                </div>
+                <div class="reviewer-form__body">
+                    <div class="address-form__new-please">
+                        <i class="uil uil-bell address-form__new-please-icon"></i>
+                        <div class="address-form__new-please-desc">
+                            <div class="destroy-form__new-please-desc-title">Vui lòng chọn lý do huỷ đơn hàng. Lưu ý: thao tác huỷ bỏ, huỷ tất cả các sản phẩm có trong đơn hàng và không thể hoàn tác</div>
+                        </div>
+                    </div>
+                    <li class="destroy-form__item">
+                        <div class="destroy-form__item-box">
+                            <input type="radio" name="destroy-order" class="destroy-form__item-input">
+                        </div>
+                        <div class="destroy-form__item-content">
+                            Muốn thay đổi địa chỉ giao hàng
+                        </div>
+                    </li>
+                    <li class="destroy-form__item">
+                        <div class="destroy-form__item-box">
+                            <input type="radio" name="destroy-order" class="destroy-form__item-input">
+                        </div>
+                        <div class="destroy-form__item-content">
+                            Muốn nhập/thay đổi mã Voucher
+                        </div>
+                    </li>
+                    <li class="destroy-form__item">
+                        <div class="destroy-form__item-box">
+                            <input type="radio" name="destroy-order" class="destroy-form__item-input">
+                        </div>
+                        <div class="destroy-form__item-content">
+                            Muốn thay đổi sản phẩm trong đơn hàng (size, màu sắc, số lượng ...)
+                        </div>
+                    </li>
+                    <li class="destroy-form__item">
+                        <div class="destroy-form__item-box">
+                            <input type="radio" name="destroy-order" class="destroy-form__item-input">
+                        </div>
+                        <div class="destroy-form__item-content">
+                            Thủ tục thanh toán rắc rối 
+                        </div>
+                    </li>
+                    <li class="destroy-form__item">
+                        <div class="destroy-form__item-box">
+                            <input type="radio" name="destroy-order" class="destroy-form__item-input">
+                        </div>
+                        <div class="destroy-form__item-content">
+                            Tìm thấy giá rẻ hơn ở chỗ khác 
+                        </div>
+                    </li>
+                    <li class="destroy-form__item">
+                        <div class="destroy-form__item-box">
+                            <input type="radio" name="destroy-order" class="destroy-form__item-input">
+                        </div>
+                        <div class="destroy-form__item-content">
+                            Đổi ý, không muốn mua nữa
+                        </div>
+                    </li>
+                </div>
+                <div class="reviewer-form__footer">
+                    <div class="reviewer-form__btn btn" onclick="closeModal()">TRỞ LẠI</div>
+                    <div class="reviewer-form__btn btn btn--primary">HOÀN THÀNH</div>
+                </div>
+            </div>
+            <div class="reviewer-form hide-on-destop">
                 <div class="reviewer-form__header">
                     <div class="reviewer-form__header-title">Đánh giá sản phẩm</div>
                 </div>

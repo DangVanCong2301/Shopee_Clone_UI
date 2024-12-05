@@ -555,6 +555,24 @@
     margin: 0 30px;
 }
 
+/* Destroy Form */
+.destroy-form__new-please-desc-title {
+    font-size: 12px;
+    color: #f69113;
+}
+
+.destroy-form__item {
+    display: flex;
+    align-items: center;
+    column-gap: 16px;
+}
+
+.destroy-form__item-input {
+    width: 24px;
+    height: 24px;
+    accent-color: var(--primary-color);
+}
+
 @media screen and (min-width: 992px) {
     .purchase__body-item-info {
         flex: 1;
