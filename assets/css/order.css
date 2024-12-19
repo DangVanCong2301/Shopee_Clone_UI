@@ -324,7 +324,7 @@
     
     .order__stage-list {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
         place-items: center;
     }
 
@@ -337,13 +337,7 @@
     .order__stage-desc-time {
         font-size: 12px;
         color: rgba(0, 0, 0, .26);
-    }
-
-    .order__stage-line {
-        height: 4px;
-        width: 100%;
-        position: absolute;
-        top: 68px;
+        margin-top: 4px;
     }
     
     .order__stage-line-background, .order__stage-line-foreground {
@@ -365,13 +359,6 @@
         margin: 0 70px;
     }
 
-    .order__stage-progress {
-        width: 100%;
-        position: relative;
-        display: flex;
-        align-items: center;
-    }
-
     .order__stage-rounder {
         height: 60px;
         width: 60px;
@@ -380,23 +367,47 @@
         align-items: center;
         justify-content: center;
         border-radius: 50%;
-        border: 4px solid #2dc258;
-        color: #2dc258;
+        border: 4px solid rgba(0, 0, 0, .24);
+        color: rgba(0, 0, 0, .24);
         z-index: 1;
     }
 
-    .order__stage-progress::before {
-        content: '';
+    .order__stage-rounder.active {
+        border: 4px solid #2dc258;
+        color: #2dc258;
+    }
+
+    .order__stage-line {
         position: absolute;
         height: 4px;
-        width: 80%;
-        background-color: #2dc258;
-        right: 60%;
+        width: 126px;
+        background-color: rgba(0, 0, 0, .24);
         z-index: 0;
+        top: 68px;
+    }
+
+    .order__stage-line.line-1 {
+        left: 149px;
+    }
+
+    .order__stage-line.line-1.active {
+        background-color: #2dc258;
+    }
+
+    .order__stage-line.line-2 {
+        left: 336px;
+    }
+
+    .order__stage-line.line-3 {
+        right: 337px;
+    }
+
+    .order__stage-line.line-4 {
+        right: 149px;
     }
 
     .order__stage-rounder-icon {
-        font-size: 3.5rem;
+        font-size: 30px;
         margin: 0 60px;
     }
 
