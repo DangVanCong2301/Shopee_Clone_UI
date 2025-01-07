@@ -651,6 +651,7 @@
     }
 
     .order__product-item-info {
+        flex: 1;
         padding-left: 12px;
         font-size: var(--normal-font-size);
         line-height: 22px;

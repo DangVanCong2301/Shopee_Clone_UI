@@ -137,8 +137,25 @@
     }
 
     .header {
-        background-image: linear-gradient(#fff, #fff);
+        /* background-image: linear-gradient(#fff, #fff); */
         box-shadow: 0 1px 0 rgba(0, 0, 0, 0.05);
+    }
+
+    .header__mobile-container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .header__mobile-left {
+        display: flex;
+        column-gap: 24px;
+        align-items: center;
+    }
+
+    .header__mobile-right {
+        display: flex;
+        column-gap: 12px;
+        align-items: center;
     }
 
     .header__cart-list--no-cart {
@@ -188,14 +205,18 @@
 
     .header__mobile-menu,
     .header__mobile-more {
-        margin-left: 12px;
+        /* margin-left: 12px; */
         display: block;
     }
 
-    .header__mobile-menu-icon,
     .header__mobile-more-icon {
         font-size: 2.4rem;
         color: var(--primary-color);
+    }
+
+    .header__mobile-menu-icon  {
+        font-size: 2.4rem;
+        color: var(--white-color);
     }
 
     .app__container {
@@ -514,14 +535,14 @@
 
     .header-with-search {
         justify-content: space-between;
-        margin: 0;
+        margin: 16px 0 0 0;
     }
 
     .header__search-input-wrap {
         display: flex;
-        padding-left: 10px;
+        /* padding-left: 10px; */
         align-items: center;
-        background-color: #f3f3f3;
+        /* background-color: #f3f3f3; */
         border-radius: 2px;
     }
     
@@ -532,7 +553,10 @@
 
     .header__search-input {
         padding-left: 10px;
-        background-color: #f3f3f3;
+    }
+
+    .header__search-btn {
+        height: 38px;
     }
 
     .header__search-input::placeholder {
@@ -542,6 +566,10 @@
     .header__cart,
     .header__logo {
         width: unset;
+    }
+
+    .header__logo-img {
+        width: 150px;
     }
 
     .header__mobile-search {
@@ -565,23 +593,19 @@
         box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
     }
 
-    .header__mobile-user {
-        display: block;
-    }
-
     .header__mobile-user-link {
         display: block;
-        padding-left: 12px;
+        /* padding-left: 12px; */
     }
 
     .header__mobile-user-icon {
-        font-size: 2.4rem;
-        color: var(--primary-color);
+        font-size: 30px;
+        color: var(--white-color);
         margin-top: 6px;
     }
 
     .header__cart-icon {
-        color: var(--primary-color);
+        color: var(--white-color);
     }
 
     .header__cart-btn {
