@@ -46,4 +46,107 @@
     .home-item:hover .home-product-item {
         border: none;
     }
+
+    .header__mobile-menu-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 70%;
+        height: 100vh;
+        background-color: var(--white-color);
+        padding: 12px 12px 50px 12px;
+        border-top-right-radius: 4px;
+        border-bottom-right-radius: 4px;
+        /* transform: translateX(-100%); */
+        transform: translateX(0%);
+        animation: showNavMenu .4s ease forwards;
+        transition: all .3s ease;
+        z-index: 3;
+    }
+
+    .header__mobile-menu-overlay {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.4);
+        z-index: 2;
+        /* display: none; */
+    }
+
+    .header__mobile-menu-close {
+        text-align: right;
+        cursor: pointer;
+    }
+
+    .header__mobile-menu-close-icon {
+        font-size: 20px;
+        color: rgba(0, 0, 0, 0.54);
+    }
+
+    .header__mobile-menu-list {
+        padding-top: 16px;
+    }
+
+    .header__mobile-menu-item {
+        border-bottom: 1px solid var(--border-color);
+    }
+
+    .header__mobile-menu-back {
+        border-bottom: 1px solid var(--border-color);
+    }
+
+    .header__mobile-menu-back-link {
+        display: flex;
+        align-items: center;
+        height: 60px;
+        font-size: 16px;
+        color: var(--text-color);
+        font-weight: bold;
+        column-gap: 12px;
+    }
+
+    .header__mobile-back-item-icon {
+        font-size: 30px;
+    }
+
+    .header__mobile-menu-tab-name {
+        margin-left: 12px;
+    }
+
+    .header__mobile-menu-item-link {
+        display: flex;
+        align-items: center;
+        height: 60px;
+        color: var(--text-color);
+    }
+
+    .header__mobile-menu-item-icon-symb {
+        width: 50px;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .header__mobile-menu-item-icon,
+    .header__mobile-menu-item-dropdown-icon {
+        font-size: 20px;
+    }
+
+    .header__mobile-menu-item-name {
+        flex: 1;
+        line-height: 20px;
+        height: 20px;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 1;
+        overflow: hidden;
+    }
+
+    .header__mobile-menu-item-dropdown-icon {
+        transform: rotate(-90deg);
+    }
 }
