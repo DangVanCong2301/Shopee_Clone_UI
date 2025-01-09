@@ -124,6 +124,7 @@ function loadProducts() {
                                                 <span class="home-product-item__like home-product-item__like--liked">
                                                     <i class="home-product-item__like-icon-empty far fa-heart"></i>
                                                     <i class="home-product-item__like-icon-fill fas fa-heart"></i>
+                                                    <span class="home-product-item__like-count">10</span>
                                                     <div class="home-product-item__like-loading"></div>
                                                 </span>
                                                 <div class="home-product-item__rating">
@@ -167,6 +168,32 @@ function loadProducts() {
 }
 loadProducts();
 
+// Show Navbar Menu
+function showNavMenu() {
+    document.querySelector(".header__mobile-menu-overlay").classList.add("open");
+    document.querySelector(".header__mobile-menu-container").classList.add("open");
+    document.querySelector(".header__mobile-menu-container-shop").classList.remove("open");
+    document.querySelector(".header__mobile-menu-container-industry").classList.remove("open");
+}
+
+function closeNavMenu() {
+    document.querySelector(".header__mobile-menu-overlay").classList.remove("open");
+    document.querySelector(".header__mobile-menu-container").classList.remove("open");
+    document.querySelector(".header__mobile-menu-container-shop").classList.remove("open");
+    document.querySelector(".header__mobile-menu-container-industry").classList.remove("open");
+}
+
+function openShopMenu() {
+    document.querySelector(".header__mobile-menu-container").classList.remove("open");
+    document.querySelector(".header__mobile-menu-container-shop").classList.add("open");
+}
+
+function openIndustryMenu() {
+    document.querySelector(".header__mobile-menu-container").classList.remove("open");
+    document.querySelector(".header__mobile-menu-container-industry").classList.add("open");
+}
+
+// Chat
 function hideChatWindow() {
     document.querySelector(".chat").classList.toggle("hide-chat-window");
     document.querySelector(".chat__body-right").classList.toggle("hide-chat-window");

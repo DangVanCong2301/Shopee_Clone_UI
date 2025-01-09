@@ -20,68 +20,90 @@
             <div class="header__mobile hide-on-destop">
                 <div class="header__mobile-container">
                     <div class="header__mobile-left">
-                        <div class="header__mobile-menu">
+                        <div class="header__mobile-menu" onclick="showNavMenu()">
                             <i class="uil uil-bars header__mobile-menu-icon"></i>
                         </div>
                         <div class="header__mobile-menu-nav hide-on-destop">
-                            <div class="header__mobile-menu-container open hide-on-mobile">
+                            <div class="header__mobile-menu-container">
                                 <div class="header__mobile-menu-close" onclick="closeNavMenu()">
                                     <i class="uil uil-multiply header__mobile-menu-close-icon"></i>
                                 </div>
                                 <div class="header__mobile-menu-list">
                                     <div class="header__mobile-menu-item">
-                                        <a href="#" class="header__mobile-menu-item-link">
-                                            <div class="header__mobile-menu-item-icon-symb">
-                                                <i class="header__mobile-menu-item-icon uil uil-apps"></i>
-                                            </div>
+                                        <a href="javascript:openShopMenu()" class="header__mobile-menu-item-link">
                                             <span class="header__mobile-menu-item-name">Cửa hàng</span>
                                             <i class="uil uil-angle-down header__mobile-menu-item-dropdown-icon"></i>
                                         </a>
                                     </div>
                                     <div class="header__mobile-menu-item">
-                                        <a href="#" class="header__mobile-menu-item-link">
-                                            <div class="header__mobile-menu-item-icon-symb">
-                                                <i class="header__mobile-menu-item-icon uil uil-filter"></i>
-                                            </div>
+                                        <a href="javascript:openIndustryMenu()" class="header__mobile-menu-item-link">
                                             <span class="header__mobile-menu-item-name">Danh mục</span>
                                             <i class="uil uil-angle-down header__mobile-menu-item-dropdown-icon"></i>
                                         </a>
                                     </div>
                                 </div>
                             </div>
-                            <div class="header__mobile-menu-tab">
-                                <div class="header__mobile-menu-container open">
-                                    <div class="header__mobile-menu-close" onclick="closeNavMenu()">
-                                        <i class="uil uil-multiply header__mobile-menu-close-icon"></i>
+                            <div class="header__mobile-menu-container-shop">
+                                <div class="header__mobile-menu-close" onclick="closeNavMenu()">
+                                    <i class="uil uil-multiply header__mobile-menu-close-icon"></i>
+                                </div>
+                                <div class="header__mobile-menu-list">
+                                    <div class="header__mobile-menu-back">
+                                        <a href="javascript:showNavMenu()" class="header__mobile-menu-back-link">
+                                            <div class="header__mobile-menu-back-icon-symb">
+                                                <i class="header__mobile-back-item-icon uil uil-arrow-left"></i>
+                                            </div>
+                                            <span class="header__mobile-menu-back-name">Quay lại</span>
+                                        </a>
                                     </div>
-                                    <div class="header__mobile-menu-list">
-                                        <div class="header__mobile-menu-back">
-                                            <a href="#" class="header__mobile-menu-back-link">
-                                                <div class="header__mobile-menu-back-icon-symb">
-                                                    <i class="header__mobile-back-item-icon uil uil-arrow-left"></i>
-                                                </div>
-                                                <span class="header__mobile-menu-back-name">Quay lại</span>
-                                            </a>
-                                        </div>
-                                        <div class="header__mobile-menu-back">
-                                            <a href="#" class="header__mobile-menu-back-link">
-                                                <span class="header__mobile-menu-back-name">Xem tất cả cửa hàng</span>
-                                            </a>
-                                        </div>
-                                        <div class="header__mobile-menu-item">
-                                            <a href="#" class="header__mobile-menu-item-link">
-                                                <span class="header__mobile-menu-tab-name">Laneige</span>
-                                            </a>
-                                        </div>
-                                        <div class="header__mobile-menu-item">
-                                            <a href="#" class="header__mobile-menu-item-link">
-                                                <span class="header__mobile-menu-tab-name">Legendary</span>
-                                            </a>
-                                        </div>
+                                    <div class="header__mobile-menu-back">
+                                        <a href="#" class="header__mobile-menu-back-link">
+                                            <span class="header__mobile-menu-back-all">Xem tất cả cửa hàng</span>
+                                        </a>
+                                    </div>
+                                    <div class="header__mobile-menu-item">
+                                        <a href="#" class="header__mobile-menu-item-link">
+                                            <span class="header__mobile-menu-tab-name">Laneige</span>
+                                        </a>
+                                    </div>
+                                    <div class="header__mobile-menu-item">
+                                        <a href="#" class="header__mobile-menu-item-link">
+                                            <span class="header__mobile-menu-tab-name">Legendary</span>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
-                            <div class="header__mobile-menu-overlay open"></div>
+                            <div class="header__mobile-menu-container-industry">
+                                <div class="header__mobile-menu-close" onclick="closeNavMenu()">
+                                    <i class="uil uil-multiply header__mobile-menu-close-icon"></i>
+                                </div>
+                                <div class="header__mobile-menu-list">
+                                    <div class="header__mobile-menu-back">
+                                        <a href="javascript:showNavMenu()"" class="header__mobile-menu-back-link">
+                                            <div class="header__mobile-menu-back-icon-symb">
+                                                <i class="header__mobile-back-item-icon uil uil-arrow-left"></i>
+                                            </div>
+                                            <span class="header__mobile-menu-back-name">Quay lại</span>
+                                        </a>
+                                    </div>
+                                    <div class="header__mobile-menu-back">
+                                        <a href="#" class="header__mobile-menu-back-link">
+                                            <span class="header__mobile-menu-back-all">Xem tất cả danh mục</span>
+                                        </a>
+                                    </div>
+                                    <div class="header__mobile-menu-item">
+                                        <a href="#" class="header__mobile-menu-item-link">
+                                            <span class="header__mobile-menu-tab-name">Thời trang nữ</span>
+                                        </a>
+                                    </div>
+                                    <div class="header__mobile-menu-item">
+                                        <a href="#" class="header__mobile-menu-item-link">
+                                            <span class="header__mobile-menu-tab-name">Sắc đẹp</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="header__mobile-menu-overlay"></div>
                         </div>
                     </div>
                     <div class="header__mobile-logo">
