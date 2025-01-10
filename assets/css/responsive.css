@@ -82,7 +82,7 @@
         padding: 0 24px;
     }
 
-    .home__table-container {
+    .table__container {
         width: 100vw;
         height: 100vh;
         display: flex;
@@ -96,6 +96,28 @@
 
 /* Destop */
 @media screen and (min-width: 992px) { 
+    .destop {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 20px;
+        line-height: 24px;
+        padding: 0 24px;
+    }
+
+    .destop__container {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 20px;
+        line-height: 24px;
+        padding: 0 24px;
+    }
+
     .banner {
         height: 240px;
     }
@@ -569,9 +591,9 @@
         width: unset;
     }
 
-    .header__logo-img {
+    /* .header__logo-img {
         width: 150px;
-    }
+    } */
 
     .header__mobile-search {
         display: block;

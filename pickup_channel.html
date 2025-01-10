@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="sortcut icon" href="./assets/img/shopee_logo.png">
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/grid.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+    <link rel="stylesheet" href="./assets/css/pickup_channel.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <!--=============== ICONSCOUT ===============-->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
+    <title>Shopee - Kênh người lấy hàng</title>
+</head>
+<body>
+    <div class="app">
+        <header class="header hide-on-destop">
+            <div class="header__container">
+                <div class="header__menu">
+                    <i class="uil uil-bars header__menu-icon" onclick="showNavMenu()"></i>
+                    <div class="header__menu-nav hide-on-destop">
+                        <div class="header__menu-container">
+                            <div class="header__menu-close" onclick="closeNavMenu()">
+                                <i class="uil uil-multiply header__menu-close-icon"></i>
+                            </div>
+                            <div class="header__menu-list">
+                                <div class="header__menu-item">
+                                    <a href="javascript:openShopMenu()" class="header__menu-item-link">
+                                        <span class="header__menu-item-name">Đơn hàng</span>
+                                        <i class="uil uil-angle-down header__menu-item-dropdown-icon"></i>
+                                    </a>
+                                </div>
+                                <div class="header__menu-item">
+                                    <a href="javascript:openIndustryMenu()" class="header__menu-item-link">
+                                        <span class="header__menu-item-name">Đang làm</span>
+                                        <i class="uil uil-angle-down header__menu-item-dropdown-icon"></i>
+                                    </a>
+                                </div>
+                                <div class="header__menu-item">
+                                    <a href="javascript:openIndustryMenu()" class="header__menu-item-link">
+                                        <span class="header__menu-item-name">Đã hoàn thành</span>
+                                        <i class="uil uil-angle-down header__menu-item-dropdown-icon"></i>
+                                    </a>
+                                </div>
+                                <div class="header__menu-item">
+                                    <a href="javascript:openIndustryMenu()" class="header__menu-item-link">
+                                        <span class="header__menu-item-name">Thông tin tài khoản</span>
+                                        <i class="uil uil-angle-down header__menu-item-dropdown-icon"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="header__menu-overlay"></div>
+                    </div>
+                </div>
+                <div class="header__logo">
+                    <img src="./assets/img/SPX_express_logo.png" class="header__logo-img" alt="">
+                </div>
+                <div class="header__user">
+                    <div class="header__user-symbol hide-on-destop">
+                        <a href="login.html" class="header__user-link">  
+                            <i class="uil uil-user header__user-icon"></i>
+                        </a>
+                    </div>
+                    <!-- <div class="header__user-avatar">
+                        <div class="header__mobile-user-avatar-img" style="background-image: url(./assets/img/profile_avatar.jpg);"></div>
+                    </div>   -->
+                </div>
+            </div>
+        </header>
+        <div class="table hide-on-mobile hide-on-destop">
+            <div class="table__container">
+                Sản phẩm chưa được tối ưu trên máy tính bảng, vui lòng sử dụng điện thoại và laptop 
+                để có trả nghiệm tốt hơn!
+            </div>
+        </div>
+        <div class="destop hide-on-mobile hide-on-table">
+            <div class="destop__container">
+                Sản phẩm chưa được tối ưu trên máy tính bảng, vui lòng sử dụng điện thoại và laptop 
+                để có trả nghiệm tốt hơn!
+            </div>
+        </div>
+        <div class="app__container">
+            <div class="pickup">
+                <div class="pickup__title">Danh sách cần làm</div>
+                <div class="pickup__list">
+                    <div class="pickup__item" onclick="openOrderListTab()">
+                        <div class="pickup__item-numb">0</div>
+                        <div class="pickup__item-numb-text">Chờ lấy hàng</div>
+                    </div>
+                    <div class="pickup__item">
+                        <div class="pickup__item-numb">0</div>
+                        <div class="pickup__item-numb-text">Đang lấy hàng</div>
+                    </div>
+                    <div class="pickup__item">
+                        <div class="pickup__item-numb">0</div>
+                        <div class="pickup__item-numb-text">Đã hoàn thành</div>
+                    </div>
+                    <div class="pickup__item">
+                        <div class="pickup__item-numb">0</div>
+                        <div class="pickup__item-numb-text">Đã Huỷ</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="./assets/js/pickup_channel.js"></script>
+</html>
