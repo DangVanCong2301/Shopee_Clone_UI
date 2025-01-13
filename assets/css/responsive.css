@@ -242,6 +242,36 @@
         color: var(--white-color);
     }
 
+    .header__mobile-menu-logout {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        border-top: 1px solid var(--border-color);
+    }
+
+    .header__mobile-menu-logout-name {
+        line-height: 20px;
+        height: 20px;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 1;
+        overflow: hidden;
+    }
+
+    .header__mobile-menu-logout-link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--text-color);
+        height: 60px;
+        column-gap: 16px;
+    }
+
+    .header__mobile-menu-logout-icon {
+        font-size: 24px;
+        color: rgba(0, 0, 0, 0.54);
+    }
+
     .app__container {
         padding-top: 0;
     }
@@ -470,6 +500,7 @@
     /* Chat Mobile */
     .chat {
         overflow: hidden;
+        width: 100%;
     }
 
     .chat__mobile-window {
@@ -485,6 +516,10 @@
         box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.1), 0 8px 16px 0 rgba(0, 0,0, 0.06);
         animation: showShopMenu .4s ease forwards;
         transition: all .3s ease;
+    }
+
+    .chat__body-right {
+        width: 100%;
     }
 
     .chat__mobile-window.show {
