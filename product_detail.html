@@ -576,6 +576,120 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="address-form-add-mobile hide-on-mobile">
+                            <div class="address-form-mobile__header">
+                                <div class="address-form-mobile__header-back" onclick="closeAddressFormModalMobile()">
+                                    <i class="uil uil-arrow-left address-form-mobile__header-back-icon"></i>
+                                </div>
+                                <div class="address-form-mobile__header-title">Địa chỉ mới</div>
+                            </div>
+                            <div class="address-form-mobile__body">
+                                <div class="address-form-add-mobile__div">
+                                    <div class="address-form-mobile__body-title">Liên hệ</div>
+                                    <div class="address-form-add-mobile__div-container">
+                                        <div class="address-form-add-mobile__div-box address-form-add-mobile__div-box-line">
+                                            <input type="text" class="auth__mobile-form-input" placeholder="Họ và tên">
+                                        </div>
+                                        <div class="address-form-add-mobile__div-box">
+                                            <input type="text" class="auth__mobile-form-input" placeholder="Số điện thoại">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="address-form-add-mobile__div">
+                                    <div class="address-form-mobile__body-title">Địa chỉ</div>
+                                    <div class="address-form-add-mobile__div-container">
+                                        <div class="address-form-add-mobile__div-box address-form-add-mobile__div-box-line">
+                                            <input type="text" class="auth__mobile-form-input" placeholder="Tỉnh/Thành phố, Quận/Huyện, Phường/Xã">
+                                            <i class="uil uil-angle-right-b address-form-mobile__body-add-more"></i>
+                                        </div>
+                                        <div class="address-form-add-mobile__div-box">
+                                            <input type="text" class="auth__mobile-form-input" placeholder="Địa chỉ cụ thể">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="address-form-add-mobile__div">
+                                    <div class="address-form-mobile__body-title">Cài đặt</div>
+                                    <div class="address-form-add-mobile__div-container">
+                                        <div class="address-form-add-mobile__div-box address-form-add-mobile__div-box-line">
+                                            <div class="address-form-add-mobile__div-text">Loại địa chỉ</div>
+                                            <div class="address-form-add-mobile__div-btns">
+                                                <div class="address-form-add-mobile__div-btn">Nhà riêng</div>
+                                                <div class="address-form-add-mobile__div-btn">Văn phòng</div>
+                                            </div>
+                                        </div>
+                                        <div class="address-form-add-mobile__div-box">
+                                            <div class="address-form-add-mobile__div-text">Đặt làm mặc định</div>
+                                            <div class="address-form-add-mobile__control active" onclick="openTransportModal()">
+                                                <div class="address-form-add-mobile__control-circle"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="address-form-add-mobile__bottom">
+                                    <div class="address-form-add-mobile__btn-add">Thêm địa chỉ</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="address-form-mobile-choose">
+                            <div class="address-form-mobile__header">
+                                <div class="address-form-mobile__header-back" onclick="closeAddressFormModalMobile()">
+                                    <i class="uil uil-arrow-left address-form-mobile__header-back-icon"></i>
+                                </div>
+                                <div class="address-form-mobile-choose__search">
+                                    <i class="uil uil-search address-form-mobile-choose__search-icon"></i>
+                                    <input type="text" class="address-form-mobile-choose__search-input" placeholder="Tìm kiếm Quận/Huyện, Phường/Xã">
+                                </div>
+                            </div>
+                            <div class="address-form-mobile-choose__body">
+                                <div class="address-form-add-mobile-choose__city hide-on-mobile">
+                                    <div class="address-form-mobile-choose__location">
+                                        <i class="uil uil-location-point address-form-mobile-choose__location-icon"></i>
+                                        <div class="address-form-mobile-choose__location-text">Sử dụng vị trí hiện tại của tôi</div>
+                                    </div>
+                                    <div class="address-form-add-mobile-choose__city-body">
+                                        <div class="address-form-mobile__body-title">Tỉnh/Thành phố</div>
+                                        <div class="address-form-mobile-choose__city-list">
+                                            <div class="address-form-mobile-choose__city-item">
+                                                Hà Nội
+                                            </div>
+                                            <div class="address-form-mobile-choose__city-item">
+                                                Nam Định 
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="address-form-add-mobile-choose__district">
+                                    <div class="address-form-mobile-choose__establish">
+                                        <div class="address-form-mobile-choose__establish-title">
+                                            <div class="address-form-mobile-choose__establish-title-text">Khu vực được chọn</div>
+                                            <div class="address-form-mobile-choose__establish-title-back">Thiết lập lại</div>
+                                        </div>
+                                        <div class="address-form-mobile-choose__establish-city">
+                                            <div class="address-form-mobile-choose__establish-box">
+                                                <div class="address-form-mobile-choose__establish-rounder"></div>
+                                                <div class="address-form-mobile-choose__establish-line"></div>
+                                            </div>
+                                            <div class="address-form-mobile-choose__establish-city-text">Hà Nội</div>
+                                        </div>
+                                        <div class="address-form-mobile-choose__establish-district">
+                                            <input type="radio" class="address-form-mobile-choose__establish-input">
+                                            <div class="address-form-mobile-choose__establish-district-text">Chọn Quận/Huyện</div>
+                                        </div>
+                                    </div>
+                                    <div class="address-form-add-mobile-choose__city-body">
+                                        <div class="address-form-mobile__body-title">Quận/Huyện</div>
+                                        <div class="address-form-mobile-choose__city-list">
+                                            <div class="address-form-mobile-choose__city-item">
+                                                Huyện Ba Vì
+                                            </div>
+                                            <div class="address-form-mobile-choose__city-item">
+                                                Huyện Chương Mỹ 
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="detail__shop">
