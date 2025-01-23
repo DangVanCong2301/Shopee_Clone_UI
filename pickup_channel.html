@@ -15,7 +15,7 @@
 </head>
 <body>
     <div class="app">
-        <header class="header hide-on-destop">
+        <header class="header hide-on-destop hide-on-mobile">
             <div class="header__container">
                 <div class="header__menu">
                     <i class="uil uil-bars header__menu-icon" onclick="showNavMenu()"></i>
@@ -82,7 +82,7 @@
             </div>
         </div>
         <div class="app__container">
-            <div class="pickup">
+            <div class="pickup hide-on-mobile">
                 <div class="pickup__title">Danh sách cần làm</div>
                 <div class="pickup__list">
                     <div class="pickup__item" onclick="openOrderListTab()">
@@ -101,6 +101,116 @@
                         <div class="pickup__item-numb">0</div>
                         <div class="pickup__item-numb-text">Đã Huỷ</div>
                     </div>
+                </div>
+            </div>
+            <div class="pickup-order hide-on-destop">
+                <div class="pickup-order__header">
+                    <div class="pickup-order__header-container">
+                        <div class="header__pickup-order-arrow">
+                            <i class="uil uil-arrow-left pickup-order__header-arrow-icon"></i>
+                        </div>
+                        <div class="header__pickup-order__title">Chờ lấy hàng</div>
+                    </div>
+                </div>
+                <div class="pickup-order__list-title">1 đơn hàng</div>
+                <div class="pickup-order__works">
+                    <div class="pickup-order__work">
+                        <div class="pickup-order__work-row">
+                            <div class="pickup-order__work-col-1">Mã đơn hàng</div>
+                            <div class="pickup-order__work-col-2">ĐH01</div>
+                        </div>
+                        <div class="pickup-order__work-row">
+                            <div class="pickup-order__work-col-1">Khách hàng</div>
+                            <div class="pickup-order__work-col-2">Đặng Văn Công</div>
+                        </div>
+                        <div class="pickup-order__work-row">
+                            <div class="pickup-order__work-col-1">Ngày đặt</div>
+                            <div class="pickup-order__work-col-2">2/9/2024</div>
+                        </div>
+                        <div class="pickup-order__work-row">
+                            <div class="pickup-order__work-col-1">Tổng tiền</div>
+                            <div class="pickup-order__work-col-2">291,500 VNĐ</div>
+                        </div>
+                        <div class="pickup-order__work-row">
+                            <div class="pickup-order__work-col-1">Trạng thái</div>
+                            <div class="pickup-order__work-col-2">Chờ lấy hàng</div>
+                        </div>
+                        <div class="pickup-order__work-row">
+                            <div class="pickup-order__work-col-1">Thanh toán</div>
+                            <div class="pickup-order__work-col-2">COD</div>
+                        </div>
+                        <div class="pickup-order__work-row">
+                            <div class="pickup-order__work-col-1"></div>
+                            <div class="pickup-order__work-col-2">
+                                <a href="#" class="pickup-order__work-link">Chi tiết đơn</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pickup-order__work">
+                        <div class="pickup-order__work-row">
+                            <div class="pickup-order__work-col-1">Mã đơn hàng</div>
+                            <div class="pickup-order__work-col-2">ĐH01</div>
+                        </div>
+                        <div class="pickup-order__work-row">
+                            <div class="pickup-order__work-col-1">Khách hàng</div>
+                            <div class="pickup-order__work-col-2">Đặng Văn Công</div>
+                        </div>
+                        <div class="pickup-order__work-row">
+                            <div class="pickup-order__work-col-1">Ngày đặt</div>
+                            <div class="pickup-order__work-col-2">2/9/2024</div>
+                        </div>
+                        <div class="pickup-order__work-row">
+                            <div class="pickup-order__work-col-1">Tổng tiền</div>
+                            <div class="pickup-order__work-col-2">291,500 VNĐ</div>
+                        </div>
+                        <div class="pickup-order__work-row">
+                            <div class="pickup-order__work-col-1">Trạng thái</div>
+                            <div class="pickup-order__work-col-2">Chờ lấy hàng</div>
+                        </div>
+                        <div class="pickup-order__work-row">
+                            <div class="pickup-order__work-col-1">Thanh toán</div>
+                            <div class="pickup-order__work-col-2">COD</div>
+                        </div>
+                        <div class="pickup-order__work-row">
+                            <div class="pickup-order__work-col-1"></div>
+                            <div class="pickup-order__work-col-2">
+                                <a href="#" class="pickup-order__work-link">Chi tiết đơn</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pickup-order__work">
+                        <div class="pickup-order__work-row">
+                            <div class="pickup-order__work-col-1">Mã đơn hàng</div>
+                            <div class="pickup-order__work-col-2">ĐH01</div>
+                        </div>
+                        <div class="pickup-order__work-row">
+                            <div class="pickup-order__work-col-1">Khách hàng</div>
+                            <div class="pickup-order__work-col-2">Đặng Văn Công</div>
+                        </div>
+                        <div class="pickup-order__work-row">
+                            <div class="pickup-order__work-col-1">Ngày đặt</div>
+                            <div class="pickup-order__work-col-2">2/9/2024</div>
+                        </div>
+                        <div class="pickup-order__work-row">
+                            <div class="pickup-order__work-col-1">Tổng tiền</div>
+                            <div class="pickup-order__work-col-2">291,500 VNĐ</div>
+                        </div>
+                        <div class="pickup-order__work-row">
+                            <div class="pickup-order__work-col-1">Trạng thái</div>
+                            <div class="pickup-order__work-col-2">Chờ lấy hàng</div>
+                        </div>
+                        <div class="pickup-order__work-row">
+                            <div class="pickup-order__work-col-1">Thanh toán</div>
+                            <div class="pickup-order__work-col-2">COD</div>
+                        </div>
+                        <div class="pickup-order__work-row">
+                            <div class="pickup-order__work-col-1"></div>
+                            <div class="pickup-order__work-col-2">
+                                <a href="#" class="pickup-order__work-link">Chi tiết đơn</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pickup-order__work-blur"></div>
                 </div>
             </div>
         </div>

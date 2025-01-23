@@ -2018,7 +2018,7 @@ i.home-product-item__like-icon-empty {
 }
 
 .address-form__item-input {
-    margin: 0 8px auto 0;
+    margin: 3px 8px auto 0;
     accent-color: var(--primary-color);
     width: 18px;
     height: 18px;

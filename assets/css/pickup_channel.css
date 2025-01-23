@@ -146,3 +146,93 @@
     font-weight: bold;
     font-size: 20px;
 }
+
+/* Pickup Order List */
+.pickup-order__header {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 70px;
+    background-color: var(--white-color);
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.05);
+    padding: 8px 12px 8px 12px;
+}
+
+.pickup-order__header-container {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    background-color: var(--white-color);
+}
+
+.pickup-order__header-arrow-icon {
+    font-size: 30px;
+    color: var(--primary-color);
+}
+
+.header__pickup-order__title {
+    position: absolute;
+    right: 50%;
+    transform: translateX(50%);
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.pickup-order__list-title {
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 0 10px 10px;
+}
+
+.pickup-order__works {
+    position: relative;
+    padding: 0 4px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 4px;
+    height: 750px;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+}
+
+.pickup-order__work-blur {
+    position: sticky;
+    bottom: 0px;
+    left: 0;
+    right: 0;
+}
+
+.pickup-order__work-blur::before {
+    position: absolute;
+    content: "";
+    background: linear-gradient(transparent, rgba(0, 0, 0, .06));
+    height: 40px;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+}
+
+.pickup-order__works::-webkit-scrollbar {
+    display: none;
+}
+
+.pickup-order__work {
+    background-color: var(--white-color);
+    border-radius: 4px;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .1);
+    transition: all 300ms ease;
+    padding: 0 10px;
+}
+
+.pickup-order__work-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 0;
+    border-bottom: .5px solid var(--border-color);
+}
+
+.pickup-order__work-col-1 {
+    font-weight: bold;
+}
