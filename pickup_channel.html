@@ -15,7 +15,7 @@
 </head>
 <body>
     <div class="app">
-        <header class="header hide-on-destop hide-on-mobile">
+        <header class="header hide-on-destop">
             <div class="header__container">
                 <div class="header__menu">
                     <i class="uil uil-bars header__menu-icon" onclick="showNavMenu()"></i>
@@ -50,6 +50,12 @@
                                     </a>
                                 </div>
                             </div>
+                            <div class="header__menu-logout">
+                                <a href="javascript:openIndustryMenu()" class="header__menu-logout-link">
+                                    <span class="header__menu-logout-name">Đăng xuất</span>
+                                    <i class="uil uil-signout header__menu-logout-icon"></i>
+                                </a>
+                            </div>
                         </div>
                         <div class="header__menu-overlay"></div>
                     </div>
@@ -58,14 +64,14 @@
                     <img src="./assets/img/SPX_express_logo.png" class="header__logo-img" alt="">
                 </div>
                 <div class="header__user">
-                    <div class="header__user-symbol hide-on-destop">
+                    <div class="header__user-symbol hide-on-destop hide-on-mobile">
                         <a href="login.html" class="header__user-link">  
                             <i class="uil uil-user header__user-icon"></i>
                         </a>
                     </div>
-                    <!-- <div class="header__user-avatar">
+                    <div class="header__user-avatar">
                         <div class="header__mobile-user-avatar-img" style="background-image: url(./assets/img/profile_avatar.jpg);"></div>
-                    </div>   -->
+                    </div>  
                 </div>
             </div>
         </header>
@@ -103,7 +109,7 @@
                     </div>
                 </div>
             </div>
-            <div class="pickup-order hide-on-destop">
+            <div class="pickup-order hide-on-destop hide-on-mobile">
                 <div class="pickup-order__header">
                     <div class="pickup-order__header-container">
                         <div class="header__pickup-order-arrow">
@@ -211,6 +217,112 @@
                         </div>
                     </div>
                     <div class="pickup-order__work-blur"></div>
+                </div>
+            </div>
+            <div class="pickup__order-detail hide-on-destop">
+                <div class="pickup__order-detail-header">
+                    <div class="pickup__order-detail-header-container">
+                        <div class="header__pickup-order-detail-arrow" onclick="openOrderListTab()">
+                            <i class="uil uil-arrow-left header__pickup-order-detail-arrow-icon"></i>
+                        </div>
+                        <div class="header__pickup-order-detail-title">Đơn hàng 01</div>
+                    </div>
+                </div>
+                <div class="pickup__order-detail-address">
+                    <div class="pickup__order-detail-address-destination">
+                        <i class="uil uil-map-marker pickup__order-detail-address-destination-icon"></i>
+                    </div>
+                    <div class="pickup__order-detail-address-desc">
+                        <div class="pickup__order-detail-address-desc-title">Địa chỉ lấy hàng hàng</div>
+                        <span class="pickup__order-detail-address-desc-name">Laneige</span> <span class="pickup__order-detail-address-desc-divide">|</span>
+                        <span class="pickup__order-detail-address-desc-phone">(+84) 347797502</span>
+                        <div class="pickup__order-detail-address-desc-direction">Số 20, Ngõ 259 Định Công, Phường Định Công, Quận Hoàng Mai, Hà Nội</div>
+                    </div>
+                </div>
+                <div class="pickup__order-detail-label">
+                    <div class="pickup__order-detail-label-box"></div>
+                </div>
+                <div class="pickup__order-detail-product">
+                    <div class="pickup__order-detail-product-list">
+                        <div class="pickup__order-detail-product-item">
+                            <div class="pickup__order-detail-product-item-header">
+                                <div class="pickup__order-detail-product-item-header-favorite">Yêu thích</div>
+                                <div class="pickup__order-detail-product-item-header-shop">Viet Mark</div>
+                            </div>
+                            <div class="pickup__order-detail-product-item-body">
+                                <div class="pickup__order-detail-product-item-thumb">
+                                    <img class="pickup__order-detail-product-item-img" src="./assets/img/tai_nghe_5.jpg">
+                                </div>
+                                <div class="pickup__order-detail-product-item-info">
+                                    <div class="pickup__order-detail-product-item-info-name">
+                                        Bút Laze Trình Chiếu PowerPoint Kèm Remote Điều Khiển Không Dây Cho Laptop RF 2.4GHz
+                                    </div>
+                                    <div class="pickup__order-detail-product-item-bottom">
+                                        <div class="pickup__order-detail-product-item-bottom-change">
+                                            <span>Đổi ý miễn phí</span>
+                                        </div>
+                                        <div class="pickup__order-detail-product-item-numb">
+                                            <div class="pickup__order-detail-product-item-numb-quantity">x3</div>
+                                            <div class="pickup__order-detail-product-item-numb-price">121.000đ</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pickup__order-detail-product-item-transport">
+                                <div class="pickup__order-detail-product-item-transport-header">Vận chuyển</div>
+                                <div class="pickup__order-detail-product-item-transport-type">
+                                    <div class="pickup__order-detail-product-item-transport-type-sub">Nhanh</div>
+                                    <div class="pickup__order-detail-product-item-transport-type-price">15.000đ</div>
+                                </div>
+                                <div class="pickup__order-detail-product-item-transport-time">Nhận hàng vào 7 Tháng 7 - 8 Tháng 7</div>
+                                <div class="pickup__order-detail-product-item-transport-inspection">
+                                    <span>Được đồng kiểm.</span>
+                                    <i class="uil uil-question-circle pickup__order-detail-product-item-transport-inspection-icon"></i>
+                                </div>
+                            </div>
+                            <div class="pickup__order-detail-product-item-into-money">
+                                <div class="pickup__order-detail-product-item-into-money-sub">Thành tiền (1 sản phẩm):</div>
+                                <div class="pickup__order-detail-product-item-into-money-price">121.000đ</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pickup__order-detail-payment-type">
+                    <div class="pickup__order-detail-payment-type-header">
+                        <div class="pickup__order-detail-payment-type-header-col">
+                            <i class="uil uil-usd-circle pickup__order-detail-payment-type-header-sub-icon"></i>
+                            <div class="pickup__order-detail-payment-type-header-sub">Phương thức thanh toán</div>
+                        </div>
+                        <div class="pickup__order-detail-payment-type-header-col">
+                            <div class="pickup__order-detail-payment-type-header-sub">Thanh toán khi nhận hàng</div>
+                        </div>
+                    </div>
+                    <div class="pickup__order-detail-payment-type-pay">
+                        Dùng ShopeePay để tận hưởng nhiều voucer ưu đãi.
+                    </div>
+                </div>
+                <div class="pickup__order-detail-money">
+                    <div class="pickup__order-detail-money-header">
+                        <i class="uil uil-notes pickup__order-detail-money-header-icon"></i>
+                        <div class="pickup__order-detail-header-sub">Chi tiết thanh toán</div>
+                    </div>
+                    <div class="pickup__order-detail-money-body">
+                        <div class="pickup__order-detail-money-total-price-product">
+                            <div class="pickup__order-detail-total-price-product-sub">Tổng tiền hàng</div>
+                            <div class="pickup__order-detail-total-price-product-numb">212.000đ</div>
+                        </div>
+                        <div class="pickup__order-detail-money-transport-price">
+                            <div class="pickup__order-detail-transport-price-sub">Phí vận chuyển</div>
+                            <div class="pickup__order-detail-transport-price-numb">212.000đ</div>
+                        </div>
+                    </div>
+                    <div class="pickup__order-detail-bottom">
+                        <div class="pickup__order-detail-bottom-sub">Thành tiền</div>
+                        <div class="pickup__order-detail-bottom-price">320.000đ</div>
+                    </div>
+                </div>
+                <div class="pickup__order-detail-footer" onclick="openReceiveOrderModal()">
+                    <div class="header__pickup-order-footer-btn">Nhận đơn</div>
                 </div>
             </div>
         </div>
