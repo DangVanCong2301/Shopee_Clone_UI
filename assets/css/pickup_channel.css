@@ -1,7 +1,7 @@
 .app {
     overflow: hidden;
     background-color: #f5f5f5;
-    height: 100vh;
+    /* height: 100vh; */
 }
 
 .header {
@@ -580,4 +580,32 @@
     color: var(--white-color);
     text-transform: uppercase;
     cursor: pointer;
+}
+
+/* Confirm Mobile */
+.modal__confirm-mobile {
+    border-radius: 4px;
+    background-color: var(--white-color);
+}
+
+.modal__confirm-mobile-msg {
+    padding: 20px 30px 20px 30px;
+}
+
+.modal__confirm-mobile-btns {
+    display: flex;
+    border-top: 1px solid var(--border-color);
+}
+
+.modal__confirm-mobile-btn-agree, 
+.modal__confirm-mobile-btn-no {
+    flex: 1;
+    text-align: center;
+    padding: 16px 0;
+    cursor: pointer;
+}
+
+.modal__confirm-mobile-btn-agree {
+    border-left: 1px solid var(--border-color);
+    color: var(--primary-color);
 }
