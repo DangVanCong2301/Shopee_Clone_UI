@@ -327,12 +327,37 @@
             </div>
         </div>
     </div>
-    <div class="modal">
+    <div class="modal open">
         <div class="modal__overlay">
 
         </div>
         <div class="modal__body">
-            
+            <div class="modal__add-img-mobile">
+                <div class="modal__add-img-mobile-title">Thêm ảnh lấy hàng</div>
+                <div class="modal__add-img-mobile-check">
+                    <div class="modal__add-img-mobile-rb">
+                        <input type="radio" name="ratio-img" id="" class="modal__add-img-mobile-input">
+                        <label for="modal__add-img-mobile-input" class="modal__add-img-mobile-label">Hình ảnh tỉ lệ 1:1</label>
+                    </div>
+                    <div class="modal__add-img-mobile-rb">
+                        <input type="radio" name="ratio-img" id="" class="modal__add-img-mobile-input">
+                        <label for="modal__add-img-mobile-input" class="modal__add-img-mobile-label">Hình ảnh tỉ lệ 3:4</label>
+                    </div>
+                </div>
+                <div class="modal__add-img-mobile-pic">
+                    <img src="assets/img/no_img.jpg" class="modal__add-img-mobile-value" alt="">
+                    <label class="modal__add-img-mobile-pick">
+                        <div class="modal__add-img-mobile-pick-container">
+                            <i class="uil uil-image-plus modal__add-img-mobile-pick-icon"></i>
+                            <div class="modal__add-img-mobile-pick-sub">
+                                Thêm hình ảnh (0/9)
+                            </div>
+                        </div>
+                        <input type="file" accept="image/jpeg, image/png, image/jpg" class="modal__add-img-mobile-pick-file" id="input-file">
+                    </label>
+                </div>
+                <div class="modal__add-img-mobile-btn">Xác nhận</div>
+            </div>
         </div>
     </div>
     <div class="" id="toast"></div>
